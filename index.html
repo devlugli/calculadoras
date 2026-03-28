@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Juros Compostos</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Calculadora de Juros Compostos</h1>
+
+<p class="descricao">
+Simule quanto seu dinheiro pode crescer com aportes mensais.
+</p>
+
+<p class="selo">Simulação instantânea • juros compostos • gráfico anual</p>
+
+<div class="resumo-topo">
+
+    <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+
+    <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+
+    <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+
+</div>
+
+<div class="campo">
+<label>Valor inicial</label>
+<input id="valorInicial" type="text" value="1000">
+</div>
+
+<div class="campo">
+<label>Aporte mensal</label>
+<input id="aporteMensal" type="text" value="200">
+</div>
+
+<div class="campo">
+<label>Taxa anual (%)</label>
+<input id="taxaAnual" type="number" value="10">
+</div>
+
+<div class="campo">
+<label>Tempo (anos)</label>
+<input id="anos" type="number" value="10">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resultado-grid">
+    <div class="card-resultado">
+        <span class="titulo-resultado">Valor final</span>
+        <strong id="valorFinal">R$ 0,00</strong>
+    </div>
+
+    <div class="card-resultado">
+        <span class="titulo-resultado">Total investido</span>
+        <strong id="valorInvestido">R$ 0,00</strong>
+    </div>
+
+    <div class="card-resultado">
+        <span class="titulo-resultado">Rendimento</span>
+        <strong id="rendimento">R$ 0,00</strong>
+    </div>
+</div>
+
+<canvas id="grafico"></canvas>
+
+<canvas id="grafico"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
