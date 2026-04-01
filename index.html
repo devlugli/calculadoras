@@ -1,139 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de Juros Compostos Online | CalcBrazil</title>
+  <title>CalcBrazil | Calculadoras Online Grátis</title>
+  <meta name="description" content="Calculadoras online grátis de finanças, matemática e dia a dia. Simule juros compostos, porcentagem e muito mais no CalcBrazil.">
+  <link rel="canonical" href="https://calcbrazil.com/">
+  <link rel="icon" href="/favicon.ico">
 
-<meta name="description" content="Calculadora de juros compostos com aporte mensal. Simule investimentos, descubra quanto seu dinheiro pode crescer e veja o patrimônio ao longo do tempo.">
+  <meta property="og:title" content="CalcBrazil | Calculadoras Online Grátis">
+  <meta property="og:description" content="Calculadoras online grátis de finanças, matemática e dia a dia.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/">
+  <meta property="og:type" content="website">
 
-<link rel="canonical" href="https://calcbrazil.com/">
-<link rel="icon" href="/favicon.ico">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-D1LTJL2BFV');
-</script>
-
-<meta property="og:title" content="Calculadora de Juros Compostos Online">
-<meta property="og:description" content="Descubra quanto seu dinheiro pode crescer com juros compostos.">
-<meta property="og:image" content="https://calcbrazil.com/preview.png">
-<meta property="og:url" content="https://calcbrazil.com">
-<meta property="og:type" content="website">
-
-<link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
+  <div class="container">
 
-<div class="container">
+    <section class="hero">
+      <p class="selo">Calculadoras online • grátis • rápidas • fáceis de usar</p>
 
-<h1>Calculadora de Juros Compostos com Aporte Mensal</h1>
+      <h1>CalcBrazil</h1>
 
-<p class="descricao">
-Simule quanto seu dinheiro pode crescer com juros compostos,
-aporte inicial e contribuições mensais.
-</p>
+      <p class="descricao">
+        Calculadoras online grátis para finanças, matemática e situações do dia a dia.
+        Faça simulações rápidas, visualize resultados instantaneamente e encontre
+        ferramentas úteis em um só lugar.
+      </p>
+    </section>
 
-<p class="selo">Simulação instantânea • juros compostos • gráfico anual</p>
+    <section class="resumo-topo">
+      <div class="resumo-topo-titulo">Ferramentas simples para resolver contas do dia a dia</div>
+      <div class="resumo-topo-valor">100% online</div>
+      <div class="resumo-topo-texto">
+        Use nossas calculadoras sem cadastro, de forma rápida e gratuita.
+      </div>
+    </section>
 
-<div class="resumo-topo">
+    <section class="calculadoras-home">
+      <h2>Escolha uma calculadora</h2>
 
-    <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resultado-grid">
+        <a class="card-resultado card-link" href="./calculadora-juros-compostos/">
+          <span class="titulo-resultado">Finanças</span>
+          <strong>Calculadora de Juros Compostos</strong>
+          <span>Simule investimentos com aporte mensal e veja a evolução do patrimônio.</span>
+        </a>
 
-    <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+        <a class="card-resultado card-link" href="./calculadora-porcentagem/">
+          <span class="titulo-resultado">Matemática</span>
+          <strong>Calculadora de Porcentagem</strong>
+          <span>Descubra percentuais, aumentos, descontos e relações entre valores.</span>
+        </a>
 
-    <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+        <a class="card-resultado card-link" href="./calculadora-regra-de-tres/">
+  <span class="titulo-resultado">Matemática</span>
+  <strong>Calculadora de Regra de Três</strong>
+  <span>Calcule regra de três simples online e descubra o valor proporcional automaticamente.</span>
+</a>
+      </div>
+    </section>
 
-</div>
+    <section class="seo">
+      <h2>Calculadoras online grátis</h2>
+      <p>
+        O CalcBrazil reúne calculadoras online para ajudar em finanças, matemática e
+        decisões do dia a dia. Nossa proposta é oferecer ferramentas simples, rápidas
+        e gratuitas, com interface clara e resultados fáceis de entender.
+      </p>
 
-<div class="campo">
-<label>Valor inicial</label>
-<input id="valorInicial" type="text" value="1000">
-</div>
+      <h2>O que você encontra no CalcBrazil?</h2>
+      <p>
+        Aqui você encontra calculadoras úteis para simular juros compostos, calcular
+        porcentagens e, em breve, outras ferramentas para regra de três, descontos,
+        datas e muito mais.
+      </p>
 
-<div class="campo">
-<label>Aporte mensal</label>
-<input id="aporteMensal" type="text" value="200">
-</div>
+      <h2>Por que usar calculadoras online?</h2>
+      <p>
+        Calculadoras online ajudam a economizar tempo, evitar erros manuais e tomar
+        decisões com mais segurança. Seja para um cálculo financeiro ou matemático,
+        uma boa ferramenta pode facilitar bastante a rotina.
+      </p>
+    </section>
 
-<div class="campo">
-<label>Taxa anual (%)</label>
-<input id="taxaAnual" type="number" value="10">
-</div>
-
-<div class="campo">
-<label>Tempo (anos)</label>
-<input id="anos" type="number" value="10">
-</div>
-
-<button type="button" onclick="calcular()">Calcular</button>
-
-<div class="resultado-grid">
-    <div class="card-resultado">
-        <span class="titulo-resultado">Valor final</span>
-        <strong id="valorFinal">R$ 0,00</strong>
-    </div>
-
-    <div class="card-resultado">
-        <span class="titulo-resultado">Total investido</span>
-        <strong id="valorInvestido">R$ 0,00</strong>
-    </div>
-
-    <div class="card-resultado">
-        <span class="titulo-resultado">Rendimento</span>
-        <strong id="rendimento">R$ 0,00</strong>
-    </div>
-</div>
-
-<canvas id="grafico"></canvas>
-
-<canvas id="grafico"></canvas>
-
-</div>
-
-
-  <!-- TEXTO SEO -->
-  <section class="seo">
-
-<h2>Calculadora de juros compostos com aporte mensal</h2>
-
-<p>
-Nossa calculadora permite simular investimentos com juros compostos
-considerando um valor inicial e aportes mensais. Esse tipo de simulação
-é muito usado para planejar aposentadoria, investimentos em renda fixa
-ou crescimento de patrimônio ao longo do tempo.
-</p>
-
-    <h2>O que são juros compostos?</h2>
-    <p>
-    Juros compostos são os juros calculados sobre o valor inicial investido e também
-    sobre os juros acumulados ao longo do tempo.
-    </p>
-
-    <h2>Como funciona a calculadora de juros compostos?</h2>
-    <p>
-    Nossa calculadora permite simular investimentos considerando valor inicial,
-    aportes mensais, taxa de rendimento e prazo.
-    </p>
-
-    <h2>Por que investir com juros compostos?</h2>
-    <p>
-    Investimentos que utilizam juros compostos crescem de forma exponencial ao longo
-    do tempo.
-    </p>
-  </section>
-
-<script src="script.js"></script>
-
+  </div>
 </body>
 </html>

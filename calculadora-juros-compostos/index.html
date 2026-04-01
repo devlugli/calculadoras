@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Juros Compostos Online | CalcBrazil</title>
+
+  <meta name="description" content="Calculadora de juros compostos com aporte mensal. Simule investimentos, descubra quanto seu dinheiro pode crescer e veja o patrimônio ao longo do tempo.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-juros-compostos/">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Juros Compostos Online">
+  <meta property="og:description" content="Descubra quanto seu dinheiro pode crescer com juros compostos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-juros-compostos/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <p><a href="/">← Voltar para a página inicial</a></p>
+
+    <h1>Calculadora de Juros Compostos com Aporte Mensal</h1>
+
+    <p class="descricao">
+      Simule quanto seu dinheiro pode crescer com juros compostos,
+      aporte inicial e contribuições mensais.
+    </p>
+
+    <p class="selo">Simulação instantânea • juros compostos • gráfico anual</p>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="campo">
+      <label for="valorInicial">Valor inicial</label>
+      <input id="valorInicial" type="text" value="1000">
+    </div>
+
+    <div class="campo">
+      <label for="aporteMensal">Aporte mensal</label>
+      <input id="aporteMensal" type="text" value="200">
+    </div>
+
+    <div class="campo">
+      <label for="taxaAnual">Taxa anual (%)</label>
+      <input id="taxaAnual" type="number" value="10">
+    </div>
+
+    <div class="campo">
+      <label for="anos">Tempo (anos)</label>
+      <input id="anos" type="number" value="10">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resultado-grid">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Valor final</span>
+        <strong id="valorFinal">R$ 0,00</strong>
+      </div>
+
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total investido</span>
+        <strong id="valorInvestido">R$ 0,00</strong>
+      </div>
+
+      <div class="card-resultado">
+        <span class="titulo-resultado">Rendimento</span>
+        <strong id="rendimento">R$ 0,00</strong>
+      </div>
+    </div>
+
+    <canvas id="grafico"></canvas>
+  </div>
+
+  <section class="seo">
+    <h2>Calculadora de juros compostos com aporte mensal</h2>
+
+    <p>
+      Nossa calculadora permite simular investimentos com juros compostos
+      considerando um valor inicial e aportes mensais. Esse tipo de simulação
+      é muito usado para planejar aposentadoria, investimentos em renda fixa
+      ou crescimento de patrimônio ao longo do tempo.
+    </p>
+
+    <h2>O que são juros compostos?</h2>
+    <p>
+      Juros compostos são os juros calculados sobre o valor inicial investido e também
+      sobre os juros acumulados ao longo do tempo.
+    </p>
+
+    <h2>Como funciona a calculadora de juros compostos?</h2>
+    <p>
+      Nossa calculadora permite simular investimentos considerando valor inicial,
+      aportes mensais, taxa de rendimento e prazo.
+    </p>
+
+    <h2>Por que investir com juros compostos?</h2>
+    <p>
+      Investimentos que utilizam juros compostos crescem de forma exponencial ao longo
+      do tempo.
+    </p>
+  </section>
+
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-juros-compostos/");
+</script>
+
+  <script src="./script.js"></script>
+</body>
+</html>

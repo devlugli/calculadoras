@@ -64,28 +64,26 @@ input:focus{
     background:white;
 }
 
-button{
-    width:100%;
-    padding:14px;
-    font-size:16px;
-    font-weight:bold;
-    background:linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    color:white;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow:0 10px 20px rgba(37, 99, 235, 0.22);
-    margin-top:4px;
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-button:hover{
-    transform:translateY(-1px);
-    box-shadow:0 14px 24px rgba(37, 99, 235, 0.28);
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.25);
 }
 
 .resultado-grid{
-    margin-top:24px;
+    margin-top:30px;
     display:grid;
     grid-template-columns:1fr;
     gap:12px;
@@ -152,6 +150,7 @@ canvas{
     padding:22px;
     border-radius:16px;
     margin-bottom:24px;
+    margin-top: 25px;
     text-align:center;
 }
 
@@ -215,4 +214,67 @@ canvas{
 canvas{
     width:100% !important;
     height:auto !important;
+}
+
+.seo{
+  max-width:900px;
+  margin:60px auto;
+  line-height:1.6;
+  font-size:16px;
+  color:#333;
+}
+
+.seo h2{
+  margin-top:40px;
+  font-size:24px;
+}
+
+input, select {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 8px 0 18px 0;
+  font-size: 18px;
+  border: 1px solid #cfd6e4;
+  border-radius: 18px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #1f2937;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.card-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.card-link span {
+  display: block;
+  margin-top: 8px;
+}
+
+.card-link strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.card-link:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 26px rgba(37,99,235,.12);
+}
+
+.card-resultado{
+  padding:28px;
+}
+
+.hero h1{
+  margin-top:8px;
+  margin-bottom:12px;
 }

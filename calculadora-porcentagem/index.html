@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Porcentagem Online | CalcBrazil</title>
+
+  <meta name="description" content="Calculadora de porcentagem online grátis. Descubra quanto é X% de um valor, quantos por cento um número representa e calcule aumentos ou descontos percentuais.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-porcentagem/">
+  <link rel="icon" href="/favicon.ico">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Porcentagem Online">
+  <meta property="og:description" content="Calcule porcentagem, aumentos, descontos e descubra quantos por cento um valor representa.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-porcentagem/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <p><a href="/">← Voltar para a página inicial</a></p>
+
+    <h1>Calculadora de Porcentagem</h1>
+
+    <p class="descricao">
+      Calcule porcentagens de forma rápida: descubra quanto é X% de um valor,
+      quantos por cento um número representa ou qual foi o aumento/desconto percentual.
+    </p>
+
+    <p class="selo">Cálculo instantâneo • porcentagem • aumentos • descontos</p>
+
+    <div class="campo">
+      <label for="tipoCalculo">Tipo de cálculo</label>
+      <select id="tipoCalculo" onchange="trocarModo()">
+        <option value="percentualDeValor">Quanto é X% de um valor</option>
+        <option value="valorRepresentaPercentual">Um valor representa quantos % de outro</option>
+        <option value="variacaoPercentual">Calcular aumento ou desconto percentual</option>
+      </select>
+    </div>
+
+    <div id="modoPercentualDeValor">
+      <div class="campo">
+        <label for="percentual1">Porcentagem (%)</label>
+        <input id="percentual1" type="number" value="20.00" step="0.01" inputmode="decimal">
+      </div>
+
+      <div class="campo">
+        <label for="valor1">Valor</label>
+        <input id="valor1" type="number" value="500.00" step="0.01" inputmode="decimal">
+      </div>
+    </div>
+
+    <div id="modoValorRepresentaPercentual" style="display:none;">
+      <div class="campo">
+        <label for="valorBase2">Valor base</label>
+        <input id="valorBase2" type="number" value="200.00" step="0.01" inputmode="decimal">
+      </div>
+
+      <div class="campo">
+        <label for="valorComparado2">Valor comparado</label>
+        <input id="valorComparado2" type="number" value="50.00" step="0.01" inputmode="decimal">
+      </div>
+    </div>
+
+    <div id="modoVariacaoPercentual" style="display:none;">
+      <div class="campo">
+        <label for="valorInicial3">Valor inicial</label>
+        <input id="valorInicial3" type="number" value="100.00" step="0.01" inputmode="decimal">
+      </div>
+
+      <div class="campo">
+        <label for="valorFinal3">Valor final</label>
+        <input id="valorFinal3" type="number" value="120.00" step="0.01" inputmode="decimal">
+      </div>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+  </div>
+
+  <section class="seo">
+    <h2>Calculadora de porcentagem online</h2>
+    <p>
+      Nossa calculadora de porcentagem ajuda você a resolver rapidamente os cálculos
+      percentuais mais comuns do dia a dia, como descobrir quanto é uma porcentagem
+      de um valor, calcular aumentos e descontos e identificar quantos por cento um
+      número representa em relação a outro.
+    </p>
+
+    <h2>Como calcular porcentagem?</h2>
+    <p>
+      O cálculo mais comum é multiplicar o valor pelo percentual e dividir por 100.
+      Por exemplo, para descobrir quanto é 20% de 500, basta fazer 500 × 20 ÷ 100,
+      resultando em 100.
+    </p>
+
+    <h2>Como saber quantos por cento um valor representa?</h2>
+    <p>
+      Para descobrir quantos por cento um valor representa em relação a outro,
+      divide-se o valor comparado pelo valor base e multiplica-se o resultado por 100.
+    </p>
+
+    <h2>Como calcular aumento ou desconto percentual?</h2>
+    <p>
+      Para calcular a variação percentual entre dois valores, subtraia o valor inicial
+      do valor final, divida o resultado pelo valor inicial e multiplique por 100.
+    </p>
+  </section>
+
+ <section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-porcentagem/");
+</script>
+
+  <script src="./script.js"></script>
+</body>
+</html>
