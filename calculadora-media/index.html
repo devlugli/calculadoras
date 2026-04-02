@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Média Online | CalcBrazil</title>
+
+<meta name="description" content="Calcule a média online de forma rápida e grátis. Adicione ou remova valores e descubra a média automaticamente.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-media/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Média Online">
+<meta property="og:description" content="Calcule a média de vários valores de forma rápida e prática.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-media/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Média</h1>
+
+<p class="descricao">
+Adicione ou remova valores e calcule a média de forma rápida e prática.
+</p>
+
+<p class="selo">Média • notas • valores • cálculo instantâneo</p>
+
+<div class="campo">
+<label>Quantidade de valores</label>
+
+<div class="controle-quantidade">
+<button type="button" onclick="removerCampo()">−</button>
+<span id="contadorValores">4</span>
+<button type="button" onclick="adicionarCampo()">+</button>
+</div>
+</div>
+
+<div id="camposValores"></div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">Informe os valores para calcular a média.</div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Calculadora de média online</h2>
+<p>
+Nossa calculadora de média permite descobrir rapidamente a média aritmética simples de vários valores.
+Ela é útil para notas escolares, resultados, preços e diversos cálculos do dia a dia.
+</p>
+
+<h2>Como calcular a média?</h2>
+<p>
+Para calcular a média, basta somar todos os valores informados e dividir pela quantidade de números preenchidos.
+</p>
+
+<h2>Fórmula da média</h2>
+<p>
+Média = soma dos valores ÷ quantidade de valores considerados no cálculo.
+</p>
+
+<h2>Quando usar a média?</h2>
+<p>
+A média pode ser usada para calcular notas escolares, desempenho, resultados, preços médios e outros indicadores numéricos.
+</p>
+
+<h2>Perguntas frequentes sobre média</h2>
+
+<h3>Posso calcular média de notas?</h3>
+<p>
+Sim. Basta preencher as notas e a calculadora mostrará a média automaticamente.
+</p>
+
+<h3>Posso adicionar mais valores?</h3>
+<p>
+Sim. Você pode usar os botões de mais e menos para ajustar a quantidade de campos.
+</p>
+
+<h3>Essa calculadora serve para média simples?</h3>
+<p>
+Sim. Ela calcula média aritmética simples, sem pesos diferentes entre os valores.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-media/", 3);
+</script>
+
+</body>
+</html>
