@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{TITULO_CALCULADORA}} | CalcBrazil</title>
+
+<meta name="description"
+content="{{DESCRICAO_SEO}}">
+
+<link rel="canonical" href="https://calcbrazil.com/{{URL_CALCULADORA}}/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="{{TITULO_CALCULADORA}}">
+<meta property="og:description" content="{{DESCRICAO_SEO}}">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/{{URL_CALCULADORA}}/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>{{TITULO_CALCULADORA}}</h1>
+
+<p class="descricao">
+{{DESCRICAO_CURTA}}
+</p>
+
+<p class="selo">{{PALAVRAS_CHAVE}}</p>
+
+{{CAMPOS_INPUT}}
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>{{H2_SEO_1}}</h2>
+<p>{{TEXTO_SEO_1}}</p>
+
+<h2>{{H2_SEO_2}}</h2>
+<p>{{TEXTO_SEO_2}}</p>
+
+<h2>{{H2_SEO_3}}</h2>
+<p>{{TEXTO_SEO_3}}</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/{{URL_CALCULADORA}}/", 3);
+</script>
+
+</body>
+</html>
