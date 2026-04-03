@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Horas Entre Horários | CalcBrazil</title>
+
+<meta name="description" content="Calcule a diferença entre dois horários e descubra quantas horas e minutos se passaram.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-horas-entre-horarios/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Horas Entre Horários">
+<meta property="og:description" content="Descubra quantas horas e minutos existem entre dois horários.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-horas-entre-horarios/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Horas Entre Horários</h1>
+
+<p class="descricao">
+Descubra quantas horas e minutos existem entre um horário inicial e um horário final.
+</p>
+
+<p class="selo">horas • tempo • diferença</p>
+
+<div class="campo">
+<label for="horaInicial">Horário inicial</label>
+<input id="horaInicial" type="time" value="08:00">
+</div>
+
+<div class="campo">
+<label for="horaFinal">Horário final</label>
+<input id="horaFinal" type="time" value="17:30">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular horas entre horários?</h2>
+
+<p>
+Para calcular a diferença entre dois horários, basta subtrair o horário inicial do horário final e converter o resultado em horas e minutos.
+</p>
+
+<h2>Para que serve essa calculadora?</h2>
+
+<p>
+Ela é útil para calcular jornada de trabalho, tempo de estudo, duração de atividades, intervalos e outras situações do dia a dia.
+</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>Essa calculadora funciona para jornada de trabalho?</h3>
+<p>
+Sim. Ela pode ser usada para descobrir quantas horas existem entre o início e o fim do expediente.
+</p>
+
+<h3>E se o horário passar da meia-noite?</h3>
+<p>
+Sim. Se o horário final for menor que o inicial, a calculadora considera que o período passou para o dia seguinte.
+</p>
+
+<h3>O resultado mostra minutos também?</h3>
+<p>
+Sim. O cálculo mostra horas e minutos para facilitar a visualização.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-horas-entre-horarios/", 3);
+</script>
+
+</body>
+</html>

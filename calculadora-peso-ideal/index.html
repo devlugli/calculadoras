@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Peso Ideal Online | CalcBrazil</title>
+
+  <meta name="description" content="Calcule seu peso ideal online de forma rápida e grátis. Informe sexo e altura para ver uma estimativa de peso saudável com base em um IMC de referência.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-peso-ideal/">
+  <link rel="icon" href="/favicon.ico">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Peso Ideal Online">
+  <meta property="og:description" content="Calcule seu peso ideal online de forma rápida e prática.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-peso-ideal/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Peso Ideal</h1>
+
+<p class="descricao">
+  Calcule seu peso ideal online informando sexo e altura. Veja rapidamente uma estimativa de peso saudável com base em um IMC de referência.
+</p>
+
+<p class="selo">Saúde • peso ideal • altura • cálculo instantâneo</p>
+
+<div class="campo">
+  <label for="sexo">Sexo</label>
+  <select id="sexo">
+    <option value="homem" selected>Homem</option>
+    <option value="mulher">Mulher</option>
+  </select>
+</div>
+
+<div class="campo">
+  <label for="altura">Altura (m)</label>
+  <input id="altura" type="number" value="1.75" step="0.01" inputmode="decimal">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+  <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+  <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+  <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+  </div>
+
+  <section class="seo">
+
+<h2>Faixa de referência por IMC</h2>
+
+<table class="tabela-imc" id="tabelaPesoIdeal">
+
+<tr>
+<th>IMC</th>
+<th>Interpretação</th>
+</tr>
+
+<tr data-min="0" data-max="18.5">
+<td>Menor que 18,5</td>
+<td>Abaixo da faixa considerada normal</td>
+</tr>
+
+<tr data-min="18.5" data-max="25">
+<td>18,5 – 24,9</td>
+<td>Faixa considerada normal</td>
+</tr>
+
+<tr data-min="25" data-max="30">
+<td>25 – 29,9</td>
+<td>Acima da faixa considerada normal</td>
+</tr>
+
+<tr data-min="30" data-max="999">
+<td>30 ou mais</td>
+<td>Bem acima da faixa considerada normal</td>
+</tr>
+
+</table>
+
+</section>
+
+  <section class="seo">
+    <h2>Calculadora de peso ideal online</h2>
+    <p>
+      Nossa calculadora de peso ideal ajuda você a descobrir uma estimativa de peso saudável com base no sexo e na altura informados.
+      O cálculo usa um IMC de referência para gerar um valor aproximado.
+    </p>
+
+<h2>Como calcular o peso ideal?</h2>
+<p>
+  Nesta calculadora, o peso ideal é estimado com base em um IMC de referência.
+  Usamos IMC 22 para homens e IMC 21 para mulheres.
+</p>
+
+<h2>Fórmula usada</h2>
+<p>
+  Peso ideal = IMC de referência × altura²
+</p>
+
+<h2>O que é considerado peso ideal?</h2>
+<p>
+  O chamado peso ideal é apenas uma estimativa teórica usada como referência.
+  O peso saudável real pode variar conforme idade, composição corporal, massa muscular e outros fatores.
+</p>
+
+<h2>Para que serve essa calculadora?</h2>
+<p>
+  Essa calculadora serve como apoio rápido para quem quer ter uma noção inicial de qual seria um peso aproximado para sua altura.
+</p>
+
+<h2>Perguntas frequentes sobre peso ideal</h2>
+
+<h3>Como é calculado o peso ideal?</h3>
+<p>
+O cálculo é feito multiplicando um IMC de referência pela altura ao quadrado.
+</p>
+
+<h3>Existe diferença entre homem e mulher?</h3>
+<p>
+Sim. Nesta calculadora usamos uma referência diferente para homens e mulheres.
+</p>
+
+<h3>Esse resultado é exato?</h3>
+<p>
+Não. O resultado é apenas uma estimativa de referência.
+</p>
+
+<h3>Essa calculadora substitui orientação médica?</h3>
+<p>
+Não. Ela serve apenas como referência inicial.
+</p>
+
+  </section>
+
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/relacionadas.js"></script>
+
+  <script src="./script.js"></script>
+
+  <script>
+    renderizarCalculadorasRelacionadas("/calculadora-peso-ideal/", 3);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de 13º Salário | CalcBrazil</title>
+
+<meta name="description" content="Calcule o valor do décimo terceiro salário com base no salário mensal e nos meses trabalhados.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-decimo-terceiro/">
+<link rel="icon" href="/favicon.ico">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de 13º Salário</h1>
+
+<p class="descricao">
+Descubra quanto você vai receber de décimo terceiro salário com base no salário mensal e nos meses trabalhados no ano.
+</p>
+
+<p class="selo">salário • décimo terceiro • renda</p>
+
+<div class="campo">
+<label for="salario">Salário mensal (R$)</label>
+<input id="salario" type="number" step="0.01" value="3000">
+</div>
+
+<div class="campo">
+<label for="meses">Meses trabalhados no ano</label>
+<input id="meses" type="number" step="1" value="12">
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="titulo"></div>
+<div class="resumo-topo-valor" id="valor"></div>
+<div class="resumo-topo-texto" id="texto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular o 13º salário?</h2>
+
+<p>
+O décimo terceiro salário é proporcional aos meses trabalhados durante o ano. Cada mês equivale a 1/12 do salário.
+</p>
+
+<h2>Fórmula do décimo terceiro</h2>
+
+<p>
+13º salário = salário mensal ÷ 12 × meses trabalhados.
+</p>
+
+<h2>Quem tem direito ao décimo terceiro?</h2>
+
+<p>
+Trabalhadores com carteira assinada, aposentados e pensionistas têm direito ao pagamento proporcional do décimo terceiro salário.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-decimo-terceiro/",3);
+</script>
+
+</body>
+</html>

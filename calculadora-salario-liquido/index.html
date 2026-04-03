@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Salário Líquido | CalcBrazil</title>
+
+<meta name="description" content="Descubra quanto você vai receber de salário líquido após descontos de INSS e outros valores.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-salario-liquido/">
+<link rel="icon" href="/favicon.ico">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Salário Líquido</h1>
+
+<p class="descricao">
+Descubra quanto você vai receber após descontos sobre o salário bruto.
+</p>
+
+<p class="selo">salário • desconto • renda</p>
+
+<div class="campo">
+<label for="salarioBruto">Salário bruto (R$)</label>
+<input id="salarioBruto" type="number" step="0.01" value="3000">
+</div>
+
+<div class="campo">
+<label for="descontos">Total de descontos (%)</label>
+<input id="descontos" type="number" step="0.01" value="10">
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="titulo"></div>
+<div class="resumo-topo-valor" id="valor"></div>
+<div class="resumo-topo-texto" id="texto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular salário líquido?</h2>
+
+<p>
+O salário líquido é o valor recebido após descontos aplicados ao salário bruto, como INSS, imposto de renda ou outros benefícios.
+</p>
+
+<h2>Fórmula simplificada</h2>
+
+<p>
+Salário líquido = salário bruto − descontos.
+</p>
+
+<h2>Por que calcular o salário líquido?</h2>
+
+<p>
+Esse cálculo ajuda a entender quanto realmente entra no orçamento mensal após todas as deduções.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-salario-liquido/",3);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de IMC Infantil Online | CalcBrazil</title>
+
+  <meta name="description" content="Calcule o IMC infantil online de forma rápida e grátis. Informe peso e altura da criança e veja o índice de massa corporal com uma referência inicial.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-imc-infantil/">
+  <link rel="icon" href="/favicon.ico">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de IMC Infantil Online">
+  <meta property="og:description" content="Calcule o IMC infantil online de forma rápida e prática.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-imc-infantil/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de IMC Infantil</h1>
+
+<p class="descricao">
+  Calcule o IMC infantil online informando peso e altura da criança. Veja rapidamente o índice de massa corporal e uma classificação inicial de referência.
+</p>
+
+<p class="selo">Saúde • IMC infantil • crescimento • cálculo instantâneo</p>
+
+<div class="campo">
+  <label for="idade">Idade da criança (anos)</label>
+  <input id="idade" type="number" value="8" min="1" max="19" step="1" inputmode="numeric">
+</div>
+
+<div class="campo">
+  <label for="sexo">Sexo</label>
+  <select id="sexo">
+    <option value="menino" selected>Menino</option>
+    <option value="menina">Menina</option>
+  </select>
+</div>
+
+<div class="campo">
+  <label for="peso">Peso (kg)</label>
+  <input id="peso" type="number" value="30" step="0.01" inputmode="decimal">
+</div>
+
+<div class="campo">
+  <label for="altura">Altura (m)</label>
+  <input id="altura" type="number" value="1.30" step="0.01" inputmode="decimal">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+  <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+  <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+  <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+  </div>
+
+  <section class="seo">
+
+<h2>Referência inicial do IMC infantil</h2>
+
+<table class="tabela-imc" id="tabelaIMC">
+
+<tr>
+<th>IMC</th>
+<th>Referência inicial</th>
+</tr>
+
+<tr data-min="0" data-max="14">
+<td>Menor que 14</td>
+<td>Abaixo da referência geral</td>
+</tr>
+
+<tr data-min="14" data-max="18">
+<td>14 – 17,9</td>
+<td>Faixa intermediária</td>
+</tr>
+
+<tr data-min="18" data-max="22">
+<td>18 – 21,9</td>
+<td>Acima da referência geral</td>
+</tr>
+
+<tr data-min="22" data-max="999">
+<td>22 ou mais</td>
+<td>Bem acima da referência geral</td>
+</tr>
+
+</table>
+
+</section>
+
+  <section class="seo">
+    <h2>Calculadora de IMC infantil online</h2>
+    <p>
+      Nossa calculadora de IMC infantil ajuda você a obter rapidamente uma referência inicial do índice de massa corporal da criança com base no peso e na altura.
+    </p>
+
+<h2>Como calcular o IMC infantil?</h2>
+<p>
+  O cálculo do IMC infantil usa a mesma fórmula do IMC tradicional: peso dividido pela altura ao quadrado.
+  A fórmula é IMC = peso ÷ (altura × altura).
+</p>
+
+<h2>Como interpretar o IMC infantil?</h2>
+<p>
+  Diferentemente do IMC de adultos, o IMC infantil idealmente deve ser interpretado considerando idade e sexo, com apoio de curvas de crescimento.
+  Por isso, o resultado desta página funciona como uma referência inicial e informativa.
+</p>
+
+<h2>Para que serve o IMC infantil?</h2>
+<p>
+  O IMC infantil pode ser usado como apoio para acompanhamento do crescimento e do desenvolvimento corporal da criança.
+  Ele não substitui avaliação médica ou nutricional.
+</p>
+
+<h2>Perguntas frequentes sobre IMC infantil</h2>
+
+<h3>O que é IMC infantil?</h3>
+<p>
+IMC infantil é o índice de massa corporal calculado para crianças e adolescentes com base no peso e na altura.
+</p>
+
+<h3>Como calcular o IMC infantil?</h3>
+<p>
+O IMC infantil é calculado dividindo o peso pela altura ao quadrado.
+</p>
+
+<h3>O IMC infantil é igual ao de adulto?</h3>
+<p>
+A fórmula é a mesma, mas a interpretação do resultado é diferente, porque deve considerar idade e sexo.
+</p>
+
+<h3>Esse resultado substitui avaliação profissional?</h3>
+<p>
+Não. O resultado é apenas uma referência inicial e não substitui avaliação de um profissional de saúde.
+</p>
+
+  </section>
+
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/relacionadas.js"></script>
+
+  <script src="./script.js"></script>
+
+  <script>
+    renderizarCalculadorasRelacionadas("/calculadora-imc-infantil/", 3);
+  </script>
+
+</body>
+</html>

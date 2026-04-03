@@ -90,4 +90,46 @@
 <loc>https://calcbrazil.com/calculadora-comissao-vendas/</loc>
 </url>
 
+<url>
+<loc>https://calcbrazil.com/calculadora-salario-liquido/</loc>
+</url>
+
+<url>
+<loc>https://calcbrazil.com/calculadora-decimo-terceiro/</loc>
+</url>
+
+<url>
+<loc>https://calcbrazil.com/calculadora-tempo-de-viagem/</loc>
+</url>
+
+<url>
+<loc>https://calcbrazil.com/calculadora-horas-entre-horarios/</loc>
+</url>
+
+<url>
+<loc>https://calcbrazil.com/calculadora-porcentagem-reversa/</loc>
+</url>
+
+<url>
+<loc>https://calcbrazil.com/calculadora-valor-hora-trabalhada/</loc>
+</url>
+
+<url>
+  <loc>https://calcbrazil.com/calculadora-imc-infantil/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://calcbrazil.com/calculadora-peso-ideal/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://calcbrazil.com/calculadora-idade-de-cachorro/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
 </urlset>
