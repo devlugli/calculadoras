@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Financiamento | CalcBrazil</title>
+
+<meta name="description" content="Simule parcelas de financiamento e descubra o valor aproximado da prestação, total pago e juros.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-financiamento/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Financiamento">
+<meta property="og:description" content="Simule parcelas de financiamento e descubra o valor aproximado da prestação.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-financiamento/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Financiamento</h1>
+
+<p class="descricao">
+Simule o valor das parcelas de um financiamento informando o valor financiado, a taxa de juros mensal e a quantidade de parcelas.
+</p>
+
+<p class="selo">finanças • financiamento • parcelas</p>
+
+<div class="campo">
+<label for="valorFinanciado">Valor financiado (R$)</label>
+<input id="valorFinanciado" type="number" step="0.01" value="30000" inputmode="decimal">
+</div>
+
+<div class="campo">
+<label for="taxaJuros">Taxa de juros ao mês (%)</label>
+<input id="taxaJuros" type="number" step="0.01" value="1.99" inputmode="decimal">
+</div>
+
+<div class="campo">
+<label for="parcelas">Número de parcelas</label>
+<input id="parcelas" type="number" step="1" value="48" inputmode="numeric">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+<div class="resultado-grid">
+
+<div class="card-resultado">
+<span class="titulo-resultado">Total pago</span>
+<strong id="valorTotalPago">R$ 0,00</strong>
+</div>
+
+<div class="card-resultado">
+<span class="titulo-resultado">Total em juros</span>
+<strong id="valorTotalJuros">R$ 0,00</strong>
+</div>
+
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular financiamento?</h2>
+
+<p>
+O cálculo do financiamento pode ser feito com base no valor financiado, na taxa de juros e no número de parcelas. Esta calculadora utiliza um modelo de parcela fixa para estimar o valor mensal.
+</p>
+
+<h2>O que influencia o valor da parcela?</h2>
+
+<p>
+O valor da parcela depende principalmente do valor financiado, da taxa de juros mensal e da quantidade de meses escolhida para o pagamento.
+</p>
+
+<h2>Para que serve um simulador de financiamento?</h2>
+
+<p>
+Um simulador ajuda a comparar cenários antes de contratar um financiamento, permitindo avaliar o peso das parcelas no orçamento e o total pago ao final do contrato.
+</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>Esta calculadora serve para financiamento de carro e imóvel?</h3>
+<p>
+Sim. Ela serve como uma simulação inicial para qualquer financiamento com parcelas fixas.
+</p>
+
+<h3>O valor é exato?</h3>
+<p>
+Não necessariamente. Bancos e financeiras podem incluir seguros, tarifas e outras condições no contrato final.
+</p>
+
+<h3>Qual sistema esta calculadora usa?</h3>
+<p>
+Esta simulação usa um modelo de prestação fixa, comum em financiamentos parcelados.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-financiamento/", 3);
+</script>
+
+</body>
+</html>

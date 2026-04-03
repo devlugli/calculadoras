@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Comissão de Vendas | CalcBrazil</title>
+
+<meta name="description" content="Calcule rapidamente a comissão de vendas com base no valor da venda e na porcentagem de comissão.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-comissao-vendas/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Comissão de Vendas">
+<meta property="og:description" content="Descubra quanto você ganha de comissão em uma venda.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-comissao-vendas/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Comissão de Vendas</h1>
+
+<p class="descricao">
+Descubra quanto você vai receber de comissão com base no valor da venda e na porcentagem de comissão.
+</p>
+
+<p class="selo">vendas • comissão • porcentagem</p>
+
+<div class="campo">
+<label for="valorVenda">Valor da venda (R$)</label>
+<input id="valorVenda" type="number" step="0.01" value="1500" inputmode="decimal">
+</div>
+
+<div class="campo">
+<label for="percentualComissao">Comissão (%)</label>
+<input id="percentualComissao" type="number" step="0.01" value="5" inputmode="decimal">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular comissão de vendas?</h2>
+
+<p>
+Para calcular a comissão de uma venda basta multiplicar o valor da venda pela porcentagem de comissão acordada.
+</p>
+
+<h2>Fórmula da comissão</h2>
+
+<p>
+Comissão = valor da venda × percentual de comissão.
+</p>
+
+<h2>Para que serve calcular comissão?</h2>
+
+<p>
+Esse cálculo ajuda vendedores e empresas a entender quanto será recebido por cada venda realizada.
+</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>Como calcular comissão de 5%?</h3>
+
+<p>
+Basta multiplicar o valor da venda por 0,05.
+</p>
+
+<h3>Comissão pode variar por produto?</h3>
+
+<p>
+Sim. Muitas empresas utilizam percentuais diferentes dependendo do tipo de produto ou serviço.
+</p>
+
+<h3>Comissão pode ser acumulativa?</h3>
+
+<p>
+Sim. Em alguns casos a comissão aumenta conforme o volume de vendas realizado.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-comissao-vendas/", 3);
+</script>
+
+</body>
+</html>
