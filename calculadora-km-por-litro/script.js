@@ -94,12 +94,16 @@ e identificar possíveis problemas no motor.
 
 
 
+<section id="calculadorasPopulares" class="seo"></section>
+
 <section id="calculadorasRelacionadas" class="seo"></section>
 
+<script src="../assets/js/populares.js"></script>
 <script src="../assets/js/relacionadas.js"></script>
 <script src="./script.js"></script>
 
 <script>
+    renderizarCalculadorasPopulares();
 renderizarCalculadorasRelacionadas("/calculadora-km-por-litro/",3);
 </script>
 
