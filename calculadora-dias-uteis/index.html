@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Dias Úteis | CalcBrazil</title>
+
+<meta name="description" content="Calcule quantos dias úteis existem entre duas datas. Descubra rapidamente a quantidade de dias úteis e dias totais.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-dias-uteis/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Dias Úteis">
+<meta property="og:description" content="Descubra quantos dias úteis existem entre duas datas.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-dias-uteis/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Dias Úteis</h1>
+
+<p class="descricao">
+Descubra quantos dias úteis existem entre duas datas.
+Ideal para cálculos de prazos, contratos, entregas e planejamento.
+</p>
+
+<p class="selo">Datas • dias úteis • prazos • cálculo instantâneo</p>
+
+<div class="campo">
+<label for="dataInicio">Data inicial</label>
+<input id="dataInicio" type="date">
+</div>
+
+<div class="campo">
+<label for="dataFim">Data final</label>
+<input id="dataFim" type="date">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>O que são dias úteis?</h2>
+
+<p>
+Dias úteis são os dias normalmente considerados para atividades de trabalho,
+geralmente de segunda a sexta-feira. Sábados, domingos e feriados
+normalmente não entram nesse cálculo.
+</p>
+
+<h2>Como calcular dias úteis?</h2>
+
+<p>
+Para calcular dias úteis entre duas datas, é necessário contar todos os dias
+no período e excluir sábados e domingos. Em alguns casos, também podem ser
+desconsiderados feriados dependendo da aplicação do cálculo.
+</p>
+
+<h2>Para que serve calcular dias úteis?</h2>
+
+<p>
+O cálculo de dias úteis é usado em prazos de contratos, entregas,
+processos administrativos, planejamento de projetos e rotinas empresariais.
+</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>Sábado conta como dia útil?</h3>
+<p>
+Na maioria dos casos, não. O cálculo padrão considera apenas segunda a sexta-feira.
+</p>
+
+<h3>Feriados entram no cálculo?</h3>
+<p>
+Esta calculadora considera apenas fins de semana. Feriados podem variar por região.
+</p>
+
+<h3>Por que calcular dias úteis?</h3>
+<p>
+Muitos prazos legais e administrativos são definidos em dias úteis,
+por isso esse cálculo é muito comum.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-dias-uteis/", 3);
+</script>
+
+</body>
+</html>
