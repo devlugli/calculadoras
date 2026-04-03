@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calcbrazil.com/sitemap.xml
