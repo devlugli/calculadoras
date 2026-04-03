@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quanto Posso Financiar um Carro? | CalcBrazil</title>
+
+<meta name="description" content="Descubra quanto você pode financiar em um carro com base na sua renda, entrada, juros e prazo.">
+
+<link rel="canonical" href="https://calcbrazil.com/guias/quanto-posso-financiar-um-carro/">
+
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Simulador de Financiamento de Carro",
+ "url": "https://calcbrazil.com/guias/quanto-posso-financiar-um-carro/",
+ "applicationCategory": "CalculatorApplication",
+ "operatingSystem": "Any",
+ "inLanguage": "pt-BR"
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Quanto Posso Financiar um Carro?</h1>
+
+<p class="descricao">
+Descubra quanto você pode financiar em um carro com base na sua renda mensal,
+entrada disponível, taxa de juros e prazo.
+</p>
+
+<div class="campo">
+<label>Renda mensal (R$)</label>
+<input id="renda" type="number" value="5000">
+</div>
+
+<div class="campo">
+<label>Entrada (R$)</label>
+<input id="entrada" type="number" value="10000">
+</div>
+
+<div class="campo">
+<label>Juros ao mês (%)</label>
+<input id="juros" type="number" value="1.8">
+</div>
+
+<div class="campo">
+<label>Prazo (meses)</label>
+<input id="prazo" type="number" value="48">
+</div>
+
+<div class="campo">
+<label>% da renda para parcela</label>
+<input id="percentual" type="number" value="30">
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+
+<div class="resumo-topo-titulo" id="tituloResultado"></div>
+
+<div class="resumo-topo-valor" id="valorResultado"></div>
+
+<div class="resumo-topo-texto" id="textoResultado"></div>
+
+</div>
+
+</div>
+
+
+<section class="seo">
+
+<h2>Como funciona esta simulação</h2>
+
+<p>
+Esta calculadora estima quanto você poderia financiar considerando sua renda,
+percentual da renda destinado à parcela, taxa de juros e prazo.
+</p>
+
+<h2>Importante</h2>
+
+<p>
+Esta é apenas uma simulação inicial. Bancos podem usar critérios diferentes
+como score de crédito, entrada mínima e análise de perfil.
+</p>
+
+</section>
+
+
+<section id="calculadorasPopulares" class="seo"></section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+
+<script src="../../assets/js/populares.js"></script>
+<script src="../../assets/js/relacionadas.js"></script>
+
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasPopulares();
+renderizarCalculadorasRelacionadas("/guias/quanto-posso-financiar-um-carro/");
+</script>
+
+</body>
+</html>

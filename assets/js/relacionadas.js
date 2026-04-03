@@ -184,7 +184,44 @@ const CALCULADORAS = [
     titulo: "Calculadora de Idade de Cachorro",
     descricao: "Descubra a idade humana equivalente do seu cachorro.",
     categoria: "Saúde"
-  }
+  },
+
+  {
+  url: "/calculadoras-financeiras/",
+  titulo: "Calculadoras Financeiras",
+  descricao: "Veja todas as calculadoras de finanças e negócios.",
+  categoria: "Categoria" 
+},
+{
+  url: "/calculadoras-matematica/",
+  titulo: "Calculadoras de Matemática",
+  descricao: "Veja todas as calculadoras de matemática em um só lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-financeiras/",
+  titulo: "Calculadoras Financeiras",
+  descricao: "Veja todas as calculadoras de finanças e negócios em um só lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-datas/",
+  titulo: "Calculadoras de Datas",
+  descricao: "Veja todas as calculadoras de datas em um só lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-saude/",
+  titulo: "Calculadoras de Saúde",
+  descricao: "Veja todas as calculadoras de saúde em um só lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-combustivel/",
+  titulo: "Calculadoras de Combustível",
+  descricao: "Veja todas as calculadoras de combustível em um só lugar.",
+  categoria: "Categoria"
+}
 ];
 
 function normalizarUrl(url) {
