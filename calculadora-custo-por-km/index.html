@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Custo por KM | CalcBrazil</title>
+
+<meta name="description" content="Calcule quanto custa rodar 1 km com seu carro. Informe o preço do combustível e o consumo em km por litro.">
+
+<link rel="canonical" href="https://calcbrazil.com/calculadora-custo-por-km/">
+<link rel="icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Calculadora de Custo por KM">
+<meta property="og:description" content="Descubra quanto custa rodar 1 km com seu carro.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-custo-por-km/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Calculadora de Custo por KM</h1>
+
+<p class="descricao">
+Descubra quanto custa rodar 1 quilômetro com seu carro com base no preço do combustível e no consumo em km por litro.
+</p>
+
+<p class="selo">carro • combustível • custo por km</p>
+
+<div class="campo">
+<label for="precoCombustivel">Preço do combustível (R$ por litro)</label>
+<input id="precoCombustivel" type="number" step="0.01" value="6.79" inputmode="decimal">
+</div>
+
+<div class="campo">
+<label for="consumo">Consumo do carro (km por litro)</label>
+<input id="consumo" type="number" step="0.01" value="12" inputmode="decimal">
+</div>
+
+<button type="button" onclick="calcular()">Calcular</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Como calcular o custo por km?</h2>
+
+<p>
+Para calcular quanto custa rodar 1 km, basta dividir o preço do combustível pelo consumo do veículo em quilômetros por litro.
+</p>
+
+<h2>Fórmula do custo por quilômetro</h2>
+
+<p>
+A fórmula é simples: custo por km = preço do combustível ÷ consumo em km por litro.
+</p>
+
+<h2>Para que serve esse cálculo?</h2>
+
+<p>
+Esse cálculo ajuda a comparar veículos, planejar viagens, estimar gastos com deslocamento e entender melhor o custo de uso do carro.
+</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>O que é custo por km?</h3>
+<p>
+É o valor aproximado gasto em combustível para rodar 1 quilômetro.
+</p>
+
+<h3>Esse cálculo inclui manutenção e seguro?</h3>
+<p>
+Não. Esta calculadora considera apenas o custo do combustível.
+</p>
+
+<h3>Posso usar álcool ou gasolina?</h3>
+<p>
+Sim. Basta informar o preço do combustível utilizado e o consumo correspondente do veículo.
+</p>
+
+</section>
+
+<section id="calculadorasRelacionadas" class="seo"></section>
+
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+
+<script>
+renderizarCalculadorasRelacionadas("/calculadora-custo-por-km/", 3);
+</script>
+
+</body>
+</html>
