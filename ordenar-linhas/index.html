@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordenar Linhas Online Grátis | CalcBrazil</title>
+<meta name="description" content="Ordene linhas online grátis em ordem alfabética crescente ou decrescente. Ideal para listas, palavras-chave, nomes e bases de texto.">
+<link rel="canonical" href="https://calcbrazil.com/ordenar-linhas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Ordenar Linhas Online Grátis | CalcBrazil">
+<meta property="og:description" content="Organize linhas em ordem alfabética crescente ou decrescente com uma ferramenta rápida e gratuita.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/ordenar-linhas/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Ordenar Linhas</h1>
+<p class="descricao">Organize linhas em ordem alfabética crescente ou decrescente para limpar listas e bases de texto.</p>
+<p class="selo">Texto • ordenar linhas • alfabética • listas • produtividade</p>
+<div class="campo">
+<label for="linhasTexto">Linhas para ordenar</label>
+<textarea id="linhasTexto" class="texto-area" rows="10" placeholder="Cole aqui as linhas que você quer ordenar."></textarea>
+</div>
+<div class="campo">
+<label for="ordemLinhas">Ordem</label>
+<select id="ordemLinhas">
+  <option value="asc">A a Z</option>
+  <option value="desc">Z a A</option>
+</select>
+</div>
+<button type="button" onclick="ordenarLinhas()">Ordenar linhas</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="resultado-texto-box">
+  <div class="resultado-texto-header">
+    <strong>Linhas ordenadas</strong>
+    <span id="copyFeedback" class="copy-feedback"></span>
+  </div>
+  <textarea id="linhasOrdenadas" class="texto-area resultado-texto" rows="10" readonly></textarea>
+  <div class="acoes-texto">
+    <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar resultado</button>
+  </div>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve ordenar linhas?</h2>
+<p>Essa ferramenta ajuda a colocar listas em ordem alfabética para facilitar revisão, comparação, limpeza de base e organização de conteúdo.</p>
+<h2>Que tipo de linha pode ser ordenada?</h2>
+<p>Você pode ordenar nomes, palavras-chave, produtos, cidades, URLs, e-mails, comandos e qualquer lista em que cada item esteja em uma linha.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Ela é útil ao revisar planilhas exportadas, listas para SEO, conjuntos de termos, nomes de clientes, itens de inventário e materiais de apoio.</p>
+</section>
+<section class="seo">
+<h2>Mais ferramentas de texto</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/removedor-de-linhas-duplicadas/">
+    <span class="titulo-resultado">Texto</span>
+    <strong>Removedor de Linhas Duplicadas</strong>
+    <span>Elimine linhas repetidas automaticamente.</span>
+  </a>
+  <a class="card-resultado card-link" href="/localizar-e-substituir/">
+    <span class="titulo-resultado">Texto</span>
+    <strong>Localizar e Substituir</strong>
+    <span>Troque termos e trechos de forma rápida.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-texto/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas de Texto</strong>
+    <span>Veja todas as ferramentas de texto publicadas.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conversor de Texto Online Grátis | CalcBrazil</title>
+
+<meta name="description" content="Converta texto para maiúsculas, minúsculas, capitalizado e formato de título com uma ferramenta online grátis e rápida.">
+
+<link rel="canonical" href="https://calcbrazil.com/converter-de-texto/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+
+<meta property="og:title" content="Conversor de Texto Online Grátis | CalcBrazil">
+<meta property="og:description" content="Transforme texto em maiúsculas, minúsculas, capitalizado e título rapidamente.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/converter-de-texto/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<p><a href="/">← Voltar para a página inicial</a></p>
+
+<h1>Conversor de Texto</h1>
+
+<p class="descricao">
+Transforme rapidamente um texto em maiúsculas, minúsculas, capitalizado ou formato de título.
+</p>
+
+<p class="selo">Texto • maiúsculas • minúsculas • capitalização • conversão instantânea</p>
+
+<div class="campo">
+<label for="textoOriginal">Texto original</label>
+<textarea id="textoOriginal" class="texto-area" rows="9" placeholder="Digite ou cole o texto que você quer converter."></textarea>
+</div>
+
+<div class="campo">
+<label for="modoConversao">Modo de conversão</label>
+<select id="modoConversao">
+  <option value="maiusculas">Tudo em maiúsculas</option>
+  <option value="minusculas">Tudo em minúsculas</option>
+  <option value="capitalizado">Capitalizar cada palavra</option>
+  <option value="frase">Primeira letra da frase</option>
+</select>
+</div>
+
+<button type="button" onclick="converterTexto()">Converter texto</button>
+
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+
+<div class="resultado-texto-box">
+  <div class="resultado-texto-header">
+    <strong>Texto convertido</strong>
+    <span id="copyFeedback" class="copy-feedback"></span>
+  </div>
+  <textarea id="textoConvertido" class="texto-area resultado-texto" rows="8" readonly></textarea>
+  <div class="acoes-texto">
+    <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar resultado</button>
+  </div>
+</div>
+
+</div>
+
+<section class="seo">
+
+<h2>Para que serve um conversor de texto?</h2>
+<p>
+Essa ferramenta ajuda a padronizar letras para títulos, legendas, chamadas, documentos, colagens
+em sistemas e ajustes rápidos de revisão.
+</p>
+
+<h2>Quais formatos você pode usar?</h2>
+<p>
+Você pode transformar o texto em maiúsculas, minúsculas, capitalizado palavra por palavra ou
+com a primeira letra da frase em destaque.
+</p>
+
+<h2>Quando essa ferramenta é útil?</h2>
+<p>
+O conversor de texto é útil para SEO, social media, edição de documentos, revisão de conteúdo,
+formatação de títulos e organização de textos no dia a dia.
+</p>
+
+</section>
+
+<section class="seo">
+<h2>Mais ferramentas de texto</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/contador-de-caracteres/">
+    <span class="titulo-resultado">Texto</span>
+    <strong>Contador de Caracteres</strong>
+    <span>Conte caracteres, palavras e linhas rapidamente.</span>
+  </a>
+  <a class="card-resultado card-link" href="/removedor-de-espacos/">
+    <span class="titulo-resultado">Texto</span>
+    <strong>Removedor de Espaços</strong>
+    <span>Limpe espaços extras sem esforço.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-texto/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas de Texto</strong>
+    <span>Veja todas as ferramentas de texto publicadas.</span>
+  </a>
+</div>
+</section>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
