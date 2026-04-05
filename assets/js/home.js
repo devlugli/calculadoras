@@ -37,7 +37,17 @@ const homeTools = [
   { name: "Gerador de Telefone", url: "./gerador-de-telefone/" },
   { name: "Gerador de Nome", url: "./gerador-de-nome/" },
   { name: "Gerador de Empresa", url: "./gerador-de-empresa/" },
-  { name: "Gerador de Lorem Ipsum", url: "./gerador-de-lorem-ipsum/" }
+  { name: "Gerador de Lorem Ipsum", url: "./gerador-de-lorem-ipsum/" },
+  { name: "Número por Extenso", url: "./numero-por-extenso/" },
+  { name: "Valor por Extenso", url: "./valor-por-extenso/" },
+  { name: "Conversor de Números Romanos", url: "./conversor-de-numeros-romanos/" },
+  { name: "Porcentagem para Decimal", url: "./porcentagem-para-decimal/" },
+  { name: "Decimal para Porcentagem", url: "./decimal-para-porcentagem/" },
+  { name: "Horas para Minutos", url: "./horas-para-minutos/" },
+  { name: "Minutos para Horas", url: "./minutos-para-horas/" },
+  { name: "Dias para Horas", url: "./dias-para-horas/" },
+  { name: "Anos para Meses", url: "./anos-para-meses/" },
+  { name: "Meses para Anos", url: "./meses-para-anos/" }
 ];
 
 const normalizeText = (value) =>

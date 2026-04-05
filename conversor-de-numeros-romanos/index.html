@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de Números Romanos Online | CalcBrazil</title>
+<meta name="description" content="Converta números decimais para romanos e romanos para decimal online grátis.">
+<link rel="canonical" href="https://calcbrazil.com/conversor-de-numeros-romanos/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Conversor de Números Romanos Online | CalcBrazil">
+<meta property="og:description" content="Transforme números decimais em romanos e romanos em decimal.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/conversor-de-numeros-romanos/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Conversor de Números Romanos</h1>
+<p class="descricao">Converta números decimais para romanos e romanos para decimal de forma rápida.</p>
+<p class="selo">Conversão • romanos • números • estudos • geração instantânea</p>
+<div class="campo">
+<label for="modoRomano">Tipo de conversão</label>
+<select id="modoRomano">
+  <option value="decimal-romano">Decimal para romano</option>
+  <option value="romano-decimal">Romano para decimal</option>
+</select>
+</div>
+<div class="campo">
+<label for="valorRomano">Valor</label>
+<input id="valorRomano" type="text" value="2026">
+</div>
+<button type="button" onclick="converterRomano()">Converter</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">MMXXVI</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">Escolha o tipo de conversão e informe um valor válido.</div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar resultado</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um conversor de números romanos?</h2>
+<p>Essa ferramenta ajuda em estudos, datas, capítulos, nomes de eventos e qualquer situação em que seja útil converter entre decimal e algarismos romanos.</p>
+</section>
+<section class="seo">
+<h2>Mais conversores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/numero-por-extenso/"><span class="titulo-resultado">Texto</span><strong>Número por Extenso</strong><span>Converta números inteiros em texto escrito.</span></a>
+  <a class="card-resultado card-link" href="/porcentagem-para-decimal/"><span class="titulo-resultado">Porcentagem</span><strong>Porcentagem para Decimal</strong><span>Transforme porcentagens em valor decimal.</span></a>
+  <a class="card-resultado card-link" href="/conversores/"><span class="titulo-resultado">Coleção</span><strong>Conversores</strong><span>Veja todos os conversores publicados no portal.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script>renderizarCalculadorasPopulares();</script>
+<script src="../assets/js/conversores.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
