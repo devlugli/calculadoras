@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de CPF Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere CPF válido online grátis para testes, desenvolvimento e homologação. Ferramenta rápida com opção de máscara.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-cpf/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de CPF Online Grátis | CalcBrazil">
+<meta property="og:description" content="Gere CPFs válidos para testes de forma rápida e gratuita.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-cpf/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de CPF</h1>
+<p class="descricao">Gere CPFs válidos para testes, desenvolvimento e ambientes de homologação.</p>
+<p class="selo">CPF • documentos • testes • QA • geração instantânea</p>
+<div class="campo">
+<label for="cpfComMascara">Formato do CPF</label>
+<select id="cpfComMascara">
+  <option value="sim">Com máscara</option>
+  <option value="nao">Sem máscara</option>
+</select>
+</div>
+<button type="button" onclick="gerarCpf()">Gerar CPF</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar CPF</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de CPF?</h2>
+<p>Essa ferramenta ajuda a criar CPFs matematicamente válidos para testes em formulários, sistemas, APIs e fluxos de cadastro.</p>
+<h2>O CPF gerado é válido?</h2>
+<p>Sim. O número é gerado com dígitos verificadores corretos, mas deve ser usado apenas para fins de teste e desenvolvimento.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use ao validar campos de cadastro, montar massa de testes, simular cenários e preencher ambientes de homologação.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-cnpj/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CNPJ</strong>
+    <span>Crie CNPJs válidos para desenvolvimento e QA.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil fictício completo com dados básicos.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

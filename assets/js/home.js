@@ -22,7 +22,12 @@ const homeTools = [
   { name: "Removedor de Quebras de Linha", url: "./removedor-de-quebras-de-linha/" },
   { name: "Removedor de Linhas Duplicadas", url: "./removedor-de-linhas-duplicadas/" },
   { name: "Ordenar Linhas", url: "./ordenar-linhas/" },
-  { name: "Localizar e Substituir", url: "./localizar-e-substituir/" }
+  { name: "Localizar e Substituir", url: "./localizar-e-substituir/" },
+  { name: "Gerador de CPF", url: "./gerador-de-cpf/" },
+  { name: "Gerador de CNPJ", url: "./gerador-de-cnpj/" },
+  { name: "Gerador de UUID", url: "./gerador-de-uuid/" },
+  { name: "Gerador de Senha", url: "./gerador-de-senha/" },
+  { name: "Gerador de Pessoa", url: "./gerador-de-pessoa/" }
 ];
 
 const normalizeText = (value) =>

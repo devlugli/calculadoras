@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de CNPJ Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere CNPJ válido online grátis para testes, desenvolvimento e homologação. Ferramenta rápida com opção de máscara.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-cnpj/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de CNPJ Online Grátis | CalcBrazil">
+<meta property="og:description" content="Gere CNPJs válidos para testes de forma rápida e gratuita.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-cnpj/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de CNPJ</h1>
+<p class="descricao">Gere CNPJs válidos para testes, desenvolvimento, integrações e homologação.</p>
+<p class="selo">CNPJ • documentos • testes • sistemas • geração instantânea</p>
+<div class="campo">
+<label for="cnpjComMascara">Formato do CNPJ</label>
+<select id="cnpjComMascara">
+  <option value="sim">Com máscara</option>
+  <option value="nao">Sem máscara</option>
+</select>
+</div>
+<button type="button" onclick="gerarCnpj()">Gerar CNPJ</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar CNPJ</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de CNPJ?</h2>
+<p>Essa ferramenta ajuda a criar CNPJs válidos para testes de cadastros, APIs, ERPs, formulários empresariais e fluxos de homologação.</p>
+<h2>O CNPJ gerado é válido?</h2>
+<p>Sim. O número é gerado com dígitos verificadores consistentes, mas deve ser usado apenas em cenários de teste e desenvolvimento.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use ao testar campos empresariais, montar massa de dados, validar integrações e simular registros de pessoa jurídica.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-cpf/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CPF</strong>
+    <span>Crie CPFs válidos para desenvolvimento e QA.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil fictício completo com dados básicos.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

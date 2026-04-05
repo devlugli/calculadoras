@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Senha Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere senhas fortes online grátis com letras, números e símbolos. Ajuste o tamanho e crie combinações seguras em segundos.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-senha/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Senha Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie senhas fortes com tamanho personalizado e combinações seguras.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-senha/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Senha</h1>
+<p class="descricao">Crie senhas fortes com letras, números e símbolos, ajustando o tamanho em poucos cliques.</p>
+<p class="selo">Senha • segurança • desenvolvimento • acesso • geração instantânea</p>
+<div class="campo">
+<label for="tamanhoSenha">Tamanho da senha</label>
+<select id="tamanhoSenha">
+  <option value="8">8 caracteres</option>
+  <option value="12" selected>12 caracteres</option>
+  <option value="16">16 caracteres</option>
+  <option value="20">20 caracteres</option>
+</select>
+</div>
+<div class="campo">
+<label for="perfilSenha">Perfil da senha</label>
+<select id="perfilSenha">
+  <option value="completo">Letras, números e símbolos</option>
+  <option value="sem-simbolos">Letras e números</option>
+  <option value="numerica">Apenas números</option>
+</select>
+</div>
+<button type="button" onclick="gerarSenha()">Gerar senha</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar senha</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de senha?</h2>
+<p>Essa ferramenta ajuda a criar senhas fortes para contas, sistemas, ambientes de teste e uso pessoal ou profissional.</p>
+<h2>Como a senha é montada?</h2>
+<p>Você escolhe o tamanho e o perfil desejado. O gerador combina caracteres aleatórios conforme a opção selecionada.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use ao criar acessos, testar fluxos de autenticação, montar credenciais temporárias e aumentar a segurança de contas.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-uuid/">
+    <span class="titulo-resultado">Desenvolvimento</span>
+    <strong>Gerador de UUID</strong>
+    <span>Crie identificadores únicos rapidamente.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil fictício completo com dados básicos.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

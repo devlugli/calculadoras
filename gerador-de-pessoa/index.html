@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Pessoa Fictícia Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere pessoa fictícia online grátis com nome, e-mail, telefone, CPF e dados básicos para testes e desenvolvimento.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-pessoa/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Pessoa Fictícia Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie um perfil fictício com nome, documento, e-mail e telefone para testes.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-pessoa/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Pessoa Fictícia</h1>
+<p class="descricao">Monte um perfil fictício com nome, CPF, e-mail, telefone e estado para testes de cadastro e homologação.</p>
+<p class="selo">Pessoa fictícia • dados de teste • cadastro • QA • geração instantânea</p>
+<div class="campo">
+<label for="generoPessoa">Perfil</label>
+<select id="generoPessoa">
+  <option value="qualquer">Aleatório</option>
+  <option value="feminino">Feminino</option>
+  <option value="masculino">Masculino</option>
+</select>
+</div>
+<button type="button" onclick="gerarPessoa()">Gerar pessoa</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="resultado-grid texto-metricas">
+  <div class="card-resultado">
+    <span class="titulo-resultado">CPF</span>
+    <strong id="resultadoCpf">-</strong>
+    <span>Documento válido para cenários de teste.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">E-mail</span>
+    <strong id="resultadoEmail">-</strong>
+    <span>Endereço gerado automaticamente.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Telefone</span>
+    <strong id="resultadoTelefone">-</strong>
+    <span>Número fictício em formato brasileiro.</span>
+  </div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarPessoa()">Copiar perfil</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de pessoa?</h2>
+<p>Essa ferramenta ajuda a montar perfis fictícios para testes de cadastro, formulários, CRM, e-commerce, apps e ambientes de homologação.</p>
+<h2>Quais dados são gerados?</h2>
+<p>O gerador cria nome, e-mail, telefone, estado e CPF válido para uso em cenários de desenvolvimento e QA.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use ao criar massa de teste, validar campos, simular usuários e acelerar o preenchimento de ambientes não produtivos.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-cpf/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CPF</strong>
+    <span>Crie CPFs válidos para desenvolvimento e QA.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-cnpj/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CNPJ</strong>
+    <span>Crie CNPJs válidos para sistemas e testes.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
