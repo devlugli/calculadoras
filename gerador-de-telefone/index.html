@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Telefone Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere telefone fictício em formato brasileiro para testes de cadastro, WhatsApp, CRM e homologação.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-telefone/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Telefone Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie telefone fictício com DDD brasileiro para formulários e testes.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-telefone/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Telefone</h1>
+<p class="descricao">Gere telefone fictício com DDD brasileiro para cadastros, CRM, apps e testes de contato.</p>
+<p class="selo">Telefone • contato • cadastro • QA • geração instantânea</p>
+<div class="campo">
+<label for="tipoTelefone">Tipo</label>
+<select id="tipoTelefone">
+  <option value="celular">Celular</option>
+  <option value="fixo">Fixo</option>
+</select>
+</div>
+<button type="button" onclick="gerarTelefone()">Gerar telefone</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar telefone</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de telefone?</h2>
+<p>Essa ferramenta ajuda a simular números brasileiros em formulários, CRMs, sistemas de suporte, chat e integração com WhatsApp.</p>
+<h2>O número gerado é real?</h2>
+<p>Não. Ele é fictício e destinado a testes, demonstrações e desenvolvimento.</p>
+<h2>Quais formatos são gerados?</h2>
+<p>Você pode gerar número celular ou fixo com DDD em formato brasileiro.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-email/">
+    <span class="titulo-resultado">Contato</span>
+    <strong>Gerador de E-mail</strong>
+    <span>Crie e-mails fictícios para completar perfis de teste.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil completo com documento, e-mail e telefone.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

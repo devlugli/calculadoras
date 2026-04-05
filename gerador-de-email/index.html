@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de E-mail Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere e-mails fictícios online grátis para cadastro, QA, desenvolvimento e homologação.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-email/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de E-mail Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie e-mails fictícios em segundos para testes e formulários.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-email/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de E-mail</h1>
+<p class="descricao">Gere endereços de e-mail fictícios para cadastro, homologação e cenários de teste.</p>
+<p class="selo">E-mail • cadastro • QA • teste • geração instantânea</p>
+<div class="campo">
+<label for="dominioEmail">Domínio</label>
+<select id="dominioEmail">
+  <option value="teste.com">teste.com</option>
+  <option value="mailinator.com">mailinator.com</option>
+  <option value="exemplo.com.br">exemplo.com.br</option>
+</select>
+</div>
+<button type="button" onclick="gerarEmail()">Gerar e-mail</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar e-mail</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de e-mail?</h2>
+<p>Essa ferramenta ajuda a preencher rapidamente campos de e-mail em formulários, cadastros, CRMs, apps e cenários de teste.</p>
+<h2>O endereço gerado existe de verdade?</h2>
+<p>Não necessariamente. Ele é criado para uso fictício em desenvolvimento, homologação e QA.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use para montar massa de teste, simular usuários e acelerar o preenchimento de formulários.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-telefone/">
+    <span class="titulo-resultado">Contato</span>
+    <strong>Gerador de Telefone</strong>
+    <span>Crie telefone fictício em formato brasileiro.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil completo com documento e contato.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

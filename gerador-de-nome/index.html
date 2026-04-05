@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Nome Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere nomes online grátis para testes, personagens, exemplos e cadastros fictícios.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-nome/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Nome Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie nomes aleatórios para testes, personagens e perfis fictícios.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-nome/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Nome</h1>
+<p class="descricao">Gere nomes aleatórios para perfis fictícios, personagens, formulários e cenários de teste.</p>
+<p class="selo">Nome • perfil • cadastro • teste • geração instantânea</p>
+<div class="campo">
+<label for="perfilNome">Perfil</label>
+<select id="perfilNome">
+  <option value="qualquer">Aleatório</option>
+  <option value="feminino">Feminino</option>
+  <option value="masculino">Masculino</option>
+</select>
+</div>
+<button type="button" onclick="gerarNome()">Gerar nome</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar nome</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de nome?</h2>
+<p>Essa ferramenta ajuda a preencher cadastros, criar personagens, montar massa de teste e gerar exemplos de perfis rapidamente.</p>
+<h2>Os nomes são reais?</h2>
+<p>São combinações fictícias inspiradas em nomes brasileiros comuns e servem para fins de teste e criatividade.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use para cadastros, mockups, demos, jogos, apresentações e massa de dados não produtiva.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-pessoa/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Pessoa</strong>
+    <span>Monte um perfil completo a partir de um nome gerado.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-email/">
+    <span class="titulo-resultado">Contato</span>
+    <strong>Gerador de E-mail</strong>
+    <span>Combine o nome com um e-mail fictício para cadastros.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Cartão de Crédito Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere números de cartão de crédito para testes com bandeira e formatação. Ferramenta útil para QA, desenvolvimento e homologação.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-cartao-de-credito/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Cartão de Crédito Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie números de cartão para testes com bandeira e máscara.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-cartao-de-credito/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Cartão de Crédito</h1>
+<p class="descricao">Gere números de cartão para testes com bandeira, validade e CVV simulados.</p>
+<p class="selo">Pagamento • QA • testes • cartão • geração instantânea</p>
+<div class="campo">
+<label for="bandeiraCartao">Bandeira</label>
+<select id="bandeiraCartao">
+  <option value="visa">Visa</option>
+  <option value="mastercard">Mastercard</option>
+  <option value="amex">American Express</option>
+</select>
+</div>
+<div class="campo">
+<label for="cartaoComMascara">Formato</label>
+<select id="cartaoComMascara">
+  <option value="sim">Com espaços</option>
+  <option value="nao">Sem espaços</option>
+</select>
+</div>
+<button type="button" onclick="gerarCartao()">Gerar cartão</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="resultado-grid texto-metricas">
+  <div class="card-resultado">
+    <span class="titulo-resultado">Validade</span>
+    <strong id="resultadoValidade">-</strong>
+    <span>Mês e ano simulados.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">CVV</span>
+    <strong id="resultadoCvv">-</strong>
+    <span>Código de segurança fictício.</span>
+  </div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar cartão</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de cartão?</h2>
+<p>Essa ferramenta ajuda a validar campos de pagamento, formulários, gateways, mocks e fluxos de checkout em ambientes de teste.</p>
+<h2>Os números gerados são para uso real?</h2>
+<p>Não. Eles devem ser usados apenas para testes, demonstrações e desenvolvimento.</p>
+<h2>O que é gerado junto com o número?</h2>
+<p>Além do número principal, a ferramenta gera validade e CVV simulados para completar cenários de QA.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-conta-bancaria/">
+    <span class="titulo-resultado">Cadastro</span>
+    <strong>Gerador de Conta Bancária</strong>
+    <span>Crie agência, conta e banco para cenários de teste.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-cpf/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CPF</strong>
+    <span>Gere CPFs válidos para testes e homologação.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

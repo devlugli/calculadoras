@@ -27,7 +27,17 @@ const homeTools = [
   { name: "Gerador de CNPJ", url: "./gerador-de-cnpj/" },
   { name: "Gerador de UUID", url: "./gerador-de-uuid/" },
   { name: "Gerador de Senha", url: "./gerador-de-senha/" },
-  { name: "Gerador de Pessoa", url: "./gerador-de-pessoa/" }
+  { name: "Gerador de Pessoa", url: "./gerador-de-pessoa/" },
+  { name: "Gerador de Cartão de Crédito", url: "./gerador-de-cartao-de-credito/" },
+  { name: "Gerador de Conta Bancária", url: "./gerador-de-conta-bancaria/" },
+  { name: "Gerador de RG", url: "./gerador-de-rg/" },
+  { name: "Gerador de CNH", url: "./gerador-de-cnh/" },
+  { name: "Gerador de CEP", url: "./gerador-de-cep/" },
+  { name: "Gerador de E-mail", url: "./gerador-de-email/" },
+  { name: "Gerador de Telefone", url: "./gerador-de-telefone/" },
+  { name: "Gerador de Nome", url: "./gerador-de-nome/" },
+  { name: "Gerador de Empresa", url: "./gerador-de-empresa/" },
+  { name: "Gerador de Lorem Ipsum", url: "./gerador-de-lorem-ipsum/" }
 ];
 
 const normalizeText = (value) =>

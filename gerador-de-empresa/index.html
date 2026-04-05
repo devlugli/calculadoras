@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Empresa Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere empresa fictícia online grátis com nome, segmento, e-mail e CNPJ para testes e desenvolvimento.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-empresa/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Empresa Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie uma empresa fictícia com nome, segmento, e-mail e CNPJ para testes.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-empresa/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Empresa</h1>
+<p class="descricao">Gere empresa fictícia com nome, segmento, CNPJ e e-mail para CRM, ERP e cadastros B2B.</p>
+<p class="selo">Empresa • cadastro • B2B • QA • geração instantânea</p>
+<button type="button" onclick="gerarEmpresa()">Gerar empresa</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="resultado-grid texto-metricas">
+  <div class="card-resultado">
+    <span class="titulo-resultado">CNPJ</span>
+    <strong id="resultadoCnpj">-</strong>
+    <span>Documento válido para teste.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">E-mail</span>
+    <strong id="resultadoEmail">-</strong>
+    <span>Contato corporativo fictício.</span>
+  </div>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar empresa</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de empresa?</h2>
+<p>Essa ferramenta ajuda a simular clientes PJ, fornecedores e cadastros corporativos em CRMs, ERPs e apps B2B.</p>
+<h2>Quais dados são gerados?</h2>
+<p>O gerador cria nome empresarial, segmento, e-mail corporativo e CNPJ válido para testes.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use ao criar massa de teste para cadastros corporativos, painéis internos e integrações PJ.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-cnpj/">
+    <span class="titulo-resultado">Documentos</span>
+    <strong>Gerador de CNPJ</strong>
+    <span>Gere CNPJs válidos para homologação e QA.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-email/">
+    <span class="titulo-resultado">Contato</span>
+    <strong>Gerador de E-mail</strong>
+    <span>Monte e-mails fictícios para complementar o perfil da empresa.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

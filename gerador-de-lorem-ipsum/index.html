@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Lorem Ipsum Online Grátis | CalcBrazil</title>
+<meta name="description" content="Gere lorem ipsum online grátis com quantidade de parágrafos para layout, protótipos, design e desenvolvimento.">
+<link rel="canonical" href="https://calcbrazil.com/gerador-de-lorem-ipsum/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Gerador de Lorem Ipsum Online Grátis | CalcBrazil">
+<meta property="og:description" content="Crie texto lorem ipsum para layout, protótipos e conteúdo temporário.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/gerador-de-lorem-ipsum/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Lorem Ipsum</h1>
+<p class="descricao">Gere texto lorem ipsum para layouts, protótipos, wireframes, design e desenvolvimento.</p>
+<p class="selo">Conteúdo • layout • design • protótipo • geração instantânea</p>
+<div class="campo">
+<label for="quantidadeParagrafos">Quantidade de parágrafos</label>
+<input id="quantidadeParagrafos" type="number" min="1" max="10" value="3">
+</div>
+<button type="button" onclick="gerarLorem()">Gerar texto</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+<div class="resumo-topo-valor" id="resumoTopoValor"></div>
+<div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="campo">
+<label for="resultadoLorem">Texto gerado</label>
+<textarea id="resultadoLorem" rows="10" readonly></textarea>
+</div>
+<div class="acoes-texto">
+  <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar texto</button>
+  <span id="copyFeedback" class="copy-feedback"></span>
+</div>
+</div>
+<section class="seo">
+<h2>Para que serve um gerador de lorem ipsum?</h2>
+<p>Essa ferramenta ajuda a preencher layouts, mockups, landing pages, protótipos, wireframes e testes visuais com texto temporário.</p>
+<h2>Quando usar essa ferramenta?</h2>
+<p>Use sempre que precisar de conteúdo de exemplo para design, frontend, CMS, templates e demonstrações.</p>
+<h2>Posso escolher a quantidade de texto?</h2>
+<p>Sim. Você pode gerar múltiplos parágrafos e copiar tudo de uma vez.</p>
+</section>
+<section class="seo">
+<h2>Mais geradores</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/contador-de-caracteres/">
+    <span class="titulo-resultado">Texto</span>
+    <strong>Contador de Caracteres</strong>
+    <span>Conte letras, palavras e linhas do texto gerado.</span>
+  </a>
+  <a class="card-resultado card-link" href="/gerador-de-nome/">
+    <span class="titulo-resultado">Dados fictícios</span>
+    <strong>Gerador de Nome</strong>
+    <span>Complete layouts e exemplos com nomes aleatórios.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Geradores de Dados</strong>
+    <span>Veja todos os geradores publicados.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
