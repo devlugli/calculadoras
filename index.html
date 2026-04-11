@@ -12,6 +12,9 @@
 <meta property="og:image" content="https://calcbrazil.com/preview.png">
 <meta property="og:url" content="https://calcbrazil.com/">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,6 +44,7 @@
 </span>
 </a>
 <nav class="home-nav" aria-label="Navegação principal">
+<a href="#resolver">Resolver agora</a>
 <a href="#mais-usadas">Mais usadas</a>
 <a href="#tipos">Tipos de ferramenta</a>
 <a href="#categorias">Categorias</a>
@@ -48,6 +52,8 @@
 </nav>
 </header>
 <section class="hero hero-home">
+<div class="hero-home-grid">
+<div class="hero-home-copy">
 <p class="selo">Ferramentas online • grátis • rápidas • úteis no dia a dia</p>
 <span class="hero-eyebrow">Portal em expansão</span>
 <h1>Calculadoras, conversores, ferramentas de texto, geradores e guias online grátis</h1>
@@ -62,6 +68,7 @@ de texto, geradores de dados, conversores úteis e uma área de guias em expans�
 <input id="home-search-input" name="q" list="home-tools-list" type="search" placeholder="Ex.: porcentagem, IMC, dias entre datas, financiamento">
 <button type="submit">Buscar</button>
 </div>
+<div class="home-search-suggestions" id="home-search-suggestions" aria-live="polite" hidden></div>
 <datalist id="home-tools-list">
 <option value="Calculadora de Porcentagem"></option>
 <option value="Calculadora de Regra de Três"></option>
@@ -115,11 +122,42 @@ de texto, geradores de dados, conversores úteis e uma área de guias em expans�
 </datalist>
 <p class="home-search-help">Pesquise pelo nome da ferramenta e vá direto para a página mais próxima do que você precisa.</p>
 </form>
+<div class="hero-acoes">
+<a class="home-cta home-cta-primario" href="#resolver">Quero resolver agora</a>
+<a class="home-cta home-cta-secundario" href="./guias/">Explorar guias práticos</a>
+</div>
 <div class="hero-shortcuts" aria-label="Atalhos rápidos">
 <a href="#mais-usadas">Calcular</a>
 <a href="#tipos">Explorar</a>
 <a href="#categorias">Categorias</a>
 <a href="#guias">Guias</a>
+</div>
+</div>
+<aside class="hero-home-panel" aria-label="Destaques da plataforma">
+<div class="hero-panel-card hero-panel-card-featured">
+<span class="hero-panel-kicker">Mais procurado</span>
+<strong>Busque por problema, não só por nome</strong>
+<p>Digite algo como "desconto", "financiamento", "texto" ou "documentos" e encontre a página mais próxima do que precisa.</p>
+</div>
+<div class="hero-panel-list">
+<a class="hero-mini-card" href="./calculadora-porcentagem/">
+<span>Resposta rápida</span>
+<strong>Porcentagem</strong>
+</a>
+<a class="hero-mini-card" href="./calculadora-financiamento/">
+<span>Planejamento</span>
+<strong>Financiamento</strong>
+</a>
+<a class="hero-mini-card" href="./contador-de-caracteres/">
+<span>Texto e SEO</span>
+<strong>Contador de Caracteres</strong>
+</a>
+<a class="hero-mini-card" href="./gerador-de-cpf/">
+<span>Dados de teste</span>
+<strong>Gerador de CPF</strong>
+</a>
+</div>
+</aside>
 </div>
 </section>
 <section class="home-stats" aria-label="Números do portal">
@@ -138,6 +176,35 @@ de texto, geradores de dados, conversores úteis e uma área de guias em expans�
 <strong>100% grátis</strong>
 <p>Use as ferramentas de forma rápida e direta, sem custo para acessar os recursos.</p>
 </article>
+</section>
+<section class="home-section" id="resolver">
+<div class="home-section-head">
+<span class="home-kicker">Entradas rápidas</span>
+<h2>Resolva por objetivo</h2>
+<p>Em vez de navegar por categoria, escolha o tipo de tarefa que você quer destravar agora.</p>
+</div>
+<div class="home-grid home-grid-4 home-intents-grid">
+<a class="home-intent-card" href="./calculadoras-financeiras/">
+<span class="home-intent-icon" aria-hidden="true">%</span>
+<strong>Fazer contas de dinheiro</strong>
+<p>Desconto, juros, salário, comissão, markup, margem e preço de venda.</p>
+</a>
+<a class="home-intent-card" href="./calculadoras-datas/">
+<span class="home-intent-icon" aria-hidden="true">17</span>
+<strong>Calcular tempo e datas</strong>
+<p>Idade, dias entre datas, dias úteis, horários e conversões de tempo.</p>
+</a>
+<a class="home-intent-card" href="./ferramentas-texto/">
+<span class="home-intent-icon" aria-hidden="true">Aa</span>
+<strong>Limpar ou converter texto</strong>
+<p>Contar, ordenar, remover espaços, trocar conteúdo e trabalhar com HTML.</p>
+</a>
+<a class="home-intent-card" href="./geradores-dados/">
+<span class="home-intent-icon" aria-hidden="true">ID</span>
+<strong>Gerar dados para teste</strong>
+<p>CPF, CNPJ, RG, UUID, cartões, contas, contatos e perfis fictícios.</p>
+</a>
+</div>
 </section>
 <section class="home-section" id="mais-usadas">
 <div class="home-section-head">
@@ -407,6 +474,6 @@ ou no guia que faz mais sentido para o que precisa agora.
 </footer>
 </main>
 </div>
-<script src="./assets/js/home.js"></script>
+<script src="./assets/js/home-v2.js"></script>
 </body>
 </html>
