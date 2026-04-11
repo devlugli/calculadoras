@@ -47,6 +47,11 @@ de um investimento ou empréstimo.
 
 
 
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemploJuros(1000, 5, 12)">R$ 1.000 a 5% por 12</button>
+<button type="button" onclick="aplicarExemploJuros(2500, 2, 6)">R$ 2.500 a 2% por 6</button>
+<button type="button" onclick="aplicarExemploJuros(800, 1.5, 10)">R$ 800 a 1,5% por 10</button>
+</div>
 <div class="campo">
 <label for="capital">Capital inicial</label>
 <input id="capital" type="number" step="0.01" value="1000" inputmode="decimal">
@@ -84,6 +89,30 @@ de um investimento ou empréstimo.
 <strong id="valorMontante"></strong>
 </div>
 
+</div>
+
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado">
+<span class="titulo-resultado">Juros por periodo</span>
+<strong id="jurosPorPeriodo">R$ 0,00</strong>
+<span id="jurosPorPeriodoTexto">Quanto o capital rende em cada periodo informado.</span>
+</div>
+
+<div class="card-resultado">
+<span class="titulo-resultado">Capital inicial</span>
+<strong id="capitalResumo">R$ 0,00</strong>
+<span id="capitalResumoTexto">Valor usado como base para o calculo.</span>
+</div>
+
+<div class="card-resultado">
+<span class="titulo-resultado">Leitura rapida</span>
+<strong id="jurosResumoCurto">-</strong>
+<span id="jurosResumoCurtoTexto">Resumo simples para entender o resultado sem refazer a conta.</span>
+</div>
+</div>
+
+<div class="nota-resultado" id="jurosNotaResultado">
+Essa calculadora considera juros simples, ou seja, os juros incidem sempre sobre o capital inicial.
 </div>
 
 </div>
@@ -156,7 +185,7 @@ ao longo do tempo.
 
 <script src="../assets/js/populares.js"></script>
 <script src="../assets/js/relacionadas.js"></script>
-<script src="./script.js"></script>
+<script src="./script-v2.js"></script>
 
 <script>
     renderizarCalculadorasPopulares();

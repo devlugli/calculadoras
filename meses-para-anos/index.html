@@ -27,6 +27,12 @@ gtag('config', 'G-D1LTJL2BFV');
 <h1>Meses para Anos</h1>
 <p class="descricao">Converta meses em anos e entenda melhor a equivalência de tempo.</p>
 <p class="selo">Conversão • tempo • meses • anos • geração instantânea</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+  <button type="button" onclick="aplicarExemploMeses(6)">6 meses</button>
+  <button type="button" onclick="aplicarExemploMeses(12)">12 meses</button>
+  <button type="button" onclick="aplicarExemploMeses(18)">18 meses</button>
+  <button type="button" onclick="aplicarExemploMeses(24)">24 meses</button>
+</div>
 <div class="campo">
 <label for="mesesEntrada">Meses</label>
 <input id="mesesEntrada" type="number" step="1" value="18">
@@ -36,6 +42,23 @@ gtag('config', 'G-D1LTJL2BFV');
 <div class="resumo-topo-titulo">Resultado em anos</div>
 <div class="resumo-topo-valor" id="resumoTopoValor">1,5</div>
 <div class="resumo-topo-texto" id="resumoTopoTexto">Equivale a 1 ano(s) e 6 mês(es).</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+  <div class="card-resultado">
+    <span class="titulo-resultado">Anos completos</span>
+    <strong id="anosInteirosValor">1</strong>
+    <span id="anosInteirosTexto">Parte inteira do periodo convertido.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Meses restantes</span>
+    <strong id="mesesRestantesValor">6</strong>
+    <span id="mesesRestantesTexto">Meses que sobram apos fechar anos completos.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Leitura rapida</span>
+    <strong id="mesesLeituraRapida">1 ano e 6 meses</strong>
+    <span id="mesesLeituraRapidaTexto">Formato facil para idade, contrato e planejamento.</span>
+  </div>
 </div>
 <div class="acoes-texto">
   <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar resultado</button>
@@ -60,6 +83,6 @@ gtag('config', 'G-D1LTJL2BFV');
 <script src="../assets/js/populares.js"></script>
 <script>renderizarCalculadorasPopulares();</script>
 <script src="../assets/js/conversores.js"></script>
-<script src="./script.js"></script>
+<script src="./script-v2.js"></script>
 </body>
 </html>

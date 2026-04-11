@@ -974,6 +974,54 @@ select {
   box-shadow:0 14px 30px rgba(84, 55, 20, 0.10);
 }
 
+.atalhos-rapidos{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 18px;
+}
+
+.atalhos-rapidos button{
+  width:auto;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#fff;
+  color:var(--cb-accent-strong);
+  border:1px solid #d8d2c3;
+  box-shadow:none;
+}
+
+.atalhos-rapidos button:hover{
+  box-shadow:0 10px 22px rgba(84, 55, 20, 0.10);
+}
+
+.detalhes-resultado{
+  margin-top:18px;
+}
+
+.detalhes-resultado .card-resultado{
+  text-align:left;
+}
+
+.detalhes-resultado .card-resultado strong{
+  font-size:24px;
+}
+
+.detalhes-resultado .card-resultado span:last-child{
+  color:var(--cb-text-soft);
+  line-height:1.5;
+}
+
+.nota-resultado{
+  margin-top:16px;
+  padding:16px 18px;
+  border-radius:16px;
+  background:linear-gradient(180deg, #fff 0%, #f8f4eb 100%);
+  border:1px solid #eadfca;
+  color:var(--cb-text-soft);
+  line-height:1.6;
+}
+
 .texto-area{
   min-height:180px;
 }

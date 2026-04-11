@@ -31,6 +31,10 @@ gtag('config', 'G-D1LTJL2BFV');
 <label for="htmlOriginal">HTML original</label>
 <textarea id="htmlOriginal" class="texto-area" rows="9" placeholder="Cole aqui o HTML que você quer transformar em texto."></textarea>
 </div>
+<div class="atalhos-rapidos" aria-label="Acoes rapidas">
+  <button type="button" onclick="preencherExemploHtml()">Usar exemplo</button>
+  <button type="button" onclick="limparCamposHtml()">Limpar</button>
+</div>
 <button type="button" onclick="converterHtmlParaTexto()">Converter para texto</button>
 <div class="resumo-topo">
 <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
@@ -45,6 +49,23 @@ gtag('config', 'G-D1LTJL2BFV');
   <textarea id="textoExtraido" class="texto-area resultado-texto" rows="10" readonly></textarea>
   <div class="acoes-texto">
     <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar texto</button>
+  </div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+  <div class="card-resultado">
+    <span class="titulo-resultado">Palavras</span>
+    <strong id="contadorPalavras">0</strong>
+    <span id="contadorPalavrasTexto">Quantidade aproximada de palavras extraidas.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Linhas</span>
+    <strong id="contadorLinhas">0</strong>
+    <span id="contadorLinhasTexto">Boa referencia para revisar quebras e estrutura.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Leitura rapida</span>
+    <strong id="htmlStatus">Pronto</strong>
+    <span id="htmlStatusTexto">Cole o HTML para gerar texto limpo sem mexer no codigo original.</span>
   </div>
 </div>
 </div>
@@ -76,6 +97,6 @@ gtag('config', 'G-D1LTJL2BFV');
   </a>
 </div>
 </section>
-<script src="./script.js"></script>
+<script src="./script-v2.js"></script>
 </body>
 </html>

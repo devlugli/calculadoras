@@ -27,6 +27,10 @@ gtag('config', 'G-D1LTJL2BFV');
 <h1>Gerador de CPF</h1>
 <p class="descricao">Gere CPFs válidos para testes, desenvolvimento e ambientes de homologação.</p>
 <p class="selo">CPF • documentos • testes • QA • geração instantânea</p>
+<div class="atalhos-rapidos" aria-label="Acoes rapidas">
+  <button type="button" onclick="gerarCpf()">Gerar novo CPF</button>
+  <button type="button" onclick="copiarCpfSemMascara()">Copiar sem mascara</button>
+</div>
 <div class="campo">
 <label for="cpfComMascara">Formato do CPF</label>
 <select id="cpfComMascara">
@@ -39,6 +43,23 @@ gtag('config', 'G-D1LTJL2BFV');
 <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
 <div class="resumo-topo-valor" id="resumoTopoValor"></div>
 <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+  <div class="card-resultado">
+    <span class="titulo-resultado">Sem mascara</span>
+    <strong id="cpfSemMascaraValor">-</strong>
+    <span id="cpfSemMascaraTexto">Versao limpa para API, banco e automacao.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Formato visual</span>
+    <strong id="cpfFormatadoValor">-</strong>
+    <span id="cpfFormatadoTexto">Versao pronta para formulario e apresentacao.</span>
+  </div>
+  <div class="card-resultado">
+    <span class="titulo-resultado">Uso indicado</span>
+    <strong id="cpfUsoValor">Teste</strong>
+    <span id="cpfUsoTexto">Use somente em homologacao, QA e desenvolvimento.</span>
+  </div>
 </div>
 <div class="acoes-texto">
   <button type="button" class="botao-secundario" onclick="copiarResultado()">Copiar CPF</button>
@@ -88,6 +109,6 @@ gtag('config', 'G-D1LTJL2BFV');
 <section id="calculadorasPopulares" class="seo"></section>
 <script src="../assets/js/populares.js"></script>
 <script>renderizarCalculadorasPopulares();</script>
-<script src="./script.js"></script>
+<script src="./script-v2.js"></script>
 </body>
 </html>

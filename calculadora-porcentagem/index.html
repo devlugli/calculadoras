@@ -42,6 +42,13 @@
 
     <p class="selo">Cálculo instantâneo • porcentagem • aumentos • descontos</p>
 
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo('percentualDeValor', 10, 250)">10% de 250</button>
+      <button type="button" onclick="aplicarExemplo('percentualDeValor', 30, 1200)">30% de 1.200</button>
+      <button type="button" onclick="aplicarExemplo('valorRepresentaPercentual', 200, 50)">50 de 200</button>
+      <button type="button" onclick="aplicarExemplo('variacaoPercentual', 100, 120)">100 para 120</button>
+    </div>
+
     <div class="campo">
       <label for="tipoCalculo">Tipo de cálculo</label>
       <select id="tipoCalculo" onchange="trocarModo()">
@@ -93,6 +100,28 @@
       <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
       <div class="resumo-topo-valor" id="resumoTopoValor"></div>
       <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rapida</span>
+        <strong id="detalhePrincipal">-</strong>
+        <span id="detalhePrincipalTexto">Escolha um modo de calculo para ver o resumo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Conta usada</span>
+        <strong id="detalheFormula">-</strong>
+        <span id="detalheFormulaTexto">A formula aparece de forma simples para facilitar a conferencia.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Proximo passo</span>
+        <strong id="detalheProximoPasso">-</strong>
+        <span id="detalheProximoPassoTexto">Use o resultado para comparar preco, desconto, reajuste ou participacao.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultadoPercentual">
+      Troque o tipo de calculo acima para resolver rapidamente os casos mais comuns de porcentagem sem abrir outra pagina.
     </div>
 
   </div>
@@ -184,6 +213,6 @@
 renderizarCalculadorasRelacionadas("/calculadora-porcentagem/");
 </script>
 
-  <script src="./script.js"></script>
+  <script src="./script-v2.js"></script>
 </body>
 </html>
