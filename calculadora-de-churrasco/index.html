@@ -147,6 +147,23 @@
         window.location.href
       ].join("\n");
     }
+    async function copiarTextoFallback(texto) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(texto);
+        return true;
+      }
+      const textarea = document.createElement("textarea");
+      textarea.value = texto;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "absolute";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
+      const copiou = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return copiou;
+    }
     async function compartilharResultado() {
       const feedback = document.getElementById("compartilharFeedback");
       const texto = gerarTextoCompartilhamento();
@@ -159,13 +176,21 @@
           feedback.textContent = "Resultado pronto para compartilhar.";
           return;
         }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(texto);
+        if (await copiarTextoFallback(texto)) {
           feedback.textContent = "Resumo copiado. Agora é só colar no TikTok ou onde quiser.";
           return;
         }
         feedback.textContent = "Seu navegador não liberou o compartilhamento automático.";
       } catch (error) {
+        if (error && error.name !== "AbortError") {
+          try {
+            if (await copiarTextoFallback(texto)) {
+              feedback.textContent = "Compartilhamento direto não abriu, mas o resumo foi copiado.";
+              return;
+            }
+          } catch (copyError) {
+          }
+        }
         feedback.textContent = "Compartilhamento cancelado.";
       }
     }
@@ -173,8 +198,7 @@
       const feedback = document.getElementById("compartilharFeedback");
       const texto = gerarTextoCompartilhamento();
       try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(texto);
+        if (await copiarTextoFallback(texto)) {
           feedback.textContent = "Resultado copiado. Agora é só colar.";
           return;
         }
@@ -195,13 +219,21 @@
           feedback.textContent = "Link da calculadora compartilhado.";
           return;
         }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(window.location.href);
+        if (await copiarTextoFallback(window.location.href)) {
           feedback.textContent = "Link da calculadora copiado.";
           return;
         }
         feedback.textContent = "Seu navegador não liberou o compartilhamento automático.";
       } catch (error) {
+        if (error && error.name !== "AbortError") {
+          try {
+            if (await copiarTextoFallback(window.location.href)) {
+              feedback.textContent = "Compartilhamento direto não abriu, mas o link foi copiado.";
+              return;
+            }
+          } catch (copyError) {
+          }
+        }
         feedback.textContent = "Compartilhamento cancelado.";
       }
     }
