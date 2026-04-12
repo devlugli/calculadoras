@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Autonomia do Carro | CalcBrazil</title>
+  <meta name="description" content="Descubra quantos km seu carro pode rodar com um tanque cheio. Calcule autonomia a partir da capacidade do tanque e do consumo em km por litro.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-autonomia-do-carro/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Autonomia do Carro">
+  <meta property="og:description" content="Veja quantos km seu carro pode rodar com o tanque cheio a partir do consumo médio.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-autonomia-do-carro/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Autonomia do Carro</h1>
+    <p class="descricao">Descubra quantos quilômetros seu carro pode rodar com um tanque cheio usando a capacidade do tanque e o consumo médio.</p>
+    <p class="selo">carro • combustível • autonomia • km por litro</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(50, 11.5)">Tanque 50L e 11,5 km/L</button>
+      <button type="button" onclick="aplicarExemplo(55, 14.2)">Tanque 55L e 14,2 km/L</button>
+      <button type="button" onclick="aplicarExemplo(42, 9.8)">Tanque 42L e 9,8 km/L</button>
+    </div>
+
+    <div class="campo">
+      <label for="capacidadeTanque">Capacidade do tanque (litros)</label>
+      <input id="capacidadeTanque" type="number" value="50" step="0.01" inputmode="decimal">
+    </div>
+
+    <div class="campo">
+      <label for="consumoMedio">Consumo médio (km por litro)</label>
+      <input id="consumoMedio" type="number" value="11.5" step="0.01" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Autonomia estimada</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe tanque e consumo para estimar a autonomia.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Com meio tanque</span>
+        <strong id="meioTanque">-</strong>
+        <span id="meioTanqueTexto">Estimativa de alcance com metade da capacidade.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Reserva de 20%</span>
+        <strong id="reservaVinte">-</strong>
+        <span id="reservaVinteTexto">Distância aproximada para planejar com margem de segurança.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalheResumo">-</strong>
+        <span id="detalheResumoTexto">Resumo simples para trajetos urbanos e rodoviários.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultadoAutonomia">O resultado é uma estimativa. Terreno, trânsito, peso e estilo de condução podem alterar o consumo real.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Veja quantos km seu carro faz com um tanque</h2>
+    <p>Esta calculadora de autonomia do carro ajuda a responder uma dúvida comum antes de viajar ou abastecer: quantos quilômetros dá para rodar com o tanque cheio?</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular a autonomia do carro?</h2>
+    <p>Basta multiplicar a capacidade do tanque pelo consumo médio em km por litro. O resultado mostra a distância aproximada que o carro pode percorrer.</p>
+    <h2>Quando essa calculadora é útil?</h2>
+    <p>Ela é útil para planejar viagens, prever paradas para abastecimento, comparar veículos e entender melhor o consumo no uso diário.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Essa autonomia é exata?</h3>
+    <p>Não. O valor é uma estimativa baseada no consumo médio informado.</p>
+    <h3>Posso usar consumo urbano ou rodoviário?</h3>
+    <p>Sim. Basta informar o consumo médio que faz mais sentido para o seu uso.</p>
+    <h3>Por que mostrar autonomia com reserva?</h3>
+    <p>Para ajudar no planejamento sem depender do tanque quase vazio.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-km-por-litro/">
+        <span class="titulo-resultado">Combustível</span>
+        <strong>KM por Litro</strong>
+        <span>Descubra o consumo médio antes de calcular a autonomia.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadora-custo-por-km/">
+        <span class="titulo-resultado">Combustível</span>
+        <strong>Custo por KM</strong>
+        <span>Veja quanto custa rodar cada quilômetro com o seu carro.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadora-gasto-combustível-viagem/">
+        <span class="titulo-resultado">Combustível</span>
+        <strong>Gasto de Combustível em Viagem</strong>
+        <span>Planeje o custo total do deslocamento com base na distância.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-autonomia-do-carro/");
+  </script>
+</body>
+</html>
+
+
+

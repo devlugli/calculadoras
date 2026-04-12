@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Semanas Entre Datas | CalcBrazil</title>
+  <meta name="description" content="Descubra quantas semanas existem entre duas datas. Veja semanas completas, dias restantes e o total em dias de forma simples.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-semanas-entre-datas/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Semanas Entre Datas">
+  <meta property="og:description" content="Calcule quantas semanas existem entre duas datas e veja os dias restantes.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-semanas-entre-datas/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Semanas Entre Datas</h1>
+    <p class="descricao">Descubra quantas semanas completas existem entre duas datas e quantos dias sobram no intervalo.</p>
+    <p class="selo">datas • semanas • intervalo • calendário</p>
+
+    <div class="campo">
+      <label for="dataInicial">Data inicial</label>
+      <input id="dataInicial" type="date">
+    </div>
+
+    <div class="campo">
+      <label for="dataFinal">Data final</label>
+      <input id="dataFinal" type="date">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Semanas no período</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe duas datas para ver o intervalo em semanas.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Dias totais</span>
+        <strong id="diasTotais">-</strong>
+        <span id="diasTotaisTexto">Mostra o total em dias corridos entre as datas.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Dias restantes</span>
+        <strong id="diasRestantes">-</strong>
+        <span id="diasRestantesTexto">Sobras depois de separar as semanas completas.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalheResumo">-</strong>
+        <span id="detalheResumoTexto">Resumo útil para prazos, cronogramas e períodos letivos.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultadoSemanas">Esta página ajuda quando o intervalo em semanas faz mais sentido do que apenas em dias.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Veja quantas semanas existem entre duas datas</h2>
+    <p>Esta calculadora é útil para planejamento, cronogramas, contratos, organização de estudos e qualquer período em que semanas completas façam mais sentido.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular semanas entre datas?</h2>
+    <p>Primeiro calculamos a diferença total em dias. Depois dividimos esse intervalo por 7 para descobrir quantas semanas completas existem e quantos dias restam.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Essa página mostra semanas completas?</h3>
+    <p>Sim. Ela separa semanas completas e informa os dias restantes.</p>
+    <h3>Posso usar datas no passado ou no futuro?</h3>
+    <p>Sim. A calculadora funciona com qualquer par de datas válido.</p>
+    <h3>Ela substitui a calculadora de dias entre datas?</h3>
+    <p>Não. Ela complementa a leitura quando você quer enxergar o período em semanas.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-dias-entre-datas/">
+        <span class="titulo-resultado">Datas</span>
+        <strong>Dias Entre Datas</strong>
+        <span>Veja o mesmo intervalo medido em dias corridos.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadora-data-futura/">
+        <span class="titulo-resultado">Datas</span>
+        <strong>Calculadora de Data Futura</strong>
+        <span>Some ou subtraia dias, semanas, meses e anos a uma data-base.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadoras-datas/">
+        <span class="titulo-resultado">Categoria</span>
+        <strong>Calculadoras de Datas</strong>
+        <span>Explore mais ferramentas de datas, idade, horários e dias úteis.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-semanas-entre-datas/");
+  </script>
+</body>
+</html>
+
+
+

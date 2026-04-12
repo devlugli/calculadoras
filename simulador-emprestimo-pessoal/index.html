@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simulador de Empréstimo Pessoal Online | CalcBrazil</title>
+  <meta name="description" content="Simule um empréstimo pessoal e veja valor da parcela, total pago e juros aproximados. Ferramenta online para comparar cenários rapidamente.">
+
+  <link rel="canonical" href="https://calcbrazil.com/simulador-emprestimo-pessoal/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Simulador de Empréstimo Pessoal Online">
+  <meta property="og:description" content="Veja parcelas, total pago e juros antes de contratar um empréstimo pessoal.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/simulador-emprestimo-pessoal/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Simulador de Empréstimo Pessoal</h1>
+    <p class="descricao">Simule parcelas, total pago e custo em juros para comparar cenários antes de contratar um empréstimo pessoal.</p>
+    <p class="selo">finanças • empréstimo • parcelas • juros • simulação</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(5000, 3.49, 12)">R$ 5.000 em 12x</button>
+      <button type="button" onclick="aplicarExemplo(12000, 2.89, 24)">R$ 12.000 em 24x</button>
+      <button type="button" onclick="aplicarExemplo(20000, 2.19, 36)">R$ 20.000 em 36x</button>
+    </div>
+
+    <div class="campo">
+      <label for="valorEmprestimo">Valor do empréstimo (R$)</label>
+      <input id="valorEmprestimo" type="number" value="5000" step="0.01" inputmode="decimal">
+    </div>
+
+    <div class="campo">
+      <label for="taxaMensal">Taxa de juros ao mês (%)</label>
+      <input id="taxaMensal" type="number" value="3.49" step="0.01" inputmode="decimal">
+    </div>
+
+    <div class="campo">
+      <label for="parcelas">Número de parcelas</label>
+      <input id="parcelas" type="number" value="12" step="1" inputmode="numeric">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Parcela estimada</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para ver a simulação.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total pago</span>
+        <strong id="totalPago">-</strong>
+        <span id="totalPagoTexto">Soma de todas as parcelas no fim do período.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total em juros</span>
+        <strong id="totalJuros">-</strong>
+        <span id="totalJurosTexto">Diferença entre o valor emprestado e o valor total quitado.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalheResumo">-</strong>
+        <span id="detalheResumoTexto">Resumo simples para comparar cenários de prazo e taxa.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultadoEmprestimo">Esta simulação serve como referência inicial. Bancos e financeiras podem incluir tarifas e seguros.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Compare empréstimo pessoal antes de contratar</h2>
+    <p>Use este simulador de empréstimo pessoal para entender o tamanho da parcela, o total pago e o peso dos juros antes de fechar uma proposta.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como funciona a simulação de empréstimo pessoal?</h2>
+    <p>A conta usa um modelo de parcela fixa com base no valor emprestado, na taxa mensal e na quantidade de parcelas. Assim você consegue comparar cenários de forma rápida.</p>
+    <h2>Quando vale usar esse simulador?</h2>
+    <p>Ele é útil para organização financeira, comparação entre propostas de crédito, renegociação e avaliação do impacto da parcela no orçamento mensal.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>O valor da parcela é exato?</h3>
+    <p>Não necessariamente. Instituições financeiras podem aplicar tarifas, seguros e regras próprias.</p>
+    <h3>Posso simular empréstimo com taxa zero?</h3>
+    <p>Sim. Nesse caso, o valor total é dividido igualmente pelo número de parcelas.</p>
+    <h3>Essa página serve para empréstimo consignado?</h3>
+    <p>Serve como referência inicial para vários tipos de empréstimo com pagamento parcelado.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-financiamento/">
+        <span class="titulo-resultado">Finanças</span>
+        <strong>Calculadora de Financiamento</strong>
+        <span>Simule parcelas e total pago em financiamentos mais longos.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadora-juros-simples/">
+        <span class="titulo-resultado">Finanças</span>
+        <strong>Calculadora de Juros Simples</strong>
+        <span>Entenda melhor o peso dos juros em cada comparação.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadoras-financeiras/">
+        <span class="titulo-resultado">Categoria</span>
+        <strong>Calculadoras Financeiras</strong>
+        <span>Explore mais simuladores para juros, salário, precificação e vendas.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/simulador-emprestimo-pessoal/");
+  </script>
+</body>
+</html>
+
+

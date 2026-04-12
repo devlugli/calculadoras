@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Data Futura | CalcBrazil</title>
+  <meta name="description" content="Descubra qual será a data futura ou passada ao somar ou subtrair dias, semanas, meses e anos. Ferramenta prática para prazos e planejamento.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-data-futura/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Data Futura">
+  <meta property="og:description" content="Some ou subtraia dias, semanas, meses e anos para descobrir uma data futura ou passada.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-data-futura/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Data Futura</h1>
+    <p class="descricao">Descubra qual será a data depois de somar ou subtrair dias, semanas, meses ou anos a partir de uma data-base.</p>
+    <p class="selo">datas • prazo • calendário • planejamento</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(30, 'dias', 'somar')">Daqui a 30 dias</button>
+      <button type="button" onclick="aplicarExemplo(12, 'semanas', 'somar')">Daqui a 12 semanas</button>
+      <button type="button" onclick="aplicarExemplo(6, 'meses', 'subtrair')">6 meses atrás</button>
+    </div>
+
+    <div class="campo">
+      <label for="dataBase">Data-base</label>
+      <input id="dataBase" type="date">
+    </div>
+
+    <div class="campo">
+      <label for="operacao">Operação</label>
+      <select id="operacao">
+        <option value="somar">Somar</option>
+        <option value="subtrair">Subtrair</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="quantidade">Quantidade</label>
+      <input id="quantidade" type="number" value="30" step="1" inputmode="numeric">
+    </div>
+
+    <div class="campo">
+      <label for="unidade">Unidade</label>
+      <select id="unidade">
+        <option value="dias">Dias</option>
+        <option value="semanas">Semanas</option>
+        <option value="meses">Meses</option>
+        <option value="anos">Anos</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Data encontrada</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Escolha a data-base e o intervalo para calcular.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Dia da semana</span>
+        <strong id="diaSemana">-</strong>
+        <span id="diaSemanaTexto">Mostra em que dia da semana a data cai.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Intervalo usado</span>
+        <strong id="intervaloUsado">-</strong>
+        <span id="intervaloUsadoTexto">Resumo da operação aplicada.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalheResumo">-</strong>
+        <span id="detalheResumoTexto">Ajuda a validar prazos e datas de referência.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultadoData">Use esta ferramenta para vencimentos, contratos, entregas, viagens e organização pessoal.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Calcule uma data futura ou passada em segundos</h2>
+    <p>Esta calculadora é útil para descobrir datas de vencimento, prazos de entrega, períodos de experiência, contratos, retorno de viagem e vários outros cenários.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular uma data futura?</h2>
+    <p>Basta escolher uma data-base e informar quantos dias, semanas, meses ou anos devem ser somados ou subtraídos. A ferramenta retorna a data correspondente.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Posso calcular uma data passada?</h3>
+    <p>Sim. Basta trocar a operação para subtrair.</p>
+    <h3>Essa página serve para prazos em meses?</h3>
+    <p>Sim. Você pode trabalhar com dias, semanas, meses e anos na mesma ferramenta.</p>
+    <h3>O cálculo considera a data-base informada?</h3>
+    <p>Sim. A conta parte exatamente da data escolhida no formulário.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-dias-entre-datas/">
+        <span class="titulo-resultado">Datas</span>
+        <strong>Dias Entre Datas</strong>
+        <span>Compare duas datas e veja o intervalo total em dias.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadora-semanas-entre-datas/">
+        <span class="titulo-resultado">Datas</span>
+        <strong>Semanas Entre Datas</strong>
+        <span>Descubra quantas semanas existem entre duas datas.</span>
+      </a>
+      <a class="card-resultado card-link" href="/calculadoras-datas/">
+        <span class="titulo-resultado">Categoria</span>
+        <strong>Calculadoras de Datas</strong>
+        <span>Explore outras ferramentas de idade, dias úteis e horários.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-data-futura/");
+  </script>
+</body>
+</html>
+
+
+
+

@@ -36,6 +36,12 @@ const CALCULADORAS = [
     categoria: "Matemática"
   },
   {
+    url: "/calculadora-qual-a-porcentagem/",
+    titulo: "Qual a Porcentagem?",
+    descricao: "Descubra quantos por cento um valor representa em relacao a outro.",
+    categoria: "Matemática"
+  },
+  {
     url: "/calculadora-juros-compostos/",
     titulo: "Juros Compostos",
     descricao: "Simule investimentos e veja o crescimento do capital.",
@@ -75,6 +81,12 @@ const CALCULADORAS = [
     url: "/calculadora-financiamento/",
     titulo: "Calculadora de Financiamento",
     descricao: "Simule parcelas, juros e total pago em um financiamento.",
+    categoria: "Finanças"
+  },
+  {
+    url: "/simulador-emprestimo-pessoal/",
+    titulo: "Simulador de Empréstimo Pessoal",
+    descricao: "Veja parcelas, total pago e juros antes de contratar.",
     categoria: "Finanças"
   },
   {
@@ -132,6 +144,18 @@ const CALCULADORAS = [
     categoria: "Datas"
   },
   {
+    url: "/calculadora-data-futura/",
+    titulo: "Calculadora de Data Futura",
+    descricao: "Some ou subtraia dias, semanas, meses e anos a uma data base.",
+    categoria: "Datas"
+  },
+  {
+    url: "/calculadora-semanas-entre-datas/",
+    titulo: "Semanas Entre Datas",
+    descricao: "Descubra quantas semanas completas existem entre duas datas.",
+    categoria: "Datas"
+  },
+  {
     url: "/calculadora-alcool-ou-gasolina/",
     titulo: "Álcool ou Gasolina",
     descricao: "Descubra qual combustível compensa mais.",
@@ -159,6 +183,12 @@ const CALCULADORAS = [
     url: "/calculadora-tempo-de-viagem/",
     titulo: "Tempo de Viagem",
     descricao: "Descubra quanto tempo uma viagem pode levar.",
+    categoria: "Combustível"
+  },
+  {
+    url: "/calculadora-autonomia-do-carro/",
+    titulo: "Autonomia do Carro",
+    descricao: "Veja quantos km o carro pode rodar com um tanque cheio.",
     categoria: "Combustível"
   },
   {
