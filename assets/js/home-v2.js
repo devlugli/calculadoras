@@ -52,7 +52,19 @@ const homeTools = [
   { name: "Minutos para Horas", url: "./minutos-para-horas/", category: "Conversores", aliases: ["minutos para horas"] },
   { name: "Dias para Horas", url: "./dias-para-horas/", category: "Conversores", aliases: ["dias para horas"] },
   { name: "Anos para Meses", url: "./anos-para-meses/", category: "Conversores", aliases: ["anos para meses"] },
-  { name: "Meses para Anos", url: "./meses-para-anos/", category: "Conversores", aliases: ["meses para anos"] }
+  { name: "Meses para Anos", url: "./meses-para-anos/", category: "Conversores", aliases: ["meses para anos"] },
+  { name: "Calculadora de Churrasco", url: "./calculadora-de-churrasco/", category: "Cotidiano", aliases: ["churrasco", "carne por pessoa", "quanto comprar para churrasco"] },
+  { name: "Quantidade de Bebida para Festa", url: "./quantidade-de-bebida-para-festa/", category: "Cotidiano", aliases: ["bebida para festa", "quantidade de bebida", "cerveja e refrigerante"] },
+  { name: "Calculadora de Festa Infantil", url: "./calculadora-de-festa-infantil/", category: "Cotidiano", aliases: ["festa infantil", "bolo e salgados", "quanto comprar para festa infantil"] },
+  { name: "Calculadora de Cerveja para Festa", url: "./calculadora-de-cerveja-para-festa/", category: "Cotidiano", aliases: ["cerveja para festa", "quantidade de cerveja", "latas para festa"] },
+  { name: "Quantidade de Salgados por Pessoa", url: "./quantidade-de-salgados-por-pessoa/", category: "Cotidiano", aliases: ["salgados por pessoa", "quantos salgados", "salgados para festa"] },
+  { name: "Quantidade de Bolo por Pessoa", url: "./quantidade-de-bolo-por-pessoa/", category: "Cotidiano", aliases: ["bolo por pessoa", "quantos quilos de bolo", "bolo para festa"] },
+  { name: "Calculadora de Tinta", url: "./calculadora-de-tinta/", category: "Constru\u00e7\u00e3o", aliases: ["tinta", "quantos litros de tinta", "tinta por m2"] },
+  { name: "Calculadora de Piso", url: "./calculadora-de-piso/", category: "Constru\u00e7\u00e3o", aliases: ["piso", "quantas caixas de piso", "metragem de piso"] },
+  { name: "Calculadora de Concreto", url: "./calculadora-de-concreto/", category: "Constru\u00e7\u00e3o", aliases: ["concreto", "quantos metros cubicos de concreto", "volume de concreto"] },
+  { name: "Calculadora de Argamassa", url: "./calculadora-de-argamassa/", category: "Constru\u00e7\u00e3o", aliases: ["argamassa", "quantos sacos de argamassa", "argamassa por m2"] },
+  { name: "Calculadora de Rejunte", url: "./calculadora-de-rejunte/", category: "Constru\u00e7\u00e3o", aliases: ["rejunte", "quantos kg de rejunte", "rejunte por m2"] },
+  { name: "Calculadora de Blocos para Parede", url: "./calculadora-de-blocos-para-parede/", category: "Constru\u00e7\u00e3o", aliases: ["blocos para parede", "quantos blocos por metro quadrado", "alvenaria"] }
 ];
 
 const normalizeText = (value) =>

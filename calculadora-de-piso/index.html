@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Piso | CalcBrazil</title>
+  <meta name="description" content="Calcule área, peças e caixas de piso com margem de perda para obra e reforma.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-piso/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Piso">
+  <meta property="og:description" content="Estime quantas peças e caixas de piso comprar para o ambiente.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-piso/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Piso</h1>
+    <p class="descricao">Calcule a área do ambiente, a quantidade de peças e o número de caixas de piso com margem de perda para corte e reposição.</p>
+    <p class="selo">piso • caixas • peças • metragem • reforma</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(3, 4, 60, 60, 2.2, 10)">Quarto</button>
+      <button type="button" onclick="aplicarExemplo(5, 6, 84, 84, 2.0, 12)">Sala grande</button>
+      <button type="button" onclick="aplicarExemplo(2, 3, 45, 45, 1.8, 15)">Área compacta</button>
+    </div>
+    <div class="campo"><label for="largura">Largura do ambiente (m)</label><input id="largura" type="number" value="3" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="comprimento">Comprimento do ambiente (m)</label><input id="comprimento" type="number" value="4" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="pecaLargura">Largura da peça (cm)</label><input id="pecaLargura" type="number" value="60" min="1" step="1"></div>
+    <div class="campo"><label for="pecaComprimento">Comprimento da peça (cm)</label><input id="pecaComprimento" type="number" value="60" min="1" step="1"></div>
+    <div class="campo"><label for="caixa">Área por caixa (m²)</label><input id="caixa" type="number" value="2.2" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="perda">Perda (%)</label><input id="perda" type="number" value="10" min="0" step="1"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo do piso</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha as medidas para calcular o material.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Área total</span><strong id="areaTotal">-</strong><span>Área com perda incluída.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Peças</span><strong id="pecas">-</strong><span>Quantidade estimada de peças.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Caixas</span><strong id="caixas">-</strong><span>Total aproximado para compra.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    function aplicarExemplo(largura, comprimento, pecaLargura, pecaComprimento, caixa, perda) {
+      document.getElementById("largura").value = largura;
+      document.getElementById("comprimento").value = comprimento;
+      document.getElementById("pecaLargura").value = pecaLargura;
+      document.getElementById("pecaComprimento").value = pecaComprimento;
+      document.getElementById("caixa").value = caixa;
+      document.getElementById("perda").value = perda;
+      calcular();
+    }
+    function calcular() {
+      const largura = Number(document.getElementById("largura").value) || 0;
+      const comprimento = Number(document.getElementById("comprimento").value) || 0;
+      const pecaLargura = Number(document.getElementById("pecaLargura").value) || 1;
+      const pecaComprimento = Number(document.getElementById("pecaComprimento").value) || 1;
+      const caixa = Number(document.getElementById("caixa").value) || 1;
+      const perda = Number(document.getElementById("perda").value) || 0;
+      const area = largura * comprimento;
+      const areaFinal = area * (1 + perda / 100);
+      const areaPeca = (pecaLargura / 100) * (pecaComprimento / 100);
+      const pecas = Math.ceil(areaFinal / areaPeca);
+      const caixas = Math.ceil(areaFinal / caixa);
+      document.getElementById("resumoTopoValor").textContent = `${areaFinal.toFixed(2).replace(".", ",")} m²`;
+      document.getElementById("resumoTopoTexto").textContent = `Área base de ${area.toFixed(2).replace(".", ",")} m² com ${perda}% de perda.`;
+      document.getElementById("areaTotal").textContent = `${areaFinal.toFixed(2).replace(".", ",")} m²`;
+      document.getElementById("pecas").textContent = `${pecas} peça(s)`;
+      document.getElementById("caixas").textContent = `${caixas} caixa(s)`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-piso/");
+    calcular();
+  </script>
+</body>
+</html>

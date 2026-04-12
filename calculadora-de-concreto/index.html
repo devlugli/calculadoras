@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Concreto | CalcBrazil</title>
+  <meta name="description" content="Calcule o volume de concreto em m³ e litros para laje, contrapiso, base e pequenas estruturas.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-concreto/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Concreto">
+  <meta property="og:description" content="Descubra o volume aproximado de concreto para a sua obra.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-concreto/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Concreto</h1>
+    <p class="descricao">Estime o volume de concreto em metros cúbicos e litros para laje, base, calçada ou contrapiso.</p>
+    <p class="selo">concreto • m³ • obra • contrapiso • base</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(4, 5, 8)">Contrapiso</button>
+      <button type="button" onclick="aplicarExemplo(2, 6, 12)">Calçada</button>
+      <button type="button" onclick="aplicarExemplo(3, 3, 10)">Base</button>
+    </div>
+    <div class="campo"><label for="largura">Largura (m)</label><input id="largura" type="number" value="4" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="comprimento">Comprimento (m)</label><input id="comprimento" type="number" value="5" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="espessura">Espessura (cm)</label><input id="espessura" type="number" value="8" min="1" step="0.1"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Volume de concreto</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha as medidas para ver a estimativa.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Metros cúbicos</span><strong id="metrosCubicos">-</strong><span>Volume principal da conta.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Litros</span><strong id="litros">-</strong><span>Outra leitura útil.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Folga de 5%</span><strong id="folga">-</strong><span>Margem para a execução.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    function aplicarExemplo(largura, comprimento, espessura) {
+      document.getElementById("largura").value = largura;
+      document.getElementById("comprimento").value = comprimento;
+      document.getElementById("espessura").value = espessura;
+      calcular();
+    }
+    function calcular() {
+      const largura = Number(document.getElementById("largura").value) || 0;
+      const comprimento = Number(document.getElementById("comprimento").value) || 0;
+      const espessura = (Number(document.getElementById("espessura").value) || 0) / 100;
+      const volume = largura * comprimento * espessura;
+      document.getElementById("resumoTopoValor").textContent = `${volume.toFixed(3).replace(".", ",")} m³`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta baseada em ${largura} m x ${comprimento} m x ${(espessura * 100).toFixed(1).replace(".", ",")} cm.`;
+      document.getElementById("metrosCubicos").textContent = `${volume.toFixed(3).replace(".", ",")} m³`;
+      document.getElementById("litros").textContent = `${Math.round(volume * 1000)} L`;
+      document.getElementById("folga").textContent = `${(volume * 1.05).toFixed(3).replace(".", ",")} m³`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-concreto/");
+    calcular();
+  </script>
+</body>
+</html>

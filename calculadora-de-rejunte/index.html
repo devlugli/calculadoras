@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Rejunte | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de rejunte com base na área, tamanho da peça e largura da junta.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-rejunte/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Rejunte">
+  <meta property="og:description" content="Estime quantos quilos de rejunte comprar para o ambiente.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-rejunte/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Rejunte</h1>
+    <p class="descricao">Estime o consumo de rejunte para o ambiente considerando a área, o tamanho da peça e a largura da junta.</p>
+    <p class="selo">rejunte • piso • junta • acabamento • obra</p>
+    <div class="campo"><label for="area">Área (m²)</label><input id="area" type="number" value="20" min="0.1" step="0.1"></div>
+    <div class="campo"><label for="peca">Tamanho da peça</label><select id="peca"><option value="pequena">Pequena</option><option value="media" selected>Média</option><option value="grande">Grande</option></select></div>
+    <div class="campo"><label for="junta">Largura da junta (mm)</label><input id="junta" type="number" value="3" min="1" step="1"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Rejunte necessário</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha a área e o perfil do assentamento.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Consumo em kg</span><strong id="kgTotal">-</strong><span>Estimativa principal.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Folga de 10%</span><strong id="folga">-</strong><span>Margem para aplicação.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Leitura rápida</span><strong id="detalheResumo">-</strong><span>Resumo do cenário.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    function calcular() {
+      const area = Number(document.getElementById("area").value) || 0;
+      const peca = document.getElementById("peca").value;
+      const junta = Number(document.getElementById("junta").value) || 1;
+      const base = peca === "pequena" ? 0.35 : peca === "grande" ? 0.18 : 0.25;
+      const total = area * base * (junta / 3);
+      document.getElementById("resumoTopoValor").textContent = `${total.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta para ${area} m² com junta de ${junta} mm.`;
+      document.getElementById("kgTotal").textContent = `${total.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("folga").textContent = `${(total * 1.1).toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("detalheResumo").textContent = `Peça ${peca} com consumo base de ${base.toFixed(2).replace(".", ",")} kg por m².`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-rejunte/");
+    calcular();
+  </script>
+</body>
+</html>

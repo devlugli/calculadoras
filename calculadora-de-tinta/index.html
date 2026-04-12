@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Tinta | CalcBrazil</title>
+  <meta name="description" content="Calcule quantos litros de tinta comprar com base na área, número de demãos e rendimento da tinta.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-tinta/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Tinta">
+  <meta property="og:description" content="Estime litros, galões e latas de tinta para pintura residencial.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-tinta/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Tinta</h1>
+    <p class="descricao">Descubra quantos litros de tinta comprar para a pintura com base na área total, no número de demãos e no rendimento do produto.</p>
+    <p class="selo">tinta • pintura • litros • demãos • reforma</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(45, 2, 16)">Sala pequena</button>
+      <button type="button" onclick="aplicarExemplo(120, 2, 18)">Casa maior</button>
+      <button type="button" onclick="aplicarExemplo(30, 3, 14)">3 demãos</button>
+    </div>
+    <div class="campo"><label for="area">Área total (m²)</label><input id="area" type="number" value="45" min="1" step="0.1"></div>
+    <div class="campo"><label for="demaos">Número de demãos</label><input id="demaos" type="number" value="2" min="1" step="1"></div>
+    <div class="campo"><label for="rendimento">Rendimento da tinta (m² por litro)</label><input id="rendimento" type="number" value="16" min="1" step="0.1"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Tinta necessária</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para estimar o consumo.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Litros</span><strong id="litros">-</strong><span>Consumo estimado com 10% de folga.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Galões 3,6 L</span><strong id="galoes">-</strong><span>Equivalência prática.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Latas 18 L</span><strong id="latas">-</strong><span>Outra leitura útil para compra.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const areaEl = document.getElementById("area");
+    const demaosEl = document.getElementById("demaos");
+    const rendimentoEl = document.getElementById("rendimento");
+    function aplicarExemplo(area, demaos, rendimento) {
+      areaEl.value = area;
+      demaosEl.value = demaos;
+      rendimentoEl.value = rendimento;
+      calcular();
+    }
+    function calcular() {
+      const area = Number(areaEl.value) || 0;
+      const demaos = Number(demaosEl.value) || 0;
+      const rendimento = Number(rendimentoEl.value) || 1;
+      const litros = (area * demaos / rendimento) * 1.1;
+      document.getElementById("resumoTopoValor").textContent = `${litros.toFixed(1).replace(".", ",")} L`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta para ${area} m² com ${demaos} demão(ãos).`;
+      document.getElementById("litros").textContent = `${litros.toFixed(1).replace(".", ",")} L`;
+      document.getElementById("galoes").textContent = `${Math.ceil(litros / 3.6)} galão(ões)`;
+      document.getElementById("latas").textContent = `${Math.ceil(litros / 18)} lata(s)`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-tinta/");
+    calcular();
+  </script>
+</body>
+</html>

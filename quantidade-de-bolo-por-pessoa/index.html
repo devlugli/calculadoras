@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantidade de Bolo por Pessoa | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de bolo por pessoa com estimativa em quilos e número aproximado de fatias para festas e eventos.">
+  <link rel="canonical" href="https://calcbrazil.com/quantidade-de-bolo-por-pessoa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Quantidade de Bolo por Pessoa">
+  <meta property="og:description" content="Descubra quantos quilos de bolo comprar para a festa.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/quantidade-de-bolo-por-pessoa/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Quantidade de Bolo por Pessoa</h1>
+    <p class="descricao">Estime o peso do bolo e a quantidade aproximada de fatias para a festa com uma conta simples e rápida.</p>
+    <p class="selo">bolo • festa • quilos • fatias • convidados</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(30, true, 'medio')">30 pessoas</button>
+      <button type="button" onclick="aplicarExemplo(80, true, 'farto')">Evento grande</button>
+      <button type="button" onclick="aplicarExemplo(25, false, 'leve')">Bolo secundário</button>
+    </div>
+    <div class="campo"><label for="convidados">Convidados</label><input id="convidados" type="number" value="30" min="1" step="1"></div>
+    <div class="campo"><label for="principal">O bolo será a sobremesa principal?</label><select id="principal"><option value="sim" selected>Sim</option><option value="nao">Não</option></select></div>
+    <div class="campo"><label for="perfil">Perfil de serviço</label><select id="perfil"><option value="leve">Leve</option><option value="medio" selected>Médio</option><option value="farto">Farto</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo do bolo</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe convidados e perfil para ver a estimativa.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Peso sugerido</span><strong id="pesoBolo">-</strong><span>Conta principal em quilos.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Fatias</span><strong id="fatias">-</strong><span>Leitura aproximada por porção.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Faixa segura</span><strong id="faixaSegura">-</strong><span>Margem para evitar falta.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const convidadosEl = document.getElementById("convidados");
+    const principalEl = document.getElementById("principal");
+    const perfilEl = document.getElementById("perfil");
+    function aplicarExemplo(convidados, principal, perfil) {
+      convidadosEl.value = convidados;
+      principalEl.value = principal ? "sim" : "nao";
+      perfilEl.value = perfil;
+      calcular();
+    }
+    function calcular() {
+      const convidados = Number(convidadosEl.value) || 0;
+      const gramasBase = principalEl.value === "sim" ? 120 : 80;
+      const ajuste = perfilEl.value === "leve" ? 0.9 : perfilEl.value === "farto" ? 1.15 : 1;
+      const totalKg = (convidados * gramasBase * ajuste) / 1000;
+      document.getElementById("resumoTopoValor").textContent = `${totalKg.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("resumoTopoTexto").textContent = `Estimativa para ${convidados} pessoa(s).`;
+      document.getElementById("pesoBolo").textContent = `${totalKg.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("fatias").textContent = `${Math.ceil(totalKg * 8)} a ${Math.ceil(totalKg * 10)} fatias`;
+      document.getElementById("faixaSegura").textContent = `${(totalKg * 1.05).toFixed(1).replace(".", ",")} a ${(totalKg * 1.15).toFixed(1).replace(".", ",")} kg`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/quantidade-de-bolo-por-pessoa/");
+    calcular();
+  </script>
+</body>
+</html>

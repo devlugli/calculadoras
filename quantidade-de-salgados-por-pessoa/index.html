@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantidade de Salgados por Pessoa | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de salgados por pessoa conforme convidados, tipo de evento e presença de refeição principal.">
+  <link rel="canonical" href="https://calcbrazil.com/quantidade-de-salgados-por-pessoa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Quantidade de Salgados por Pessoa">
+  <meta property="og:description" content="Veja quantos salgados comprar para a festa ou confraternização.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/quantidade-de-salgados-por-pessoa/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Quantidade de Salgados por Pessoa</h1>
+    <p class="descricao">Estime quantos salgados comprar para o evento com base em convidados, tipo de ocasião e existência de refeição principal.</p>
+    <p class="selo">salgados • festa • convidados • buffet • evento</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(30, 'coquetel', false)">Coquetel</button>
+      <button type="button" onclick="aplicarExemplo(60, 'aniversario', false)">Aniversário</button>
+      <button type="button" onclick="aplicarExemplo(40, 'reuniao', true)">Com refeição</button>
+    </div>
+    <div class="campo"><label for="convidados">Convidados</label><input id="convidados" type="number" value="30" min="1" step="1"></div>
+    <div class="campo"><label for="evento">Tipo de evento</label><select id="evento"><option value="coquetel">Coquetel</option><option value="aniversario" selected>Aniversário</option><option value="reuniao">Reunião</option></select></div>
+    <div class="campo"><label for="refeicao">Haverá refeição principal?</label><select id="refeicao"><option value="nao" selected>Não</option><option value="sim">Sim</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Total sugerido</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para calcular os salgados.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Média por pessoa</span><strong id="mediaPessoa">-</strong><span>Faixa usada para a conta.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Faixa segura</span><strong id="faixaSegura">-</strong><span>Mínimo e folga.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Leitura rápida</span><strong id="detalheResumo">-</strong><span>Resumo do cenário.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const convidadosEl = document.getElementById("convidados");
+    const eventoEl = document.getElementById("evento");
+    const refeicaoEl = document.getElementById("refeicao");
+    function aplicarExemplo(convidados, evento, refeicao) {
+      convidadosEl.value = convidados;
+      eventoEl.value = evento;
+      refeicaoEl.value = refeicao ? "sim" : "nao";
+      calcular();
+    }
+    function calcular() {
+      const convidados = Number(convidadosEl.value) || 0;
+      const base = eventoEl.value === "coquetel" ? 14 : eventoEl.value === "reuniao" ? 10 : 12;
+      const refeicao = refeicaoEl.value === "sim";
+      const media = refeicao ? Math.max(6, base - 4) : base;
+      const total = convidados * media;
+      document.getElementById("resumoTopoValor").textContent = `${total} salgados`;
+      document.getElementById("resumoTopoTexto").textContent = `Estimativa para ${convidados} pessoa(s).`;
+      document.getElementById("mediaPessoa").textContent = `${media} por pessoa`;
+      document.getElementById("faixaSegura").textContent = `${Math.round(total * 0.9)} a ${Math.round(total * 1.1)} un.`;
+      document.getElementById("detalheResumo").textContent = refeicao ? "Conta reduzida porque haverá refeição principal." : "Conta pensada para salgados como destaque do serviço.";
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/quantidade-de-salgados-por-pessoa/");
+    calcular();
+  </script>
+</body>
+</html>

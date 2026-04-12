@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Churrasco Online | CalcBrazil</title>
+  <meta name="description" content="Calcule carne, linguiça, frango, pão de alho, carvão e bebidas para o churrasco. Ferramenta prática para adultos, crianças e perfil do evento.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-churrasco/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Churrasco Online">
+  <meta property="og:description" content="Descubra quanto comprar para o churrasco com base no número de pessoas e no perfil do evento.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-churrasco/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Churrasco</h1>
+    <p class="descricao">Estime carnes, acompanhamentos, carvão e bebidas para organizar o churrasco com mais segurança e menos desperdício.</p>
+    <p class="selo">churrasco • carne por pessoa • bebida • carvão • festa</p>
+    <div class="acoes-texto churrasco-top-actions">
+      <button type="button" class="botao-secundario botao-com-icone" id="compartilharCalculadora">
+        <span class="botao-emoji" aria-hidden="true">📤</span>
+        <span>Compartilhar calculadora</span>
+      </button>
+    </div>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(10, 2, 'medio', true)">10 adultos</button>
+      <button type="button" onclick="aplicarExemplo(20, 4, 'completo', true)">20 adultos</button>
+      <button type="button" onclick="aplicarExemplo(8, 3, 'leve', false)">Sem álcool</button>
+    </div>
+    <div class="campo"><label for="adultos">Adultos</label><input id="adultos" type="number" value="10" min="1" step="1"></div>
+    <div class="campo"><label for="criancas">Crianças</label><input id="criancas" type="number" value="2" min="0" step="1"></div>
+    <div class="campo"><label for="perfil">Perfil do churrasco</label><select id="perfil"><option value="leve">Leve</option><option value="medio" selected>Médio</option><option value="completo">Completo</option></select></div>
+    <div class="campo"><label for="alcool">Haverá cerveja?</label><select id="alcool"><option value="sim" selected>Sim</option><option value="nao">Não</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo de compra</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para ver a estimativa do churrasco.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado churrasco-list-grid">
+      <div class="card-resultado churrasco-list-card">
+        <span class="titulo-resultado">Carnes</span>
+        <ul class="resultado-lista">
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🥩</span>Bovina</span><strong id="itemBovina">-</strong></li>
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🌭</span>Linguiça</span><strong id="itemLinguica">-</strong></li>
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🍗</span>Frango</span><strong id="itemFrango">-</strong></li>
+        </ul>
+      </div>
+      <div class="card-resultado churrasco-list-card">
+        <span class="titulo-resultado">Bebidas</span>
+        <ul class="resultado-lista">
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🍺</span>Cerveja</span><strong id="itemCerveja">-</strong></li>
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🥤</span>Refrigerante</span><strong id="itemRefrigerante">-</strong></li>
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">💧</span>Água</span><strong id="itemAgua">-</strong></li>
+        </ul>
+      </div>
+      <div class="card-resultado churrasco-list-card">
+        <span class="titulo-resultado">Apoio</span>
+        <ul class="resultado-lista">
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🥖</span>Pão de alho</span><strong id="itemPaoDeAlho">-</strong></li>
+          <li><span class="resultado-item-label"><span class="resultado-item-emoji" aria-hidden="true">🔥</span>Carvão</span><strong id="itemCarvao">-</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nota-resultado" id="notaResultado">Use como ponto de partida e ajuste conforme o perfil dos convidados.</div>
+    <div class="acoes-texto churrasco-share">
+      <button type="button" class="botao-com-icone" id="compartilharChurrasco">
+        <span class="botao-emoji" aria-hidden="true">📣</span>
+        <span>Compartilhar resultado</span>
+      </button>
+      <button type="button" class="botao-secundario botao-com-icone" id="copiarChurrasco">
+        <span class="botao-emoji" aria-hidden="true">📋</span>
+        <span>Copiar resultado</span>
+      </button>
+      <div class="copy-feedback" id="compartilharFeedback" aria-live="polite"></div>
+    </div>
+  </div>
+  <section class="seo-callout">
+    <h2>Como calcular carne e bebida para churrasco?</h2>
+    <p>Esta calculadora de churrasco considera adultos, crianças, perfil do evento e presença de cerveja para sugerir quantidades mais próximas do consumo real.</p>
+  </section>
+  <section class="seo">
+    <h2>O que esta calculadora inclui?</h2>
+    <p>Ela estima carne bovina, linguiça, frango, pão de alho, carvão, cerveja, refrigerante e água para facilitar a compra antes do evento.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const formatKg = (value) => `${value.toFixed(1).replace(".", ",")} kg`;
+    const formatLitros = (value) => `${value.toFixed(1).replace(".", ",")} L`;
+    const formatInteiro = (value, label) => `${value} ${label}`;
+    function aplicarExemplo(adultos, criancas, perfil, alcool) {
+      document.getElementById("adultos").value = adultos;
+      document.getElementById("criancas").value = criancas;
+      document.getElementById("perfil").value = perfil;
+      document.getElementById("alcool").value = alcool ? "sim" : "nao";
+      calcular();
+    }
+    function calcular() {
+      const adultos = Number(document.getElementById("adultos").value) || 0;
+      const criancas = Number(document.getElementById("criancas").value) || 0;
+      const perfil = document.getElementById("perfil").value;
+      const alcool = document.getElementById("alcool").value === "sim";
+      const fator = perfil === "leve" ? 1 : perfil === "completo" ? 1.2 : 1.1;
+      const pesoBase = adultos + criancas * 0.5;
+      const carneBovina = pesoBase * 0.26 * fator;
+      const linguica = pesoBase * 0.11 * fator;
+      const frango = pesoBase * 0.09 * fator;
+      const paoDeAlho = Math.ceil((adultos * 1.2 + criancas * 0.5) * (perfil === "completo" ? 1.1 : 1));
+      const carvao = Math.max(1, Math.ceil((pesoBase * 0.22 * fator) / 2.5));
+      const cerveja = alcool ? adultos * (perfil === "leve" ? 1.4 : perfil === "completo" ? 2.4 : 1.9) : 0;
+      const refrigerante = adultos * 0.4 + criancas * 0.6;
+      const agua = adultos * 0.3 + criancas * 0.35;
+      document.getElementById("resumoTopoValor").textContent = `${formatKg(carneBovina + linguica + frango)} de carnes`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta pensada para ${adultos} adulto(s) e ${criancas} criança(s).`;
+      document.getElementById("itemBovina").textContent = formatKg(carneBovina);
+      document.getElementById("itemLinguica").textContent = formatKg(linguica);
+      document.getElementById("itemFrango").textContent = formatKg(frango);
+      document.getElementById("itemCerveja").textContent = alcool ? formatLitros(cerveja) : "Não incluir";
+      document.getElementById("itemRefrigerante").textContent = formatLitros(refrigerante);
+      document.getElementById("itemAgua").textContent = formatLitros(agua);
+      document.getElementById("itemPaoDeAlho").textContent = formatInteiro(paoDeAlho, "un.");
+      document.getElementById("itemCarvao").textContent = formatInteiro(carvao, "saco(s)");
+      document.getElementById("notaResultado").textContent = "Se o grupo come bem ou o evento for longo, trabalhe com uma margem extra de 10% a 15%.";
+    }
+    function gerarTextoCompartilhamento() {
+      const adultos = document.getElementById("adultos").value;
+      const criancas = document.getElementById("criancas").value;
+      return [
+        `Meu churrasco para ${adultos} adulto(s) e ${criancas} criança(s):`,
+        `Bovina: ${document.getElementById("itemBovina").textContent}`,
+        `Linguiça: ${document.getElementById("itemLinguica").textContent}`,
+        `Frango: ${document.getElementById("itemFrango").textContent}`,
+        `Cerveja: ${document.getElementById("itemCerveja").textContent}`,
+        `Refrigerante: ${document.getElementById("itemRefrigerante").textContent}`,
+        `Água: ${document.getElementById("itemAgua").textContent}`,
+        `Pão de alho: ${document.getElementById("itemPaoDeAlho").textContent}`,
+        `Carvão: ${document.getElementById("itemCarvao").textContent}`,
+        "",
+        "Monte o seu no CalcBrazil:",
+        window.location.href
+      ].join("\n");
+    }
+    async function compartilharResultado() {
+      const feedback = document.getElementById("compartilharFeedback");
+      const texto = gerarTextoCompartilhamento();
+      try {
+        if (navigator.share) {
+          await navigator.share({
+            title: "Calculadora de Churrasco",
+            text: texto
+          });
+          feedback.textContent = "Resultado pronto para compartilhar.";
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(texto);
+          feedback.textContent = "Resumo copiado. Agora é só colar no TikTok ou onde quiser.";
+          return;
+        }
+        feedback.textContent = "Seu navegador não liberou o compartilhamento automático.";
+      } catch (error) {
+        feedback.textContent = "Compartilhamento cancelado.";
+      }
+    }
+    async function copiarResultado() {
+      const feedback = document.getElementById("compartilharFeedback");
+      const texto = gerarTextoCompartilhamento();
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(texto);
+          feedback.textContent = "Resultado copiado. Agora é só colar.";
+          return;
+        }
+        feedback.textContent = "Seu navegador não liberou a cópia automática.";
+      } catch (error) {
+        feedback.textContent = "Não foi possível copiar agora.";
+      }
+    }
+    async function compartilharCalculadora() {
+      const feedback = document.getElementById("compartilharFeedback");
+      try {
+        if (navigator.share) {
+          await navigator.share({
+            title: "Calculadora de Churrasco",
+            text: "Monte seu churrasco no CalcBrazil.",
+            url: window.location.href
+          });
+          feedback.textContent = "Link da calculadora compartilhado.";
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(window.location.href);
+          feedback.textContent = "Link da calculadora copiado.";
+          return;
+        }
+        feedback.textContent = "Seu navegador não liberou o compartilhamento automático.";
+      } catch (error) {
+        feedback.textContent = "Compartilhamento cancelado.";
+      }
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-churrasco/");
+    document.getElementById("compartilharCalculadora").addEventListener("click", compartilharCalculadora);
+    document.getElementById("copiarChurrasco").addEventListener("click", copiarResultado);
+    document.getElementById("compartilharChurrasco").addEventListener("click", compartilharResultado);
+    calcular();
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantidade de Bebida para Festa | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de bebida para festa com estimativa de cerveja, refrigerante, água e suco conforme convidados, duração e clima.">
+  <link rel="canonical" href="https://calcbrazil.com/quantidade-de-bebida-para-festa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Quantidade de Bebida para Festa">
+  <meta property="og:description" content="Estime cerveja, refrigerante, água e suco para a festa com poucos campos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/quantidade-de-bebida-para-festa/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Quantidade de Bebida para Festa</h1>
+    <p class="descricao">Estime cerveja, refrigerante, água e suco para a festa com base em adultos, crianças, duração e temperatura do dia.</p>
+    <p class="selo">bebidas • festa • convidados • cerveja • refrigerante</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(20, 5, 'medio', 'normal')">20 convidados</button>
+      <button type="button" onclick="aplicarExemplo(40, 10, 'longo', 'quente')">Evento longo</button>
+      <button type="button" onclick="aplicarExemplo(12, 6, 'curto', 'normal')">Festa pequena</button>
+    </div>
+    <div class="campo"><label for="adultos">Adultos</label><input id="adultos" type="number" value="20" min="1" step="1"></div>
+    <div class="campo"><label for="criancas">Crianças</label><input id="criancas" type="number" value="5" min="0" step="1"></div>
+    <div class="campo"><label for="duracao">Duração</label><select id="duracao"><option value="curto">Até 3 horas</option><option value="medio" selected>3 a 5 horas</option><option value="longo">Mais de 5 horas</option></select></div>
+    <div class="campo"><label for="clima">Clima</label><select id="clima"><option value="normal" selected>Normal</option><option value="quente">Quente</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo das bebidas</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe o perfil da festa para ver a conta.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Cerveja</span><strong id="cerveja">-</strong><span>Litros e latas aproximadas.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Sem álcool</span><strong id="semAlcool">-</strong><span>Refrigerante, água e suco.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Leitura rápida</span><strong id="detalheResumo">-</strong><span>Uma margem segura para a compra.</span></div>
+    </div>
+    <div class="nota-resultado" id="notaResultado">Use esta página como referência e ajuste para o perfil dos convidados.</div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const formatLitros = (value) => `${value.toFixed(1).replace(".", ",")} L`;
+    const adultosEl = document.getElementById("adultos");
+    const criancasEl = document.getElementById("criancas");
+    const duracaoEl = document.getElementById("duracao");
+    const climaEl = document.getElementById("clima");
+    function aplicarExemplo(adultos, criancas, duracao, clima) {
+      adultosEl.value = adultos;
+      criancasEl.value = criancas;
+      duracaoEl.value = duracao;
+      climaEl.value = clima;
+      calcular();
+    }
+    function calcular() {
+      const adultos = Number(adultosEl.value) || 0;
+      const criancas = Number(criancasEl.value) || 0;
+      const fatorDuracao = duracaoEl.value === "curto" ? 1 : duracaoEl.value === "longo" ? 1.35 : 1.15;
+      const fatorClima = climaEl.value === "quente" ? 1.15 : 1;
+      const cervejaLitros = adultos * 1.2 * fatorDuracao * fatorClima;
+      const refrigerante = (adultos * 0.35 + criancas * 0.45) * fatorDuracao * fatorClima;
+      const agua = (adultos * 0.3 + criancas * 0.35) * fatorDuracao * fatorClima;
+      const suco = criancas * 0.25 * fatorDuracao;
+      document.getElementById("resumoTopoValor").textContent = `${formatLitros(cervejaLitros + refrigerante + agua + suco)} no total`;
+      document.getElementById("resumoTopoTexto").textContent = `Estimativa para ${adultos} adulto(s) e ${criancas} criança(s).`;
+      document.getElementById("cerveja").textContent = `${formatLitros(cervejaLitros)} • ${Math.ceil((cervejaLitros * 1000) / 350)} latas`;
+      document.getElementById("semAlcool").textContent = `${formatLitros(refrigerante)} refri • ${formatLitros(agua)} água • ${formatLitros(suco)} suco`;
+      document.getElementById("detalheResumo").textContent = climaEl.value === "quente" ? "Consumo reforçado para clima quente." : "Conta ajustada para consumo regular.";
+      document.getElementById("notaResultado").textContent = "Se a festa for ao ar livre ou tiver dança, considere uma folga extra de 10%.";
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/quantidade-de-bebida-para-festa/");
+    calcular();
+  </script>
+</body>
+</html>

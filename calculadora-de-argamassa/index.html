@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Argamassa | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de argamassa conforme área e tipo de assentamento para piso ou revestimento.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-argamassa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Argamassa">
+  <meta property="og:description" content="Estime quantos sacos de argamassa comprar para a obra.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-argamassa/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Argamassa</h1>
+    <p class="descricao">Descubra quantos quilos e sacos de argamassa comprar com base na área e no tipo de assentamento.</p>
+    <p class="selo">argamassa • saco • assentamento • piso • revestimento</p>
+    <div class="campo"><label for="area">Área (m²)</label><input id="area" type="number" value="35" min="0.1" step="0.1"></div>
+    <div class="campo"><label for="tipo">Tipo de assentamento</label><select id="tipo"><option value="piso">Piso</option><option value="revestimento">Revestimento</option><option value="externo">Área externa</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Argamassa necessária</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha a área para calcular.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Consumo em kg</span><strong id="kgTotal">-</strong><span>Estimativa principal.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Sacos de 20 kg</span><strong id="sacos">-</strong><span>Equivalência de compra.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Leitura rápida</span><strong id="detalheResumo">-</strong><span>Resumo do tipo escolhido.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    function calcular() {
+      const area = Number(document.getElementById("area").value) || 0;
+      const tipo = document.getElementById("tipo").value;
+      const consumo = tipo === "revestimento" ? 4.5 : tipo === "externo" ? 6 : 5;
+      const total = area * consumo * 1.08;
+      document.getElementById("resumoTopoValor").textContent = `${total.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta para ${area} m² de ${tipo}.`;
+      document.getElementById("kgTotal").textContent = `${total.toFixed(1).replace(".", ",")} kg`;
+      document.getElementById("sacos").textContent = `${Math.ceil(total / 20)} saco(s)`;
+      document.getElementById("detalheResumo").textContent = `Consumo médio de ${consumo.toFixed(1).replace(".", ",")} kg por m².`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-argamassa/");
+    calcular();
+  </script>
+</body>
+</html>

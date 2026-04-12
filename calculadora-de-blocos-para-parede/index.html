@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Blocos para Parede | CalcBrazil</title>
+  <meta name="description" content="Calcule quantos blocos comprar para levantar uma parede conforme largura, altura e tipo de bloco.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-blocos-para-parede/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Blocos para Parede">
+  <meta property="og:description" content="Estime blocos e margem de compra para alvenaria.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-blocos-para-parede/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Blocos para Parede</h1>
+    <p class="descricao">Descubra quantos blocos comprar para construir uma parede com uma conta rápida e margem de segurança.</p>
+    <p class="selo">blocos • parede • alvenaria • obra • metragem</p>
+    <div class="campo"><label for="largura">Largura da parede (m)</label><input id="largura" type="number" value="4" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="altura">Altura da parede (m)</label><input id="altura" type="number" value="2.8" min="0.1" step="0.01"></div>
+    <div class="campo"><label for="bloco">Tipo de bloco</label><select id="bloco"><option value="ceramico">Cerâmico 9x19x19</option><option value="concreto">Concreto 14x19x39</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Blocos necessários</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha as medidas para calcular a quantidade.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Área da parede</span><strong id="areaParede">-</strong><span>Metragem total.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Blocos</span><strong id="blocos">-</strong><span>Quantidade base.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Com 10% de folga</span><strong id="folga">-</strong><span>Margem para perdas e recortes.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    function calcular() {
+      const largura = Number(document.getElementById("largura").value) || 0;
+      const altura = Number(document.getElementById("altura").value) || 0;
+      const bloco = document.getElementById("bloco").value;
+      const area = largura * altura;
+      const blocosPorMetro = bloco === "concreto" ? 12.5 : 25;
+      const total = Math.ceil(area * blocosPorMetro);
+      document.getElementById("resumoTopoValor").textContent = `${total} bloco(s)`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta para ${area.toFixed(2).replace(".", ",")} m² de parede.`;
+      document.getElementById("areaParede").textContent = `${area.toFixed(2).replace(".", ",")} m²`;
+      document.getElementById("blocos").textContent = `${total} bloco(s)`;
+      document.getElementById("folga").textContent = `${Math.ceil(total * 1.1)} bloco(s)`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-blocos-para-parede/");
+    calcular();
+  </script>
+</body>
+</html>

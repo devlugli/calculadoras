@@ -217,6 +217,79 @@ const CALCULADORAS = [
   },
 
   {
+    url: "/calculadora-de-churrasco/",
+    titulo: "Calculadora de Churrasco",
+    descricao: "Calcule carne, bebidas e apoio para o churrasco.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/quantidade-de-bebida-para-festa/",
+    titulo: "Quantidade de Bebida para Festa",
+    descricao: "Estime cerveja, refrigerante, água e suco para o evento.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/calculadora-de-festa-infantil/",
+    titulo: "Calculadora de Festa Infantil",
+    descricao: "Veja bolo, doces, salgados e bebidas para a festa.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/calculadora-de-cerveja-para-festa/",
+    titulo: "Calculadora de Cerveja para Festa",
+    descricao: "Descubra quantos litros e latas comprar.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/quantidade-de-salgados-por-pessoa/",
+    titulo: "Quantidade de Salgados por Pessoa",
+    descricao: "Planeje a quantidade de salgados por tipo de evento.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/quantidade-de-bolo-por-pessoa/",
+    titulo: "Quantidade de Bolo por Pessoa",
+    descricao: "Estime quilos de bolo e fatias para a festa.",
+    categoria: "Cotidiano"
+  },
+  {
+    url: "/calculadora-de-tinta/",
+    titulo: "Calculadora de Tinta",
+    descricao: "Calcule litros, gal\u00f5es e latas para a pintura.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+  {
+    url: "/calculadora-de-piso/",
+    titulo: "Calculadora de Piso",
+    descricao: "Veja \u00e1rea, pe\u00e7as e caixas de piso para o ambiente.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+  {
+    url: "/calculadora-de-concreto/",
+    titulo: "Calculadora de Concreto",
+    descricao: "Estime o volume de concreto para laje ou contrapiso.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+  {
+    url: "/calculadora-de-argamassa/",
+    titulo: "Calculadora de Argamassa",
+    descricao: "Descubra quantos sacos de argamassa comprar.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+  {
+    url: "/calculadora-de-rejunte/",
+    titulo: "Calculadora de Rejunte",
+    descricao: "Estime o consumo de rejunte para o acabamento.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+  {
+    url: "/calculadora-de-blocos-para-parede/",
+    titulo: "Calculadora de Blocos para Parede",
+    descricao: "Calcule quantos blocos comprar para a parede.",
+    categoria: "Constru\u00e7\u00e3o"
+  },
+
+  {
   url: "/calculadoras-financeiras/",
   titulo: "Calculadoras Financeiras",
   descricao: "Veja todas as calculadoras de finanças e negócios.",
@@ -250,6 +323,18 @@ const CALCULADORAS = [
   url: "/calculadoras-combustivel/",
   titulo: "Calculadoras de Combustível",
   descricao: "Veja todas as calculadoras de combustível em um só lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-cotidiano/",
+  titulo: "Calculadoras do Cotidiano",
+  descricao: "Veja ferramentas para churrasco, festa, bebida, bolo e salgados.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadoras-construcao/",
+  titulo: "Calculadoras de Constru\u00e7\u00e3o",
+  descricao: "Veja ferramentas para tinta, piso, concreto, argamassa e blocos.",
   categoria: "Categoria"
 }
 ];

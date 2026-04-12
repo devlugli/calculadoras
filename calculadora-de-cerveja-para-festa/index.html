@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Cerveja para Festa | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade de cerveja para festa com estimativa em litros, latas e long necks conforme adultos, duração e perfil de consumo.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-cerveja-para-festa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Cerveja para Festa">
+  <meta property="og:description" content="Veja quantos litros, latas e long necks comprar para a festa.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-cerveja-para-festa/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Cerveja para Festa</h1>
+    <p class="descricao">Descubra quantos litros, latas e long necks de cerveja comprar para a festa com uma conta rápida e direta.</p>
+    <p class="selo">cerveja • festa • bebida • latas • long neck</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(20, 'medio', 'medio')">20 adultos</button>
+      <button type="button" onclick="aplicarExemplo(35, 'alto', 'longo')">Consumo alto</button>
+      <button type="button" onclick="aplicarExemplo(12, 'leve', 'curto')">Evento curto</button>
+    </div>
+    <div class="campo"><label for="adultos">Adultos que bebem</label><input id="adultos" type="number" value="20" min="1" step="1"></div>
+    <div class="campo"><label for="consumo">Perfil de consumo</label><select id="consumo"><option value="leve">Leve</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></div>
+    <div class="campo"><label for="duracao">Duração</label><select id="duracao"><option value="curto">Até 3 horas</option><option value="medio" selected>3 a 5 horas</option><option value="longo">Mais de 5 horas</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo da cerveja</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os campos para ver a estimativa.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Litros</span><strong id="litros">-</strong><span>Volume total aproximado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Latas 350 ml</span><strong id="latas">-</strong><span>Equivalência prática para compra.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Long neck 330 ml</span><strong id="longnecks">-</strong><span>Outra leitura útil para o evento.</span></div>
+    </div>
+    <div class="nota-resultado" id="notaResultado">Se a festa for no calor ou ao ar livre, vale trabalhar com uma margem extra.</div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const adultosEl = document.getElementById("adultos");
+    const consumoEl = document.getElementById("consumo");
+    const duracaoEl = document.getElementById("duracao");
+    function aplicarExemplo(adultos, consumo, duracao) {
+      adultosEl.value = adultos;
+      consumoEl.value = consumo;
+      duracaoEl.value = duracao;
+      calcular();
+    }
+    function calcular() {
+      const adultos = Number(adultosEl.value) || 0;
+      const perfil = consumoEl.value === "leve" ? 1.2 : consumoEl.value === "alto" ? 2.2 : 1.7;
+      const fatorDuracao = duracaoEl.value === "curto" ? 0.9 : duracaoEl.value === "longo" ? 1.25 : 1;
+      const litros = adultos * perfil * fatorDuracao;
+      document.getElementById("resumoTopoValor").textContent = `${litros.toFixed(1).replace(".", ",")} L`;
+      document.getElementById("resumoTopoTexto").textContent = `Estimativa para ${adultos} adulto(s) com consumo ${consumoEl.value}.`;
+      document.getElementById("litros").textContent = `${litros.toFixed(1).replace(".", ",")} L`;
+      document.getElementById("latas").textContent = `${Math.ceil((litros * 1000) / 350)} latas`;
+      document.getElementById("longnecks").textContent = `${Math.ceil((litros * 1000) / 330)} long necks`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-cerveja-para-festa/");
+    calcular();
+  </script>
+</body>
+</html>

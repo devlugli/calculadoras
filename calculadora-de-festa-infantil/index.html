@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Festa Infantil | CalcBrazil</title>
+  <meta name="description" content="Calcule bolo, doces, salgados e bebidas para festa infantil com base em crianças, adultos e perfil do evento.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-festa-infantil/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Festa Infantil">
+  <meta property="og:description" content="Veja bolo, salgados, doces e bebidas para a festa infantil em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-festa-infantil/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Festa Infantil</h1>
+    <p class="descricao">Estime bolo, doces, salgados e bebidas para organizar a festa infantil com mais tranquilidade.</p>
+    <p class="selo">festa infantil • bolo • doces • salgados • bebidas</p>
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo(20, 25, 'medio')">25 crianças</button>
+      <button type="button" onclick="aplicarExemplo(30, 40, 'completo')">Festa maior</button>
+      <button type="button" onclick="aplicarExemplo(10, 12, 'simples')">Evento simples</button>
+    </div>
+    <div class="campo"><label for="adultos">Adultos</label><input id="adultos" type="number" value="20" min="0" step="1"></div>
+    <div class="campo"><label for="criancas">Crianças</label><input id="criancas" type="number" value="25" min="1" step="1"></div>
+    <div class="campo"><label for="perfil">Perfil da festa</label><select id="perfil"><option value="simples">Simples</option><option value="medio" selected>Médio</option><option value="completo">Completo</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Resumo da mesa</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe crianças, adultos e perfil da festa.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Comidas</span><strong id="comidas">-</strong><span>Salgados e doces.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Bolo</span><strong id="bolo">-</strong><span>Peso estimado e faixa de segurança.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Bebidas</span><strong id="bebidas">-</strong><span>Refrigerante, suco e água.</span></div>
+    </div>
+    <div class="nota-resultado" id="notaResultado">Ajuste a conta se a festa tiver refeição principal ou muitas sobremesas extras.</div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script>
+    const kg = (value) => `${value.toFixed(1).replace(".", ",")} kg`;
+    const litros = (value) => `${value.toFixed(1).replace(".", ",")} L`;
+    const adultosEl = document.getElementById("adultos");
+    const criancasEl = document.getElementById("criancas");
+    const perfilEl = document.getElementById("perfil");
+    function aplicarExemplo(adultos, criancas, perfil) {
+      adultosEl.value = adultos;
+      criancasEl.value = criancas;
+      perfilEl.value = perfil;
+      calcular();
+    }
+    function calcular() {
+      const adultos = Number(adultosEl.value) || 0;
+      const criancas = Number(criancasEl.value) || 0;
+      const fator = perfilEl.value === "simples" ? 1 : perfilEl.value === "completo" ? 1.2 : 1.1;
+      const salgados = Math.ceil((adultos * 8 + criancas * 10) * fator);
+      const doces = Math.ceil((adultos * 4 + criancas * 6) * fator);
+      const bolo = (adultos * 0.09 + criancas * 0.12) * fator;
+      const refrigerante = (adultos * 0.35 + criancas * 0.3) * fator;
+      const suco = criancas * 0.25 * fator;
+      const agua = (adultos * 0.2 + criancas * 0.15) * fator;
+      document.getElementById("resumoTopoValor").textContent = `${salgados} salgados e ${doces} doces`;
+      document.getElementById("resumoTopoTexto").textContent = `Conta pensada para ${criancas} criança(s) e ${adultos} adulto(s).`;
+      document.getElementById("comidas").textContent = `${salgados} salgados • ${doces} doces`;
+      document.getElementById("bolo").textContent = `${kg(bolo)} • cerca de ${Math.ceil(bolo * 8)} fatias`;
+      document.getElementById("bebidas").textContent = `${litros(refrigerante)} refri • ${litros(suco)} suco • ${litros(agua)} água`;
+    }
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-festa-infantil/");
+    calcular();
+  </script>
+</body>
+</html>
