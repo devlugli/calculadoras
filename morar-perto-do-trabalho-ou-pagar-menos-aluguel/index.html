@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morar Perto do Trabalho ou Pagar Menos Aluguel? | CalcBrazil</title>
+<meta name="description" content="Coloque aluguel, transporte e valor do tempo na mesma conta para ver se morar perto do trabalho compensa.">
+<link rel="canonical" href="https://calcbrazil.com/morar-perto-do-trabalho-ou-pagar-menos-aluguel/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Morar Perto do Trabalho ou Pagar Menos Aluguel?">
+<meta property="og:description" content="Compare extra de aluguel, economia de transporte e valor do tempo perdido no deslocamento.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/morar-perto-do-trabalho-ou-pagar-menos-aluguel/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="morar-perto">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Morar Perto do Trabalho ou Pagar Menos Aluguel?</h1>
+<p class="descricao">Compare o aluguel extra com a economia de transporte e o valor do tempo para entender se a mudanca faz sentido.</p>
+<p class="selo">moradia • deslocamento • aluguel • tempo</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Tempo vale muito</button>
+<button type="button" onclick="aplicarExemplo(1)">Aluguel segue pesando</button>
+</div>
+<div class="campo"><label for="aluguelAtual">Aluguel atual (R$)</label><input id="aluguelAtual" type="number" value="1600" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="novoAluguel">Novo aluguel perto do trabalho (R$)</label><input id="novoAluguel" type="number" value="2200" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="transporteAtual">Gasto atual com transporte (R$)</label><input id="transporteAtual" type="number" value="650" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="transporteNovo">Novo gasto com transporte (R$)</label><input id="transporteNovo" type="number" value="120" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="horasDeslocamentoDia">Horas de deslocamento economizadas por dia</label><input id="horasDeslocamentoDia" type="number" value="2.5" step="0.1" inputmode="decimal"></div>
+<div class="campo"><label for="valorHoraLivre">Quanto vale sua hora livre (R$)</label><input id="valorHoraLivre" type="number" value="18" step="0.01" inputmode="decimal"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">Muita gente calcula aluguel e transporte, mas ignora o valor do tempo. Esta ferramenta tenta colocar isso na mesa.</div>
+</div>
+<section class="seo">
+<h2>Por que essa comparacao e diferente?</h2>
+<p>Porque ela nao olha apenas o dinheiro direto. O tempo recuperado pode ser usado para descanso, renda extra, estudo ou qualidade de vida.</p>
+<h2>Quando morar perto ganha?</h2>
+<p>Quando a combinacao entre economia de transporte e valor do tempo supera o aluguel extra da mudanca.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/alugar-ou-comprar-imovel/"><span class="titulo-resultado">Moradia</span><strong>Alugar ou Comprar Imovel?</strong><span>Se a decisão envolve compra, compare aluguel atual com a alternativa de financiamento.</span></a>
+<a class="card-resultado card-link" href="/vale-a-pena-trocar-de-emprego/"><span class="titulo-resultado">Carreira</span><strong>Vale a Pena Trocar de Emprego?</strong><span>Use as duas páginas juntas quando trabalho e deslocamento mudam ao mesmo tempo.</span></a>
+<a class="card-resultado card-link" href="/ter-carro-ou-usar-app-transporte/"><span class="titulo-resultado">Mobilidade</span><strong>Ter Carro ou Usar App e Transporte?</strong><span>Refine o custo do deslocamento antes de decidir apenas pelo aluguel.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/morar-perto-do-trabalho-ou-pagar-menos-aluguel/");</script>
+</body>
+</html>

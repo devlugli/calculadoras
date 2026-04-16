@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trocar de Carro ou Manter o Atual? | CalcBrazil</title>
+<meta name="description" content="Compare o custo do carro atual com o do carro novo para ver se ainda vale manter ou se a troca ja faz sentido.">
+<link rel="canonical" href="https://calcbrazil.com/trocar-de-carro-ou-manter-o-atual/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Trocar de Carro ou Manter o Atual?">
+<meta property="og:description" content="Veja quando os gastos do carro atual ja se aproximam demais de um carro novo.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/trocar-de-carro-ou-manter-o-atual/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="trocar-carro">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Trocar de Carro ou Manter o Atual?</h1>
+<p class="descricao">Compare o custo mensal do carro atual com o custo projetado de um carro novo para ver se a troca comeca a fazer sentido.</p>
+<p class="selo">carro • manutencao • comparacao • troca</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Atual pesa demais</button>
+<button type="button" onclick="aplicarExemplo(1)">Atual ainda vence</button>
+</div>
+<div class="campo"><label for="manutencaoAtual">Manutencao mensal do carro atual (R$)</label><input id="manutencaoAtual" type="number" value="650" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="seguroAtual">Seguro atual por mes (R$)</label><input id="seguroAtual" type="number" value="220" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="combustivelAtual">Combustivel atual por mes (R$)</label><input id="combustivelAtual" type="number" value="700" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="parcelaNovo">Parcela do carro novo (R$)</label><input id="parcelaNovo" type="number" value="1100" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="seguroNovo">Seguro do carro novo por mes (R$)</label><input id="seguroNovo" type="number" value="300" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="combustivelNovo">Combustivel do carro novo por mes (R$)</label><input id="combustivelNovo" type="number" value="500" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="reparoUnico">Reparo grande previsto no atual (R$)</label><input id="reparoUnico" type="number" value="6000" step="0.01" inputmode="decimal"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">Aqui a leitura fica mais util quando voce coloca manutencao realista e nao esquece um reparo grande que ja esta vindo.</div>
+</div>
+<section class="seo">
+<h2>Quando manter o carro atual continua melhor?</h2>
+<p>Quando ele ainda custa claramente menos por mes e nao ha um reparo grande mudando a conta de forma estrutural.</p>
+<h2>Quando trocar comeca a ganhar?</h2>
+<p>Quando a manutencao, o risco de quebra e um reparo alto deixam o carro atual perto demais do custo de um carro mais novo.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/vale-a-pena-financiar-um-carro/"><span class="titulo-resultado">Decisão</span><strong>Vale a Pena Financiar um Carro?</strong><span>Se a troca exigir financiamento, compare o peso da parcela antes de assumir o novo custo.</span></a>
+<a class="card-resultado card-link" href="/ter-carro-ou-usar-app-transporte/"><span class="titulo-resultado">Mobilidade</span><strong>Ter Carro ou Usar App e Transporte?</strong><span>Se o carro atual já pesa demais, veja se a alternativa sem carro pode ser mais leve.</span></a>
+<a class="card-resultado card-link" href="/calculadora-custo-por-km/"><span class="titulo-resultado">Combustível</span><strong>Calculadora de Custo por KM</strong><span>Entenda melhor o peso do uso diário do carro antes de decidir trocar ou manter.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/trocar-de-carro-ou-manter-o-atual/");</script>
+</body>
+</html>

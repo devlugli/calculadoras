@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quitar Divida ou Investir? | CalcBrazil</title>
+<meta name="description" content="Compare o custo dos juros da divida com o ganho de investir o mesmo valor para ver qual escolha pesa menos.">
+<link rel="canonical" href="https://calcbrazil.com/quitar-divida-ou-investir/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Quitar Divida ou Investir?">
+<meta property="og:description" content="Veja quando os juros da divida superam o investimento e puxam a decisao para quitar antes.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/quitar-divida-ou-investir/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="quitar-divida-ou-investir">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Quitar Divida ou Investir?</h1>
+<p class="descricao">Compare o peso dos juros da divida com o rendimento do investimento para entender qual lado esta mais forte no seu cenario.</p>
+<p class="selo">divida • investir • juros • comparacao</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Juros muito altos</button>
+<button type="button" onclick="aplicarExemplo(1)">Rendimento competitivo</button>
+</div>
+<div class="campo"><label for="aporteDisponivel">Valor disponivel para decidir (R$)</label><input id="aporteDisponivel" type="number" value="15000" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="jurosDivida">Juros da divida ao mes (%)</label><input id="jurosDivida" type="number" value="5.5" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="rendimentoMensal">Rendimento mensal do investimento (%)</label><input id="rendimentoMensal" type="number" value="1" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="mesesComparacao">Periodo de comparacao (meses)</label><input id="mesesComparacao" type="number" value="12" step="1" inputmode="numeric"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">Quando a divida tem juros muito altos, ela costuma bater o investimento. A conta ajuda a enxergar isso com mais rapidez.</div>
+</div>
+<section class="seo">
+<h2>Por que esta decisao importa?</h2>
+<p>Muita gente ve o investimento render e esquece que a divida tambem esta crescendo. O foco aqui e comparar o peso real de cada lado.</p>
+<h2>Quando investir ainda pode competir?</h2>
+<p>Quando o juro da divida esta baixo e existe uma boa razao para manter caixa ou reserva aplicada.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/guias/quitar-divida-ou-investir/"><span class="titulo-resultado">Guia</span><strong>Quitar Divida ou Investir?</strong><span>Leia a lógica por trás dessa decisão antes de comparar apenas números soltos.</span></a>
+<a class="card-resultado card-link" href="/vale-a-pena-antecipar-parcelas/"><span class="titulo-resultado">Decisão</span><strong>Vale a Pena Antecipar Parcelas?</strong><span>Use o comparador para cenários em que a dívida já está parcelada e pode ser antecipada.</span></a>
+<a class="card-resultado card-link" href="/calculadora-juros-compostos/"><span class="titulo-resultado">Finanças</span><strong>Juros Compostos</strong><span>Veja o potencial do investimento no período e refine a comparação com a dívida.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/quitar-divida-ou-investir/");</script>
+</body>
+</html>

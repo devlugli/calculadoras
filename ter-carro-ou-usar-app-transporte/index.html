@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ter Carro ou Usar App e Transporte? | CalcBrazil</title>
+<meta name="description" content="Compare o custo total do carro com app e transporte publico para ver qual opcao pesa menos no mes.">
+<link rel="canonical" href="https://calcbrazil.com/ter-carro-ou-usar-app-transporte/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Ter Carro ou Usar App e Transporte?">
+<meta property="og:description" content="Veja o custo do carro contra as alternativas sem carro em um comparativo simples.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/ter-carro-ou-usar-app-transporte/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="ter-carro-ou-app">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Ter Carro ou Usar App e Transporte?</h1>
+<p class="descricao">Compare o custo total do carro com o custo mensal de app e transporte publico para ver qual caminho pesa menos.</p>
+<p class="selo">carro • app • transporte • comparacao</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Sem carro fica melhor</button>
+<button type="button" onclick="aplicarExemplo(1)">Carro compete</button>
+</div>
+<div class="campo"><label for="parcelaCarro">Parcela do carro (R$)</label><input id="parcelaCarro" type="number" value="1200" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="custosFixosCarro">Custos fixos do carro por mes (R$)</label><input id="custosFixosCarro" type="number" value="650" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="custosUsoCarro">Combustivel, estacionamento e uso por mes (R$)</label><input id="custosUsoCarro" type="number" value="700" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="gastoApp">Gasto mensal com app (R$)</label><input id="gastoApp" type="number" value="600" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="gastoTransportePublico">Gasto mensal com transporte publico (R$)</label><input id="gastoTransportePublico" type="number" value="250" step="0.01" inputmode="decimal"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">O custo do carro costuma ser subestimado. Tente colocar todos os gastos fixos e de uso para a comparacao ficar honesta.</div>
+</div>
+<section class="seo">
+<h2>Quando abrir mao do carro pode ser melhor?</h2>
+<p>Quando app e transporte publico juntos ainda ficam muito abaixo do custo real de manter o carro por mes.</p>
+<h2>Quando o carro continua competitivo?</h2>
+<p>Quando os custos sem carro se aproximam bastante e conveniencia, agenda e autonomia pesam muito no uso diario.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/trocar-de-carro-ou-manter-o-atual/"><span class="titulo-resultado">Mobilidade</span><strong>Trocar de Carro ou Manter o Atual?</strong><span>Se manter carro ainda for importante, compare se vale trocar por um modelo menos pesado.</span></a>
+<a class="card-resultado card-link" href="/calculadora-custo-por-km/"><span class="titulo-resultado">Combustível</span><strong>Calculadora de Custo por KM</strong><span>Entenda melhor o custo de rodar com o carro antes de comparar com app e transporte.</span></a>
+<a class="card-resultado card-link" href="/calculadora-gasto-combustivel-viagem/"><span class="titulo-resultado">Combustível</span><strong>Gasto de Combustível em Viagem</strong><span>Projete o uso em trajetos maiores e complemente a conta do custo mensal do carro.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/ter-carro-ou-usar-app-transporte/");</script>
+</body>
+</html>

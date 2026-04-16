@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprar a Vista ou Investir? | CalcBrazil</title>
+<meta name="description" content="Compare desconto no pagamento a vista com o potencial de investir o dinheiro pelo mesmo periodo.">
+<link rel="canonical" href="https://calcbrazil.com/comprar-a-vista-ou-investir/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Comprar a Vista ou Investir?">
+<meta property="og:description" content="Veja quando o desconto a vista vence e quando investir o dinheiro ganha mais forca.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/comprar-a-vista-ou-investir/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="comprar-a-vista-ou-investir">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Comprar a Vista ou Investir?</h1>
+<p class="descricao">Compare o desconto no pagamento a vista com o ganho potencial de manter o dinheiro investido durante o mesmo periodo.</p>
+<p class="selo">a vista • investir • desconto • parcelamento</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Sem juros e com rendimento</button>
+<button type="button" onclick="aplicarExemplo(1)">Desconto forte a vista</button>
+</div>
+<div class="campo"><label for="valorCompra">Valor da compra (R$)</label><input id="valorCompra" type="number" value="12000" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="descontoVista">Desconto a vista (%)</label><input id="descontoVista" type="number" value="10" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="parcelas">Numero de parcelas</label><input id="parcelas" type="number" value="12" step="1" inputmode="numeric"></div>
+<div class="campo"><label for="jurosParcelamento">Juros do parcelamento ao mes (%)</label><input id="jurosParcelamento" type="number" value="0" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="rendimentoInvestimento">Rendimento mensal do investimento (%)</label><input id="rendimentoInvestimento" type="number" value="1" step="0.01" inputmode="decimal"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">A comparacao fica mais util quando voce informa juros e rendimento com a mesma unidade de tempo.</div>
+</div>
+<section class="seo">
+<h2>Quando pagar a vista costuma vencer?</h2>
+<p>Quando o desconto real e forte e o parcelamento adiciona juros relevantes ao valor final.</p>
+<h2>Quando investir ganha espaco?</h2>
+<p>Quando o parcelamento esta sem juros ou com custo muito baixo e o dinheiro pode render mais no periodo.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/quitar-divida-ou-investir/"><span class="titulo-resultado">Decisão</span><strong>Quitar Divida ou Investir?</strong><span>Use o mesmo raciocínio para comparar juros da dívida com rendimento do dinheiro aplicado.</span></a>
+<a class="card-resultado card-link" href="/vale-a-pena-antecipar-parcelas/"><span class="titulo-resultado">Decisão</span><strong>Vale a Pena Antecipar Parcelas?</strong><span>Compare desconto imediato com o potencial de manter o dinheiro investido.</span></a>
+<a class="card-resultado card-link" href="/calculadora-juros-compostos/"><span class="titulo-resultado">Finanças</span><strong>Juros Compostos</strong><span>Veja o crescimento do dinheiro investido em um período maior e refine a comparação.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/comprar-a-vista-ou-investir/");</script>
+</body>
+</html>

@@ -354,6 +354,72 @@ const CALCULADORAS = [
   titulo: "Lucro Real Mercado Livre e Shopee",
   descricao: "Descubra o lucro final da venda em marketplace com todos os custos.",
   categoria: "Marketplace"
+},
+{
+  url: "/calculadoras-decisao/",
+  titulo: "Calculadoras de Decisao",
+  descricao: "Compare escolhas importantes de dinheiro, moradia, carreira e mobilidade.",
+  categoria: "Categoria"
+},
+{
+  url: "/vale-a-pena-financiar-um-carro/",
+  titulo: "Vale a Pena Financiar um Carro?",
+  descricao: "Veja se a parcela do carro cabe de forma saudavel no orcamento.",
+  categoria: "Decisao"
+},
+{
+  url: "/alugar-ou-comprar-imovel/",
+  titulo: "Alugar ou Comprar Imovel?",
+  descricao: "Compare aluguel e compra para ver qual escolha fica mais leve no momento.",
+  categoria: "Decisao"
+},
+{
+  url: "/consorcio-ou-financiamento/",
+  titulo: "Consorcio ou Financiamento?",
+  descricao: "Compare custo total, parcela e urgencia para decidir melhor.",
+  categoria: "Decisao"
+},
+{
+  url: "/comprar-a-vista-ou-investir/",
+  titulo: "Comprar a Vista ou Investir?",
+  descricao: "Veja quando o desconto a vista vence e quando investir ganha forca.",
+  categoria: "Decisao"
+},
+{
+  url: "/trocar-de-carro-ou-manter-o-atual/",
+  titulo: "Trocar de Carro ou Manter o Atual?",
+  descricao: "Entenda se os custos do carro atual ja se aproximaram demais de um carro novo.",
+  categoria: "Decisao"
+},
+{
+  url: "/vale-a-pena-antecipar-parcelas/",
+  titulo: "Vale a Pena Antecipar Parcelas?",
+  descricao: "Compare desconto na antecipacao com o ganho de manter o dinheiro investido.",
+  categoria: "Decisao"
+},
+{
+  url: "/quitar-divida-ou-investir/",
+  titulo: "Quitar Divida ou Investir?",
+  descricao: "Veja se os juros da divida superam o rendimento do investimento.",
+  categoria: "Decisao"
+},
+{
+  url: "/vale-a-pena-trocar-de-emprego/",
+  titulo: "Vale a Pena Trocar de Emprego?",
+  descricao: "Compare renda real, custos e risco antes de mudar de trabalho.",
+  categoria: "Decisao"
+},
+{
+  url: "/morar-perto-do-trabalho-ou-pagar-menos-aluguel/",
+  titulo: "Morar Perto do Trabalho ou Pagar Menos Aluguel?",
+  descricao: "Coloque transporte, aluguel e valor do tempo na mesma conta.",
+  categoria: "Decisao"
+},
+{
+  url: "/ter-carro-ou-usar-app-transporte/",
+  titulo: "Ter Carro ou Usar App e Transporte?",
+  descricao: "Compare o custo do carro com as alternativas sem carro.",
+  categoria: "Decisao"
 }
 ];
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vale a Pena Trocar de Emprego? | CalcBrazil</title>
+<meta name="description" content="Compare renda real, custos e risco para ver se trocar de emprego melhora o seu cenario de forma consistente.">
+<link rel="canonical" href="https://calcbrazil.com/vale-a-pena-trocar-de-emprego/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Vale a Pena Trocar de Emprego?">
+<meta property="og:description" content="Veja se o ganho real do novo emprego sustenta a mudanca.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/vale-a-pena-trocar-de-emprego/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="trocar-emprego">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Vale a Pena Trocar de Emprego?</h1>
+<p class="descricao">Compare salario liquido, custos ligados ao trabalho, beneficios e risco para ver se a troca ganha forca.</p>
+<p class="selo">emprego • renda • carreira • decisao</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Mudanca forte</button>
+<button type="button" onclick="aplicarExemplo(1)">Mudanca fraca</button>
+</div>
+<div class="campo"><label for="salarioAtual">Salario liquido atual (R$)</label><input id="salarioAtual" type="number" value="4200" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="salarioNovo">Novo salario liquido (R$)</label><input id="salarioNovo" type="number" value="5200" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="custoAtual">Custos mensais do trabalho atual (R$)</label><input id="custoAtual" type="number" value="450" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="custoNovo">Custos mensais do novo trabalho (R$)</label><input id="custoNovo" type="number" value="220" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="beneficiosDiferenca">Diferenca mensal de beneficios (R$)</label><input id="beneficiosDiferenca" type="number" value="250" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="risco">Nivel de risco percebido</label><select id="risco"><option value="baixo">Baixo</option><option value="medio" selected>Medio</option><option value="alto">Alto</option></select></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">Esta leitura e propositalmente objetiva. Cultura, crescimento e qualidade do ambiente tambem importam e podem mudar a decisao.</div>
+</div>
+<section class="seo">
+<h2>O que realmente importa nessa troca?</h2>
+<p>Nao e so o salario bruto. O ganho real aparece quando voce coloca custos, beneficios e risco da mudanca na mesma conta.</p>
+<h2>Quando a troca fica convincente?</h2>
+<p>Quando a melhora liquida e clara o suficiente para sustentar a mudanca mesmo em um contexto mais incerto.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/morar-perto-do-trabalho-ou-pagar-menos-aluguel/"><span class="titulo-resultado">Moradia</span><strong>Morar Perto do Trabalho ou Pagar Menos Aluguel?</strong><span>Se a troca de emprego muda deslocamento e rotina, leve esse impacto para a conta.</span></a>
+<a class="card-resultado card-link" href="/calculadora-salario-liquido/"><span class="titulo-resultado">Trabalho</span><strong>Salário Líquido</strong><span>Refine a leitura entendendo melhor quanto realmente entra no bolso em cada cenário.</span></a>
+<a class="card-resultado card-link" href="/calculadoras-decisao/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Decisao</strong><span>Explore outros comparadores para dinheiro, moradia, dívida e mobilidade.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/vale-a-pena-trocar-de-emprego/");</script>
+</body>
+</html>

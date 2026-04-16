@@ -67,7 +67,18 @@ const homeTools = [
   { name: "Calculadora de Blocos para Parede", url: "./calculadora-de-blocos-para-parede/", category: "Constru\u00e7\u00e3o", aliases: ["blocos para parede", "quantos blocos por metro quadrado", "alvenaria"] },
   { name: "Calculadora de Comissao do Mercado Livre", url: "./calculadora-comissao-mercado-livre/", category: "Marketplace", aliases: ["mercado livre", "comissao mercado livre", "taxa mercado livre", "comissao ml"] },
   { name: "Calculadora de Comissao Shopee", url: "./calculadora-comissao-shopee/", category: "Marketplace", aliases: ["shopee", "comissao shopee", "taxa shopee", "taxas shopee"] },
-  { name: "Calculadora de Lucro Real Mercado Livre e Shopee", url: "./calculadora-lucro-real-mercado-livre-shopee/", category: "Marketplace", aliases: ["lucro real", "lucro marketplace", "simulador de lucro", "lucro mercado livre", "lucro shopee"] }
+  { name: "Calculadora de Lucro Real Mercado Livre e Shopee", url: "./calculadora-lucro-real-mercado-livre-shopee/", category: "Marketplace", aliases: ["lucro real", "lucro marketplace", "simulador de lucro", "lucro mercado livre", "lucro shopee"] },
+  { name: "Calculadoras de Decisao", url: "./calculadoras-decisao/", category: "Decisao", aliases: ["calculadoras de decisao", "comparadores", "decidir melhor"] },
+  { name: "Vale a Pena Financiar um Carro", url: "./vale-a-pena-financiar-um-carro/", category: "Decisao", aliases: ["vale a pena financiar carro", "financiar um carro", "compensa financiar carro"] },
+  { name: "Alugar ou Comprar Imovel", url: "./alugar-ou-comprar-imovel/", category: "Decisao", aliases: ["alugar ou comprar", "alugar ou comprar imovel", "vale comprar imovel"] },
+  { name: "Consorcio ou Financiamento", url: "./consorcio-ou-financiamento/", category: "Decisao", aliases: ["consorcio ou financiamento", "vale consorcio", "vale financiamento"] },
+  { name: "Comprar a Vista ou Investir", url: "./comprar-a-vista-ou-investir/", category: "Decisao", aliases: ["comprar a vista ou investir", "a vista ou investir", "parcelar ou investir"] },
+  { name: "Trocar de Carro ou Manter o Atual", url: "./trocar-de-carro-ou-manter-o-atual/", category: "Decisao", aliases: ["trocar de carro", "manter o carro atual", "vale trocar de carro"] },
+  { name: "Vale a Pena Antecipar Parcelas", url: "./vale-a-pena-antecipar-parcelas/", category: "Decisao", aliases: ["antecipar parcelas", "vale antecipar parcelas", "quitar parcelas antes"] },
+  { name: "Quitar Divida ou Investir", url: "./quitar-divida-ou-investir/", category: "Decisao", aliases: ["quitar divida ou investir", "pagar divida ou investir", "investir ou quitar divida"] },
+  { name: "Vale a Pena Trocar de Emprego", url: "./vale-a-pena-trocar-de-emprego/", category: "Decisao", aliases: ["trocar de emprego", "vale trocar de emprego", "novo emprego compensa"] },
+  { name: "Morar Perto do Trabalho ou Pagar Menos Aluguel", url: "./morar-perto-do-trabalho-ou-pagar-menos-aluguel/", category: "Decisao", aliases: ["morar perto do trabalho", "pagar menos aluguel", "morar perto ou pagar menos"] },
+  { name: "Ter Carro ou Usar App e Transporte", url: "./ter-carro-ou-usar-app-transporte/", category: "Decisao", aliases: ["ter carro ou usar app", "usar app e transporte", "vale ter carro"] }
 ];
 
 const normalizeText = (value) =>

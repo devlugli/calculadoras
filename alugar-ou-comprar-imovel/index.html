@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alugar ou Comprar Imovel? | CalcBrazil</title>
+<meta name="description" content="Compare aluguel, entrada e parcela da compra para ver qual escolha parece mais leve no seu momento.">
+<link rel="canonical" href="https://calcbrazil.com/alugar-ou-comprar-imovel/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Alugar ou Comprar Imovel?">
+<meta property="og:description" content="Veja se a compra ja se aproximou do aluguel ou ainda pesa demais no fluxo mensal.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/alugar-ou-comprar-imovel/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-decision-page="alugar-ou-comprar">
+<div class="container">
+<p><a href="/">Voltar para a pagina inicial</a></p>
+<h1>Alugar ou Comprar Imovel?</h1>
+<p class="descricao">Compare o aluguel atual com a compra financiada para ver se comprar ja faz sentido ou se alugar segue mais leve.</p>
+<p class="selo">imovel • aluguel • compra • financiamento</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<button type="button" onclick="aplicarExemplo(0)">Compra competitiva</button>
+<button type="button" onclick="aplicarExemplo(1)">Aluguel mais leve</button>
+</div>
+<div class="campo"><label for="valorImovel">Valor do imovel (R$)</label><input id="valorImovel" type="number" value="350000" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="entrada">Entrada (R$)</label><input id="entrada" type="number" value="80000" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="taxaJuros">Taxa de juros ao mes (%)</label><input id="taxaJuros" type="number" value="0.89" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="parcelas">Numero de parcelas</label><input id="parcelas" type="number" value="360" step="1" inputmode="numeric"></div>
+<div class="campo"><label for="aluguelMensal">Aluguel mensal (R$)</label><input id="aluguelMensal" type="number" value="2200" step="0.01" inputmode="decimal"></div>
+<button type="button" onclick="calcularDecisao()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+</div>
+<div class="nota-resultado">A conta nao substitui planejamento de longo prazo, mas ajuda a enxergar se a compra ja se aproximou do aluguel.</div>
+</div>
+<section class="seo">
+<h2>Quando comprar ganha forca?</h2>
+<p>Quando a entrada e boa e a parcela ja nao fica muito distante do aluguel, a compra comeca a disputar melhor no fluxo mensal.</p>
+<h2>Quando alugar ainda parece melhor?</h2>
+<p>Quando a parcela fica muito acima do aluguel e a entrada ainda drena muito caixa do patrimonio disponivel.</p>
+</section>
+<section class="seo">
+<h2>Veja tambem</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/guias/alugar-ou-comprar-imovel/"><span class="titulo-resultado">Guia</span><strong>Alugar ou Comprar Imovel?</strong><span>Entenda os sinais que fazem a compra ganhar força e quando alugar ainda preserva melhor o caixa.</span></a>
+<a class="card-resultado card-link" href="/calculadora-financiamento/"><span class="titulo-resultado">Finanças</span><strong>Calculadora de Financiamento</strong><span>Use a simulação da parcela para comparar a compra com o aluguel em um cenário mais realista.</span></a>
+<a class="card-resultado card-link" href="/morar-perto-do-trabalho-ou-pagar-menos-aluguel/"><span class="titulo-resultado">Decisão</span><strong>Morar Perto do Trabalho ou Pagar Menos Aluguel?</strong><span>Leve transporte e valor do tempo para a conta antes de decidir só pelo aluguel.</span></a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="../assets/js/calculadoras-decisao.js"></script>
+<script>renderizarCalculadorasPopulares();renderizarCalculadorasRelacionadas("/alugar-ou-comprar-imovel/");</script>
+</body>
+</html>
