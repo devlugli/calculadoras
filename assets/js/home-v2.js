@@ -64,7 +64,10 @@ const homeTools = [
   { name: "Calculadora de Concreto", url: "./calculadora-de-concreto/", category: "Constru\u00e7\u00e3o", aliases: ["concreto", "quantos metros cubicos de concreto", "volume de concreto"] },
   { name: "Calculadora de Argamassa", url: "./calculadora-de-argamassa/", category: "Constru\u00e7\u00e3o", aliases: ["argamassa", "quantos sacos de argamassa", "argamassa por m2"] },
   { name: "Calculadora de Rejunte", url: "./calculadora-de-rejunte/", category: "Constru\u00e7\u00e3o", aliases: ["rejunte", "quantos kg de rejunte", "rejunte por m2"] },
-  { name: "Calculadora de Blocos para Parede", url: "./calculadora-de-blocos-para-parede/", category: "Constru\u00e7\u00e3o", aliases: ["blocos para parede", "quantos blocos por metro quadrado", "alvenaria"] }
+  { name: "Calculadora de Blocos para Parede", url: "./calculadora-de-blocos-para-parede/", category: "Constru\u00e7\u00e3o", aliases: ["blocos para parede", "quantos blocos por metro quadrado", "alvenaria"] },
+  { name: "Calculadora de Comissao do Mercado Livre", url: "./calculadora-comissao-mercado-livre/", category: "Marketplace", aliases: ["mercado livre", "comissao mercado livre", "taxa mercado livre", "comissao ml"] },
+  { name: "Calculadora de Comissao Shopee", url: "./calculadora-comissao-shopee/", category: "Marketplace", aliases: ["shopee", "comissao shopee", "taxa shopee", "taxas shopee"] },
+  { name: "Calculadora de Lucro Real Mercado Livre e Shopee", url: "./calculadora-lucro-real-mercado-livre-shopee/", category: "Marketplace", aliases: ["lucro real", "lucro marketplace", "simulador de lucro", "lucro mercado livre", "lucro shopee"] }
 ];
 
 const normalizeText = (value) =>

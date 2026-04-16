@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Comissão Shopee | CalcBrazil</title>
+<meta name="description" content="Calcule as taxas aproximadas da Shopee e veja o valor líquido recebido considerando comissão, serviço, pagamento e frete grátis.">
+<link rel="canonical" href="https://calcbrazil.com/calculadora-comissao-shopee/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Calculadora de Comissão Shopee">
+<meta property="og:description" content="Veja as taxas estimadas da Shopee e descubra quanto sobra líquido na venda.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-comissao-shopee/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Calculadora de Comissão Shopee</h1>
+<p class="descricao">
+Simule as taxas aproximadas da Shopee com base no preço do produto e no cenário de frete grátis
+para entender quanto sobra no valor líquido recebido pela venda.
+</p>
+<p class="selo">marketplace • Shopee • taxas • comissão • valor líquido</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+<button type="button" onclick="aplicarExemplo(100, 'nao')">R$ 100 sem frete grátis</button>
+<button type="button" onclick="aplicarExemplo(100, 'sim')">R$ 100 com frete grátis</button>
+<button type="button" onclick="aplicarExemplo(179.9, 'sim')">R$ 179,90 com frete grátis</button>
+</div>
+<div class="campo">
+<label for="precoProduto">Preço do produto (R$)</label>
+<input id="precoProduto" type="number" step="0.01" value="100" inputmode="decimal">
+</div>
+<div class="campo">
+<label for="participaFreteGratis">Participa de frete grátis?</label>
+<select id="participaFreteGratis">
+<option value="nao" selected>Não</option>
+<option value="sim">Sim</option>
+</select>
+</div>
+<button type="button" onclick="calcular()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Valor líquido estimado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">R$ 0,00</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para ver a estimativa de taxas.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado">
+<span class="titulo-resultado">Total em taxas</span>
+<strong id="totalTaxas">R$ 0,00</strong>
+<span id="totalTaxasTexto">Soma aproximada de comissão, serviço e pagamento.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Percentual usado</span>
+<strong id="percentualTotal">0,00%</strong>
+<span id="percentualTotalTexto">Base de 18% mais ajuste estimado de frete grátis quando aplicável.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Leitura rápida</span>
+<strong id="leituraRapida">-</strong>
+<span id="leituraRapidaTexto">Resumo simples para comparar o efeito do frete grátis.</span>
+</div>
+</div>
+<div class="nota-resultado" id="notaResultadoShopee">
+Esta simulação usa percentuais aproximados. Programas, campanhas e políticas da Shopee podem alterar o custo real por pedido.
+</div>
+</div>
+<section class="seo-callout">
+<h2>Veja o peso das taxas da Shopee antes de precificar</h2>
+<p>
+Vendedores costumam olhar só a comissão principal, mas a conta da Shopee também pode envolver taxa
+de serviço, taxa de pagamento e efeito do frete grátis. Esta página ajuda a enxergar o impacto total
+na venda antes de publicar o produto.
+</p>
+</section>
+<section class="seo">
+<h2>Como calcular a comissão da Shopee?</h2>
+<p>
+A estimativa base desta calculadora usa 14% de comissão, 2% de taxa de serviço e 2% de taxa de pagamento,
+totalizando 18% sobre o preço do produto. Depois, a ferramenta aplica um ajuste extra quando o anúncio participa
+de frete grátis.
+</p>
+<h2>Por que o frete grátis muda a conta?</h2>
+<p>
+Em muitos cenários o vendedor passa a absorver parte maior do custo operacional da venda.
+Por isso a página mostra um cenário separado com impacto adicional estimado.
+</p>
+<h2>Quando vale comparar Shopee e Mercado Livre?</h2>
+<p>
+Sempre que o mesmo produto é anunciado em mais de um marketplace. Comparar as taxas ajuda a entender
+qual canal deixa mais margem e qual precisa de um preço diferente.
+</p>
+<h2>Perguntas frequentes</h2>
+<h3>O total de 18% é oficial?</h3>
+<p>Não. É uma referência prática para simulação rápida. O percentual real pode mudar conforme regras e campanhas.</p>
+<h3>Posso usar esta calculadora para preço mínimo?</h3>
+<p>Sim. Ela é um bom primeiro filtro para não anunciar sem considerar o peso das taxas.</p>
+<h3>Como saber meu lucro final?</h3>
+<p>Depois de estimar as taxas, use o simulador de lucro real para descontar custo do produto, frete, embalagem e imposto.</p>
+</section>
+<section class="seo">
+<h2>Veja também</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/calculadora-comissao-mercado-livre/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Comissão do Mercado Livre</strong>
+<span>Compare o peso da comissão do ML com tipo de anúncio e categoria.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadora-lucro-real-mercado-livre-shopee/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Lucro Real Mercado Livre e Shopee</strong>
+<span>Some custo, frete, embalagem e imposto para descobrir a margem real da venda.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadoras-financeiras/">
+<span class="titulo-resultado">Categoria</span>
+<strong>Calculadoras Financeiras</strong>
+<span>Veja mais ferramentas para preço, margem, markup e comissões.</span>
+</a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+<script>
+renderizarCalculadorasPopulares();
+renderizarCalculadorasRelacionadas("/calculadora-comissao-shopee/");
+</script>
+</body>
+</html>

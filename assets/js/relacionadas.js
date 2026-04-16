@@ -336,6 +336,24 @@ const CALCULADORAS = [
   titulo: "Calculadoras de Constru\u00e7\u00e3o",
   descricao: "Veja ferramentas para tinta, piso, concreto, argamassa e blocos.",
   categoria: "Categoria"
+},
+{
+  url: "/calculadora-comissao-mercado-livre/",
+  titulo: "Comissao do Mercado Livre",
+  descricao: "Estime a comissao do ML e o valor liquido recebido na venda.",
+  categoria: "Marketplace"
+},
+{
+  url: "/calculadora-comissao-shopee/",
+  titulo: "Comissao Shopee",
+  descricao: "Simule taxas da Shopee e veja quanto sobra na venda.",
+  categoria: "Marketplace"
+},
+{
+  url: "/calculadora-lucro-real-mercado-livre-shopee/",
+  titulo: "Lucro Real Mercado Livre e Shopee",
+  descricao: "Descubra o lucro final da venda em marketplace com todos os custos.",
+  categoria: "Marketplace"
 }
 ];
 

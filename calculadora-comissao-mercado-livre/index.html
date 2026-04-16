@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Comissão do Mercado Livre | CalcBrazil</title>
+<meta name="description" content="Calcule a comissão aproximada do Mercado Livre e veja quanto sobra no valor líquido da venda com base no preço, tipo de anúncio e categoria.">
+<link rel="canonical" href="https://calcbrazil.com/calculadora-comissao-mercado-livre/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Calculadora de Comissão do Mercado Livre">
+<meta property="og:description" content="Veja a comissão estimada do Mercado Livre e o valor líquido recebido na venda.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-comissao-mercado-livre/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Calculadora de Comissão do Mercado Livre</h1>
+<p class="descricao">
+Simule a comissão aproximada do Mercado Livre com base no preço do produto,
+no tipo de anúncio e na categoria escolhida para entender quanto sobra líquido na venda.
+</p>
+<p class="selo">marketplace • Mercado Livre • comissão • valor líquido</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+<button type="button" onclick="aplicarExemplo(100, 'premium', 'geral')">Produto de R$ 100 Premium</button>
+<button type="button" onclick="aplicarExemplo(189.9, 'classico', 'moda')">Moda em anúncio Clássico</button>
+<button type="button" onclick="aplicarExemplo(499.9, 'premium', 'eletronicos')">Eletrônicos em Premium</button>
+</div>
+<div class="campo">
+<label for="precoProduto">Preço do produto (R$)</label>
+<input id="precoProduto" type="number" step="0.01" value="100" inputmode="decimal">
+</div>
+<div class="campo">
+<label for="tipoAnuncio">Tipo de anúncio</label>
+<select id="tipoAnuncio">
+<option value="classico">Clássico (11%)</option>
+<option value="premium" selected>Premium (16%)</option>
+</select>
+</div>
+<div class="campo">
+<label for="categoria">Categoria</label>
+<select id="categoria">
+<option value="geral" selected>Geral (taxa média da plataforma)</option>
+<option value="moda">Moda e acessórios (+1 ponto percentual)</option>
+<option value="beleza">Beleza e cuidados pessoais (+0,5 ponto percentual)</option>
+<option value="casa">Casa, móveis e decoração (+0,5 ponto percentual)</option>
+<option value="eletronicos">Eletrônicos e informática (-1 ponto percentual)</option>
+</select>
+</div>
+<button type="button" onclick="calcular()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo" id="resumoTopoTitulo">Valor líquido estimado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">R$ 0,00</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para ver a estimativa de comissão.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado">
+<span class="titulo-resultado">Comissão ML</span>
+<strong id="comissaoMl">R$ 0,00</strong>
+<span id="comissaoMlTexto">Valor aproximado cobrado pela plataforma.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Percentual usado</span>
+<strong id="percentualAplicado">0,00%</strong>
+<span id="percentualAplicadoTexto">Soma do tipo de anúncio com o ajuste médio da categoria.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Leitura rápida</span>
+<strong id="leituraRapida">-</strong>
+<span id="leituraRapidaTexto">Resumo simples para comparar anúncios e categorias.</span>
+</div>
+</div>
+<div class="nota-resultado" id="notaResultadoMercadoLivre">
+Esta simulação usa percentuais médios para orientar a precificação. Taxas reais podem variar por categoria, campanha e regra vigente da plataforma.
+</div>
+</div>
+<section class="seo-callout">
+<h2>Entenda quanto o Mercado Livre desconta antes de anunciar</h2>
+<p>
+Esta calculadora ajuda vendedores a estimar a comissão do Mercado Livre e o valor líquido recebido
+depois da taxa da plataforma. Ela é útil para validar anúncio clássico, anúncio premium e diferenças
+aproximadas entre categorias antes de definir o preço final.
+</p>
+</section>
+<section class="seo">
+<h2>Como calcular a comissão do Mercado Livre?</h2>
+<p>
+A lógica base é multiplicar o preço do produto pelo percentual da comissão do tipo de anúncio.
+Depois, o valor da comissão é subtraído do preço para chegar ao valor líquido recebido.
+</p>
+<h2>Qual a diferença entre anúncio clássico e premium?</h2>
+<p>
+No modelo mais comum, o anúncio clássico usa uma comissão menor e o premium usa uma comissão maior.
+O premium tende a ter mais exposição, então a conta final do vendedor muda bastante.
+</p>
+<h2>Por que considerar a categoria?</h2>
+<p>
+Algumas categorias trabalham com taxas um pouco diferentes. Por isso esta página usa ajustes médios
+para ajudar na estimativa, sem substituir a tabela oficial da plataforma.
+</p>
+<h2>Perguntas frequentes</h2>
+<h3>O resultado é exato?</h3>
+<p>Não. O resultado é uma estimativa útil para precificação rápida e comparação entre cenários.</p>
+<h3>Posso usar esta conta para decidir meu preço mínimo?</h3>
+<p>Sim. Ela já ajuda a enxergar o efeito da comissão sobre a venda e pode ser combinada com o simulador de lucro.</p>
+<h3>Vale comparar com Shopee?</h3>
+<p>Sim. Muitos vendedores anunciam nos dois marketplaces e precisam comparar o peso das taxas em cada um.</p>
+</section>
+<section class="seo">
+<h2>Veja também</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/calculadora-comissao-shopee/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Comissão Shopee</strong>
+<span>Compare o custo aproximado da Shopee com taxa de serviço, pagamento e frete grátis.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadora-lucro-real-mercado-livre-shopee/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Lucro Real Mercado Livre e Shopee</strong>
+<span>Descubra se a venda sobra no azul depois de comissão, frete, embalagem e imposto.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadoras-financeiras/">
+<span class="titulo-resultado">Categoria</span>
+<strong>Calculadoras Financeiras</strong>
+<span>Explore mais ferramentas para preço, margem, markup, comissão e lucro.</span>
+</a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+<script>
+renderizarCalculadorasPopulares();
+renderizarCalculadorasRelacionadas("/calculadora-comissao-mercado-livre/");
+</script>
+</body>
+</html>

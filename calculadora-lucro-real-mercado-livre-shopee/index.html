@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Lucro Real Mercado Livre e Shopee | CalcBrazil</title>
+<meta name="description" content="Calcule o lucro real no Mercado Livre e na Shopee considerando custo do produto, comissao, frete, embalagem e imposto para ver a margem final.">
+<link rel="canonical" href="https://calcbrazil.com/calculadora-lucro-real-mercado-livre-shopee/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D1LTJL2BFV');
+</script>
+<meta property="og:title" content="Calculadora de Lucro Real Mercado Livre e Shopee">
+<meta property="og:description" content="Descubra o lucro final e a margem da venda no Mercado Livre ou na Shopee.">
+<meta property="og:image" content="https://calcbrazil.com/preview.png">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-lucro-real-mercado-livre-shopee/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Calculadora de Lucro Real Mercado Livre e Shopee</h1>
+<p class="descricao">
+Descubra se a venda realmente dá lucro no Mercado Livre ou na Shopee considerando
+preço, custo do produto, taxas do marketplace, frete, embalagem e imposto.
+</p>
+<p class="selo">marketplace • lucro • margem • precificação • vendedor</p>
+<div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+<button type="button" onclick="aplicarExemploMl()">Exemplo Mercado Livre</button>
+<button type="button" onclick="aplicarExemploShopee()">Exemplo Shopee</button>
+<button type="button" onclick="aplicarExemploEnxuto()">Produto de margem apertada</button>
+</div>
+<div class="campo">
+<label for="marketplace">Marketplace</label>
+<select id="marketplace">
+<option value="mercado_livre" selected>Mercado Livre</option>
+<option value="shopee">Shopee</option>
+</select>
+</div>
+<div class="campo">
+<label for="precoVenda">Preço de venda (R$)</label>
+<input id="precoVenda" type="number" step="0.01" value="100" inputmode="decimal">
+</div>
+<div class="campo">
+<label for="custoProduto">Custo do produto (R$)</label>
+<input id="custoProduto" type="number" step="0.01" value="40" inputmode="decimal">
+</div>
+<div class="campo" id="campoTipoAnuncio">
+<label for="tipoAnuncioMl">Tipo de anúncio no Mercado Livre</label>
+<select id="tipoAnuncioMl">
+<option value="classico">Clássico (11%)</option>
+<option value="premium" selected>Premium (16%)</option>
+</select>
+</div>
+<div class="campo" id="campoCategoriaMl">
+<label for="categoriaMl">Categoria no Mercado Livre</label>
+<select id="categoriaMl">
+<option value="geral" selected>Geral</option>
+<option value="moda">Moda e acessórios</option>
+<option value="beleza">Beleza e cuidados pessoais</option>
+<option value="casa">Casa, móveis e decoração</option>
+<option value="eletronicos">Eletrônicos e informática</option>
+</select>
+</div>
+<div class="campo" id="campoFreteGratisShopee" hidden>
+<label for="freteGratisShopee">Participa de frete grátis na Shopee?</label>
+<select id="freteGratisShopee">
+<option value="nao" selected>Não</option>
+<option value="sim">Sim</option>
+</select>
+</div>
+<div class="campo">
+<label for="freteVendedor">Frete pago pelo vendedor (R$)</label>
+<input id="freteVendedor" type="number" step="0.01" value="12" inputmode="decimal">
+</div>
+<div class="campo">
+<label for="custoEmbalagem">Custo da embalagem (R$)</label>
+<input id="custoEmbalagem" type="number" step="0.01" value="2" inputmode="decimal">
+</div>
+<div class="campo">
+<label for="imposto">Imposto ou outro desconto adicional (R$)</label>
+<input id="imposto" type="number" step="0.01" value="0" inputmode="decimal">
+</div>
+<button type="button" onclick="calcular()">Calcular</button>
+<div class="resumo-topo">
+<div class="resumo-topo-titulo">Lucro final estimado</div>
+<div class="resumo-topo-valor" id="resumoTopoValor">R$ 0,00</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para ver o lucro real da venda.</div>
+</div>
+<div class="resultado-grid detalhes-resultado">
+<div class="card-resultado">
+<span class="titulo-resultado">Margem</span>
+<strong id="margemFinal">0,00%</strong>
+<span id="margemFinalTexto">Lucro dividido pelo preço de venda.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Valor líquido recebido</span>
+<strong id="valorLiquidoRecebido">R$ 0,00</strong>
+<span id="valorLiquidoRecebidoTexto">Preço menos taxas do marketplace.</span>
+</div>
+<div class="card-resultado">
+<span class="titulo-resultado">Taxas do marketplace</span>
+<strong id="taxasMarketplace">R$ 0,00</strong>
+<span id="taxasMarketplaceTexto">Custo aproximado cobrado pela plataforma escolhida.</span>
+</div>
+</div>
+<div class="nota-resultado" id="notaResultadoLucro">
+Use esta simulação para validar se o preço cobre todos os custos. As taxas dos marketplaces são aproximadas e podem variar por regra, campanha e categoria.
+</div>
+</div>
+<section class="seo-callout">
+<h2>Ferramenta para responder a pergunta que o vendedor realmente quer</h2>
+<p>
+Não basta saber a comissão do marketplace. O ponto principal é descobrir se sobra lucro depois de
+custos, frete, embalagem e imposto. Esta calculadora junta tudo isso em uma conta prática para precificação.
+</p>
+</section>
+<section class="seo">
+<h2>Como funciona a calculadora de lucro real?</h2>
+<p>
+O cálculo parte do preço de venda e desconta custo do produto, taxas do marketplace, frete pago pelo vendedor,
+embalagem e imposto. No fim, a página mostra o lucro final, a margem e o valor líquido recebido.
+</p>
+<h2>Quando usar Mercado Livre ou Shopee na simulação?</h2>
+<p>
+Use o marketplace que representa o canal principal da venda. Se você trabalha nos dois, vale simular os dois cenários
+para descobrir qual deles aceita um preço melhor ou exige mais cuidado com margem.
+</p>
+<h2>Por que a margem pode parecer boa e ainda assim ser ruim?</h2>
+<p>
+Muitos vendedores olham apenas o valor líquido depois da comissão e esquecem de somar frete, embalagem e imposto.
+Esses custos escondidos comprimem a margem e podem transformar uma venda em prejuízo.
+</p>
+<h2>Perguntas frequentes</h2>
+<h3>Posso usar imposto em percentual?</h3>
+<p>Nesta versão o campo de imposto é em reais para simplificar o cálculo. Se quiser, depois podemos evoluir para percentual.</p>
+<h3>A calculadora serve para produto com lucro negativo?</h3>
+<p>Sim. Se os custos passarem do preço de venda, o resultado mostrará prejuízo e margem negativa.</p>
+<h3>Qual a melhor ferramenta para começar?</h3>
+<p>Se você ainda está entendendo as taxas, comece pelas calculadoras de comissão do Mercado Livre e da Shopee. Depois use esta página para a análise completa.</p>
+</section>
+<section class="seo">
+<h2>Veja também</h2>
+<div class="resultado-grid">
+<a class="card-resultado card-link" href="/calculadora-comissao-mercado-livre/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Comissão do Mercado Livre</strong>
+<span>Faça a leitura rápida das taxas do ML antes de simular o lucro completo.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadora-comissao-shopee/">
+<span class="titulo-resultado">Marketplace</span>
+<strong>Calculadora de Comissão Shopee</strong>
+<span>Compare a taxa total estimada da Shopee com e sem frete grátis.</span>
+</a>
+<a class="card-resultado card-link" href="/calculadora-margem-de-lucro/">
+<span class="titulo-resultado">Negócios</span>
+<strong>Calculadora de Margem de Lucro</strong>
+<span>Veja também a margem de um produto em um cenário mais simples de precificação.</span>
+</a>
+</div>
+</section>
+<section id="calculadorasPopulares" class="seo"></section>
+<section id="calculadorasRelacionadas" class="seo"></section>
+<script src="../assets/js/populares.js"></script>
+<script src="../assets/js/relacionadas.js"></script>
+<script src="./script.js"></script>
+<script>
+renderizarCalculadorasPopulares();
+renderizarCalculadorasRelacionadas("/calculadora-lucro-real-mercado-livre-shopee/");
+</script>
+</body>
+</html>
