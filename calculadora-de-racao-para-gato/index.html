@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Ração para Gato | CalcBrazil</title>
+  <meta name="description" content="Calcule a quantidade diária de ração para gato com base no peso, fase da vida, atividade e calorias do alimento.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-racao-para-gato/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Ração para Gato | CalcBrazil">
+  <meta property="og:description" content="Descubra uma estimativa de quantidade diária de ração para gato.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-racao-para-gato/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Ração para Gato",
+  "url": "https://calcbrazil.com/calculadora-de-racao-para-gato/",
+  "description": "Estime a quantidade diária de ração para gato com base no peso e no perfil do animal.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Ração para Gato</h1>
+    <p class="descricao">Estime a quantidade diária de ração para o seu gato com base no peso, fase da vida, nível de atividade e calorias da ração.</p>
+    <p class="selo">Pets • gato • ração • alimentação • cálculo instantâneo</p>
+    <div class="campo">
+      <label for="peso">Peso do gato (kg)</label>
+      <input id="peso" type="number" value="4" step="0.1" min="0" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="fase">Fase da vida</label>
+      <select id="fase">
+        <option value="filhote">Filhote</option>
+        <option value="adulto" selected>Adulto</option>
+        <option value="idoso">Idoso</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="atividade">Nível de atividade</label>
+      <select id="atividade">
+        <option value="baixa">Baixa</option>
+        <option value="moderada" selected>Moderada</option>
+        <option value="alta">Alta</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="kcal">Energia da ração (kcal/kg)</label>
+      <input id="kcal" type="number" value="3900" step="1" min="1" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Por refeição</span>
+        <strong id="gramasPorRefeicao">0 g</strong>
+        <span>Estimativa prática por refeição.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Calorias por dia</span>
+        <strong id="kcalDia">0 kcal</strong>
+        <span>Necessidade energética estimada.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Sugestão de refeições</span>
+        <strong id="refeicoesDia">0</strong>
+        <span>Divisão recomendada para a rotina.</span>
+      </div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Como calcular a quantidade de ração para gato?</h2>
+    <p>A estimativa considera o peso corporal, a fase da vida, o nível de atividade e as calorias da ração. O resultado final mostra uma quantidade aproximada em gramas por dia.</p>
+    <h2>Quando usar essa calculadora?</h2>
+    <p>Ela é útil para ter uma referência inicial de porção diária, comparar alimentos com energias diferentes e ajustar melhor a rotina alimentar do gato.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Quanto de ração um gato deve comer por dia?</h3>
+    <p>A resposta depende do peso, da idade, da atividade e da ração usada. Esta ferramenta faz uma estimativa inicial em gramas.</p>
+    <h3>Esse resultado é exato?</h3>
+    <p>Não. O resultado é apenas uma referência e pode variar conforme condição corporal e orientação veterinária.</p>
+    <h3>Posso usar o valor de kcal/kg da embalagem?</h3>
+    <p>Sim. Esse é o valor ideal para usar na calculadora.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-racao-para-gato/");
+  </script>
+</body>
+</html>

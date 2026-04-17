@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Peso Ideal para Gato | CalcBrazil</title>
+  <meta name="description" content="Estime o peso ideal do seu gato com base no peso atual e no escore de condição corporal.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-peso-ideal-para-gato/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Peso Ideal para Gato | CalcBrazil">
+  <meta property="og:description" content="Veja uma estimativa do peso ideal do seu gato a partir da condição corporal.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-peso-ideal-para-gato/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Peso Ideal para Gato",
+  "url": "https://calcbrazil.com/calculadora-de-peso-ideal-para-gato/",
+  "description": "Estime o peso ideal do gato com base no peso atual e no escore de condição corporal.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Peso Ideal para Gato</h1>
+    <p class="descricao">Estime o peso ideal do seu gato usando o peso atual e o escore de condição corporal, uma referência prática para entender se ele está abaixo, no ideal ou acima do peso.</p>
+    <p class="selo">Pets • gato • peso ideal • condição corporal • cálculo instantâneo</p>
+    <div class="campo">
+      <label for="pesoAtual">Peso atual do gato (kg)</label>
+      <input id="pesoAtual" type="number" value="5" step="0.1" min="0" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="ecc">Escore de condição corporal (1 a 5)</label>
+      <select id="ecc">
+        <option value="1">1 - Muito abaixo do peso</option>
+        <option value="2">2 - Abaixo do peso</option>
+        <option value="3" selected>3 - Peso ideal</option>
+        <option value="4">4 - Acima do peso</option>
+        <option value="5">5 - Bem acima do peso</option>
+      </select>
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Escala de condição corporal para gatos</h2>
+    <table class="tabela-imc">
+      <tr><th>Escore</th><th>Interpretação</th></tr>
+      <tr><td>1</td><td>Cerca de 30% abaixo do ideal</td></tr>
+      <tr><td>2</td><td>Cerca de 15% abaixo do ideal</td></tr>
+      <tr><td>3</td><td>Faixa considerada ideal</td></tr>
+      <tr><td>4</td><td>Cerca de 15% acima do ideal</td></tr>
+      <tr><td>5</td><td>Cerca de 30% acima do ideal</td></tr>
+    </table>
+  </section>
+  <section class="seo">
+    <h2>Como calcular o peso ideal do gato?</h2>
+    <p>A calculadora usa o peso atual e um escore corporal simplificado de 1 a 5 para estimar qual seria o peso mais próximo da faixa ideal.</p>
+    <h2>Esse cálculo é exato?</h2>
+    <p>Não. O resultado é apenas uma estimativa. Peso saudável em gatos também depende de estrutura corporal, idade, massa muscular e avaliação veterinária.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>O que é o escore de condição corporal?</h3>
+    <p>É uma escala usada para avaliar se o gato está magro, no peso ideal ou acima do peso observando e palpando o corpo.</p>
+    <h3>Posso usar só a balança para saber o peso ideal?</h3>
+    <p>Não. O número da balança ajuda, mas a condição corporal costuma ser uma referência melhor do que um peso isolado.</p>
+    <h3>Essa calculadora substitui o veterinário?</h3>
+    <p>Não. O resultado é apenas informativo e não substitui orientação profissional.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-peso-ideal-para-gato/");
+  </script>
+</body>
+</html>

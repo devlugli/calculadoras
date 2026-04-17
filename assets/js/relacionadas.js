@@ -213,7 +213,43 @@ const CALCULADORAS = [
     url: "/calculadora-idade-de-cachorro/",
     titulo: "Calculadora de Idade de Cachorro",
     descricao: "Descubra a idade humana equivalente do seu cachorro.",
-    categoria: "Saúde"
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadora-de-idade-de-gato/",
+    titulo: "Calculadora de Idade de Gato",
+    descricao: "Descubra a idade humana equivalente do seu gato.",
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadora-de-racao-para-cachorro/",
+    titulo: "Calculadora de Ração para Cachorro",
+    descricao: "Estime a quantidade diária de ração para o seu cachorro.",
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadora-de-racao-para-gato/",
+    titulo: "Calculadora de Ração para Gato",
+    descricao: "Estime a quantidade diária de ração para o seu gato.",
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadora-de-peso-ideal-para-gato/",
+    titulo: "Peso Ideal para Gato",
+    descricao: "Veja uma estimativa de peso ideal com base na condição corporal.",
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadora-de-gestacao-de-cadela/",
+    titulo: "Gestação de Cadela",
+    descricao: "Estime a data provável de parto e a janela da gestação.",
+    categoria: "Pets"
+  },
+  {
+    url: "/calculadoras-pets/",
+    titulo: "Calculadoras de Pets",
+    descricao: "Veja todas as ferramentas para cachorro e gato em um só lugar.",
+    categoria: "Categoria"
   },
 
   {

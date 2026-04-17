@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Gestação de Cadela | CalcBrazil</title>
+  <meta name="description" content="Calcule a data estimada de parto de uma cadela a partir da data de cobertura e veja a janela provável da gestação.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-gestacao-de-cadela/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Gestação de Cadela | CalcBrazil">
+  <meta property="og:description" content="Estime a data de parto de uma cadela com base na data de cobertura.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-gestacao-de-cadela/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Gestação de Cadela",
+  "url": "https://calcbrazil.com/calculadora-de-gestacao-de-cadela/",
+  "description": "Estime a data provável de parto e a janela da gestação de uma cadela.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Gestação de Cadela</h1>
+    <p class="descricao">Informe a data da cobertura para estimar a data provável do parto e a janela aproximada da gestação.</p>
+    <p class="selo">Pets • cadela • gestação • parto • cálculo instantâneo</p>
+    <div class="campo">
+      <label for="dataCobertura">Data da cobertura</label>
+      <input id="dataCobertura" type="date">
+    </div>
+    <div class="campo">
+      <label for="duracao">Gestação média (dias)</label>
+      <input id="duracao" type="number" value="63" step="1" min="58" max="68" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Início da janela</span>
+        <strong id="janelaInicio">-</strong>
+        <span>Estimativa mais cedo para o parto.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Fim da janela</span>
+        <strong id="janelaFim">-</strong>
+        <span>Estimativa mais tardia para o parto.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Tempo restante</span>
+        <strong id="diasRestantes">-</strong>
+        <span>Contagem aproximada até a data prevista.</span>
+      </div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Como funciona a calculadora de gestação de cadela?</h2>
+    <p>A ferramenta usa a data de cobertura para estimar um parto médio em 63 dias e mostra também uma janela aproximada entre 58 e 68 dias, já que a duração pode variar.</p>
+    <h2>Esse cálculo é exato?</h2>
+    <p>Não. A previsão é apenas informativa. Em cães, a data de cobertura nem sempre coincide exatamente com a ovulação e a concepção, então a precisão é limitada.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Quantos dias dura a gestação de uma cadela?</h3>
+    <p>Uma referência comum é cerca de 63 dias, mas a janela pode variar dependendo do caso.</p>
+    <h3>Posso usar essa data como confirmação de parto?</h3>
+    <p>Não. Ela serve como estimativa inicial e não substitui acompanhamento veterinário.</p>
+    <h3>Quando procurar um veterinário?</h3>
+    <p>Sempre que houver dúvidas, sinais de desconforto, alteração no comportamento ou necessidade de acompanhar a gestação com mais segurança.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-gestacao-de-cadela/");
+  </script>
+</body>
+</html>
