@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Taxa Metabólica Basal | CalcBrazil</title>
+  <meta name="description" content="Calcule sua taxa metabólica basal online com base em sexo, idade, peso e altura. Veja quantas calorias seu corpo gasta em repouso.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-taxa-metabolica-basal/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Taxa Metabólica Basal | CalcBrazil">
+  <meta property="og:description" content="Descubra sua taxa metabólica basal e o gasto energético em repouso.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-taxa-metabolica-basal/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Taxa Metabólica Basal",
+  "url": "https://calcbrazil.com/calculadora-de-taxa-metabolica-basal/",
+  "description": "Calcule a taxa metabólica basal com base em sexo, idade, peso e altura.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é taxa metabólica basal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A taxa metabólica basal representa a quantidade de calorias que o corpo gasta em repouso para manter funções vitais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como calcular a taxa metabólica basal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nesta calculadora, usamos a fórmula de Mifflin-St Jeor com sexo, idade, peso e altura para estimar o gasto energético basal."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Taxa Metabólica Basal</h1>
+    <p class="descricao">Calcule sua taxa metabólica basal para descobrir quantas calorias seu corpo gasta em repouso, usando sexo, idade, peso e altura.</p>
+    <p class="selo">Saúde • metabolismo • TMB • calorias • cálculo instantâneo</p>
+
+    <div class="campo">
+      <label for="sexo">Sexo</label>
+      <select id="sexo">
+        <option value="homem" selected>Homem</option>
+        <option value="mulher">Mulher</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="idade">Idade (anos)</label>
+      <input id="idade" type="number" value="30" step="1" min="1" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="peso">Peso (kg)</label>
+      <input id="peso" type="number" value="70" step="0.1" min="0" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="altura">Altura (cm)</label>
+      <input id="altura" type="number" value="175" step="1" min="1" inputmode="numeric">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>O que é taxa metabólica basal?</h2>
+    <p>
+      A taxa metabólica basal, ou TMB, representa a quantidade de calorias que o corpo gasta em repouso para manter funções vitais como respiração, circulação e temperatura corporal.
+    </p>
+
+    <h2>Como calcular a taxa metabólica basal?</h2>
+    <p>
+      Nesta calculadora, usamos a fórmula de Mifflin-St Jeor, que considera sexo, idade, peso e altura para estimar o gasto energético basal diário.
+    </p>
+
+    <h2>Para que serve a TMB?</h2>
+    <p>
+      A TMB ajuda a entender o gasto energético mínimo do corpo e costuma ser usada como base para calcular calorias de manutenção, emagrecimento e ganho de peso.
+    </p>
+
+    <h2>Perguntas frequentes</h2>
+    <h3>Taxa metabólica basal é o mesmo que calorias por dia?</h3>
+    <p>Não. A TMB considera apenas o gasto em repouso. O total diário depende também do nível de atividade.</p>
+    <h3>Esse resultado é exato?</h3>
+    <p>Não. O valor é uma estimativa e não substitui avaliação profissional.</p>
+    <h3>Como usar esse resultado?</h3>
+    <p>Ele é um bom ponto de partida para entender o metabolismo e pode ser combinado com uma calculadora de calorias por dia.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-taxa-metabolica-basal/");
+  </script>
+</body>
+</html>

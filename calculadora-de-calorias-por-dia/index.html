@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Calorias por Dia | CalcBrazil</title>
+  <meta name="description" content="Descubra quantas calorias consumir por dia para manter, emagrecer ou ganhar peso com base em sexo, idade, peso, altura e atividade física.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-calorias-por-dia/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Calorias por Dia | CalcBrazil">
+  <meta property="og:description" content="Veja quantas calorias consumir por dia para manter, emagrecer ou ganhar peso.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-calorias-por-dia/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Calorias por Dia",
+  "url": "https://calcbrazil.com/calculadora-de-calorias-por-dia/",
+  "description": "Calcule calorias por dia para manter, emagrecer ou ganhar peso.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quantas calorias devo consumir por dia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A quantidade depende de sexo, idade, peso, altura, nível de atividade e objetivo. Esta calculadora estima calorias para manutenção, emagrecimento e ganho de peso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Essa calculadora é exata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O resultado é uma estimativa útil como ponto de partida e não substitui orientação profissional."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Calorias por Dia</h1>
+    <p class="descricao">Descubra quantas calorias consumir por dia para manter, emagrecer ou ganhar peso com base em sexo, idade, peso, altura e nível de atividade.</p>
+    <p class="selo">Saúde • calorias • dieta • metabolismo • cálculo instantâneo</p>
+
+    <div class="campo">
+      <label for="sexo">Sexo</label>
+      <select id="sexo">
+        <option value="homem" selected>Homem</option>
+        <option value="mulher">Mulher</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="idade">Idade (anos)</label>
+      <input id="idade" type="number" value="30" step="1" min="1" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="peso">Peso (kg)</label>
+      <input id="peso" type="number" value="70" step="0.1" min="0" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="altura">Altura (cm)</label>
+      <input id="altura" type="number" value="175" step="1" min="1" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="atividade">Nível de atividade</label>
+      <select id="atividade">
+        <option value="1.2">Sedentário</option>
+        <option value="1.375">Levemente ativo</option>
+        <option value="1.55" selected>Moderadamente ativo</option>
+        <option value="1.725">Muito ativo</option>
+        <option value="1.9">Extremamente ativo</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Manutenção</span>
+        <strong id="caloriasManutencao">0 kcal</strong>
+        <span>Estimativa para manter o peso.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Emagrecimento</span>
+        <strong id="caloriasDeficit">0 kcal</strong>
+        <span>Estimativa com déficit moderado.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Ganho de peso</span>
+        <strong id="caloriasSuperavit">0 kcal</strong>
+        <span>Estimativa com superávit moderado.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como calcular calorias por dia?</h2>
+    <p>
+      A estimativa começa pela taxa metabólica basal e depois considera o nível de atividade física para chegar ao gasto energético diário total. A partir disso, é possível ajustar um déficit ou superávit calórico.
+    </p>
+
+    <h2>Para que serve essa calculadora?</h2>
+    <p>
+      Ela ajuda a estimar calorias para manutenção, emagrecimento ou ganho de peso, servindo como ponto de partida para planejamento alimentar.
+    </p>
+
+    <h2>Perguntas frequentes</h2>
+    <h3>Quantas calorias devo consumir por dia?</h3>
+    <p>A resposta depende do seu perfil corporal e do nível de atividade. Esta calculadora mostra uma estimativa prática.</p>
+    <h3>Posso usar esse resultado para dieta?</h3>
+    <p>Sim, como referência inicial. Para ajustes mais específicos, o ideal é buscar orientação profissional.</p>
+    <h3>Calorias para emagrecer e manter são iguais?</h3>
+    <p>Não. Emagrecimento normalmente envolve déficit calórico, enquanto manutenção busca equilibrar ingestão e gasto.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-calorias-por-dia/");
+  </script>
+</body>
+</html>

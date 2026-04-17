@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Macros | CalcBrazil</title>
+  <meta name="description" content="Calcule proteínas, carboidratos e gorduras por dia com base nas calorias diárias e no objetivo alimentar.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-de-macros/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Macros | CalcBrazil">
+  <meta property="og:description" content="Descubra quantos gramas de proteínas, carboidratos e gorduras consumir por dia.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-de-macros/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Macros",
+  "url": "https://calcbrazil.com/calculadora-de-macros/",
+  "description": "Calcule proteínas, carboidratos e gorduras com base nas calorias diárias e no objetivo.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR"
+}
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">← Voltar para a página inicial</a></p>
+    <h1>Calculadora de Macros</h1>
+    <p class="descricao">Calcule proteínas, carboidratos e gorduras por dia com base nas calorias diárias e no seu objetivo alimentar.</p>
+    <p class="selo">Saúde • macros • dieta • proteínas • cálculo instantâneo</p>
+
+    <div class="campo">
+      <label for="calorias">Calorias diárias (kcal)</label>
+      <input id="calorias" type="number" value="2200" step="1" min="1" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="objetivo">Objetivo</label>
+      <select id="objetivo">
+        <option value="manutencao" selected>Manutenção</option>
+        <option value="emagrecimento">Emagrecimento</option>
+        <option value="ganho">Ganho de peso</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Proteínas</span>
+        <strong id="proteinas">0 g</strong>
+        <span>Estimativa diária de proteínas.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Carboidratos</span>
+        <strong id="carboidratos">0 g</strong>
+        <span>Estimativa diária de carboidratos.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Gorduras</span>
+        <strong id="gorduras">0 g</strong>
+        <span>Estimativa diária de gorduras.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como calcular macros?</h2>
+    <p>
+      A calculadora divide as calorias diárias entre proteínas, carboidratos e gorduras usando distribuições práticas para manutenção, emagrecimento e ganho de peso.
+    </p>
+
+    <h2>Para que serve a calculadora de macros?</h2>
+    <p>
+      Ela ajuda a transformar uma meta calórica em gramas diários de macronutrientes, facilitando o planejamento alimentar.
+    </p>
+
+    <h2>Perguntas frequentes</h2>
+    <h3>O que são macros?</h3>
+    <p>Macros é uma forma abreviada de macronutrientes: proteínas, carboidratos e gorduras.</p>
+    <h3>Essa divisão é obrigatória?</h3>
+    <p>Não. A distribuição é uma referência prática e pode ser ajustada conforme necessidade e orientação profissional.</p>
+    <h3>Posso usar junto com a calculadora de calorias?</h3>
+    <p>Sim. Essa é a melhor forma de usar a calculadora de macros.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-de-macros/");
+  </script>
+</body>
+</html>

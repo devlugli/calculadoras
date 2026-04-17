@@ -210,6 +210,24 @@ const CALCULADORAS = [
     categoria: "Saúde"
   },
   {
+    url: "/calculadora-de-calorias-por-dia/",
+    titulo: "Calculadora de Calorias por Dia",
+    descricao: "Estime quantas calorias consumir para manter, perder ou ganhar peso.",
+    categoria: "Saúde"
+  },
+  {
+    url: "/calculadora-de-taxa-metabolica-basal/",
+    titulo: "Calculadora de Taxa Metabólica Basal",
+    descricao: "Descubra seu gasto calórico basal com base em sexo, idade, peso e altura.",
+    categoria: "Saúde"
+  },
+  {
+    url: "/calculadora-de-macros/",
+    titulo: "Calculadora de Macros",
+    descricao: "Divida sua meta calórica entre proteínas, carboidratos e gorduras.",
+    categoria: "Saúde"
+  },
+  {
     url: "/calculadora-idade-de-cachorro/",
     titulo: "Calculadora de Idade de Cachorro",
     descricao: "Descubra a idade humana equivalente do seu cachorro.",
