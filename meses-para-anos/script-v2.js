@@ -1,16 +1,26 @@
+function formatarLeituraRapida(anosInteiros, mesesRestantes) {
+  if (anosInteiros > 0 && mesesRestantes > 0) {
+    return `${anosInteiros} ano${anosInteiros === 1 ? "" : "s"} e ${mesesRestantes} mes${mesesRestantes === 1 ? "" : "es"}`;
+  }
+
+  if (anosInteiros > 0) {
+    return `${anosInteiros} ano${anosInteiros === 1 ? "" : "s"}`;
+  }
+
+  return `${mesesRestantes} mes${mesesRestantes === 1 ? "" : "es"}`;
+}
+
 function atualizarResumoMeses(meses) {
   const anos = meses / 12;
   const anosInteiros = Math.floor(meses / 12);
   const mesesRestantes = Math.round(meses % 12);
-  const leitura = anosInteiros > 0
-    ? `${anosInteiros} ano${anosInteiros === 1 ? "" : "s"} e ${mesesRestantes} mes${mesesRestantes === 1 ? "" : "es"}`
-    : `${mesesRestantes} mes${mesesRestantes === 1 ? "" : "es"}`;
+  const leitura = formatarLeituraRapida(anosInteiros, mesesRestantes);
 
   document.getElementById("resumoTopoValor").innerText = Number.isFinite(anos)
     ? anos.toLocaleString("pt-BR", { maximumFractionDigits: 4 })
     : "-";
   document.getElementById("resumoTopoTexto").innerText = Number.isFinite(anos)
-    ? `Equivale a ${anosInteiros} ano(s) e ${mesesRestantes} mes(es).`
+    ? `${meses} mes${meses === 1 ? "" : "es"} equivalem a ${leitura}.`
     : "Informe uma quantidade de meses valida.";
 
   document.getElementById("anosInteirosValor").innerText = Number.isFinite(anos) ? anosInteiros : "-";
