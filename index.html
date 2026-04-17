@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadoras Online Gratis, Conversores e Ferramentas | CalcBrazil</title>
 <meta name="description" content="Calculadoras online gratis, conversores, ferramentas de texto, geradores de dados e guias práticos em um so lugar. Encontre soluções rápidas para finanças, matemática, saúde, datas e mais.">
+<meta name="theme-color" content="#0f766e">
 <link rel="canonical" href="https://calcbrazil.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="CalcBrazil | Calculadoras Online Gratis e Ferramentas">
@@ -65,89 +66,22 @@ que aparecem no trabalho, nos estudos e nas compras do dia a dia.
 <form class="home-search" id="home-search" autocomplete="off">
 <label class="home-search-label" for="home-search-input">Encontre uma ferramenta</label>
 <div class="home-search-row">
-<input id="home-search-input" name="q" list="home-tools-list" type="search" placeholder="Ex.: porcentagem, IMC, dias entre datas, financiamento">
+<input id="home-search-input" name="q" type="search" placeholder="Ex.: porcentagem, IMC, dias entre datas, financiamento" aria-describedby="home-search-help home-search-hints-label" spellcheck="false" autocomplete="off">
 <button type="submit">Buscar</button>
 </div>
 <div class="home-search-suggestions" id="home-search-suggestions" aria-live="polite" hidden></div>
-<datalist id="home-tools-list">
-<option value="Calculadora de Porcentagem"></option>
-<option value="Calculadora de Regra de Três"></option>
-<option value="Calculadora de IMC"></option>
-<option value="Dias Entre Datas"></option>
-<option value="Calculadora de Financiamento"></option>
-<option value="Calculadora de Comissão do Mercado Livre"></option>
-<option value="Calculadora de Comissão Shopee"></option>
-<option value="Calculadora de Lucro Real Mercado Livre e Shopee"></option>
-<option value="Vale a Pena Financiar um Carro"></option>
-<option value="Alugar ou Comprar Imóvel"></option>
-<option value="Consórcio ou Financiamento"></option>
-<option value="Comprar à Vista ou Investir"></option>
-<option value="Trocar de Carro ou Manter o Atual"></option>
-<option value="Vale a Pena Antecipar Parcelas"></option>
-<option value="Quitar Dívida ou Investir"></option>
-<option value="Vale a Pena Trocar de Emprego"></option>
-<option value="Morar Perto do Trabalho ou Pagar Menos Aluguel"></option>
-<option value="Ter Carro ou Usar App e Transporte"></option>
-<option value="Calculadora de Churrasco"></option>
-<option value="Calculadora de Tinta"></option>
-<option value="Calculadora de Piso"></option>
-<option value="Calculadora de Concreto"></option>
-<option value="Álcool ou Gasolina"></option>
-<option value="Calculadora de Desconto"></option>
-<option value="Salário Líquido"></option>
-<option value="Juros Compostos"></option>
-<option value="Calculadora de Idade"></option>
-<option value="Calculadora de Dias Úteis"></option>
-<option value="Calculadora de IMC Infantil"></option>
-<option value="Calculadora de Peso Ideal"></option>
-<option value="Calculadora de Calorias por Dia"></option>
-<option value="Calculadora de Taxa Metabólica Basal"></option>
-<option value="Calculadora de Macros"></option>
-<option value="Calculadoras de Pets"></option>
-<option value="Calculadora de Idade de Cachorro"></option>
-<option value="Calculadora de Idade de Gato"></option>
-<option value="Calculadora de Ração para Cachorro"></option>
-<option value="Calculadora de Ração para Gato"></option>
-<option value="Calculadora de Peso Ideal para Gato"></option>
-<option value="Calculadora de Gestação de Cadela"></option>
-<option value="KM por Litro"></option>
-<option value="Contador de Caracteres"></option>
-<option value="Conversor de Texto"></option>
-<option value="Removedor de Espaços"></option>
-<option value="Texto para HTML"></option>
-<option value="HTML para Texto"></option>
-<option value="Escapar HTML"></option>
-<option value="Removedor de Quebras de Linha"></option>
-<option value="Removedor de Linhas Duplicadas"></option>
-<option value="Ordenar Linhas"></option>
-<option value="Localizar e Substituir"></option>
-<option value="Gerador de CPF"></option>
-<option value="Gerador de CNPJ"></option>
-<option value="Gerador de UUID"></option>
-<option value="Gerador de Senha"></option>
-<option value="Gerador de Pessoa"></option>
-<option value="Gerador de Cartão de Crédito"></option>
-<option value="Gerador de Conta Bancária"></option>
-<option value="Gerador de RG"></option>
-<option value="Gerador de CNH"></option>
-<option value="Gerador de CEP"></option>
-<option value="Gerador de E-mail"></option>
-<option value="Gerador de Telefone"></option>
-<option value="Gerador de Nome"></option>
-<option value="Gerador de Empresa"></option>
-<option value="Gerador de Lorem Ipsum"></option>
-<option value="Número por Extenso"></option>
-<option value="Valor por Extenso"></option>
-<option value="Conversor de Números Romanos"></option>
-<option value="Porcentagem para Decimal"></option>
-<option value="Decimal para Porcentagem"></option>
-<option value="Horas para Minutos"></option>
-<option value="Minutos para Horas"></option>
-<option value="Dias para Horas"></option>
-<option value="Anos para Meses"></option>
-<option value="Meses para Anos"></option>
-</datalist>
-<p class="home-search-help">Pesquise pelo nome da ferramenta ou pelo problema que voce quer resolver e va direto para a pagina mais proxima do que precisa.</p>
+<div class="home-search-hints" aria-labelledby="home-search-hints-label">
+<span class="home-search-hints-label" id="home-search-hints-label">Buscas rápidas</span>
+<div class="home-search-chips">
+<button type="button" class="home-search-chip" data-query="desconto">Desconto</button>
+<button type="button" class="home-search-chip" data-query="financiamento">Financiamento</button>
+<button type="button" class="home-search-chip" data-query="dias entre datas">Dias entre datas</button>
+<button type="button" class="home-search-chip" data-query="CPF para teste">CPF para teste</button>
+<button type="button" class="home-search-chip" data-query="churrasco">Churrasco</button>
+<button type="button" class="home-search-chip" data-query="tinta">Tinta</button>
+</div>
+</div>
+<p class="home-search-help" id="home-search-help">Pesquise pelo nome da ferramenta ou pelo problema que voce quer resolver e va direto para a pagina mais proxima do que precisa.</p>
 </form>
 <div class="hero-acoes">
 <a class="home-cta home-cta-primario" href="#resolver">Quero resolver agora</a>
@@ -190,19 +124,48 @@ que aparecem no trabalho, nos estudos e nas compras do dia a dia.
 <section class="home-stats" aria-label="Números do portal">
 <article class="home-stat-card">
 <span class="home-stat-label">Calculadoras publicadas</span>
-<strong>65</strong>
+<strong data-stat="calculators">65</strong>
 <p>Ferramentas já disponíveis para demandas recorrentes do dia a dia.</p>
 </article>
 <article class="home-stat-card">
 <span class="home-stat-label">Ferramentas publicadas</span>
-<strong>100</strong>
+<strong data-stat="tools">100</strong>
 <p>Entre calculadoras, texto, geradores e conversores já disponíveis no portal.</p>
 </article>
 <article class="home-stat-card">
-<span class="home-stat-label">Uso gratuito</span>
-<strong>100% grátis</strong>
-<p>Use as ferramentas de forma rápida e direta, sem custo para acessar os recursos.</p>
+<span class="home-stat-label">Coleções para explorar</span>
+<strong data-stat="collections">12</strong>
+<p>Hubs, categorias e áreas temáticas para descobrir outras ferramentas sem voltar para a busca.</p>
 </article>
+</section>
+<section class="home-section">
+<div class="home-section-head">
+<span class="home-kicker">Rotas prontas</span>
+<h2>Escolha pelo seu contexto</h2>
+<p>Se você ainda não sabe o nome da ferramenta, comece pelo cenário que mais parece com o seu momento.</p>
+</div>
+<div class="home-grid home-grid-4">
+<a class="home-context-card home-context-card-finance" href="./calculadoras-financeiras/">
+<span class="home-context-kicker">Trabalho e vendas</span>
+<strong>Preço, comissão, lucro e salário</strong>
+<p>Atalhos para desconto, markup, comissão, salário líquido e decisões de compra.</p>
+</a>
+<a class="home-context-card home-context-card-home" href="./calculadoras-construcao/">
+<span class="home-context-kicker">Casa e obra</span>
+<strong>Tinta, piso, concreto e materiais</strong>
+<p>Use estimadores de metragem e compra para obra, pintura, parede e acabamento.</p>
+</a>
+<a class="home-context-card home-context-card-health" href="./calculadoras-saude/">
+<span class="home-context-kicker">Saúde e rotina</span>
+<strong>IMC, calorias, macros e metas</strong>
+<p>Ferramentas rápidas para composição corporal, gasto diário e acompanhamento básico.</p>
+</a>
+<a class="home-context-card home-context-card-dev" href="./geradores-dados/">
+<span class="home-context-kicker">Dev e QA</span>
+<strong>CPF, CNPJ, UUID e dados de teste</strong>
+<p>Gere documentos, perfis e identificadores fictícios para homologação, testes e cadastros.</p>
+</a>
+</div>
 </section>
 <section class="home-section" id="resolver">
 <div class="home-section-head">
