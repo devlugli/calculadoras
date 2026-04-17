@@ -21,7 +21,7 @@ function atualizarResumoMeses(meses) {
     : "-";
   document.getElementById("resumoTopoTexto").innerText = Number.isFinite(anos)
     ? `${meses} mes${meses === 1 ? "" : "es"} equivalem a ${leitura}.`
-    : "Informe uma quantidade de meses valida.";
+    : "Informe uma quantidade de meses válida.";
 
   document.getElementById("anosInteirosValor").innerText = Number.isFinite(anos) ? anosInteiros : "-";
   document.getElementById("mesesRestantesValor").innerText = Number.isFinite(anos) ? mesesRestantes : "-";
@@ -33,7 +33,7 @@ function converterMeses() {
 
   if (!Number.isFinite(meses) || meses < 0) {
     document.getElementById("resumoTopoValor").innerText = "-";
-    document.getElementById("resumoTopoTexto").innerText = "Informe uma quantidade de meses valida.";
+    document.getElementById("resumoTopoTexto").innerText = "Informe uma quantidade de meses válida.";
     document.getElementById("anosInteirosValor").innerText = "-";
     document.getElementById("mesesRestantesValor").innerText = "-";
     document.getElementById("mesesLeituraRapida").innerText = "-";
@@ -57,7 +57,7 @@ function copiarResultado() {
   copiarTextoComFallback(
     valor,
     () => mostrarFeedbackCopia("copyFeedback", "Copiado com sucesso."),
-    () => mostrarFeedbackCopia("copyFeedback", "Nao foi possivel copiar automaticamente.")
+    () => mostrarFeedbackCopia("copyFeedback", "Não foi possível copiar automaticamente.")
   );
 }
 
