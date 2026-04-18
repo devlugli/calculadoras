@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de QR Code Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Gere QR Code online grátis para links, texto, Wi-Fi, telefone, e-mail e WhatsApp. Crie códigos escaneáveis para compartilhar em segundos.">
+  <link rel="canonical" href="https://calcbrazil.com/gerador-de-qrcode/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Gerador de QR Code Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Crie QR Code para URL, texto, Wi-Fi, telefone, e-mail e WhatsApp com visual pronto para compartilhar.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/gerador-de-qrcode/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de QR Code</h1>
+<p class="descricao">Transforme links, texto, Wi-Fi, telefone, e-mail e mensagens em um QR Code pronto para escanear e compartilhar.</p>
+<p class="selo">QR Code • URL • Wi-Fi • WhatsApp • impressão • divulgação rápida</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="tipoQr">Tipo de QR Code</label>
+      <select id="tipoQr">
+        <option value="url">Link / URL</option>
+        <option value="text">Texto livre</option>
+        <option value="wifi">Wi-Fi</option>
+        <option value="email">E-mail</option>
+        <option value="phone">Telefone</option>
+        <option value="whatsapp">WhatsApp</option>
+      </select>
+    </div>
+
+    <fieldset class="tool-fieldset" id="grupoUrl">
+      <legend>Destino do link</legend>
+      <label for="qrUrl">URL</label>
+      <input id="qrUrl" type="url" placeholder="https://seusite.com/pagina">
+      <p class="tool-helper">Use a URL completa para abrir site, cardápio, catálogo, checkout ou página de campanha.</p>
+    </fieldset>
+
+    <fieldset class="tool-fieldset" id="grupoTexto" hidden>
+      <legend>Texto livre</legend>
+      <label for="qrTexto">Texto</label>
+      <textarea id="qrTexto" class="texto-area" placeholder="Digite a informação que deve aparecer ao escanear o QR Code"></textarea>
+    </fieldset>
+
+    <fieldset class="tool-fieldset" id="grupoWifi" hidden>
+      <legend>Wi-Fi</legend>
+      <label for="wifiNome">Nome da rede</label>
+      <input id="wifiNome" type="text" placeholder="Ex.: WiFi do Café">
+      <label for="wifiSenha">Senha</label>
+      <input id="wifiSenha" type="text" placeholder="Digite a senha da rede">
+      <label for="wifiTipo">Segurança</label>
+      <select id="wifiTipo">
+        <option value="WPA">WPA / WPA2</option>
+        <option value="WEP">WEP</option>
+        <option value="nopass">Sem senha</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="tool-fieldset" id="grupoEmail" hidden>
+      <legend>E-mail</legend>
+      <label for="emailDestino">E-mail</label>
+      <input id="emailDestino" type="email" placeholder="contato@empresa.com">
+      <label for="emailAssunto">Assunto</label>
+      <input id="emailAssunto" type="text" placeholder="Ex.: Quero um orçamento">
+      <label for="emailMensagem">Mensagem</label>
+      <textarea id="emailMensagem" class="texto-area" placeholder="Digite a mensagem que deve abrir no app de e-mail"></textarea>
+    </fieldset>
+
+    <fieldset class="tool-fieldset" id="grupoTelefone" hidden>
+      <legend>Telefone</legend>
+      <label for="telefoneNumero">Número</label>
+      <input id="telefoneNumero" type="text" placeholder="+5511999999999">
+      <p class="tool-helper">Use DDI e DDD quando quiser facilitar ligação ou contato para clientes.</p>
+    </fieldset>
+
+    <fieldset class="tool-fieldset" id="grupoWhatsapp" hidden>
+      <legend>WhatsApp</legend>
+      <label for="whatsNumero">Número</label>
+      <input id="whatsNumero" type="text" placeholder="5511999999999">
+      <label for="whatsMensagem">Mensagem pronta</label>
+      <textarea id="whatsMensagem" class="texto-area" placeholder="Olá! Vim pelo QR Code e quero mais informações."></textarea>
+    </fieldset>
+
+    <div class="tool-grid-2">
+      <div class="campo">
+        <label for="qrTamanho">Tamanho da imagem</label>
+        <select id="qrTamanho">
+          <option value="256">256 x 256</option>
+          <option value="384" selected>384 x 384</option>
+          <option value="512">512 x 512</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="qrMargem">Margem</label>
+        <select id="qrMargem">
+          <option value="0">Sem margem</option>
+          <option value="8" selected>Média</option>
+          <option value="16">Ampla</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" onclick="gerarQrCode()">Gerar QR Code</button>
+    <div class="tool-note">Dica: para impressão, prefira QR com margem média e teste a leitura no celular antes de divulgar.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Prévia do QR</h2>
+    <div class="tool-preview-shell">
+      <div class="tool-preview-card">
+        <div class="tool-preview-placeholder" id="qrPlaceholder">Preencha os dados ao lado e gere o QR Code para ver a prévia aqui.</div>
+        <img id="qrPreview" class="tool-preview-image" alt="Prévia do QR Code gerado" hidden>
+      </div>
+      <div class="tool-preview-meta">
+        <div class="tool-result-box">
+          <strong id="qrResumoTitulo">Nenhum conteúdo gerado ainda</strong>
+          <span id="qrResumoTexto">Quando você gerar o QR, este bloco mostrará o tipo escolhido e o destino codificado.</span>
+        </div>
+        <div class="tool-actions">
+          <a id="qrDownload" href="#" target="_blank" rel="noopener" hidden>Baixar PNG</a>
+          <button type="button" class="botao-secundario" onclick="copiarConteudoQr()">Copiar conteúdo do QR</button>
+        </div>
+        <span id="copyFeedback" class="copy-feedback"></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um gerador de QR Code?</h2>
+<p>Essa ferramenta ajuda a transformar links e informações em um código escaneável, facilitando acesso por celular sem precisar digitar. É útil para atendimento, cardápio, portfólio, Wi-Fi, redes sociais, cadastro e divulgação local.</p>
+<h2>Quais tipos de QR você pode criar aqui?</h2>
+<p>Você pode gerar QR para URL, texto livre, Wi-Fi, e-mail, telefone e WhatsApp. Assim, a mesma ferramenta atende cenários pessoais, comerciais e operacionais.</p>
+<h2>Como usar o QR no dia a dia?</h2>
+<p>Depois de gerar, teste no celular e use em mesa, balcão, vitrine, embalagem, perfil social, apresentação, assinatura ou impresso. Em ambientes reais, dê preferência para contraste forte e área de respiro.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-link-whatsapp/">
+    <span class="titulo-resultado">Atendimento</span>
+    <strong>Gerador de Link para WhatsApp</strong>
+    <span>Monte o link limpo antes de transformar em QR Code.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-qr/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas QR</strong>
+    <span>Veja a nova área do portal dedicada a QR e compartilhamento rápido.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Explorar</span>
+    <strong>Geradores de Dados</strong>
+    <span>Descubra outras ferramentas úteis para operação, testes e produtividade.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

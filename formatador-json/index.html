@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatador de JSON Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Formate e valide JSON online grátis. Cole o conteúdo, descubra erros de sintaxe e organize payloads para leitura e debug.">
+  <link rel="canonical" href="https://calcbrazil.com/formatador-json/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Formatador de JSON Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Valide e formate JSON para leitura, integração, suporte técnico e depuração de APIs.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/formatador-json/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Formatador de JSON</h1>
+<p class="descricao">Cole um JSON, valide a estrutura, formate para leitura ou compacte o conteúdo para usar em payload, integração e debug.</p>
+<p class="selo">JSON • API • payload • debug • suporte • validação</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="jsonInput">JSON de entrada</label>
+      <textarea id="jsonInput" class="texto-area" rows="14" placeholder='{"usuario":"calc","ativo":true,"roles":["admin","editor"]}'></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="formatarJson()">Formatar JSON</button>
+      <button type="button" class="botao-secundario" onclick="minificarJson()">Minificar JSON</button>
+      <button type="button" class="botao-secundario" onclick="limparJson()">Limpar</button>
+    </div>
+    <div class="tool-note">Dica: use esta página para abrir respostas de API, configs, payloads de webhook e dados enviados para integração.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="jsonStatusTitulo">Aguardando conteúdo</strong>
+        <span id="jsonStatusTexto">Cole um JSON válido ou inválido para validar, formatar ou minificar.</span>
+      </div>
+      <textarea id="jsonOutput" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarJsonResultado()">Copiar resultado</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um formatador de JSON?</h2>
+<p>Essa ferramenta ajuda a organizar estruturas JSON para leitura e depuração. É útil em APIs, integrações, suporte técnico, QA, logs, payloads e configurações.</p>
+<h2>O que acontece quando o JSON está inválido?</h2>
+<p>Se houver erro de sintaxe, a página informa que o conteúdo está inválido e mostra a mensagem retornada pelo parser para facilitar a correção.</p>
+<h2>Quando usar a versão minificada?</h2>
+<p>Use a versão compacta quando quiser reduzir espaço, enviar em campo único, testar payload ou copiar o conteúdo sem quebras e recuos.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/base64-encode-decode/">
+    <span class="titulo-resultado">Conversão</span>
+    <strong>Base64 Encode / Decode</strong>
+    <span>Converta conteúdo técnico entre texto e Base64.</span>
+  </a>
+  <a class="card-resultado card-link" href="/jwt-decoder/">
+    <span class="titulo-resultado">Token</span>
+    <strong>JWT Decoder</strong>
+    <span>Abra tokens JWT e inspecione header e payload.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a nova área com utilidades para desenvolvimento e suporte.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

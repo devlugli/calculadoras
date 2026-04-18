@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex Tester Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Teste expressões regulares online grátis. Valide padrão, flags e veja correspondências rapidamente no navegador.">
+  <link rel="canonical" href="https://calcbrazil.com/regex-tester/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Regex Tester Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Valide regex, ajuste flags e veja matches com rapidez para debug, integração e desenvolvimento.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/regex-tester/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Regex Tester</h1>
+<p class="descricao">Teste expressões regulares, ajuste flags e inspecione correspondências para debug, parsing e validação de texto.</p>
+<p class="selo">Regex • validação • parsing • debug • texto • dev</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="regexPattern">Expressão regular</label>
+      <input id="regexPattern" type="text" placeholder="Ex.: \\b\\d{3}-\\d{2}\\b">
+    </div>
+    <div class="tool-grid-2">
+      <div class="campo">
+        <label for="regexFlags">Flags</label>
+        <input id="regexFlags" type="text" placeholder="Ex.: gi">
+      </div>
+      <div class="campo">
+        <label for="regexSample">Amostra rápida</label>
+        <input id="regexSample" type="text" placeholder="Ex.: global, ignore case">
+      </div>
+    </div>
+    <div class="campo">
+      <label for="regexInput">Texto de teste</label>
+      <textarea id="regexInput" class="texto-area" rows="12" placeholder="Cole aqui o texto em que você quer testar a regex"></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="testarRegex()">Testar regex</button>
+      <button type="button" class="botao-secundario" onclick="limparRegex()">Limpar</button>
+    </div>
+    <div class="tool-note">Dica: use `g` para listar todas as ocorrências, `i` para ignorar maiúsculas/minúsculas e `m` quando quiser avaliar múltiplas linhas.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="regexStatusTitulo">Aguardando regex</strong>
+        <span id="regexStatusTexto">Informe uma expressão regular, as flags desejadas e um texto para testar.</span>
+      </div>
+      <textarea id="regexOutput" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarRegexResultado()">Copiar resultado</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um regex tester?</h2>
+<p>Essa ferramenta ajuda a validar expressões regulares antes de usá-las em código, automação, filtros, parsing de texto, validação de campos e transformação de conteúdo.</p>
+<h2>O que você consegue ver aqui?</h2>
+<p>Você consegue testar o padrão, ajustar flags e visualizar todas as correspondências encontradas no texto. Isso acelera debug e evita tentativa e erro no código.</p>
+<h2>Quando usar?</h2>
+<p>Use ao trabalhar com validação de CPF, e-mail, telefone, extração de IDs, parsing de logs, limpeza de conteúdo e qualquer fluxo que dependa de padrão textual.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/formatador-json/">
+    <span class="titulo-resultado">Payload</span>
+    <strong>Formatador de JSON</strong>
+    <span>Abra e organize estruturas JSON para análise e debug.</span>
+  </a>
+  <a class="card-resultado card-link" href="/url-encode-decode/">
+    <span class="titulo-resultado">URL</span>
+    <strong>URL Encode / Decode</strong>
+    <span>Converta parâmetros e strings para uso em URL.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a área completa com utilidades técnicas do portal.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

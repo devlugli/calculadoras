@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Link para WhatsApp Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Gere link para WhatsApp online grátis com número e mensagem pronta para usar em bio, site, botão, campanha e atendimento.">
+  <link rel="canonical" href="https://calcbrazil.com/gerador-de-link-whatsapp/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Gerador de Link para WhatsApp Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Monte links prontos para abrir conversa no WhatsApp com número e mensagem personalizada.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/gerador-de-link-whatsapp/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Link para WhatsApp</h1>
+<p class="descricao">Monte um link pronto para abrir conversa no WhatsApp com mensagem personalizada e use em bio, botão, site, anúncio ou atendimento.</p>
+<p class="selo">WhatsApp • atendimento • campanha • bio • CTA • conversão</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="whatsPais">Número com DDI e DDD</label>
+      <input id="whatsPais" type="text" placeholder="Ex.: 5511999999999">
+      <p class="tool-helper">Digite apenas números para gerar um link limpo no formato do WhatsApp.</p>
+    </div>
+    <div class="campo">
+      <label for="whatsTexto">Mensagem pronta</label>
+      <textarea id="whatsTexto" class="texto-area" placeholder="Olá! Vim pelo site e quero saber mais sobre o serviço."></textarea>
+    </div>
+    <button type="button" onclick="gerarLinkWhatsapp()">Gerar link</button>
+    <div class="tool-note">Você pode usar o link gerado em botão do site, bio do Instagram, Google Perfil da Empresa, anúncio, cardápio ou assinatura.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="resultadoWhatsappTitulo">Seu link ainda não foi gerado</strong>
+        <span id="resultadoWhatsappTexto">Preencha o número e, se quiser, a mensagem. Depois gere o link para copiar ou abrir.</span>
+      </div>
+      <div class="tool-result-box" id="resultadoWhatsappLink">Nenhum link disponível.</div>
+      <div class="tool-actions">
+        <a id="abrirWhatsapp" href="#" target="_blank" rel="noopener" hidden>Abrir no WhatsApp</a>
+        <button type="button" class="botao-secundario" onclick="copiarLinkWhatsapp()">Copiar link</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um gerador de link para WhatsApp?</h2>
+<p>Essa ferramenta serve para criar um link clicável que já abre a conversa no WhatsApp, com ou sem mensagem pronta. É útil para acelerar atendimento, receber pedidos, captar leads e reduzir atrito.</p>
+<h2>Onde você pode usar esse link?</h2>
+<p>O link pode ser usado em site, botão, landing page, Instagram, anúncio, e-mail, perfil comercial, PDF, apresentação e materiais impressos.</p>
+<h2>Quer transformar o link em QR Code?</h2>
+<p>Depois de gerar o link, você pode levá-lo para o gerador de QR Code e criar uma versão escaneável para balcão, embalagem, vitrine, cartão ou mesa.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/gerador-de-qrcode/">
+    <span class="titulo-resultado">QR Code</span>
+    <strong>Gerador de QR Code</strong>
+    <span>Transforme o link do WhatsApp em um QR para imprimir ou divulgar.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-qr/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas QR</strong>
+    <span>Veja a nova área dedicada a QR, links rápidos e compartilhamento.</span>
+  </a>
+  <a class="card-resultado card-link" href="/geradores-dados/">
+    <span class="titulo-resultado">Portal</span>
+    <strong>Geradores de Dados</strong>
+    <span>Explore outras ferramentas úteis para operação, marketing e produtividade.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

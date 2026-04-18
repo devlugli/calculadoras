@@ -1229,6 +1229,222 @@ select {
   font-weight:600;
 }
 
+.tool-grid-2{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:16px;
+}
+
+.tool-stack{
+  display:grid;
+  gap:16px;
+}
+
+.tool-fieldset{
+  margin:0;
+  padding:18px;
+  border:1px solid #e5dccb;
+  border-radius:18px;
+  background:linear-gradient(180deg, #fffefb 0%, #f8f3ea 100%);
+}
+
+.tool-fieldset legend{
+  padding:0 10px;
+  font-weight:800;
+  color:#23403d;
+}
+
+.tool-fieldset[hidden],
+.tool-panel[hidden]{
+  display:none;
+}
+
+.tool-helper{
+  margin:-6px 0 0;
+  color:var(--cb-text-soft);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.tool-note{
+  padding:16px 18px;
+  border-radius:16px;
+  border:1px solid #cfe5f7;
+  background:linear-gradient(180deg, #f7fbff 0%, #eef7ff 100%);
+  color:#35556d;
+  line-height:1.6;
+}
+
+.tool-panel{
+  padding:22px;
+  border-radius:22px;
+  border:1px solid #e8ddc9;
+  background:linear-gradient(180deg, #fff 0%, #f8f4eb 100%);
+  box-shadow:0 18px 36px rgba(84, 55, 20, 0.06);
+}
+
+.tool-panel h2{
+  margin:0 0 12px;
+  font-size:24px;
+  color:#111827;
+}
+
+.tool-preview-shell{
+  display:grid;
+  gap:16px;
+}
+
+.tool-preview-card{
+  display:grid;
+  place-items:center;
+  min-height:320px;
+  padding:20px;
+  border-radius:20px;
+  border:1px dashed #d9ceb7;
+  background:
+    linear-gradient(45deg, rgba(15,118,110,0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(15,118,110,0.04) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(194,65,12,0.04) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(194,65,12,0.04) 75%),
+    #fffdfa;
+  background-size:24px 24px;
+  background-position:0 0, 0 12px, 12px -12px, -12px 0;
+}
+
+.tool-preview-placeholder{
+  max-width:300px;
+  text-align:center;
+  color:#6b7280;
+  line-height:1.6;
+}
+
+.tool-preview-image{
+  width:100%;
+  max-width:320px;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+.tool-preview-meta{
+  display:grid;
+  gap:10px;
+}
+
+.tool-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.tool-actions a,
+.tool-actions button{
+  width:auto;
+  min-width:200px;
+}
+
+.tool-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  border-radius:12px;
+  border:none;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  text-decoration:none;
+  background:linear-gradient(135deg, var(--cb-accent), var(--cb-accent-strong));
+  transition:all 0.2s ease;
+}
+
+.tool-actions a:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(15,118,110,0.24);
+}
+
+.tool-result-box{
+  padding:16px 18px;
+  border-radius:16px;
+  border:1px solid #e7dfcf;
+  background:#fffdfa;
+  color:#374151;
+  line-height:1.6;
+  word-break:break-word;
+}
+
+.tool-result-box strong,
+.tool-result-box span{
+  display:block;
+}
+
+.tool-result-box span{
+  margin-top:8px;
+  color:var(--cb-text-soft);
+  font-size:14px;
+}
+
+.codigo-resultado{
+  width:100%;
+  min-height:220px;
+  padding:16px 18px;
+  border:1px solid #d7dce5;
+  border-radius:16px;
+  background:#0f172a;
+  color:#e2e8f0;
+  font-family:Consolas, "Courier New", monospace;
+  font-size:14px;
+  line-height:1.6;
+  resize:vertical;
+}
+
+.codigo-resultado[readonly]{
+  opacity:1;
+}
+
+.hub-hero{
+  padding:28px;
+  border-radius:24px;
+  border:1px solid #ddd6fe;
+  background:
+    radial-gradient(circle at top right, rgba(109, 40, 217, 0.14), transparent 28%),
+    radial-gradient(circle at left center, rgba(15, 118, 110, 0.10), transparent 24%),
+    linear-gradient(135deg, #faf5ff 0%, #f8fafc 55%, #eff6ff 100%);
+}
+
+.hub-hero h2{
+  margin:8px 0 0;
+  font-size:28px;
+  color:#111827;
+}
+
+.hub-hero p{
+  margin:12px 0 0;
+  max-width:860px;
+  color:var(--cb-text-soft);
+  line-height:1.7;
+}
+
+.hub-chip-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.hub-chip{
+  display:inline-flex;
+  align-items:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.86);
+  border:1px solid #ddd6fe;
+  color:#5b21b6;
+  font-weight:700;
+}
+
 .churrasco-list-grid{
   align-items:start;
 }
@@ -1524,6 +1740,20 @@ font-weight:bold;
   .home-search-chip{
     width:auto;
     font-size:13px;
+  }
+
+  .tool-grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .tool-actions{
+    flex-direction:column;
+  }
+
+  .tool-actions a,
+  .tool-actions button{
+    width:100%;
+    min-width:0;
   }
 
   .hero-panel-list{

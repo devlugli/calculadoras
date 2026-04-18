@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWT Decoder Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Decodifique JWT online grátis e veja header e payload do token rapidamente para debug, integração e suporte técnico.">
+  <link rel="canonical" href="https://calcbrazil.com/jwt-decoder/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="JWT Decoder Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Abra tokens JWT e visualize header e payload em formato legível no navegador.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/jwt-decoder/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>JWT Decoder</h1>
+<p class="descricao">Cole um token JWT e visualize header e payload em formato legível para suporte, autenticação, integração e troubleshooting.</p>
+<p class="selo">JWT • token • auth • debug • payload • integração</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="jwtInput">Token JWT</label>
+      <textarea id="jwtInput" class="texto-area" rows="14" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="decodificarJwt()">Decodificar token</button>
+      <button type="button" class="botao-secundario" onclick="limparJwt()">Limpar</button>
+    </div>
+    <div class="tool-note">Observação: esta ferramenta apenas decodifica e exibe header e payload. Ela não valida assinatura nem garante autenticidade do token.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="jwtStatusTitulo">Aguardando token</strong>
+        <span id="jwtStatusTexto">Cole um JWT para abrir header e payload.</span>
+      </div>
+      <label for="jwtHeader"><strong>Header</strong></label>
+      <textarea id="jwtHeader" class="codigo-resultado" readonly></textarea>
+      <label for="jwtPayload"><strong>Payload</strong></label>
+      <textarea id="jwtPayload" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarJwtParte('header')">Copiar header</button>
+        <button type="button" class="botao-secundario" onclick="copiarJwtParte('payload')">Copiar payload</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um decoder de JWT?</h2>
+<p>Essa ferramenta ajuda a abrir rapidamente o conteúdo visível de um token JWT, como header e payload, para entender claims, tempo de expiração, issuer, subject e outros campos úteis em integrações e autenticação.</p>
+<h2>Ela valida a assinatura do token?</h2>
+<p>Não. O objetivo aqui é apenas decodificar e exibir as partes legíveis do JWT. Para validação de assinatura, você ainda precisa da chave correta e do fluxo apropriado no backend.</p>
+<h2>Quando usar?</h2>
+<p>Use em suporte técnico, QA, debug de autenticação, revisão de claims, troubleshooting de expiração e inspeção rápida de tokens retornados por sistemas.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/formatador-json/">
+    <span class="titulo-resultado">Payload</span>
+    <strong>Formatador de JSON</strong>
+    <span>Abra estruturas JSON com mais clareza para leitura e debug.</span>
+  </a>
+  <a class="card-resultado card-link" href="/base64-encode-decode/">
+    <span class="titulo-resultado">Conversão</span>
+    <strong>Base64 Encode / Decode</strong>
+    <span>Converta conteúdo técnico entre texto e Base64.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a nova área com utilidades técnicas do portal.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

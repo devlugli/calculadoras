@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Hash Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Gere hash online grátis com SHA-1, SHA-256, SHA-384 e SHA-512 direto no navegador.">
+  <link rel="canonical" href="https://calcbrazil.com/gerador-de-hash/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Gerador de Hash Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Crie hashes no navegador para suporte, verificação, integração e utilidades técnicas.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/gerador-de-hash/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Gerador de Hash</h1>
+<p class="descricao">Gere hashes com SHA-1, SHA-256, SHA-384 e SHA-512 direto no navegador para verificação, suporte e tarefas técnicas rápidas.</p>
+<p class="selo">Hash • SHA-256 • verificação • suporte • segurança • dev</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="hashAlgoritmo">Algoritmo</label>
+      <select id="hashAlgoritmo">
+        <option value="SHA-1">SHA-1</option>
+        <option value="SHA-256" selected>SHA-256</option>
+        <option value="SHA-384">SHA-384</option>
+        <option value="SHA-512">SHA-512</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="hashInput">Conteúdo</label>
+      <textarea id="hashInput" class="texto-area" rows="14" placeholder="Digite ou cole o conteúdo que deve virar hash"></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="gerarHash()">Gerar hash</button>
+      <button type="button" class="botao-secundario" onclick="limparHash()">Limpar</button>
+    </div>
+    <div class="tool-note">O hash é gerado localmente no navegador com Web Crypto API. O conteúdo não precisa sair da página para produzir o resultado.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="hashStatusTitulo">Aguardando conteúdo</strong>
+        <span id="hashStatusTexto">Escolha um algoritmo, informe o conteúdo e gere o hash.</span>
+      </div>
+      <textarea id="hashOutput" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarHashResultado()">Copiar resultado</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um gerador de hash?</h2>
+<p>Essa ferramenta ajuda a produzir uma assinatura hash do conteúdo informado, útil para comparação, verificação, referência técnica, integração e troubleshooting.</p>
+<h2>Quais algoritmos estão disponíveis?</h2>
+<p>Você pode gerar hash com SHA-1, SHA-256, SHA-384 e SHA-512. Para uso geral e verificação moderna, SHA-256 costuma ser a escolha mais prática.</p>
+<h2>Quando usar?</h2>
+<p>Use ao comparar conteúdo, validar referência, gerar fingerprint simples, testar saída de sistemas e reproduzir utilidades técnicas rápidas sem abrir terminal.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/base64-encode-decode/">
+    <span class="titulo-resultado">Conversão</span>
+    <strong>Base64 Encode / Decode</strong>
+    <span>Converta conteúdo técnico entre texto e Base64.</span>
+  </a>
+  <a class="card-resultado card-link" href="/formatador-json/">
+    <span class="titulo-resultado">Payload</span>
+    <strong>Formatador de JSON</strong>
+    <span>Abra e organize estruturas JSON para leitura e debug.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a área completa com utilidades técnicas do portal.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

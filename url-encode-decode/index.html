@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Encode / Decode Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Codifique e decodifique URL online grátis. Converta parâmetros, espaços e caracteres especiais para uso em links e integrações.">
+  <link rel="canonical" href="https://calcbrazil.com/url-encode-decode/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="URL Encode / Decode Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Converta texto para uso em URL e volte ao conteúdo original com rapidez.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/url-encode-decode/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>URL Encode / Decode</h1>
+<p class="descricao">Converta texto para uso em URL com segurança e decodifique parâmetros para leitura em debug, suporte e integração.</p>
+<p class="selo">URL • encode • decode • parâmetros • integração • debug</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="urlModo">Modo</label>
+      <select id="urlModo">
+        <option value="encode">Texto para URL Encode</option>
+        <option value="decode">URL Decode para texto</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="urlInput">Conteúdo</label>
+      <textarea id="urlInput" class="texto-area" rows="14" placeholder="Ex.: nome=João da Silva&origem=site principal"></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="converterUrl()">Converter</button>
+      <button type="button" class="botao-secundario" onclick="limparUrl()">Limpar</button>
+    </div>
+    <div class="tool-note">Use esta ferramenta quando precisar montar query string, parâmetros de redirecionamento, mensagens em link ou ler conteúdo codificado em URLs.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="urlStatusTitulo">Aguardando conteúdo</strong>
+        <span id="urlStatusTexto">Escolha o modo, cole o conteúdo e gere o resultado.</span>
+      </div>
+      <textarea id="urlOutput" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarUrlResultado()">Copiar resultado</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um URL Encode / Decode?</h2>
+<p>Essa ferramenta ajuda a codificar texto para uso em URL, preservando espaços e caracteres especiais, e também a decodificar conteúdo já codificado para leitura humana.</p>
+<h2>Quando usar?</h2>
+<p>Use ao montar parâmetros de redirecionamento, query strings, mensagens em links, URLs de compartilhamento, callbacks e integrações com APIs ou campanhas.</p>
+<h2>O que muda entre encode e decode?</h2>
+<p>No encode, o texto vira um formato seguro para URL. No decode, o conteúdo codificado volta para a forma original legível.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/base64-encode-decode/">
+    <span class="titulo-resultado">Conversão</span>
+    <strong>Base64 Encode / Decode</strong>
+    <span>Converta conteúdo técnico entre texto e Base64.</span>
+  </a>
+  <a class="card-resultado card-link" href="/regex-tester/">
+    <span class="titulo-resultado">Validação</span>
+    <strong>Regex Tester</strong>
+    <span>Teste padrões para validar ou extrair conteúdo de strings.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a área completa com utilidades técnicas do portal.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

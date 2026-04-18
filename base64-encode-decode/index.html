@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 Encode / Decode Online Grátis | CalcBrazil</title>
+  <meta name="description" content="Codifique e decodifique Base64 online grátis. Converta texto UTF-8 em Base64 e volte ao conteúdo original com rapidez.">
+  <link rel="canonical" href="https://calcbrazil.com/base64-encode-decode/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Base64 Encode / Decode Online Grátis | CalcBrazil">
+  <meta property="og:description" content="Converta texto em Base64 e decodifique strings Base64 para leitura e suporte técnico.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/base64-encode-decode/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container">
+<p><a href="/">← Voltar para a página inicial</a></p>
+<h1>Base64 Encode / Decode</h1>
+<p class="descricao">Converta texto em Base64 e decodifique conteúdo Base64 para leitura, integração, suporte e troubleshooting.</p>
+<p class="selo">Base64 • encode • decode • integração • suporte • depuração</p>
+
+<div class="tool-grid-2">
+  <div class="tool-stack">
+    <div class="campo">
+      <label for="base64Modo">Modo</label>
+      <select id="base64Modo">
+        <option value="encode">Texto para Base64</option>
+        <option value="decode">Base64 para texto</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="base64Input">Conteúdo</label>
+      <textarea id="base64Input" class="texto-area" rows="14" placeholder="Digite ou cole o conteúdo aqui"></textarea>
+    </div>
+    <div class="tool-actions">
+      <button type="button" onclick="converterBase64()">Converter</button>
+      <button type="button" class="botao-secundario" onclick="limparBase64()">Limpar</button>
+    </div>
+    <div class="tool-note">Essa ferramenta trabalha com texto UTF-8 para preservar acentos e caracteres especiais ao codificar e decodificar.</div>
+  </div>
+
+  <div class="tool-panel">
+    <h2>Resultado</h2>
+    <div class="tool-preview-meta">
+      <div class="tool-result-box">
+        <strong id="base64StatusTitulo">Aguardando conteúdo</strong>
+        <span id="base64StatusTexto">Escolha o modo, cole o conteúdo e gere o resultado.</span>
+      </div>
+      <textarea id="base64Output" class="codigo-resultado" readonly></textarea>
+      <div class="tool-actions">
+        <button type="button" class="botao-secundario" onclick="copiarBase64Resultado()">Copiar resultado</button>
+      </div>
+      <span id="copyFeedback" class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="seo">
+<h2>Para que serve um conversor Base64?</h2>
+<p>Essa ferramenta ajuda a codificar texto em Base64 e a decodificar conteúdo codificado, algo comum em APIs, integrações, logs, tokens parciais, payloads e parâmetros técnicos.</p>
+<h2>Ela funciona com acentos?</h2>
+<p>Sim. O conversor trabalha com UTF-8 para lidar melhor com conteúdo em português e outros caracteres especiais.</p>
+<h2>Quando usar?</h2>
+<p>Use ao inspecionar dados técnicos, montar payloads simples, validar strings codificadas, abrir conteúdo retornado por integração e depurar entradas de sistemas.</p>
+</section>
+
+<section class="seo">
+<h2>Ferramentas relacionadas</h2>
+<div class="resultado-grid">
+  <a class="card-resultado card-link" href="/formatador-json/">
+    <span class="titulo-resultado">API</span>
+    <strong>Formatador de JSON</strong>
+    <span>Organize payloads e respostas para leitura e debug.</span>
+  </a>
+  <a class="card-resultado card-link" href="/jwt-decoder/">
+    <span class="titulo-resultado">Token</span>
+    <strong>JWT Decoder</strong>
+    <span>Abra header e payload de tokens JWT rapidamente.</span>
+  </a>
+  <a class="card-resultado card-link" href="/ferramentas-dev/">
+    <span class="titulo-resultado">Coleção</span>
+    <strong>Ferramentas Dev</strong>
+    <span>Veja a nova área com utilidades técnicas do portal.</span>
+  </a>
+</div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

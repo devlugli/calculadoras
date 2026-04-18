@@ -474,6 +474,66 @@ const CALCULADORAS = [
   titulo: "Ter Carro ou Usar App e Transporte?",
   descricao: "Compare o custo do carro com as alternativas sem carro.",
   categoria: "Decisao"
+},
+{
+  url: "/gerador-de-qrcode/",
+  titulo: "Gerador de QR Code",
+  descricao: "Crie QR para links, texto, Wi-Fi, telefone, e-mail e WhatsApp.",
+  categoria: "QR"
+},
+{
+  url: "/gerador-de-link-whatsapp/",
+  titulo: "Gerador de Link para WhatsApp",
+  descricao: "Monte links prontos para abrir conversa com mensagem personalizada.",
+  categoria: "QR"
+},
+{
+  url: "/ferramentas-qr/",
+  titulo: "Ferramentas QR",
+  descricao: "Veja a colecao de QR Code e compartilhamento rapido em um so lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/ferramentas-dev/",
+  titulo: "Ferramentas Dev",
+  descricao: "Veja JSON, Base64, JWT e outras utilidades tecnicas em um so lugar.",
+  categoria: "Categoria"
+},
+{
+  url: "/formatador-json/",
+  titulo: "Formatador de JSON",
+  descricao: "Valide, formate e minifique JSON para leitura e debug.",
+  categoria: "Dev"
+},
+{
+  url: "/base64-encode-decode/",
+  titulo: "Base64 Encode / Decode",
+  descricao: "Converta texto em Base64 e decodifique o conteudo original.",
+  categoria: "Dev"
+},
+{
+  url: "/jwt-decoder/",
+  titulo: "JWT Decoder",
+  descricao: "Abra header e payload de tokens JWT rapidamente.",
+  categoria: "Dev"
+},
+{
+  url: "/regex-tester/",
+  titulo: "Regex Tester",
+  descricao: "Teste expressoes regulares, flags e correspondencias em texto.",
+  categoria: "Dev"
+},
+{
+  url: "/url-encode-decode/",
+  titulo: "URL Encode / Decode",
+  descricao: "Converta conteudo para URL e volte ao texto original rapidamente.",
+  categoria: "Dev"
+},
+{
+  url: "/gerador-de-hash/",
+  titulo: "Gerador de Hash",
+  descricao: "Crie hash com algoritmos SHA direto no navegador.",
+  categoria: "Dev"
 }
 ];
 
