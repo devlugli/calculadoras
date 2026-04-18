@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Idade Gestacional | CalcBrazil</title>
+  <meta name="description" content="Estime a idade gestacional em semanas e dias a partir da data da &uacute;ltima menstrua&ccedil;&atilde;o.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-idade-gestacional/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Idade Gestacional | CalcBrazil">
+  <meta property="og:description" content="Veja uma estimativa informativa de semanas e dias de gesta&ccedil;&atilde;o.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-idade-gestacional/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Idade Gestacional</h1>
+    <p class="descricao">Informe a data da &uacute;ltima menstrua&ccedil;&atilde;o para estimar a idade gestacional em semanas e dias.</p>
+    <p class="selo">Gesta&ccedil;&atilde;o &bull; DUM &bull; semanas &bull; informativo</p>
+
+    <div class="campo">
+      <label for="dum">Data da &uacute;ltima menstrua&ccedil;&atilde;o</label>
+      <input id="dum" type="date">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como a idade gestacional &eacute; estimada?</h2>
+    <p>Esta p&aacute;gina conta o tempo decorrido desde a DUM at&eacute; a data atual e converte o resultado em semanas e dias.</p>
+    <h2>Importante</h2>
+    <p>O resultado &eacute; apenas informativo. Data&ccedil;&atilde;o por ultrassom e orienta&ccedil;&atilde;o profissional podem diferir da estimativa apresentada.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-idade-gestacional/");
+  </script>
+</body>
+</html>

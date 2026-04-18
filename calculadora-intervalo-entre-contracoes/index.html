@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Intervalo Entre Contra&ccedil;&otilde;es | CalcBrazil</title>
+  <meta name="description" content="Calcule a m&eacute;dia de intervalo entre contra&ccedil;&otilde;es a partir dos hor&aacute;rios de in&iacute;cio das &uacute;ltimas contra&ccedil;&otilde;es.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-intervalo-entre-contracoes/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Intervalo Entre Contra&ccedil;&otilde;es | CalcBrazil">
+  <meta property="og:description" content="Veja a m&eacute;dia do intervalo entre contra&ccedil;&otilde;es de forma informativa.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-intervalo-entre-contracoes/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Intervalo Entre Contra&ccedil;&otilde;es</h1>
+    <p class="descricao">Informe o hor&aacute;rio de in&iacute;cio das &uacute;ltimas contra&ccedil;&otilde;es e a dura&ccedil;&atilde;o da mais recente para estimar a m&eacute;dia de intervalo.</p>
+    <p class="selo">Parto &bull; contra&ccedil;&otilde;es &bull; intervalo &bull; informativo</p>
+
+    <div class="campo">
+      <label for="inicio1">In&iacute;cio da contra&ccedil;&atilde;o 1</label>
+      <input id="inicio1" type="time" value="10:00">
+    </div>
+    <div class="campo">
+      <label for="inicio2">In&iacute;cio da contra&ccedil;&atilde;o 2</label>
+      <input id="inicio2" type="time" value="10:12">
+    </div>
+    <div class="campo">
+      <label for="inicio3">In&iacute;cio da contra&ccedil;&atilde;o 3</label>
+      <input id="inicio3" type="time" value="10:24">
+    </div>
+    <div class="campo">
+      <label for="duracao">Dura&ccedil;&atilde;o da &uacute;ltima contra&ccedil;&atilde;o (segundos)</label>
+      <input id="duracao" type="number" step="1" min="0" value="50" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>Esta ferramenta &eacute; apenas informativa e n&atilde;o serve para orientar conduta m&eacute;dica. Se houver dor intensa, sangramento, d&uacute;vida sobre trabalho de parto ou qualquer preocupa&ccedil;&atilde;o, procure atendimento profissional.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-intervalo-entre-contracoes/");
+  </script>
+</body>
+</html>

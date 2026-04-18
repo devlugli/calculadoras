@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Per&iacute;odo F&eacute;rtil | CalcBrazil</title>
+  <meta name="description" content="Estime o per&iacute;odo f&eacute;rtil com base na data da &uacute;ltima menstrua&ccedil;&atilde;o e na dura&ccedil;&atilde;o do ciclo.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-periodo-fertil/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Per&iacute;odo F&eacute;rtil | CalcBrazil">
+  <meta property="og:description" content="Veja uma janela f&eacute;rtil estimada a partir de um ciclo regular.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-periodo-fertil/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Per&iacute;odo F&eacute;rtil</h1>
+    <p class="descricao">Informe a data da &uacute;ltima menstrua&ccedil;&atilde;o e o tamanho do ciclo para estimar a janela f&eacute;rtil.</p>
+    <p class="selo">Ciclo &bull; per&iacute;odo f&eacute;rtil &bull; ovula&ccedil;&atilde;o &bull; informativo</p>
+
+    <div class="campo">
+      <label for="dum">Primeiro dia da &uacute;ltima menstrua&ccedil;&atilde;o</label>
+      <input id="dum" type="date">
+    </div>
+    <div class="campo">
+      <label for="ciclo">Dura&ccedil;&atilde;o do ciclo (dias)</label>
+      <input id="ciclo" type="number" step="1" min="21" max="40" value="28" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como a janela f&eacute;rtil &eacute; estimada?</h2>
+    <p>A previs&atilde;o parte de uma ovula&ccedil;&atilde;o estimada em cerca de 14 dias antes da pr&oacute;xima menstrua&ccedil;&atilde;o. A janela f&eacute;rtil costuma ser mostrada entre cinco dias antes e um dia depois dessa data.</p>
+    <h2>Importante</h2>
+    <p>O resultado funciona melhor em ciclos regulares e n&atilde;o substitui orienta&ccedil;&atilde;o profissional ou m&eacute;todos cl&iacute;nicos.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-periodo-fertil/");
+  </script>
+</body>
+</html>

@@ -476,6 +476,120 @@ const CALCULADORAS = [
   categoria: "Decisao"
 },
 {
+  url: "/calculadoras-trabalho-rh/",
+  titulo: "Calculadoras de Trabalho e RH",
+  descricao: "Veja ferramentas para rescisao, ferias, folha, beneficios e custos trabalhistas.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadora-rescisao/",
+  titulo: "Calculadora de Rescisao",
+  descricao: "Estime aviso, ferias proporcionais, decimo e multa de FGTS.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-ferias/",
+  titulo: "Calculadora de Ferias",
+  descricao: "Veja o valor aproximado de ferias com um terco e abono.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-horas-extras/",
+  titulo: "Calculadora de Horas Extras",
+  descricao: "Calcule o valor total das horas extras com adicional.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-adicional-noturno/",
+  titulo: "Calculadora de Adicional Noturno",
+  descricao: "Estime a parcela extra sobre horas trabalhadas no periodo noturno.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-banco-de-horas/",
+  titulo: "Calculadora de Banco de Horas",
+  descricao: "Atualize o saldo do banco de horas com creditos e debitos.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-inss/",
+  titulo: "Calculadora de INSS",
+  descricao: "Estime o desconto previdenciario mensal com tabela progressiva.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-irrf-salario/",
+  titulo: "Calculadora de IRRF sobre Salario",
+  descricao: "Veja a retencao estimada de IRRF sobre salario.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-vale-transporte/",
+  titulo: "Calculadora de Vale-Transporte",
+  descricao: "Compare custo mensal de transporte com o limite de desconto em folha.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-vale-refeicao-por-mes/",
+  titulo: "Calculadora de Vale-Refeicao por Mes",
+  descricao: "Estime o total mensal do vale-refeicao com base em dias e valor diario.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-custo-de-funcionario-clt/",
+  titulo: "Calculadora de Custo de Funcionario CLT",
+  descricao: "Monte uma estimativa mensal e anual do custo total do colaborador.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadora-comissao-por-meta/",
+  titulo: "Calculadora de Comissao por Meta",
+  descricao: "Veja atingimento de meta, bonus e comissao estimada.",
+  categoria: "Trabalho e RH"
+},
+{
+  url: "/calculadoras-gestacao-bebe/",
+  titulo: "Calculadoras de Gestacao e Bebe",
+  descricao: "Veja ferramentas informativas para ciclo, ovulacao, gestacao e parto.",
+  categoria: "Categoria"
+},
+{
+  url: "/calculadora-idade-gestacional/",
+  titulo: "Calculadora de Idade Gestacional",
+  descricao: "Estime semanas e dias de gestacao com base na DUM.",
+  categoria: "Gestacao e Bebe"
+},
+{
+  url: "/calculadora-data-provavel-do-parto/",
+  titulo: "Calculadora de Data Provavel do Parto",
+  descricao: "Veja a estimativa da data provavel do parto.",
+  categoria: "Gestacao e Bebe"
+},
+{
+  url: "/calculadora-periodo-fertil/",
+  titulo: "Calculadora de Periodo Fertil",
+  descricao: "Estime a janela fertil em ciclos regulares.",
+  categoria: "Gestacao e Bebe"
+},
+{
+  url: "/calculadora-ovulacao/",
+  titulo: "Calculadora de Ovulacao",
+  descricao: "Descubra a data estimada de ovulacao em um ciclo regular.",
+  categoria: "Gestacao e Bebe"
+},
+{
+  url: "/calculadora-menstruacao/",
+  titulo: "Calculadora de Menstruacao",
+  descricao: "Veja previsoes informativas dos proximos ciclos.",
+  categoria: "Gestacao e Bebe"
+},
+{
+  url: "/calculadora-intervalo-entre-contracoes/",
+  titulo: "Calculadora de Intervalo Entre Contracoes",
+  descricao: "Calcule a media entre contracoes a partir dos horarios informados.",
+  categoria: "Gestacao e Bebe"
+},
+{
   url: "/gerador-de-qrcode/",
   titulo: "Gerador de QR Code",
   descricao: "Crie QR para links, texto, Wi-Fi, telefone, e-mail e WhatsApp.",

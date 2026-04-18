@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Vale-Transporte | CalcBrazil</title>
+  <meta name="description" content="Calcule o desconto estimado de vale-transporte com base no sal&aacute;rio e no custo mensal de deslocamento.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-vale-transporte/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Vale-Transporte | CalcBrazil">
+  <meta property="og:description" content="Compare o custo mensal de transporte com o desconto m&aacute;ximo de 6% do sal&aacute;rio.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-vale-transporte/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Vale-Transporte</h1>
+    <p class="descricao">Veja o desconto estimado do vale-transporte a partir do sal&aacute;rio bruto e do custo mensal de deslocamento.</p>
+    <p class="selo">Benef&iacute;cios &bull; vale-transporte &bull; folha &bull; mobilidade</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio bruto (R$)</label>
+      <input id="salario" type="number" step="0.01" value="2800" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="custoMensal">Custo mensal de transporte (R$)</label>
+      <input id="custoMensal" type="number" step="0.01" value="320" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Limite de 6%</span><strong id="limiteDesconto">R$ 0,00</strong><span>Desconto m&aacute;ximo do empregado nesta simula&ccedil;&atilde;o.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Parte do empregado</span><strong id="parteEmpregado">R$ 0,00</strong><span>Menor valor entre custo mensal e limite legal informado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Parte complementar</span><strong id="parteEmpresa">R$ 0,00</strong><span>Diferen&ccedil;a entre o custo e o desconto do empregado.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como funciona esta calculadora?</h2>
+    <p>Ela compara o custo mensal de transporte com o limite de 6% do sal&aacute;rio bruto. O desconto do empregado costuma ficar no menor desses dois valores, e a diferen&ccedil;a pode ser assumida pela empresa.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-vale-transporte/");
+  </script>
+</body>
+</html>

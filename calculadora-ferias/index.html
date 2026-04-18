@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de F&eacute;rias | CalcBrazil</title>
+  <meta name="description" content="Calcule o valor estimado de f&eacute;rias com um ter&ccedil;o constitucional e abono pecuni&aacute;rio.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-ferias/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de F&eacute;rias | CalcBrazil">
+  <meta property="og:description" content="Veja o valor estimado de f&eacute;rias com dias de descanso e venda de dias.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-ferias/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de F&eacute;rias</h1>
+    <p class="descricao">Estime o valor de f&eacute;rias com base no sal&aacute;rio, nos dias de descanso e na venda de at&eacute; 10 dias.</p>
+    <p class="selo">Trabalho &bull; f&eacute;rias &bull; um ter&ccedil;o &bull; abono</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio mensal (R$)</label>
+      <input id="salario" type="number" step="0.01" value="3200" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="diasGozo">Dias de f&eacute;rias</label>
+      <input id="diasGozo" type="number" step="1" min="1" max="30" value="30" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="diasAbono">Dias vendidos</label>
+      <input id="diasAbono" type="number" step="1" min="0" max="10" value="0" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">F&eacute;rias base</span><strong id="feriasBase">R$ 0,00</strong><span>Valor proporcional aos dias de descanso.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">1/3 constitucional</span><strong id="tercoConstitucional">R$ 0,00</strong><span>Adicional previsto sobre o per&iacute;odo calculado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Abono pecuni&aacute;rio</span><strong id="abonoPecuniario">R$ 0,00</strong><span>Valor dos dias vendidos com seu respectivo ter&ccedil;o.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como calcular f&eacute;rias?</h2>
+    <p>A conta parte do sal&aacute;rio mensal proporcional aos dias de f&eacute;rias e soma um ter&ccedil;o constitucional. Se houver venda de dias, o abono pecuni&aacute;rio &eacute; acrescentado &agrave; estimativa.</p>
+    <h2>Importante</h2>
+    <p>O resultado &eacute; informativo e n&atilde;o considera descontos, m&eacute;dias vari&aacute;veis, adicionais contratuais ou regras espec&iacute;ficas da empresa.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-ferias/");
+  </script>
+</body>
+</html>

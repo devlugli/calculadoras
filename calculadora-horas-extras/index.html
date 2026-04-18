@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Horas Extras | CalcBrazil</title>
+  <meta name="description" content="Calcule horas extras com adicional de 50% ou 100% a partir do valor da hora e da quantidade de horas.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-horas-extras/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Horas Extras | CalcBrazil">
+  <meta property="og:description" content="Estime o valor total de horas extras com base no valor da hora e no adicional.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-horas-extras/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Horas Extras</h1>
+    <p class="descricao">Informe o valor da hora, a quantidade de horas extras e o adicional aplicado para estimar o total.</p>
+    <p class="selo">Trabalho &bull; horas extras &bull; adicional &bull; folha</p>
+
+    <div class="campo">
+      <label for="valorHora">Valor da hora (R$)</label>
+      <input id="valorHora" type="number" step="0.01" value="18" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="horasExtras">Horas extras</label>
+      <input id="horasExtras" type="number" step="0.01" value="12" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="adicional">Adicional</label>
+      <select id="adicional">
+        <option value="50" selected>50%</option>
+        <option value="100">100%</option>
+      </select>
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como calcular horas extras?</h2>
+    <p>O valor da hora extra &eacute; o valor da hora normal somado ao percentual de adicional. Depois, esse valor &eacute; multiplicado pela quantidade de horas extras trabalhadas.</p>
+    <h2>Exemplo</h2>
+    <p>Se a hora vale R$ 18,00 e o adicional &eacute; de 50%, cada hora extra passa a valer R$ 27,00.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-horas-extras/");
+  </script>
+</body>
+</html>

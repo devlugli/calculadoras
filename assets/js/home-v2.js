@@ -102,7 +102,26 @@ const homeTools = [
   { name: "Quitar Dívida ou Investir", url: "./quitar-divida-ou-investir/", category: "Decisão", aliases: ["quitar divida ou investir", "pagar divida ou investir", "investir ou quitar divida"] },
   { name: "Vale a Pena Trocar de Emprego", url: "./vale-a-pena-trocar-de-emprego/", category: "Decisão", aliases: ["trocar de emprego", "vale trocar de emprego", "novo emprego compensa"] },
   { name: "Morar Perto do Trabalho ou Pagar Menos Aluguel", url: "./morar-perto-do-trabalho-ou-pagar-menos-aluguel/", category: "Decisão", aliases: ["morar perto do trabalho", "pagar menos aluguel", "morar perto ou pagar menos"] },
-  { name: "Ter Carro ou Usar App e Transporte", url: "./ter-carro-ou-usar-app-transporte/", category: "Decisão", aliases: ["ter carro ou usar app", "usar app e transporte", "vale ter carro"] }
+  { name: "Ter Carro ou Usar App e Transporte", url: "./ter-carro-ou-usar-app-transporte/", category: "Decisão", aliases: ["ter carro ou usar app", "usar app e transporte", "vale ter carro"] },
+  { name: "Calculadoras de Trabalho e RH", url: "./calculadoras-trabalho-rh/", category: "Trabalho e RH", aliases: ["trabalho e rh", "calculadoras de trabalho", "calculadoras de rh", "folha e beneficios"] },
+  { name: "Calculadora de Rescisão", url: "./calculadora-rescisao/", category: "Trabalho e RH", aliases: ["rescisao", "calcular rescisao", "verbas rescisorias"] },
+  { name: "Calculadora de Férias", url: "./calculadora-ferias/", category: "Trabalho e RH", aliases: ["ferias", "calcular ferias", "um terco de ferias"] },
+  { name: "Calculadora de Horas Extras", url: "./calculadora-horas-extras/", category: "Trabalho e RH", aliases: ["horas extras", "hora extra", "calcular hora extra"] },
+  { name: "Calculadora de Adicional Noturno", url: "./calculadora-adicional-noturno/", category: "Trabalho e RH", aliases: ["adicional noturno", "hora noturna", "calcular adicional noturno"] },
+  { name: "Calculadora de Banco de Horas", url: "./calculadora-banco-de-horas/", category: "Trabalho e RH", aliases: ["banco de horas", "saldo banco de horas"] },
+  { name: "Calculadora de INSS", url: "./calculadora-inss/", category: "Trabalho e RH", aliases: ["inss", "desconto inss", "previdencia salario"] },
+  { name: "Calculadora de IRRF sobre Salário", url: "./calculadora-irrf-salario/", category: "Trabalho e RH", aliases: ["irrf salario", "imposto de renda salario", "retencao irrf"] },
+  { name: "Calculadora de Vale-Transporte", url: "./calculadora-vale-transporte/", category: "Trabalho e RH", aliases: ["vale transporte", "desconto vale transporte", "vt"] },
+  { name: "Calculadora de Vale-Refeição por Mês", url: "./calculadora-vale-refeicao-por-mes/", category: "Trabalho e RH", aliases: ["vale refeicao", "vr por mes", "beneficio refeicao"] },
+  { name: "Calculadora de Custo de Funcionário CLT", url: "./calculadora-custo-de-funcionario-clt/", category: "Trabalho e RH", aliases: ["custo funcionario clt", "custo colaborador", "custo de funcionario"] },
+  { name: "Calculadora de Comissão por Meta", url: "./calculadora-comissao-por-meta/", category: "Trabalho e RH", aliases: ["comissao por meta", "meta de vendas", "bonus por meta"] },
+  { name: "Calculadoras de Gestação e Bebê", url: "./calculadoras-gestacao-bebe/", category: "Gestação e Bebê", aliases: ["gestacao e bebe", "calculadoras de gestacao", "ciclo e fertilidade"] },
+  { name: "Calculadora de Idade Gestacional", url: "./calculadora-idade-gestacional/", category: "Gestação e Bebê", aliases: ["idade gestacional", "semanas de gestacao", "dum gestacao"] },
+  { name: "Calculadora de Data Provável do Parto", url: "./calculadora-data-provavel-do-parto/", category: "Gestação e Bebê", aliases: ["data provavel do parto", "dpp", "parto previsto"] },
+  { name: "Calculadora de Período Fértil", url: "./calculadora-periodo-fertil/", category: "Gestação e Bebê", aliases: ["periodo fertil", "janela fertil", "dias ferteis"] },
+  { name: "Calculadora de Ovulação", url: "./calculadora-ovulacao/", category: "Gestação e Bebê", aliases: ["ovulacao", "dia da ovulacao"] },
+  { name: "Calculadora de Menstruação", url: "./calculadora-menstruacao/", category: "Gestação e Bebê", aliases: ["menstruacao", "proxima menstruacao", "ciclo menstrual"] },
+  { name: "Calculadora de Intervalo Entre Contrações", url: "./calculadora-intervalo-entre-contracoes/", category: "Gestação e Bebê", aliases: ["intervalo entre contracoes", "contracoes", "media entre contracoes"] }
 ];
 
 const normalizeText = (value) =>
@@ -224,7 +243,9 @@ const updatePortalStats = () => {
     "Cotidiano",
     "Construção",
     "Marketplace",
-    "Decisão"
+    "Decisão",
+    "Trabalho e RH",
+    "Gestação e Bebê"
   ]);
 
   const calculators = homeTools.filter((tool) => calculatorCategories.has(tool.category)).length;

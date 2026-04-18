@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Custo de Funcion&aacute;rio CLT | CalcBrazil</title>
+  <meta name="description" content="Monte uma estimativa mensal e anual do custo de um funcion&aacute;rio CLT com sal&aacute;rio, encargos e benef&iacute;cios.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-custo-de-funcionario-clt/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Custo de Funcion&aacute;rio CLT | CalcBrazil">
+  <meta property="og:description" content="Estime custo mensal e anual do colaborador com base em encargos e benef&iacute;cios.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-custo-de-funcionario-clt/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Custo de Funcion&aacute;rio CLT</h1>
+    <p class="descricao">Estime o custo mensal e anual de um colaborador CLT somando sal&aacute;rio, encargos aproximados e benef&iacute;cios mensais.</p>
+    <p class="selo">Empresa &bull; RH &bull; CLT &bull; custo total &bull; folha</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio mensal (R$)</label>
+      <input id="salario" type="number" step="0.01" value="3500" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="encargos">Encargos aproximados (%)</label>
+      <input id="encargos" type="number" step="0.01" value="47.44" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="beneficios">Benef&iacute;cios mensais (R$)</label>
+      <input id="beneficios" type="number" step="0.01" value="800" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Encargos mensais</span><strong id="encargosMensais">R$ 0,00</strong><span>Percentual aproximado sobre o sal&aacute;rio.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Benef&iacute;cios</span><strong id="beneficiosMensais">R$ 0,00</strong><span>Valor mensal informado para benef&iacute;cios.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Custo anual</span><strong id="custoAnual">R$ 0,00</strong><span>Proje&ccedil;&atilde;o de 12 meses do custo informado.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>O que esta calculadora considera?</h2>
+    <p>Ela soma sal&aacute;rio, encargos percentuais estimados e benef&iacute;cios mensais. O objetivo &eacute; ajudar em planejamento inicial de custo, n&atilde;o substituir um fechamento de folha real.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-custo-de-funcionario-clt/");
+  </script>
+</body>
+</html>

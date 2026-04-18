@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Data Prov&aacute;vel do Parto | CalcBrazil</title>
+  <meta name="description" content="Estime a data prov&aacute;vel do parto com base na data da &uacute;ltima menstrua&ccedil;&atilde;o.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-data-provavel-do-parto/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Data Prov&aacute;vel do Parto | CalcBrazil">
+  <meta property="og:description" content="Veja a estimativa da DPP de forma simples e informativa.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-data-provavel-do-parto/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Data Prov&aacute;vel do Parto</h1>
+    <p class="descricao">Use a DUM para estimar a data prov&aacute;vel do parto com base em 280 dias de gesta&ccedil;&atilde;o.</p>
+    <p class="selo">Gesta&ccedil;&atilde;o &bull; DPP &bull; DUM &bull; informativo</p>
+
+    <div class="campo">
+      <label for="dum">Data da &uacute;ltima menstrua&ccedil;&atilde;o</label>
+      <input id="dum" type="date">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como a DPP &eacute; calculada?</h2>
+    <p>A estimativa soma 280 dias &agrave; data da &uacute;ltima menstrua&ccedil;&atilde;o. Trata-se de uma previs&atilde;o de calend&aacute;rio, n&atilde;o de uma confirma&ccedil;&atilde;o cl&iacute;nica.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-data-provavel-do-parto/");
+  </script>
+</body>
+</html>

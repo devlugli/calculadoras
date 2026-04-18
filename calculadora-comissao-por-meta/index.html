@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Comiss&atilde;o por Meta | CalcBrazil</title>
+  <meta name="description" content="Calcule atingimento de meta, comiss&atilde;o estimada e b&ocirc;nus a partir da meta, do realizado e da taxa aplicada.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-comissao-por-meta/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Comiss&atilde;o por Meta | CalcBrazil">
+  <meta property="og:description" content="Veja percentual de atingimento e comiss&atilde;o estimada sobre a meta.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-comissao-por-meta/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Comiss&atilde;o por Meta</h1>
+    <p class="descricao">Estime o percentual de atingimento da meta e a comiss&atilde;o sobre o valor realizado.</p>
+    <p class="selo">Vendas &bull; comiss&atilde;o &bull; meta &bull; desempenho</p>
+
+    <div class="campo">
+      <label for="meta">Meta (R$)</label>
+      <input id="meta" type="number" step="0.01" value="30000" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="realizado">Realizado (R$)</label>
+      <input id="realizado" type="number" step="0.01" value="28500" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="taxa">Taxa de comiss&atilde;o (%)</label>
+      <input id="taxa" type="number" step="0.01" value="2" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="bonusMeta">B&ocirc;nus ao bater a meta (R$)</label>
+      <input id="bonusMeta" type="number" step="0.01" value="500" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Atingimento</span><strong id="atingimento">0,00%</strong><span>Percentual do realizado sobre a meta.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Comiss&atilde;o vari&aacute;vel</span><strong id="comissaoVariavel">R$ 0,00</strong><span>Percentual aplicado sobre o valor realizado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">B&ocirc;nus</span><strong id="bonusFinal">R$ 0,00</strong><span>Pago apenas quando a meta &eacute; alcan&ccedil;ada nesta simula&ccedil;&atilde;o.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como funciona esta simula&ccedil;&atilde;o?</h2>
+    <p>O valor realizado recebe a taxa de comiss&atilde;o informada. Se a meta for atingida ou superada, a ferramenta soma tamb&eacute;m o b&ocirc;nus configurado.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-comissao-por-meta/");
+  </script>
+</body>
+</html>

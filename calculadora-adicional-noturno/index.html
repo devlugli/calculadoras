@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Adicional Noturno | CalcBrazil</title>
+  <meta name="description" content="Estime o adicional noturno com base no valor da hora, na quantidade de horas noturnas e no percentual aplicado.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-adicional-noturno/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Adicional Noturno | CalcBrazil">
+  <meta property="og:description" content="Veja o valor estimado do adicional noturno em poucas etapas.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-adicional-noturno/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Adicional Noturno</h1>
+    <p class="descricao">Estime o valor extra gerado pelo adicional noturno com base no valor da hora e na quantidade de horas trabalhadas no per&iacute;odo noturno.</p>
+    <p class="selo">Trabalho &bull; adicional noturno &bull; folha &bull; turnos</p>
+
+    <div class="campo">
+      <label for="valorHora">Valor da hora (R$)</label>
+      <input id="valorHora" type="number" step="0.01" value="18" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="horasNoturnas">Horas noturnas</label>
+      <input id="horasNoturnas" type="number" step="0.01" value="40" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="percentual">Percentual do adicional</label>
+      <input id="percentual" type="number" step="0.01" value="20" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como funciona o adicional noturno?</h2>
+    <p>A conta multiplica o valor da hora pelo percentual do adicional e pela quantidade de horas informadas. O resultado mostra apenas a parcela extra, separada da remunera&ccedil;&atilde;o base.</p>
+    <h2>Importante</h2>
+    <p>Empresas e categorias podem usar regras espec&iacute;ficas, como redu&ccedil;&atilde;o da hora noturna, percentuais diferentes e integra&ccedil;&atilde;o com outros adicionais.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-adicional-noturno/");
+  </script>
+</body>
+</html>

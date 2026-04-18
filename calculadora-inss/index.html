@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de INSS | CalcBrazil</title>
+  <meta name="description" content="Estime o desconto de INSS sobre o sal&aacute;rio com base na tabela progressiva aplicada a partir de janeiro de 2026.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-inss/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de INSS | CalcBrazil">
+  <meta property="og:description" content="Veja o valor estimado do desconto de INSS e a al&iacute;quota efetiva.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-inss/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de INSS</h1>
+    <p class="descricao">Calcule o desconto previdenci&aacute;rio mensal do empregado com base na tabela progressiva vigente a partir de janeiro de 2026.</p>
+    <p class="selo">Folha &bull; INSS &bull; previd&ecirc;ncia &bull; sal&aacute;rio</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio bruto (R$)</label>
+      <input id="salario" type="number" step="0.01" value="4500" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Base considerada</span><strong id="baseConsiderada">R$ 0,00</strong><span>Limitada ao teto previdenci&aacute;rio da tabela.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Al&iacute;quota efetiva</span><strong id="aliquotaEfetiva">0,00%</strong><span>Percentual efetivo sobre o sal&aacute;rio informado.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Tabela usada nesta calculadora</h2>
+    <p>Esta p&aacute;gina considera a tabela progressiva de INSS para empregado, empregado dom&eacute;stico e trabalhador avulso v&aacute;lida a partir da compet&ecirc;ncia de janeiro de 2026.</p>
+    <h2>Importante</h2>
+    <p>O resultado &eacute; uma estimativa mensal. Situa&ccedil;&otilde;es como mais de um v&iacute;nculo, categorias diferentes e regras espec&iacute;ficas podem alterar o desconto efetivo.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-inss/");
+  </script>
+</body>
+</html>

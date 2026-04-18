@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IRRF sobre Sal&aacute;rio | CalcBrazil</title>
+  <meta name="description" content="Estime o IRRF mensal sobre sal&aacute;rio com base no valor bruto, no INSS e no n&uacute;mero de dependentes.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-irrf-salario/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de IRRF sobre Sal&aacute;rio | CalcBrazil">
+  <meta property="og:description" content="Veja uma estimativa de IRRF mensal com tabela de 2026.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-irrf-salario/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de IRRF sobre Sal&aacute;rio</h1>
+    <p class="descricao">Estime a reten&ccedil;&atilde;o mensal de IRRF a partir do sal&aacute;rio bruto, do desconto de INSS e da quantidade de dependentes.</p>
+    <p class="selo">Folha &bull; IRRF &bull; imposto de renda &bull; sal&aacute;rio</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio bruto (R$)</label>
+      <input id="salario" type="number" step="0.01" value="6500" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="dependentes">Dependentes</label>
+      <input id="dependentes" type="number" step="1" min="0" value="0" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">INSS estimado</span><strong id="descontoInss">R$ 0,00</strong><span>Desconto previdenci&aacute;rio usado na base.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Base de c&aacute;lculo</span><strong id="baseCalculo">R$ 0,00</strong><span>Base ap&oacute;s INSS e dependentes.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Sal&aacute;rio l&iacute;quido parcial</span><strong id="liquidoParcial">R$ 0,00</strong><span>Valor bruto menos INSS e IRRF estimados.</span></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Tabela usada nesta calculadora</h2>
+    <p>Esta p&aacute;gina usa a tabela de incid&ecirc;ncia mensal do IRRF v&aacute;lida a partir de janeiro de 2026 e considera a dedu&ccedil;&atilde;o mensal por dependente.</p>
+    <h2>Importante</h2>
+    <p>O c&aacute;lculo &eacute; uma estimativa simplificada. Desconto simplificado mensal, pens&atilde;o, previd&ecirc;ncia complementar e outros eventos podem mudar a reten&ccedil;&atilde;o real.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-irrf-salario/");
+  </script>
+</body>
+</html>

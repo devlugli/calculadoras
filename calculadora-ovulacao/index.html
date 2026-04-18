@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Ovula&ccedil;&atilde;o | CalcBrazil</title>
+  <meta name="description" content="Estime a data da ovula&ccedil;&atilde;o com base no primeiro dia da &uacute;ltima menstrua&ccedil;&atilde;o e na dura&ccedil;&atilde;o do ciclo.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-ovulacao/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Ovula&ccedil;&atilde;o | CalcBrazil">
+  <meta property="og:description" content="Veja a estimativa da data de ovula&ccedil;&atilde;o em um ciclo regular.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-ovulacao/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Ovula&ccedil;&atilde;o</h1>
+    <p class="descricao">Estime a data mais prov&aacute;vel de ovula&ccedil;&atilde;o a partir da DUM e da dura&ccedil;&atilde;o do ciclo menstrual.</p>
+    <p class="selo">Ciclo &bull; ovula&ccedil;&atilde;o &bull; fertilidade &bull; informativo</p>
+
+    <div class="campo">
+      <label for="dum">Primeiro dia da &uacute;ltima menstrua&ccedil;&atilde;o</label>
+      <input id="dum" type="date">
+    </div>
+    <div class="campo">
+      <label for="ciclo">Dura&ccedil;&atilde;o do ciclo (dias)</label>
+      <input id="ciclo" type="number" step="1" min="21" max="40" value="28" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo"></div>
+      <div class="resumo-topo-valor" id="resumoTopoValor"></div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto"></div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como a data &eacute; estimada?</h2>
+    <p>A conta considera que a ovula&ccedil;&atilde;o tende a acontecer por volta de 14 dias antes da pr&oacute;xima menstrua&ccedil;&atilde;o. O resultado &eacute; apenas indicativo.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-ovulacao/");
+  </script>
+</body>
+</html>
