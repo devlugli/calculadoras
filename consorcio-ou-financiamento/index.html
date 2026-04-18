@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consorcio ou Financiamento? | CalcBrazil</title>
-<meta name="description" content="Compare parcela, custo total e urgencia para decidir entre consorcio e financiamento.">
+<title>Cons&oacute;rcio ou Financiamento? | CalcBrazil</title>
+<meta name="description" content="Compare parcela, custo total e urg&ecirc;ncia para decidir entre cons&oacute;rcio e financiamento.">
 <link rel="canonical" href="https://calcbrazil.com/consorcio-ou-financiamento/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Consorcio ou Financiamento?">
+<meta property="og:title" content="Cons&oacute;rcio ou Financiamento?">
 <meta property="og:description" content="Veja qual caminho pesa menos ou entrega mais velocidade para o seu objetivo.">
 <meta property="og:image" content="https://calcbrazil.com/preview.png">
 <meta property="og:url" content="https://calcbrazil.com/consorcio-ou-financiamento/">
@@ -16,46 +16,46 @@
 </head>
 <body data-decision-page="consorcio-ou-financiamento">
 <div class="container">
-<p><a href="/">Voltar para a pagina inicial</a></p>
-<h1>Consorcio ou Financiamento?</h1>
-<p class="descricao">Compare o custo total, a parcela e a urgencia para entender qual caminho combina mais com o seu momento.</p>
-<p class="selo">consorcio • financiamento • comparacao • parcela</p>
-<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+<h1>Cons&oacute;rcio ou Financiamento?</h1>
+<p class="descricao">Compare o custo total, a parcela e a urg&ecirc;ncia para entender qual caminho combina mais com o seu momento.</p>
+<p class="selo">cons&oacute;rcio &bull; financiamento &bull; compara&ccedil;&atilde;o &bull; parcela</p>
+<div class="atalhos-rapidos" aria-label="Exemplos r&aacute;pidos">
 <button type="button" onclick="aplicarExemplo(0)">Precisa agora</button>
 <button type="button" onclick="aplicarExemplo(1)">Pode esperar</button>
 </div>
 <div class="campo"><label for="cartaCredito">Valor da carta ou do bem (R$)</label><input id="cartaCredito" type="number" value="70000" step="0.01" inputmode="decimal"></div>
 <div class="campo"><label for="lance">Lance ou entrada (R$)</label><input id="lance" type="number" value="10000" step="0.01" inputmode="decimal"></div>
-<div class="campo"><label for="taxaAdm">Taxa de administracao do consorcio (%)</label><input id="taxaAdm" type="number" value="18" step="0.01" inputmode="decimal"></div>
-<div class="campo"><label for="prazoConsorcio">Prazo do consorcio (meses)</label><input id="prazoConsorcio" type="number" value="80" step="1" inputmode="numeric"></div>
-<div class="campo"><label for="taxaFinanciamento">Juros do financiamento ao mes (%)</label><input id="taxaFinanciamento" type="number" value="1.49" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="taxaAdm">Taxa de administra&ccedil;&atilde;o do cons&oacute;rcio (%)</label><input id="taxaAdm" type="number" value="18" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="prazoConsorcio">Prazo do cons&oacute;rcio (meses)</label><input id="prazoConsorcio" type="number" value="80" step="1" inputmode="numeric"></div>
+<div class="campo"><label for="taxaFinanciamento">Juros do financiamento ao m&ecirc;s (%)</label><input id="taxaFinanciamento" type="number" value="1.49" step="0.01" inputmode="decimal"></div>
 <div class="campo"><label for="parcelasFinanciamento">Prazo do financiamento (meses)</label><input id="parcelasFinanciamento" type="number" value="48" step="1" inputmode="numeric"></div>
-<div class="campo"><label for="urgencia">Precisa do bem agora?</label><select id="urgencia"><option value="sim">Sim</option><option value="nao">Nao</option></select></div>
+<div class="campo"><label for="urgencia">Precisa do bem agora?</label><select id="urgencia"><option value="sim">Sim</option><option value="nao">N&atilde;o</option></select></div>
 <button type="button" onclick="calcularDecisao()">Calcular</button>
 <div class="resumo-topo">
 <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
 <div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
-<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decis&atilde;o aparece aqui.</div>
 </div>
 <div class="resultado-grid detalhes-resultado">
 <div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
-<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
-<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Compara&ccedil;&atilde;o</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decis&atilde;o</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
 </div>
-<div class="nota-resultado">A principal diferenca aqui nao e so custo: e tambem urgencia e previsibilidade de acesso ao bem.</div>
+<div class="nota-resultado">A principal diferen&ccedil;a aqui n&atilde;o &eacute; s&oacute; custo: &eacute; tamb&eacute;m urg&ecirc;ncia e previsibilidade de acesso ao bem.</div>
 </div>
 <section class="seo">
-<h2>Quando o consorcio costuma ganhar?</h2>
-<p>Quando a urgencia e baixa e o custo total pesa mais do que a velocidade para receber o bem.</p>
+<h2>Quando o cons&oacute;rcio costuma ganhar?</h2>
+<p>Quando a urg&ecirc;ncia &eacute; baixa e o custo total pesa mais do que a velocidade para receber o bem.</p>
 <h2>Quando o financiamento ganha?</h2>
-<p>Quando voce precisa resolver agora e aceita pagar mais para ter acesso imediato.</p>
+<p>Quando voc&ecirc; precisa resolver agora e aceita pagar mais para ter acesso imediato.</p>
 </section>
 <section class="seo">
-<h2>Veja tambem</h2>
+<h2>Veja tamb&eacute;m</h2>
 <div class="resultado-grid">
-<a class="card-resultado card-link" href="/calculadora-financiamento/"><span class="titulo-resultado">Finanças</span><strong>Calculadora de Financiamento</strong><span>Entenda melhor a parcela e o total pago do financiamento antes de comparar com o consórcio.</span></a>
-<a class="card-resultado card-link" href="/vale-a-pena-financiar-um-carro/"><span class="titulo-resultado">Decisão</span><strong>Vale a Pena Financiar um Carro?</strong><span>Veja se o financiamento cabe no orçamento quando a compra do bem é urgente.</span></a>
-<a class="card-resultado card-link" href="/calculadoras-decisao/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Decisao</strong><span>Explore outros comparadores para carro, moradia, dívida, carreira e mobilidade.</span></a>
+<a class="card-resultado card-link" href="/calculadora-financiamento/"><span class="titulo-resultado">Finan&ccedil;as</span><strong>Calculadora de Financiamento</strong><span>Entenda melhor a parcela e o total pago do financiamento antes de comparar com o cons&oacute;rcio.</span></a>
+<a class="card-resultado card-link" href="/vale-a-pena-financiar-um-carro/"><span class="titulo-resultado">Decis&atilde;o</span><strong>Vale a Pena Financiar um Carro?</strong><span>Veja se o financiamento cabe no or&ccedil;amento quando a compra do bem &eacute; urgente.</span></a>
+<a class="card-resultado card-link" href="/calculadoras-decisao/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Decis&atilde;o</strong><span>Explore outros comparadores para carro, moradia, d&iacute;vida, carreira e mobilidade.</span></a>
 </div>
 </section>
 <section id="calculadorasPopulares" class="seo"></section>

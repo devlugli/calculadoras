@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de MDC Online | CalcBrazil</title>
+  <meta name="description" content="Calcule o MDC online de dois ou mais números. Descubra rapidamente o maior divisor comum sem fazer a conta manual.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-mdc/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de MDC Online">
+  <meta property="og:description" content="Descubra o maior divisor comum de dois ou mais números em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-mdc/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de MDC</h1>
+    <p class="descricao">Descubra o maior divisor comum entre dois ou mais números usando uma conta direta e automática.</p>
+    <p class="selo">mdc • maior divisor comum • divisores • matemática</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo('12, 18')">12 e 18</button>
+      <button type="button" onclick="aplicarExemplo('24, 36, 60')">24, 36 e 60</button>
+      <button type="button" onclick="aplicarExemplo('45, 75, 105')">45, 75 e 105</button>
+    </div>
+
+    <div class="campo">
+      <label for="numeros">Números</label>
+      <input id="numeros" type="text" value="24, 36, 60" inputmode="numeric" placeholder="Ex.: 24, 36, 60">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe dois ou mais números inteiros separados por vírgula.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalhePrincipal">-</strong>
+        <span id="detalhePrincipalTexto">Aqui aparece o maior número que divide todos sem resto.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Conjunto lido</span>
+        <strong id="detalheConjunto">-</strong>
+        <span id="detalheConjuntoTexto">A calculadora mostra quais valores entraram no cálculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Uso comum</span>
+        <strong id="detalheUso">-</strong>
+        <span id="detalheUsoTexto">Muito usado para simplificar frações e dividir em partes iguais.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultado">Use o MDC para simplificar frações, organizar grupos e encontrar divisores em comum.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Calcule o maior divisor comum em segundos</h2>
+    <p>Esta ferramenta ajuda a descobrir o MDC de dois ou mais números inteiros de forma imediata. É uma conta muito usada em matemática básica, simplificação de frações e divisão em grupos iguais.</p>
+  </section>
+
+  <section class="seo">
+    <h2>O que é MDC?</h2>
+    <p>MDC significa maior divisor comum. Ele representa o maior número inteiro que consegue dividir todos os valores informados sem deixar resto.</p>
+    <h2>Quando usar o MDC?</h2>
+    <p>O MDC é útil para simplificar frações, repartir quantidades em grupos iguais, comparar medidas e resolver exercícios de matemática envolvendo divisores.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Posso usar mais de dois números?</h3>
+    <p>Sim. A calculadora aceita listas com dois ou mais números inteiros separados por vírgula.</p>
+    <h3>O MDC pode ser 1?</h3>
+    <p>Sim. Quando os números não compartilham divisores maiores, o MDC será 1.</p>
+    <h3>Posso informar números negativos?</h3>
+    <p>Sim. A calculadora considera o valor absoluto de cada número para encontrar o maior divisor comum.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-mmc/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de MMC</strong><span>Descubra o menor múltiplo comum usando os mesmos números.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-regra-de-tres/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de Regra de Três</strong><span>Resolva proporções e relações numéricas sem conta manual.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Todas as Calculadoras de Matemática</strong><span>Explore outras ferramentas numéricas do portal.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-mdc/");
+  </script>
+</body>
+</html>

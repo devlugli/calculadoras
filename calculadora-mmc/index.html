@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de MMC Online | CalcBrazil</title>
+  <meta name="description" content="Calcule o MMC online de dois ou mais números. Descubra o menor múltiplo comum rapidamente e sem fazer a conta manual.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-mmc/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de MMC Online">
+  <meta property="og:description" content="Descubra o menor múltiplo comum de dois ou mais números em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-mmc/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de MMC</h1>
+    <p class="descricao">Descubra o menor múltiplo comum entre dois ou mais números com uma conta rápida para estudos e comparações.</p>
+    <p class="selo">mmc • menor múltiplo comum • múltiplos • matemática</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo('4, 6')">4 e 6</button>
+      <button type="button" onclick="aplicarExemplo('6, 8, 12')">6, 8 e 12</button>
+      <button type="button" onclick="aplicarExemplo('9, 15, 20')">9, 15 e 20</button>
+    </div>
+
+    <div class="campo">
+      <label for="numeros">Números</label>
+      <input id="numeros" type="text" value="6, 8, 12" inputmode="numeric" placeholder="Ex.: 6, 8, 12">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe dois ou mais números inteiros separados por vírgula.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura rápida</span>
+        <strong id="detalhePrincipal">-</strong>
+        <span id="detalhePrincipalTexto">O menor múltiplo comum aparece aqui.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Conjunto lido</span>
+        <strong id="detalheConjunto">-</strong>
+        <span id="detalheConjuntoTexto">Veja quais números entraram no cálculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Uso comum</span>
+        <strong id="detalheUso">-</strong>
+        <span id="detalheUsoTexto">Muito usado para alinhar ciclos, frações e períodos.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultado">Use o MMC para comparar ciclos, somar frações e encontrar repetições em comum.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Calcule o menor múltiplo comum sem perder tempo</h2>
+    <p>Esta ferramenta mostra o MMC de dois ou mais números inteiros em segundos. É muito útil em exercícios escolares, soma de frações e problemas com repetição de intervalos.</p>
+  </section>
+
+  <section class="seo">
+    <h2>O que é MMC?</h2>
+    <p>MMC significa menor múltiplo comum. Ele representa o menor número positivo que pode ser dividido por todos os valores informados sem deixar resto.</p>
+    <h2>Quando usar o MMC?</h2>
+    <p>O MMC é comum em soma e subtração de frações, comparação de ciclos, organização de períodos e exercícios em que vários números precisam chegar ao mesmo múltiplo.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Posso usar mais de dois números?</h3>
+    <p>Sim. A calculadora aceita listas com dois ou mais números inteiros separados por vírgula.</p>
+    <h3>MMC é a mesma coisa que MDC?</h3>
+    <p>Não. O MDC procura o maior divisor em comum, enquanto o MMC procura o menor múltiplo em comum.</p>
+    <h3>Posso informar números negativos?</h3>
+    <p>Sim. A calculadora usa o valor absoluto de cada número para encontrar o menor múltiplo comum.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-mdc/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de MDC</strong><span>Descubra o maior divisor comum com os mesmos números.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-media/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de Média</strong><span>Calcule médias simples para estudos e comparações.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Todas as Calculadoras de Matemática</strong><span>Veja outras ferramentas numéricas publicadas no portal.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-mmc/");
+  </script>
+</body>
+</html>

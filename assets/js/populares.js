@@ -3,13 +3,13 @@ const CALCULADORAS_POPULARES = [
     url: "/calculadora-porcentagem/",
     titulo: "Calculadora de Porcentagem",
     descricao: "Calcule porcentagens rapidamente.",
-    categoria: "Matemática"
+    categoria: "Matem\u00e1tica"
   },
   {
     url: "/calculadora-juros-compostos/",
     titulo: "Juros Compostos",
     descricao: "Simule investimentos e crescimento do capital.",
-    categoria: "Finanças"
+    categoria: "Finan\u00e7as"
   },
   {
     url: "/calculadora-dias-entre-datas/",
@@ -19,15 +19,15 @@ const CALCULADORAS_POPULARES = [
   },
   {
     url: "/calculadora-regra-de-tres/",
-    titulo: "Regra de Três",
-    descricao: "Resolva proporções automaticamente.",
-    categoria: "Matemática"
+    titulo: "Regra de Tr\u00eas",
+    descricao: "Resolva propor\u00e7\u00f5es automaticamente.",
+    categoria: "Matem\u00e1tica"
   },
   {
     url: "/calculadora-imc/",
     titulo: "Calculadora de IMC",
-    descricao: "Calcule seu índice de massa corporal.",
-    categoria: "Saúde"
+    descricao: "Calcule seu \u00edndice de massa corporal.",
+    categoria: "Sa\u00fade"
   },
   {
     url: "/calculadora-idade/",

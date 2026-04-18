@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vale a Pena Financiar um Carro? | CalcBrazil</title>
-<meta name="description" content="Compare parcela, total pago e peso no orcamento para ver se vale a pena financiar um carro no seu cenario.">
+<meta name="description" content="Compare parcela, total pago e peso no or&ccedil;amento para ver se vale a pena financiar um carro no seu cen&aacute;rio.">
 <link rel="canonical" href="https://calcbrazil.com/vale-a-pena-financiar-um-carro/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Vale a Pena Financiar um Carro?">
-<meta property="og:description" content="Veja se a parcela do carro cabe de forma saudavel no orcamento.">
+<meta property="og:description" content="Veja se a parcela do carro cabe de forma saud&aacute;vel no or&ccedil;amento.">
 <meta property="og:image" content="https://calcbrazil.com/preview.png">
 <meta property="og:url" content="https://calcbrazil.com/vale-a-pena-financiar-um-carro/">
 <meta property="og:type" content="website">
@@ -16,44 +16,44 @@
 </head>
 <body data-decision-page="financiar-carro">
 <div class="container">
-<p><a href="/">Voltar para a pagina inicial</a></p>
+<p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
 <h1>Vale a Pena Financiar um Carro?</h1>
 <p class="descricao">Veja se o financiamento do carro faz sentido olhando entrada, juros, prazo e o peso da parcela na sua renda.</p>
-<p class="selo">carro • financiamento • parcela • orcamento</p>
-<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
-<button type="button" onclick="aplicarExemplo(0)">Cenario equilibrado</button>
-<button type="button" onclick="aplicarExemplo(1)">Cenario apertado</button>
+<p class="selo">carro &bull; financiamento &bull; parcela &bull; or&ccedil;amento</p>
+<div class="atalhos-rapidos" aria-label="Exemplos r&aacute;pidos">
+<button type="button" onclick="aplicarExemplo(0)">Cen&aacute;rio equilibrado</button>
+<button type="button" onclick="aplicarExemplo(1)">Cen&aacute;rio apertado</button>
 </div>
 <div class="campo"><label for="valorCarro">Valor do carro (R$)</label><input id="valorCarro" type="number" value="60000" step="0.01" inputmode="decimal"></div>
 <div class="campo"><label for="entrada">Entrada (R$)</label><input id="entrada" type="number" value="15000" step="0.01" inputmode="decimal"></div>
-<div class="campo"><label for="taxaJuros">Taxa de juros ao mes (%)</label><input id="taxaJuros" type="number" value="1.49" step="0.01" inputmode="decimal"></div>
-<div class="campo"><label for="parcelas">Numero de parcelas</label><input id="parcelas" type="number" value="48" step="1" inputmode="numeric"></div>
+<div class="campo"><label for="taxaJuros">Taxa de juros ao m&ecirc;s (%)</label><input id="taxaJuros" type="number" value="1.49" step="0.01" inputmode="decimal"></div>
+<div class="campo"><label for="parcelas">N&uacute;mero de parcelas</label><input id="parcelas" type="number" value="48" step="1" inputmode="numeric"></div>
 <div class="campo"><label for="rendaMensal">Renda mensal (R$)</label><input id="rendaMensal" type="number" value="7000" step="0.01" inputmode="decimal"></div>
 <button type="button" onclick="calcularDecisao()">Calcular</button>
 <div class="resumo-topo">
 <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
 <div class="resumo-topo-valor" id="resumoTopoValor">Preencha os dados</div>
-<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decisao aparece aqui.</div>
+<div class="resumo-topo-texto" id="resumoTopoTexto">A leitura da decis&atilde;o aparece aqui.</div>
 </div>
 <div class="resultado-grid detalhes-resultado">
 <div class="card-resultado"><span class="titulo-resultado" id="detalhe1Titulo">Leitura</span><strong id="detalhe1Valor">-</strong><span id="detalhe1Texto">.</span></div>
-<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Comparacao</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
-<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decisao</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe2Titulo">Compara&ccedil;&atilde;o</span><strong id="detalhe2Valor">-</strong><span id="detalhe2Texto">.</span></div>
+<div class="card-resultado"><span class="titulo-resultado" id="detalhe3Titulo">Decis&atilde;o</span><strong id="detalhe3Valor">-</strong><span id="detalhe3Texto">.</span></div>
 </div>
-<div class="nota-resultado">Use esta pagina como leitura inicial. Bancos, score, seguros e taxas reais podem mudar a conta final.</div>
+<div class="nota-resultado">Use esta p&aacute;gina como leitura inicial. Bancos, score, seguros e taxas reais podem mudar a conta final.</div>
 </div>
 <section class="seo">
 <h2>Quando financiar um carro pode fazer sentido?</h2>
-<p>Em geral, quando a entrada ajuda a reduzir o valor financiado e a parcela fica numa faixa saudavel da renda mensal.</p>
+<p>Em geral, quando a entrada ajuda a reduzir o valor financiado e a parcela fica numa faixa saud&aacute;vel da renda mensal.</p>
 <h2>O que esta calculadora considera?</h2>
-<p>Ela cruza valor do carro, entrada, juros, prazo e renda para responder se o financiamento parece sustentavel ou apertado.</p>
+<p>Ela cruza valor do carro, entrada, juros, prazo e renda para responder se o financiamento parece sustent&aacute;vel ou apertado.</p>
 </section>
 <section class="seo">
-<h2>Veja tambem</h2>
+<h2>Veja tamb&eacute;m</h2>
 <div class="resultado-grid">
-<a class="card-resultado card-link" href="/calculadora-financiamento/"><span class="titulo-resultado">Finanças</span><strong>Calculadora de Financiamento</strong><span>Simule parcela, total pago e juros antes de comparar se o financiamento cabe no orçamento.</span></a>
-<a class="card-resultado card-link" href="/guias/vale-a-pena-financiar-um-carro/"><span class="titulo-resultado">Guia</span><strong>Vale a Pena Financiar um Carro?</strong><span>Leia os sinais que ajudam a separar um financiamento viável de um financiamento pesado.</span></a>
-<a class="card-resultado card-link" href="/trocar-de-carro-ou-manter-o-atual/"><span class="titulo-resultado">Decisão</span><strong>Trocar de Carro ou Manter o Atual?</strong><span>Compare se continuar com o carro atual já está custando perto demais de um carro novo.</span></a>
+<a class="card-resultado card-link" href="/calculadora-financiamento/"><span class="titulo-resultado">Finan&ccedil;as</span><strong>Calculadora de Financiamento</strong><span>Simule parcela, total pago e juros antes de comparar se o financiamento cabe no or&ccedil;amento.</span></a>
+<a class="card-resultado card-link" href="/guias/vale-a-pena-financiar-um-carro/"><span class="titulo-resultado">Guia</span><strong>Vale a Pena Financiar um Carro?</strong><span>Leia os sinais que ajudam a separar um financiamento vi&aacute;vel de um financiamento pesado.</span></a>
+<a class="card-resultado card-link" href="/trocar-de-carro-ou-manter-o-atual/"><span class="titulo-resultado">Decis&atilde;o</span><strong>Trocar de Carro ou Manter o Atual?</strong><span>Compare se continuar com o carro atual j&aacute; est&aacute; custando perto demais de um carro novo.</span></a>
 </div>
 </section>
 <section id="calculadorasPopulares" class="seo"></section>

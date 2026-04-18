@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Média Ponderada Online | CalcBrazil</title>
+  <meta name="description" content="Calcule média ponderada online com notas e pesos. Descubra rapidamente o resultado final sem fazer a conta manual.">
+
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-media-ponderada/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+
+  <meta property="og:title" content="Calculadora de Média Ponderada Online">
+  <meta property="og:description" content="Calcule média ponderada com pesos diferentes para notas, provas e avaliações.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-media-ponderada/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a página inicial</a></p>
+    <h1>Calculadora de Média Ponderada</h1>
+    <p class="descricao">Calcule a média ponderada de provas, atividades e trabalhos considerando pesos diferentes para cada valor.</p>
+    <p class="selo">média ponderada • notas • pesos • cálculo instantâneo</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos rápidos">
+      <button type="button" onclick="aplicarExemplo([7, 8, 9, 10], [1, 2, 3, 4])">Pesos 1, 2, 3 e 4</button>
+      <button type="button" onclick="aplicarExemplo([6.5, 8, 7.5, 9], [2, 2, 3, 3])">Boletim com 4 etapas</button>
+      <button type="button" onclick="aplicarExemplo([5, 7, 8, 9], [1, 1, 2, 6])">Prova final com peso maior</button>
+    </div>
+
+    <div class="campo"><label for="nota1">Nota 1</label><input id="nota1" type="number" value="7" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="peso1">Peso 1</label><input id="peso1" type="number" value="1" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="nota2">Nota 2</label><input id="nota2" type="number" value="8" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="peso2">Peso 2</label><input id="peso2" type="number" value="2" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="nota3">Nota 3</label><input id="nota3" type="number" value="9" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="peso3">Peso 3</label><input id="peso3" type="number" value="3" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="nota4">Nota 4</label><input id="nota4" type="number" value="10" step="0.01" inputmode="decimal"></div>
+    <div class="campo"><label for="peso4">Peso 4</label><input id="peso4" type="number" value="4" step="0.01" inputmode="decimal"></div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe notas e pesos para calcular a média ponderada.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Soma ponderada</span>
+        <strong id="detalheSomaPonderada">-</strong>
+        <span id="detalheSomaPonderadaTexto">A soma das notas multiplicadas pelos pesos aparece aqui.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total dos pesos</span>
+        <strong id="detalhePesos">-</strong>
+        <span id="detalhePesosTexto">Os pesos são somados antes da divisão final.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Fórmula usada</span>
+        <strong id="detalheFormula">-</strong>
+        <span id="detalheFormulaTexto">A conta pronta ajuda a conferir o cálculo.</span>
+      </div>
+    </div>
+
+    <div class="nota-resultado" id="notaResultado">Use esta calculadora quando cada nota ou avaliação tiver importância diferente no resultado final.</div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Calcule média ponderada sem montar a conta manualmente</h2>
+    <p>Esta página ajuda a descobrir a média final quando provas, trabalhos e atividades possuem pesos diferentes. Basta informar cada nota com seu respectivo peso para ver o resultado na hora.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular média ponderada?</h2>
+    <p>Multiplique cada nota pelo peso correspondente, some todos os resultados e depois divida pela soma dos pesos. A calculadora faz esse processo automaticamente e mostra a leitura pronta.</p>
+    <h2>Quando a média ponderada é útil?</h2>
+    <p>Ela é muito usada em boletins escolares, vestibulares, processos seletivos, média de desempenho e qualquer situação em que algumas notas valem mais do que outras.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Qual a diferença entre média simples e média ponderada?</h3>
+    <p>Na média simples, todos os valores têm o mesmo peso. Na média ponderada, cada valor influencia o resultado de acordo com o peso informado.</p>
+    <h3>Posso usar pesos decimais?</h3>
+    <p>Sim. A calculadora aceita pesos inteiros e decimais, desde que a soma final dos pesos seja maior que zero.</p>
+    <h3>Serve para calcular nota final?</h3>
+    <p>Sim. Ela funciona muito bem para nota final quando provas e trabalhos têm pesos diferentes.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja também</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-media/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de Média</strong><span>Calcule a média simples quando todos os valores tiverem o mesmo peso.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-regra-de-tres/"><span class="titulo-resultado">Matemática</span><strong>Calculadora de Regra de Três</strong><span>Resolva proporções e relações numéricas do dia a dia.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Todas as Calculadoras de Matemática</strong><span>Explore outras ferramentas da categoria no portal.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-media-ponderada/");
+  </script>
+</body>
+</html>
