@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Aposentadoria INSS Online</title>
+  <meta name="description" content="Faça uma simula&ccedil;&atilde;o simples do tempo restante para aposentadoria no INSS, com aviso claro de que o resultado &eacute; apenas informativo.">
+  <link rel="canonical" href="https://calcbrazil.com/simulador-aposentadoria-inss/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Simulador de Aposentadoria INSS Online">
+  <meta property="og:description" content="Veja uma proje&ccedil;&atilde;o informativa do tempo restante para aposentadoria.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/simulador-aposentadoria-inss/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Simulador de Aposentadoria INSS</h1>
+    <p class="descricao">Veja uma proje&ccedil;&atilde;o simples do tempo restante para aposentadoria por idade.</p>
+    <p class="selo">INSS &bull; aposentadoria &bull; tempo de contribui&ccedil;&atilde;o &bull; proje&ccedil;&atilde;o</p>
+    <div class="campo">
+      <label for="sexo">Sexo</label>
+      <select id="sexo">
+        <option value="mulher">Mulher</option>
+        <option value="homem">Homem</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="idadeAtual">Idade atual</label>
+      <input id="idadeAtual" type="number" step="1" value="38" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="anosContribuicao">Anos de contribui&ccedil;&atilde;o</label>
+      <input id="anosContribuicao" type="number" step="1" value="15" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Tempo restante estimado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Esta p&aacute;gina n&atilde;o substitui o simulador oficial do Meu INSS.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Idade m&iacute;nima usada</span><strong id="idadeMinima">-</strong><span>Regra simplificada de aposentadoria por idade.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Contribui&ccedil;&atilde;o m&iacute;nima</span><strong id="contribuicaoMinima">15 anos</strong><span>Base comum usada para proje&ccedil;&atilde;o simplificada.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Situa&ccedil;&atilde;o</span><strong id="situacao">-</strong><span>Resumo curto sobre a proje&ccedil;&atilde;o.</span></div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>O INSS informa que o simulador oficial do Meu INSS utiliza a base de dados do CNIS e o resultado ainda assim &eacute; apenas uma proje&ccedil;&atilde;o. Esta p&aacute;gina oferece uma estimativa simplificada.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de BTU Online</title>
+  <meta name="description" content="Calcule quantos BTUs s&atilde;o recomendados para um ambiente com base em &aacute;rea, incid&ecirc;ncia solar e quantidade de pessoas.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-btu/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de BTU</h1>
+    <p class="descricao">Estime a capacidade recomendada de ar-condicionado para o ambiente.</p>
+    <div class="campo"><label for="area">Area do ambiente (m²)</label><input id="area" type="number" step="0.01" value="20" inputmode="decimal"></div>
+    <div class="campo"><label for="pessoas">Pessoas no ambiente</label><input id="pessoas" type="number" step="1" value="2" inputmode="numeric"></div>
+    <div class="campo"><label for="sol">Incidencia solar</label><select id="sol"><option value="sem">Pouco sol</option><option value="com">Sol forte</option></select></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">BTU recomendado</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados do ambiente.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

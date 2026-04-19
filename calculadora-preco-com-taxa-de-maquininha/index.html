@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Pre&ccedil;o com Taxa de Maquininha Online</title>
+  <meta name="description" content="Descubra o pre&ccedil;o de venda necess&aacute;rio para receber um valor l&iacute;quido ap&oacute;s a taxa da maquininha.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-preco-com-taxa-de-maquininha/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Pre&ccedil;o com Taxa de Maquininha</h1>
+    <p class="descricao">Descubra quanto cobrar para receber o valor l&iacute;quido desejado depois da taxa.</p>
+    <div class="campo"><label for="valorLiquido">Valor l&iacute;quido desejado (R$)</label><input id="valorLiquido" type="number" step="0.01" value="100" inputmode="decimal"></div>
+    <div class="campo"><label for="taxaMaquininha">Taxa da maquininha (%)</label><input id="taxaMaquininha" type="number" step="0.01" value="4.99" inputmode="decimal"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Pre&ccedil;o sugerido</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha o valor liquido desejado e a taxa.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script><script src="./script.js"></script><script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

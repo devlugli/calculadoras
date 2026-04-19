@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Consumo de Energia El&eacute;trica Online</title>
+  <meta name="description" content="Descubra o consumo mensal em kWh de um aparelho com base na pot&ecirc;ncia, horas de uso por dia e quantidade.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-consumo-de-energia-eletrica/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Consumo de Energia El&eacute;trica Online">
+  <meta property="og:description" content="Calcule o consumo de energia de aparelhos em kWh por m&ecirc;s.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-consumo-de-energia-eletrica/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Consumo de Energia El&eacute;trica</h1>
+    <p class="descricao">Estime o consumo mensal em kWh de aparelhos da casa, escrit&oacute;rio ou com&eacute;rcio.</p>
+    <p class="selo">Energia &bull; consumo &bull; kWh &bull; cotidiano</p>
+    <div class="campo"><label for="potenciaW">Pot&ecirc;ncia do aparelho (W)</label><input id="potenciaW" type="number" step="1" value="1500" inputmode="numeric"></div>
+    <div class="campo"><label for="horasDia">Horas de uso por dia</label><input id="horasDia" type="number" step="0.1" value="2" inputmode="decimal"></div>
+    <div class="campo"><label for="diasMes">Dias de uso por m&ecirc;s</label><input id="diasMes" type="number" step="1" value="30" inputmode="numeric"></div>
+    <div class="campo"><label for="quantidade">Quantidade de aparelhos</label><input id="quantidade" type="number" step="1" value="1" inputmode="numeric"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Consumo mensal estimado</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados do aparelho.</div></div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Consumo por dia</span><strong id="consumoDia">-</strong><span>Estimativa considerando o uso di&aacute;rio informado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Horas totais no m&ecirc;s</span><strong id="horasMes">-</strong><span>Total de horas usadas ao longo do m&ecirc;s.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Pot&ecirc;ncia total</span><strong id="potenciaTotal">-</strong><span>Considera a quantidade de aparelhos iguais.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

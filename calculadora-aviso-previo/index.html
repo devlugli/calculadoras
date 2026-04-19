@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Aviso-Pr&eacute;vio Online</title>
+  <meta name="description" content="Calcule aviso-pr&eacute;vio trabalhado ou indenizado com base no sal&aacute;rio e no tempo de servi&ccedil;o.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-aviso-previo/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Aviso-Pr&eacute;vio Online">
+  <meta property="og:description" content="Simule dias e valor estimado do aviso-pr&eacute;vio proporcional.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-aviso-previo/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Aviso-Pr&eacute;vio</h1>
+    <p class="descricao">Estime a quantidade de dias e o valor aproximado do aviso-pr&eacute;vio.</p>
+    <p class="selo">Aviso-pr&eacute;vio &bull; trabalho &bull; rescis&atilde;o &bull; CLT</p>
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio mensal (R$)</label>
+      <input id="salario" type="number" step="0.01" value="3200" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="anosCompletos">Anos completos na empresa</label>
+      <input id="anosCompletos" type="number" step="1" value="3" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Valor estimado do aviso</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha sal&aacute;rio e tempo de casa.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Dias de aviso</span><strong id="diasAviso">-</strong><span>Considera 30 dias + 3 por ano completo, at&eacute; 90 dias.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Valor por dia</span><strong id="valorDia">-</strong><span>Base simples usada para a estimativa.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Leitura r&aacute;pida</span><strong id="leitura">-</strong><span>Resumo curto do c&aacute;lculo.</span></div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>Esta p&aacute;gina tem car&aacute;ter informativo. Conven&ccedil;&atilde;o coletiva, tipo de desligamento e eventos da rescis&atilde;o podem alterar o valor final.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

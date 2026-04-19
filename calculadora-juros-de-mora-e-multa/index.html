@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Juros de Mora e Multa Online</title>
+  <meta name="description" content="Calcule multa e juros de mora por atraso em boletos, cobran&ccedil;as e pagamentos com base em dias corridos.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-juros-de-mora-e-multa/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Juros de Mora e Multa</h1>
+    <p class="descricao">Estime o total a pagar em um atraso com multa fixa e juros por dia ou por m&ecirc;s.</p>
+    <div class="campo"><label for="valorOriginal">Valor original (R$)</label><input id="valorOriginal" type="number" step="0.01" value="1000" inputmode="decimal"></div>
+    <div class="campo"><label for="multaPercentual">Multa (%)</label><input id="multaPercentual" type="number" step="0.01" value="2" inputmode="decimal"></div>
+    <div class="campo"><label for="jurosPercentualMes">Juros ao m&ecirc;s (%)</label><input id="jurosPercentualMes" type="number" step="0.01" value="1" inputmode="decimal"></div>
+    <div class="campo"><label for="diasAtraso">Dias de atraso</label><input id="diasAtraso" type="number" step="1" value="20" inputmode="numeric"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Total atualizado</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para estimar a atualiza&ccedil;&atilde;o.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Regra de Tr&ecirc;s Composta Online</title>
+  <meta name="description" content="Resolva regra de tr&ecirc;s composta online com grandezas diretas e inversas para estudos, trabalho e problemas do dia a dia.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-regra-de-tres-composta/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Regra de Tr&ecirc;s Composta Online">
+  <meta property="og:description" content="Calcule propor&ccedil;&otilde;es com mais de duas grandezas em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-regra-de-tres-composta/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Regra de Tr&ecirc;s Composta</h1>
+    <p class="descricao">Resolva problemas com v&aacute;rias grandezas diretas e inversas em uma conta s&oacute;.</p>
+    <p class="selo">Regra de tr&ecirc;s &bull; propor&ccedil;&atilde;o &bull; matem&aacute;tica &bull; estudo</p>
+
+    <div class="campo">
+      <label for="a1">Grandeza A - valor base</label>
+      <input id="a1" type="number" step="0.01" value="4" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="a2">Grandeza A - novo valor</label>
+      <input id="a2" type="number" step="0.01" value="6" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="relA">Rela&ccedil;&atilde;o da grandeza A</label>
+      <select id="relA">
+        <option value="direta">Direta</option>
+        <option value="inversa">Inversa</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="b1">Grandeza B - valor base</label>
+      <input id="b1" type="number" step="0.01" value="3" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="b2">Grandeza B - novo valor</label>
+      <input id="b2" type="number" step="0.01" value="5" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="relB">Rela&ccedil;&atilde;o da grandeza B</label>
+      <select id="relB">
+        <option value="direta">Direta</option>
+        <option value="inversa">Inversa</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="resultadoBase">Resultado conhecido</label>
+      <input id="resultadoBase" type="number" step="0.01" value="12" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado estimado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha as grandezas para calcular a nova propor&ccedil;&atilde;o.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Fator A</span>
+        <strong id="fatorA">-</strong>
+        <span>Impacto da primeira grandeza na propor&ccedil;&atilde;o.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Fator B</span>
+        <strong id="fatorB">-</strong>
+        <span>Impacto da segunda grandeza na propor&ccedil;&atilde;o.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Conta usada</span>
+        <strong id="contaUsada">-</strong>
+        <span>Resumo da multiplica&ccedil;&atilde;o aplicada.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo">
+    <h2>Como funciona a regra de tr&ecirc;s composta?</h2>
+    <p>Na regra de tr&ecirc;s composta, voc&ecirc; compara mais de duas grandezas e identifica se cada uma se relaciona de forma direta ou inversa com o resultado procurado.</p>
+    <h2>Quando usar?</h2>
+    <p>Ela &eacute; &uacute;til em problemas de produ&ccedil;&atilde;o, velocidade, tempo, equipe, consumo e situa&ccedil;&otilde;es em que v&aacute;rias grandezas mudam ao mesmo tempo.</p>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

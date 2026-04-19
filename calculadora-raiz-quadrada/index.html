@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Raiz Quadrada Online</title>
+  <meta name="description" content="Calcule raiz quadrada online, veja o valor aproximado, o quadrado perfeito mais pr&oacute;ximo e a confer&ecirc;ncia do resultado.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-raiz-quadrada/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Raiz Quadrada Online">
+  <meta property="og:description" content="Descubra a raiz quadrada de um n&uacute;mero em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-raiz-quadrada/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Raiz Quadrada</h1>
+    <p class="descricao">Informe um n&uacute;mero para descobrir sua raiz quadrada e conferir o resultado.</p>
+    <p class="selo">Raiz quadrada &bull; matem&aacute;tica &bull; estudo &bull; confer&ecirc;ncia</p>
+    <div class="campo">
+      <label for="numero">N&uacute;mero</label>
+      <input id="numero" type="number" step="0.01" value="144" inputmode="decimal">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Raiz quadrada</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Digite um valor maior ou igual a zero.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Confer&ecirc;ncia</span><strong id="conferencia">-</strong><span>Mostra o quadrado da raiz encontrada.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Quadrado perfeito</span><strong id="quadradoPerfeito">-</strong><span>Indica se o n&uacute;mero &eacute; quadrado perfeito.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Inteiro mais pr&oacute;ximo</span><strong id="inteiroProximo">-</strong><span>Ajuda em exerc&iacute;cios e estimativas.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

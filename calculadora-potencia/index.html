@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Pot&ecirc;ncia Online</title>
+  <meta name="description" content="Calcule pot&ecirc;ncia online com base, expoente, resultado e confer&ecirc;ncia r&aacute;pida.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-potencia/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Pot&ecirc;ncia Online">
+  <meta property="og:description" content="Resolva pot&ecirc;ncias em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-potencia/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Pot&ecirc;ncia</h1>
+    <p class="descricao">Informe base e expoente para calcular pot&ecirc;ncias de forma r&aacute;pida.</p>
+    <p class="selo">Pot&ecirc;ncia &bull; expoente &bull; matem&aacute;tica &bull; estudo</p>
+    <div class="campo"><label for="base">Base</label><input id="base" type="number" step="0.01" value="2" inputmode="decimal"></div>
+    <div class="campo"><label for="expoente">Expoente</label><input id="expoente" type="number" step="0.01" value="5" inputmode="decimal"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Resultado</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha a base e o expoente.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Reajuste de Aluguel Online</title>
+  <meta name="description" content="Calcule reajuste de aluguel por percentual e compare o valor antigo com o novo aluguel de forma simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-reajuste-de-aluguel/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Reajuste de Aluguel Online">
+  <meta property="og:description" content="Veja o novo valor do aluguel ap&oacute;s aplicar o percentual de reajuste.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-reajuste-de-aluguel/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Reajuste de Aluguel</h1>
+    <p class="descricao">Aplique um percentual de reajuste e veja o novo valor do aluguel em segundos.</p>
+    <p class="selo">Aluguel &bull; reajuste &bull; percentual &bull; finan&ccedil;as</p>
+    <div class="campo"><label for="aluguelAtual">Aluguel atual (R$)</label><input id="aluguelAtual" type="number" step="0.01" value="1800" inputmode="decimal"></div>
+    <div class="campo"><label for="percentualReajuste">Reajuste (%)</label><input id="percentualReajuste" type="number" step="0.01" value="6.5" inputmode="decimal"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Novo aluguel</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os valores para calcular o reajuste.</div></div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Aumento em reais</span><strong id="valorAumento">-</strong><span>Diferen&ccedil;a entre o aluguel antigo e o novo.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Valor anterior</span><strong id="valorAnterior">-</strong><span>Base usada para aplicar o percentual.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Percentual</span><strong id="percentualUsado">-</strong><span>Reajuste informado na simula&ccedil;&atilde;o.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Convers&atilde;o de Medidas Online</title>
+  <meta name="description" content="Converta medidas de comprimento, massa, volume e temperatura em uma calculadora online simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-conversao-de-medidas/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Convers&atilde;o de Medidas Online">
+  <meta property="og:description" content="Converta unidades em poucos segundos na mesma p&aacute;gina.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-conversao-de-medidas/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Convers&atilde;o de Medidas</h1>
+    <p class="descricao">Converta unidades de comprimento, massa, volume e temperatura sem trocar de ferramenta.</p>
+    <p class="selo">Convers&atilde;o &bull; medidas &bull; unidades &bull; utilidade</p>
+    <div class="campo">
+      <label for="tipo">Tipo de convers&atilde;o</label>
+      <select id="tipo" onchange="atualizarOpcoes()">
+        <option value="comprimento">Comprimento</option>
+        <option value="massa">Massa</option>
+        <option value="volume">Volume</option>
+        <option value="temperatura">Temperatura</option>
+      </select>
+    </div>
+    <div class="campo"><label for="valor">Valor</label><input id="valor" type="number" step="0.01" value="1" inputmode="decimal"></div>
+    <div class="campo"><label for="de">De</label><select id="de"></select></div>
+    <div class="campo"><label for="para">Para</label><select id="para"></select></div>
+    <button type="button" onclick="calcular()">Converter</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Resultado da convers&atilde;o</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Escolha o tipo de medida e as unidades.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

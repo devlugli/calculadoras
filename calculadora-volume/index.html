@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Volume Online</title>
+  <meta name="description" content="Calcule volume de cubo, caixa retangular e cilindro com uma calculadora simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-volume/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Volume</h1>
+    <p class="descricao">Descubra o volume de s&oacute;lidos geom&eacute;tricos comuns em poucos segundos.</p>
+    <div class="campo"><label for="forma">S&oacute;lido</label><select id="forma" onchange="trocarForma()"><option value="cubo">Cubo</option><option value="caixa">Caixa retangular</option><option value="cilindro">Cilindro</option></select></div>
+    <div id="camposCubo"><div class="campo"><label for="ladoCubo">Lado</label><input id="ladoCubo" type="number" step="0.01" value="3" inputmode="decimal"></div></div>
+    <div id="camposCaixa" style="display:none;"><div class="campo"><label for="comprimento">Comprimento</label><input id="comprimento" type="number" step="0.01" value="5" inputmode="decimal"></div><div class="campo"><label for="largura">Largura</label><input id="largura" type="number" step="0.01" value="4" inputmode="decimal"></div><div class="campo"><label for="altura">Altura</label><input id="altura" type="number" step="0.01" value="2" inputmode="decimal"></div></div>
+    <div id="camposCilindro" style="display:none;"><div class="campo"><label for="raio">Raio</label><input id="raio" type="number" step="0.01" value="2" inputmode="decimal"></div><div class="campo"><label for="alturaCilindro">Altura</label><input id="alturaCilindro" type="number" step="0.01" value="6" inputmode="decimal"></div></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Volume</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Escolha o s&oacute;lido e preencha as medidas.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

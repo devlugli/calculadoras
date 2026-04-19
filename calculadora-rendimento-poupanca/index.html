@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Rendimento da Poupan&ccedil;a Online</title>
+  <meta name="description" content="Simule o rendimento da poupan&ccedil;a com valor inicial, aporte mensal, taxa estimada e prazo em meses.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-rendimento-poupanca/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Rendimento da Poupan&ccedil;a Online">
+  <meta property="og:description" content="Descubra quanto a poupan&ccedil;a pode render em diferentes prazos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-rendimento-poupanca/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Rendimento da Poupan&ccedil;a</h1>
+    <p class="descricao">Simule crescimento da poupan&ccedil;a com valor inicial, aporte mensal e taxa mensal estimada.</p>
+    <p class="selo">Poupan&ccedil;a &bull; rendimento &bull; investimento &bull; finan&ccedil;as</p>
+    <div class="campo"><label for="valorInicial">Valor inicial (R$)</label><input id="valorInicial" type="number" step="0.01" value="3000" inputmode="decimal"></div>
+    <div class="campo"><label for="aporteMensal">Aporte mensal (R$)</label><input id="aporteMensal" type="number" step="0.01" value="200" inputmode="decimal"></div>
+    <div class="campo"><label for="prazoMeses">Prazo (meses)</label><input id="prazoMeses" type="number" step="1" value="24" inputmode="numeric"></div>
+    <div class="campo"><label for="taxaMensal">Taxa mensal estimada (%)</label><input id="taxaMensal" type="number" step="0.01" value="0.5" inputmode="decimal"></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Valor final estimado</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados da simula&ccedil;&atilde;o.</div></div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Total investido</span><strong id="totalInvestido">-</strong><span>Valor inicial mais aportes do per&iacute;odo.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Rendimento</span><strong id="rendimentoTotal">-</strong><span>Diferen&ccedil;a entre o saldo final e o total aplicado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Taxa usada</span><strong id="taxaUsada">-</strong><span>Taxa mensal informada na simula&ccedil;&atilde;o.</span></div>
+    </div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Per&iacute;metro Online</title>
+  <meta name="description" content="Calcule per&iacute;metro de quadrado, ret&acirc;ngulo e tri&acirc;ngulo com uma calculadora simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-perimetro/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Per&iacute;metro</h1>
+    <p class="descricao">Calcule o per&iacute;metro de figuras geom&eacute;tricas comuns em uma p&aacute;gina s&oacute;.</p>
+    <div class="campo"><label for="forma">Figura</label><select id="forma" onchange="trocarForma()"><option value="quadrado">Quadrado</option><option value="retangulo">Ret&acirc;ngulo</option><option value="triangulo">Tri&acirc;ngulo</option></select></div>
+    <div id="camposQuadrado"><div class="campo"><label for="ladoQuadrado">Lado</label><input id="ladoQuadrado" type="number" step="0.01" value="4" inputmode="decimal"></div></div>
+    <div id="camposRetangulo" style="display:none;"><div class="campo"><label for="baseRetangulo">Base</label><input id="baseRetangulo" type="number" step="0.01" value="5" inputmode="decimal"></div><div class="campo"><label for="alturaRetangulo">Altura</label><input id="alturaRetangulo" type="number" step="0.01" value="3" inputmode="decimal"></div></div>
+    <div id="camposTriangulo" style="display:none;"><div class="campo"><label for="lado1">Lado 1</label><input id="lado1" type="number" step="0.01" value="3" inputmode="decimal"></div><div class="campo"><label for="lado2">Lado 2</label><input id="lado2" type="number" step="0.01" value="4" inputmode="decimal"></div><div class="campo"><label for="lado3">Lado 3</label><input id="lado3" type="number" step="0.01" value="5" inputmode="decimal"></div></div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo"><div class="resumo-topo-titulo">Per&iacute;metro</div><div class="resumo-topo-valor" id="resumoTopoValor">-</div><div class="resumo-topo-texto" id="resumoTopoTexto">Escolha a figura e informe as medidas.</div></div>
+  </div>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Sal&aacute;rio-Maternidade Online</title>
+  <meta name="description" content="Simule o valor do sal&aacute;rio-maternidade com base na renda mensal e no tipo de segurada, com aviso claro de que o resultado &eacute; apenas estimativo.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-salario-maternidade/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Calculadora de Sal&aacute;rio-Maternidade Online">
+  <meta property="og:description" content="Veja uma estimativa informativa do sal&aacute;rio-maternidade.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-salario-maternidade/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Sal&aacute;rio-Maternidade</h1>
+    <p class="descricao">Fa&ccedil;a uma estimativa simples do valor mensal e do total do sal&aacute;rio-maternidade.</p>
+    <p class="selo">INSS &bull; maternidade &bull; benef&iacute;cio &bull; estimativa</p>
+    <div class="campo">
+      <label for="tipoSegurada">Tipo de segurada</label>
+      <select id="tipoSegurada">
+        <option value="empregada">Empregada</option>
+        <option value="contribuinte">Contribuinte individual / facultativa</option>
+        <option value="mei">MEI</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="rendaMensal">Renda ou sal&aacute;rio m&eacute;dio mensal (R$)</label>
+      <input id="rendaMensal" type="number" step="0.01" value="2800" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="mesesBeneficio">Meses de benef&iacute;cio</label>
+      <input id="mesesBeneficio" type="number" step="1" value="4" inputmode="numeric">
+    </div>
+    <button type="button" onclick="calcular()">Calcular</button>
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo">Valor mensal estimado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Use esta simula&ccedil;&atilde;o apenas como refer&ecirc;ncia.</div>
+    </div>
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado"><span class="titulo-resultado">Total estimado</span><strong id="totalBeneficio">-</strong><span>Soma do valor mensal pelo per&iacute;odo informado.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Tipo considerado</span><strong id="tipoConsiderado">-</strong><span>Mostra a base usada na simula&ccedil;&atilde;o.</span></div>
+      <div class="card-resultado"><span class="titulo-resultado">Aviso</span><strong id="avisoFinal">Estimativa</strong><span>O INSS confirma o direito apenas na an&aacute;lise oficial.</span></div>
+    </div>
+  </div>
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>Segundo o INSS, o direito e o valor efetivo dependem da categoria da segurada, car&ecirc;ncia, hist&oacute;rico contributivo e an&aacute;lise oficial do pedido. Esta p&aacute;gina &eacute; apenas uma proje&ccedil;&atilde;o.</p>
+  </section>
+  <section id="calculadorasPopulares" class="seo"></section>
+  <script src="../assets/js/populares.js"></script>
+  <script src="./script.js"></script>
+  <script>renderizarCalculadorasPopulares();</script>
+</body>
+</html>
