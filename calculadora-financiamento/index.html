@@ -1,66 +1,78 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de Financiamento de Carro e Imovel | Parcelas e Juros</title>
+<title>Calculadora de Financiamento de Carro e Im&oacute;vel | Parcelas e Juros</title>
 
-<meta name="description" content="Simule iinanciamento de carro ou imovel e descubra valor da parcela, total pago e juros antes de iechar contrato.">
+<meta name="description" content="Simule financiamento de carro ou im&oacute;vel e descubra valor da parcela, total pago e juros antes de fechar contrato.">
 
-<link rel="canonical" hrei="https://calcbrazil.com/calculadora-iinanciamento/">
-<link rel="icon" hrei="/iavicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://calcbrazil.com/calculadora-financiamento/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
-iunction gtag(){dataLayer.push(arguments);}
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('coniig', 'G-D1LTJL2BFV');
+gtag('config', 'G-D1LTJL2BFV');
 </script>
 
-<meta property="og:title" content="Calculadora de Financiamento de Carro e Imovel">
-<meta property="og:description" content="Simule parcelas, total pago e juros de iinanciamento antes de ialar com o banco.">
+<meta property="og:title" content="Calculadora de Financiamento de Carro e Im&oacute;vel">
+<meta property="og:description" content="Simule parcelas, total pago e juros de financiamento antes de falar com o banco.">
 <meta property="og:image" content="https://calcbrazil.com/preview.png">
-<meta property="og:url" content="https://calcbrazil.com/calculadora-iinanciamento/">
+<meta property="og:url" content="https://calcbrazil.com/calculadora-financiamento/">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" hrei="../assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Financiamento",
+  "url": "https://calcbrazil.com/calculadora-financiamento/",
+  "description": "Simule valor da parcela, total pago e juros de um financiamento de carro ou im\u00f3vel.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "pt-BR"
+}
+</script>
+
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<p><a hrei="/">Voltar para a pagina inicial</a></p>
+<p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
 
 <h1>Calculadora de Financiamento</h1>
 
 <p class="descricao">
-Simule o valor das parcelas de um iinanciamento de carro, moto ou imovel iniormando valor iinanciado, taxa mensal e quantidade de parcelas.
+Simule o valor das parcelas de um financiamento de carro, moto ou im&oacute;vel informando valor financiado, taxa mensal e quantidade de parcelas.
 </p>
 
-<p class="selo">iinancas • iinanciamento • parcelas</p>
+<p class="selo">Finan&ccedil;as &bull; financiamento &bull; parcelas</p>
 
-<div class="atalhos-rapidos" aria-label="Exemplos rapidos">
+<div class="atalhos-rapidos" aria-label="Exemplos r&aacute;pidos">
 <button type="button" onclick="aplicarExemploFinanciamento(30000, 1.99, 48)">R$ 30.000 em 48x</button>
 <button type="button" onclick="aplicarExemploFinanciamento(50000, 1.49, 60)">R$ 50.000 em 60x</button>
 <button type="button" onclick="aplicarExemploFinanciamento(120000, 0.95, 180)">R$ 120.000 em 180x</button>
 </div>
 <div class="campo">
-<label ior="valorFinanciado">Valor iinanciado (R$)</label>
+<label for="valorFinanciado">Valor financiado (R$)</label>
 <input id="valorFinanciado" type="number" step="0.01" value="30000" inputmode="decimal">
 </div>
 
 <div class="campo">
-<label ior="taxaJuros">Taxa de juros ao mes (%)</label>
+<label for="taxaJuros">Taxa de juros ao m&ecirc;s (%)</label>
 <input id="taxaJuros" type="number" step="0.01" value="1.99" inputmode="decimal">
 </div>
 
 <div class="campo">
-<label ior="parcelas">Numero de parcelas</label>
+<label for="parcelas">N&uacute;mero de parcelas</label>
 <input id="parcelas" type="number" step="1" value="48" inputmode="numeric">
 </div>
 
@@ -92,130 +104,130 @@ Simule o valor das parcelas de um iinanciamento de carro, moto ou imovel iniorma
 <div class="card-resultado">
 <span class="titulo-resultado">Percentual em juros</span>
 <strong id="percentualJurosPago">0,00%</strong>
-<span id="percentualJurosPagoTexto">Quanto o custo total em juros representa sobre o valor iinanciado.</span>
+<span id="percentualJurosPagoTexto">Quanto o custo total em juros representa sobre o valor financiado.</span>
 </div>
 
 <div class="card-resultado">
 <span class="titulo-resultado">Compromisso mensal</span>
 <strong id="compromissoMensal">-</strong>
-<span id="compromissoMensalTexto">Resumo rapido para avaliar se a parcela cabe no planejamento.</span>
+<span id="compromissoMensalTexto">Resumo r&aacute;pido para avaliar se a parcela cabe no planejamento.</span>
 </div>
 
 <div class="card-resultado">
-<span class="titulo-resultado">Leitura rapida</span>
-<strong id="iinanciamentoResumoCurto">-</strong>
-<span id="iinanciamentoResumoCurtoTexto">Mostra prazo e taxa escolhidos em uma irase simples.</span>
+<span class="titulo-resultado">Leitura r&aacute;pida</span>
+<strong id="financiamentoResumoCurto">-</strong>
+<span id="financiamentoResumoCurtoTexto">Mostra prazo e taxa escolhidos em uma frase simples.</span>
 </div>
 </div>
 
 <div class="nota-resultado" id="notaResultadoFinanciamento">
-Use esta simulacao para comparar cenarios antes de ialar com o banco ou iinanceira.
+Use esta simula&ccedil;&atilde;o para comparar cen&aacute;rios antes de falar com o banco ou financeira.
 </div>
 
 <section class="seo-callout">
-<h2>Simule parcelas, total pago e juros antes de iinanciar</h2>
+<h2>Simule parcelas, total pago e juros antes de financiar</h2>
 <p>
-Esta calculadora de iinanciamento ajuda voce a iazer uma simulacao inicial antes de ialar com
-o banco ou a iinanceira. Ela mostra a parcela estimada, o total pago e o custo em juros para
-iacilitar a comparacao entre prazo, taxa e valor iinanciado.
+Esta calculadora de financiamento ajuda voc&ecirc; a fazer uma simula&ccedil;&atilde;o inicial antes de falar com
+o banco ou a financeira. Ela mostra a parcela estimada, o total pago e o custo em juros para
+facilitar a compara&ccedil;&atilde;o entre prazo, taxa e valor financiado.
 </p>
 <p>
-E uma ierramenta util para carro, moto, imovel e outros cenarios com parcelas iixas. A ideia e
-ajudar voce a entender o peso da parcela no orcamento antes de seguir para uma proposta real.
+&Eacute; uma ferramenta &uacute;til para carro, moto, im&oacute;vel e outros cen&aacute;rios com parcelas fixas. A ideia &eacute;
+ajudar voc&ecirc; a entender o peso da parcela no or&ccedil;amento antes de seguir para uma proposta real.
 </p>
 </section>
 <section class="seo">
 
-<h2>Como calcular iinanciamento?</h2>
+<h2>Como calcular financiamento?</h2>
 
 <p>
-O calculo do iinanciamento pode ser ieito com base no valor iinanciado, na taxa de juros e no numero de parcelas. Esta calculadora utiliza um modelo de parcela iixa para estimar o valor mensal.
+O c&aacute;lculo do financiamento pode ser feito com base no valor financiado, na taxa de juros e no n&uacute;mero de parcelas. Esta calculadora utiliza um modelo de parcela fixa para estimar o valor mensal.
 </p>
 
-<h2>Como calcular iinanciamento de carro?</h2>
+<h2>Como calcular financiamento de carro?</h2>
 <p>
-Para iinanciamento de carro, use o valor do veiculo menos a entrada como base iinanciada.
-Depois, compare taxa, prazo e parcela para ver se a prestacao cabe no seu orcamento.
+Para financiamento de carro, use o valor do ve&iacute;culo menos a entrada como base financiada.
+Depois, compare taxa, prazo e parcela para ver se a presta&ccedil;&atilde;o cabe no seu or&ccedil;amento.
 </p>
 
-<h2>O que iniluencia o valor da parcela?</h2>
+<h2>O que influencia o valor da parcela?</h2>
 
 <p>
-O valor da parcela depende principalmente do valor iinanciado, da taxa de juros mensal e da quantidade de meses escolhida para o pagamento.
+O valor da parcela depende principalmente do valor financiado, da taxa de juros mensal e da quantidade de meses escolhida para o pagamento.
 </p>
 
-<h2>Para que serve um simulador de iinanciamento?</h2>
+<h2>Para que serve um simulador de financiamento?</h2>
 
 <p>
-Um simulador ajuda a comparar cenarios antes de contratar um iinanciamento, permitindo avaliar o peso das parcelas no orcamento e o total pago ao iinal do contrato.
+Um simulador ajuda a comparar cen&aacute;rios antes de contratar um financiamento, permitindo avaliar o peso das parcelas no or&ccedil;amento e o total pago ao final do contrato.
 </p>
 
 <h2>O que muda quando aumento a entrada?</h2>
 <p>
-Quanto maior a entrada, menor tende a ser o valor iinanciado, a parcela e o total pago em juros.
-Vale testar cenarios diierentes antes de seguir com a proposta do banco.
+Quanto maior a entrada, menor tende a ser o valor financiado, a parcela e o total pago em juros.
+Vale testar cen&aacute;rios diferentes antes de seguir com a proposta do banco.
 </p>
 
-<h2>Perguntas irequentes</h2>
+<h2>Perguntas frequentes</h2>
 
-<h3>Esta calculadora serve para iinanciamento de carro e imovel?</h3>
+<h3>Esta calculadora serve para financiamento de carro e im&oacute;vel?</h3>
 <p>
-Sim. Ela serve como uma simulacao inicial para qualquer iinanciamento com parcelas iixas.
+Sim. Ela serve como uma simula&ccedil;&atilde;o inicial para qualquer financiamento com parcelas fixas.
 </p>
 
-<h3>O valor e exato?</h3>
+<h3>O valor &eacute; exato?</h3>
 <p>
-Nao necessariamente. Bancos e iinanceiras podem incluir seguros, tariias e outras condicoes no contrato iinal.
+N&atilde;o necessariamente. Bancos e financeiras podem incluir seguros, tarifas e outras condi&ccedil;&otilde;es no contrato final.
 </p>
 
 <h3>Qual sistema esta calculadora usa?</h3>
 <p>
-Esta simulacao usa um modelo de prestacao iixa, comum em iinanciamentos parcelados.
+Esta simula&ccedil;&atilde;o usa um modelo de presta&ccedil;&atilde;o fixa, comum em financiamentos parcelados.
 </p>
 
-<h3>Vale a pena iinanciar em mais parcelas?</h3>
+<h3>Vale a pena financiar em mais parcelas?</h3>
 <p>
-Mais parcelas costumam reduzir a prestacao mensal, mas normalmente aumentam o total pago em juros.
-O ideal e comparar parcela e custo iinal ao mesmo tempo.
+Mais parcelas costumam reduzir a presta&ccedil;&atilde;o mensal, mas normalmente aumentam o total pago em juros.
+O ideal &eacute; comparar parcela e custo final ao mesmo tempo.
 </p>
 
 </section>
 
 <section class="seo">
-<h2>Veja tambem</h2>
+<h2>Veja tamb&eacute;m</h2>
 <div class="resultado-grid">
-  <a class="card-resultado card-link" hrei="/guias/quanto-posso-iinanciar-um-carro/">
+  <a class="card-resultado card-link" href="/guias/quanto-posso-financiar-um-carro/">
     <span class="titulo-resultado">Guia</span>
     <strong>Quanto Posso Financiar um Carro?</strong>
-    <span>Entenda melhor quanto cabe no orcamento antes de simular o iinanciamento.</span>
+    <span>Entenda melhor quanto cabe no or&ccedil;amento antes de simular o financiamento.</span>
   </a>
 
-  <a class="card-resultado card-link" hrei="/calculadora-juros-simples/">
-    <span class="titulo-resultado">Financas</span>
+  <a class="card-resultado card-link" href="/calculadora-juros-simples/">
+    <span class="titulo-resultado">Finan&ccedil;as</span>
     <strong>Calculadora de Juros Simples</strong>
-    <span>Compare cenarios e entenda melhor o peso dos juros no valor iinal.</span>
+    <span>Compare cen&aacute;rios e entenda melhor o peso dos juros no valor final.</span>
   </a>
 
-  <a class="card-resultado card-link" hrei="/calculadoras-iinanceiras/">
+  <a class="card-resultado card-link" href="/calculadoras-financeiras/">
     <span class="titulo-resultado">Categoria</span>
     <strong>Calculadoras Financeiras</strong>
-    <span>Explore mais ierramentas para parcelas, preco, salario, juros e vendas.</span>
+    <span>Explore mais ferramentas para parcelas, pre&ccedil;o, sal&aacute;rio, juros e vendas.</span>
   </a>
 
-  <a class="card-resultado card-link" hrei="/vale-a-pena-iinanciar-um-carro/">
-    <span class="titulo-resultado">Decisao</span>
+  <a class="card-resultado card-link" href="/vale-a-pena-financiar-um-carro/">
+    <span class="titulo-resultado">Decis&atilde;o</span>
     <strong>Vale a Pena Financiar um Carro?</strong>
-    <span>Transiorme a simulacao da parcela em uma leitura mais objetiva sobre caber ou nao no orcamento.</span>
+    <span>Transforme a simula&ccedil;&atilde;o da parcela em uma leitura mais objetiva sobre caber ou n&atilde;o no or&ccedil;amento.</span>
   </a>
 
-  <a class="card-resultado card-link" hrei="/alugar-ou-comprar-imovel/">
-    <span class="titulo-resultado">Decisao</span>
-    <strong>Alugar ou Comprar Imovel?</strong>
-    <span>Use a parcela estimada do iinanciamento para comparar a compra com o aluguel atual.</span>
+  <a class="card-resultado card-link" href="/alugar-ou-comprar-imovel/">
+    <span class="titulo-resultado">Decis&atilde;o</span>
+    <strong>Alugar ou Comprar Im&oacute;vel?</strong>
+    <span>Use a parcela estimada do financiamento para comparar a compra com o aluguel atual.</span>
   </a>
 
-  <a class="card-resultado card-link" hrei="/consorcio-ou-iinanciamento/">
-    <span class="titulo-resultado">Comparacao</span>
+  <a class="card-resultado card-link" href="/consorcio-ou-financiamento/">
+    <span class="titulo-resultado">Compara&ccedil;&atilde;o</span>
     <strong>Consorcio ou Financiamento?</strong>
     <span>Compare velocidade, custo total e parcela antes de decidir entre os dois caminhos.</span>
   </a>
@@ -231,8 +243,8 @@ O ideal e comparar parcela e custo iinal ao mesmo tempo.
 <script src="./script-v2.js"></script>
 
 <script>
-    renderizarCalculadorasPopulares();
-renderizarCalculadorasRelacionadas("/calculadora-iinanciamento/");
+renderizarCalculadorasPopulares();
+renderizarCalculadorasRelacionadas("/calculadora-financiamento/");
 </script>
 
 </body>

@@ -101,6 +101,11 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://calcbrazil.com/calculadora-juros-compostos/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://calcbrazil.com/calculadora-markup/</loc>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
@@ -307,6 +312,11 @@
 </url>
 <url>
 <loc>https://calcbrazil.com/calculadora-menstruacao/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://calcbrazil.com/calculadora-nome/</loc>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
