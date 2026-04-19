@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Saque-Anivers&aacute;rio FGTS Online</title>
+  <meta name="description" content="Descubra quanto voc&ecirc; pode sacar no saque-anivers&aacute;rio do FGTS com base nas faixas oficiais da CAIXA.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-saque-aniversario-fgts/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Saque-Anivers&aacute;rio FGTS Online">
+  <meta property="og:description" content="Simule o valor anual do saque-anivers&aacute;rio do FGTS com base no saldo total das contas.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-saque-aniversario-fgts/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Saque-Anivers&aacute;rio FGTS</h1>
+    <p class="descricao">Simule quanto voc&ecirc; pode sacar por ano no saque-anivers&aacute;rio do FGTS usando as faixas oficiais.</p>
+    <p class="selo">FGTS &bull; saque-anivers&aacute;rio &bull; trabalho &bull; benef&iacute;cio</p>
+
+    <div class="campo">
+      <label for="saldoFgts">Saldo total do FGTS (R$)</label>
+      <input id="saldoFgts" type="number" step="0.01" value="2500" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Valor estimado do saque</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe o saldo total do FGTS para estimar o valor anual.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Al&iacute;quota</span>
+        <strong id="aliquotaFaixa">-</strong>
+        <span id="aliquotaFaixaTexto">Percentual aplicado sobre o saldo da faixa correspondente.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Parcela adicional</span>
+        <strong id="parcelaAdicional">-</strong>
+        <span id="parcelaAdicionalTexto">Valor fixo somado ao percentual em algumas faixas.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Faixa usada</span>
+        <strong id="faixaSaldo">-</strong>
+        <span id="faixaSaldoTexto">Ajuda a conferir como a tabela foi aplicada no saldo informado.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Quanto posso sacar no saque-anivers&aacute;rio?</h2>
+    <p>Esta p&aacute;gina aplica as al&iacute;quotas e parcelas adicionais divulgadas pela CAIXA para simular o valor anual do saque-anivers&aacute;rio do FGTS.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>A ades&atilde;o ao saque-anivers&aacute;rio &eacute; opcional. Quem escolhe essa modalidade n&atilde;o saca o saldo integral do FGTS na demiss&atilde;o sem justa causa, exceto em hip&oacute;teses legais espec&iacute;ficas.</p>
+    <h2>Como o valor &eacute; calculado?</h2>
+    <p>O valor anual &eacute; a soma de uma al&iacute;quota sobre o saldo total com uma parcela adicional definida por faixa de saldo.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-fgts/"><span class="titulo-resultado">Trabalho</span><strong>Calculadora de FGTS</strong><span>Estime dep&oacute;sitos mensais e saldo acumulado do fundo.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-seguro-desemprego/"><span class="titulo-resultado">Trabalho</span><strong>Seguro-Desemprego</strong><span>Veja outra estimativa comum em momentos de desligamento.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-trabalho-rh/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Trabalho e RH</strong><span>Explore outras ferramentas ligadas a emprego, folha e benef&iacute;cios.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-saque-aniversario-fgts/");
+  </script>
+</body>
+</html>

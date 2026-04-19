@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de &Aacute;rea do C&iacute;rculo Online</title>
+  <meta name="description" content="Calcule a &aacute;rea do c&iacute;rculo a partir do raio ou do di&acirc;metro com resultado r&aacute;pido e simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-area-do-circulo/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de &Aacute;rea do C&iacute;rculo Online">
+  <meta property="og:description" content="Descubra a &aacute;rea do c&iacute;rculo com base no raio em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-area-do-circulo/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de &Aacute;rea do C&iacute;rculo</h1>
+    <p class="descricao">Descubra a &aacute;rea do c&iacute;rculo a partir do raio ou do di&acirc;metro em poucos segundos.</p>
+    <p class="selo">C&iacute;rculo &bull; geometria &bull; &aacute;rea &bull; pi</p>
+
+    <div class="campo">
+      <label for="modo">Entrada</label>
+      <select id="modo" onchange="trocarModo()">
+        <option value="raio">Usar raio</option>
+        <option value="diametro">Usar di&acirc;metro</option>
+      </select>
+    </div>
+
+    <div class="campo" id="campoRaio">
+      <label for="raio">Raio</label>
+      <input id="raio" type="number" step="0.01" value="5" inputmode="decimal">
+    </div>
+
+    <div class="campo" id="campoDiametro" style="display:none;">
+      <label for="diametro">Di&acirc;metro</label>
+      <input id="diametro" type="number" step="0.01" value="10" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">&Aacute;rea do c&iacute;rculo</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe raio ou di&acirc;metro para calcular a &aacute;rea.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Raio usado</span>
+        <strong id="raioUsado">-</strong>
+        <span id="raioUsadoTexto">A calculadora converte o di&acirc;metro em raio quando necess&aacute;rio.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">F&oacute;rmula</span>
+        <strong id="formulaUsada">pi x r^2</strong>
+        <span id="formulaUsadaTexto">Forma mais comum de calcular &aacute;rea do c&iacute;rculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Di&acirc;metro</span>
+        <strong id="diametroCalculado">-</strong>
+        <span id="diametroCalculadoTexto">Ajuda a conferir a medida usada na conta.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>&Aacute;rea do c&iacute;rculo sem erro de f&oacute;rmula</h2>
+    <p>Esta ferramenta aplica a f&oacute;rmula pi x raio ao quadrado e ajuda a calcular rapidamente a &aacute;rea de regi&otilde;es circulares.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular a &aacute;rea do c&iacute;rculo?</h2>
+    <p>Basta multiplicar pi pelo quadrado do raio. Se voc&ecirc; tiver apenas o di&acirc;metro, primeiro divida por dois para descobrir o raio.</p>
+    <h2>Quando esta p&aacute;gina &eacute; &uacute;til?</h2>
+    <p>Ela ajuda em problemas escolares, projetos, desenhos, constru&ccedil;&atilde;o e estimativas envolvendo superf&iacute;cies circulares.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-area/"><span class="titulo-resultado">Geometria</span><strong>Calculadora de &Aacute;rea</strong><span>Use uma p&aacute;gina com m&uacute;ltiplas figuras geom&eacute;tricas.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-metros-quadrados/"><span class="titulo-resultado">Constru&ccedil;&atilde;o</span><strong>Metros Quadrados</strong><span>Transforme medidas em &aacute;rea pr&aacute;tica para ambientes e pisos.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Matem&aacute;tica</strong><span>Explore outras ferramentas para geometria e medidas.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-area-do-circulo/");
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Rendimento CDI Online</title>
+  <meta name="description" content="Simule rendimento atrelado ao CDI com valor inicial, aportes mensais, prazo e percentual do CDI em uma calculadora online.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-rendimento-cdi/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Rendimento CDI Online">
+  <meta property="og:description" content="Descubra quanto um investimento pode render com base no CDI informado.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-rendimento-cdi/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Rendimento CDI</h1>
+    <p class="descricao">Simule o crescimento de um investimento usando CDI anual, percentual do CDI e aportes mensais.</p>
+    <p class="selo">Investimento &bull; CDI &bull; rendimento &bull; finan&ccedil;as</p>
+
+    <div class="campo">
+      <label for="valorInicial">Valor inicial (R$)</label>
+      <input id="valorInicial" type="number" step="0.01" value="5000" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="aporteMensal">Aporte mensal (R$)</label>
+      <input id="aporteMensal" type="number" step="0.01" value="300" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="prazoMeses">Prazo em meses</label>
+      <input id="prazoMeses" type="number" step="1" value="24" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="cdiAnual">CDI anual estimado (%)</label>
+      <input id="cdiAnual" type="number" step="0.01" value="10.65" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="percentualCdi">Percentual do CDI (%)</label>
+      <input id="percentualCdi" type="number" step="0.01" value="100" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Valor final estimado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe os dados da aplica&ccedil;&atilde;o para simular o rendimento.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total investido</span>
+        <strong id="totalInvestido">-</strong>
+        <span id="totalInvestidoTexto">Soma do valor inicial com todos os aportes do per&iacute;odo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Rendimento</span>
+        <strong id="rendimentoTotal">-</strong>
+        <span id="rendimentoTotalTexto">Diferen&ccedil;a entre o valor final e o valor total aplicado.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Taxa mensal estimada</span>
+        <strong id="taxaMensal">-</strong>
+        <span id="taxaMensalTexto">Taxa aproximada usada para compor o investimento ao longo dos meses.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Simule um investimento atrelado ao CDI</h2>
+    <p>Use esta calculadora para projetar o valor futuro de um investimento que rende um percentual do CDI ao longo de um prazo definido.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>Esta ferramenta tem car&aacute;ter informativo. Resultado real pode variar por impostos, taxa da institui&ccedil;&atilde;o, dias &uacute;teis, liquidez e forma de capitaliza&ccedil;&atilde;o do produto.</p>
+    <h2>Como a simula&ccedil;&atilde;o &eacute; feita?</h2>
+    <p>A p&aacute;gina converte o CDI anual informado em uma taxa mensal equivalente e aplica a composi&ccedil;&atilde;o dos juros com valor inicial e aportes recorrentes.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-juros-compostos/"><span class="titulo-resultado">Finan&ccedil;as</span><strong>Juros Compostos</strong><span>Veja uma simula&ccedil;&atilde;o cl&aacute;ssica de crescimento do capital.</span></a>
+      <a class="card-resultado card-link" href="/simulador-emprestimo-pessoal/"><span class="titulo-resultado">Finan&ccedil;as</span><strong>Empr&eacute;stimo Pessoal</strong><span>Compare aplica&ccedil;&atilde;o e custo do dinheiro em contextos diferentes.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-financeiras/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras Financeiras</strong><span>Explore outras p&aacute;ginas para investimentos, juros e planejamento.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-rendimento-cdi/");
+  </script>
+</body>
+</html>

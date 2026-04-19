@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Fra&ccedil;&atilde;o Online | Somar, Subtrair, Multiplicar e Dividir</title>
+  <meta name="description" content="Use a calculadora de fra&ccedil;&atilde;o online para somar, subtrair, multiplicar, dividir e simplificar fra&ccedil;&otilde;es com resultado imediato.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-fracao/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Fra&ccedil;&atilde;o Online">
+  <meta property="og:description" content="Some, subtraia, multiplique, divida e simplifique fra&ccedil;&otilde;es em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-fracao/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Fra&ccedil;&atilde;o</h1>
+    <p class="descricao">Resolva opera&ccedil;&otilde;es com fra&ccedil;&otilde;es e veja o resultado simplificado automaticamente.</p>
+    <p class="selo">Fra&ccedil;&atilde;o &bull; simplifica&ccedil;&atilde;o &bull; matem&aacute;tica &bull; estudo</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos r&aacute;pidos">
+      <button type="button" onclick="aplicarExemplo('1/2', '+', '1/3')">1/2 + 1/3</button>
+      <button type="button" onclick="aplicarExemplo('3/4', '-', '1/8')">3/4 - 1/8</button>
+      <button type="button" onclick="aplicarExemplo('2/5', '*', '3/7')">2/5 x 3/7</button>
+      <button type="button" onclick="aplicarExemplo('5/6', '/', '1/3')">5/6 &divide; 1/3</button>
+    </div>
+
+    <div class="campo">
+      <label for="fracaoA">Primeira fra&ccedil;&atilde;o</label>
+      <input id="fracaoA" type="text" value="1/2" inputmode="text" placeholder="Ex.: 3/4">
+    </div>
+
+    <div class="campo">
+      <label for="operacao">Opera&ccedil;&atilde;o</label>
+      <select id="operacao">
+        <option value="+">Somar</option>
+        <option value="-">Subtrair</option>
+        <option value="*">Multiplicar</option>
+        <option value="/">Dividir</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="fracaoB">Segunda fra&ccedil;&atilde;o</label>
+      <input id="fracaoB" type="text" value="1/3" inputmode="text" placeholder="Ex.: 5/8">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado simplificado</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe duas fra&ccedil;&otilde;es no formato numerador/denominador.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Forma simplificada</span>
+        <strong id="resultadoSimplificado">-</strong>
+        <span id="resultadoSimplificadoTexto">A fra&ccedil;&atilde;o final j&aacute; aparece reduzida ao menor formato.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Forma decimal</span>
+        <strong id="resultadoDecimal">-</strong>
+        <span id="resultadoDecimalTexto">Ajuda a comparar com porcentagem e n&uacute;meros decimais.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura r&aacute;pida</span>
+        <strong id="resultadoMisto">-</strong>
+        <span id="resultadoMistoTexto">Quando poss&iacute;vel, mostramos o equivalente em n&uacute;mero misto.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Fra&ccedil;&otilde;es resolvidas sem conta manual</h2>
+    <p>Use esta calculadora para somar, subtrair, multiplicar e dividir fra&ccedil;&otilde;es com simplifica&ccedil;&atilde;o autom&aacute;tica e confer&ecirc;ncia em formato decimal.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como usar a calculadora de fra&ccedil;&atilde;o?</h2>
+    <p>Digite as duas fra&ccedil;&otilde;es no formato numerador/denominador, escolha a opera&ccedil;&atilde;o desejada e clique em calcular para ver o resultado simplificado.</p>
+    <h2>Quando esta ferramenta &eacute; &uacute;til?</h2>
+    <p>Ela ajuda em estudos, tarefas escolares, confer&ecirc;ncia de exerc&iacute;cios e compara&ccedil;&atilde;o de medidas representadas por fra&ccedil;&otilde;es.</p>
+    <h2>Perguntas frequentes</h2>
+    <h3>Posso usar n&uacute;meros inteiros?</h3>
+    <p>Sim. Voc&ecirc; pode informar por exemplo 2 como 2/1.</p>
+    <h3>A calculadora simplifica o resultado?</h3>
+    <p>Sim. O resultado aparece reduzido para a menor fra&ccedil;&atilde;o equivalente poss&iacute;vel.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-mdc/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>Calculadora de MDC</strong><span>Descubra o maior divisor comum para simplificar fra&ccedil;&otilde;es.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-mmc/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>Calculadora de MMC</strong><span>Encontre o m&iacute;nimo m&uacute;ltiplo comum para opera&ccedil;&otilde;es com fra&ccedil;&otilde;es.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Matem&aacute;tica</strong><span>Explore outras ferramentas para contas num&eacute;ricas e escolares.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-fracao/");
+  </script>
+</body>
+</html>

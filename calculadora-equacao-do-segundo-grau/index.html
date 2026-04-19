@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Equa&ccedil;&atilde;o do Segundo Grau Online | Bhaskara</title>
+  <meta name="description" content="Resolva equa&ccedil;&otilde;es do segundo grau com a f&oacute;rmula de Bhaskara e veja delta, ra&iacute;zes e interpreta&ccedil;&atilde;o do resultado.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-equacao-do-segundo-grau/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Equa&ccedil;&atilde;o do Segundo Grau Online">
+  <meta property="og:description" content="Calcule delta e ra&iacute;zes de equa&ccedil;&otilde;es do segundo grau em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-equacao-do-segundo-grau/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Equa&ccedil;&atilde;o do Segundo Grau</h1>
+    <p class="descricao">Informe os coeficientes de ax&sup2; + bx + c = 0 para calcular delta e as ra&iacute;zes.</p>
+    <p class="selo">Bhaskara &bull; equa&ccedil;&atilde;o quadr&aacute;tica &bull; delta &bull; matem&aacute;tica</p>
+
+    <div class="atalhos-rapidos" aria-label="Exemplos r&aacute;pidos">
+      <button type="button" onclick="aplicarExemplo(1, -5, 6)">x&sup2; - 5x + 6</button>
+      <button type="button" onclick="aplicarExemplo(1, 2, 1)">x&sup2; + 2x + 1</button>
+      <button type="button" onclick="aplicarExemplo(1, 0, -9)">x&sup2; - 9</button>
+    </div>
+
+    <div class="campo">
+      <label for="coefA">Coeficiente a</label>
+      <input id="coefA" type="number" step="0.01" value="1" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="coefB">Coeficiente b</label>
+      <input id="coefB" type="number" step="0.01" value="-5" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="coefC">Coeficiente c</label>
+      <input id="coefC" type="number" step="0.01" value="6" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Ra&iacute;zes da equa&ccedil;&atilde;o</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Defina os coeficientes da equa&ccedil;&atilde;o para ver o resultado.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Delta</span>
+        <strong id="valorDelta">-</strong>
+        <span id="valorDeltaTexto">O discriminante mostra quantas ra&iacute;zes reais a equa&ccedil;&atilde;o possui.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Raiz x1</span>
+        <strong id="valorX1">-</strong>
+        <span id="valorX1Texto">Primeira solu&ccedil;&atilde;o da equa&ccedil;&atilde;o.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Raiz x2</span>
+        <strong id="valorX2">-</strong>
+        <span id="valorX2Texto">Segunda solu&ccedil;&atilde;o da equa&ccedil;&atilde;o.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Bhaskara sem erro de conta</h2>
+    <p>Esta ferramenta resolve equa&ccedil;&otilde;es do segundo grau com base nos coeficientes a, b e c, mostrando delta e as ra&iacute;zes encontradas.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como funciona a calculadora?</h2>
+    <p>A calculadora aplica a f&oacute;rmula de Bhaskara para resolver express&otilde;es do tipo ax&sup2; + bx + c = 0 e identificar as ra&iacute;zes reais quando elas existem.</p>
+    <h2>O que significa o valor de delta?</h2>
+    <p>Quando delta &eacute; positivo, existem duas ra&iacute;zes reais diferentes. Se for zero, existe uma raiz real dupla. Se for negativo, n&atilde;o h&aacute; ra&iacute;zes reais.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-raiz-quadrada/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>Raiz Quadrada</strong><span>Calcule ra&iacute;zes quadradas para conferir etapas do delta.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-potencia/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>Pot&ecirc;ncia</strong><span>Resolva pot&ecirc;ncias em contas alg&eacute;bricas e geom&eacute;tricas.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Matem&aacute;tica</strong><span>Veja outras ferramentas para estudo e confer&ecirc;ncia de exerc&iacute;cios.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-equacao-do-segundo-grau/");
+  </script>
+</body>
+</html>

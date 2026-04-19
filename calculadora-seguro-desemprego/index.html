@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Seguro-Desemprego 2026 Online</title>
+  <meta name="description" content="Simule o valor estimado do seguro-desemprego em 2026 com base no sal&aacute;rio m&eacute;dio, tempo trabalhado e n&uacute;mero da solicita&ccedil;&atilde;o.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-seguro-desemprego/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Seguro-Desemprego 2026 Online">
+  <meta property="og:description" content="Estime o valor da parcela e o n&uacute;mero de parcelas do seguro-desemprego.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-seguro-desemprego/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Seguro-Desemprego</h1>
+    <p class="descricao">Simule o valor estimado da parcela e a quantidade de parcelas com base na tabela vigente em 2026.</p>
+    <p class="selo">Trabalho &bull; benef&iacute;cio &bull; seguro-desemprego &bull; 2026</p>
+
+    <div class="campo">
+      <label for="salarioMedio">Sal&aacute;rio m&eacute;dio dos 3 &uacute;ltimos meses (R$)</label>
+      <input id="salarioMedio" type="number" step="0.01" value="2500" inputmode="decimal">
+    </div>
+
+    <div class="campo">
+      <label for="mesesTrabalhados">Meses trabalhados antes da dispensa</label>
+      <input id="mesesTrabalhados" type="number" step="1" value="14" inputmode="numeric">
+    </div>
+
+    <div class="campo">
+      <label for="solicitacao">N&uacute;mero da solicita&ccedil;&atilde;o</label>
+      <select id="solicitacao">
+        <option value="1">Primeira solicita&ccedil;&atilde;o</option>
+        <option value="2">Segunda solicita&ccedil;&atilde;o</option>
+        <option value="3">Terceira ou mais</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Parcela estimada</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha os dados para estimar a parcela do benef&iacute;cio.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Parcelas</span>
+        <strong id="quantidadeParcelas">-</strong>
+        <span id="quantidadeParcelasTexto">Quantidade estimada conforme meses trabalhados e solicita&ccedil;&atilde;o.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Faixa usada</span>
+        <strong id="faixaUsada">-</strong>
+        <span id="faixaUsadaTexto">Mostra qual regra da tabela anual entrou no c&aacute;lculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total estimado</span>
+        <strong id="valorTotal">-</strong>
+        <span id="valorTotalTexto">Soma aproximada do benef&iacute;cio considerando as parcelas.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Simule o seguro-desemprego com a tabela de 2026</h2>
+    <p>Esta calculadora aplica a tabela divulgada pelo Minist&eacute;rio do Trabalho e Emprego para benef&iacute;cios concedidos a partir de 11 de janeiro de 2026.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Importante</h2>
+    <p>O resultado &eacute; uma estimativa informativa. Habilita&ccedil;&atilde;o, prazos, documentos, renda pr&oacute;pria e outras condi&ccedil;&otilde;es legais podem alterar a concess&atilde;o do benef&iacute;cio.</p>
+    <h2>Tabela considerada</h2>
+    <p>Faixas de 2026: at&eacute; R$ 2.222,17 multiplica por 0,8; de R$ 2.222,18 at&eacute; R$ 3.703,99 soma o excedente x 0,5 com R$ 1.777,74; acima disso aplica teto de R$ 2.518,65, respeitado o m&iacute;nimo de R$ 1.621,00.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-aviso-previo/"><span class="titulo-resultado">Trabalho</span><strong>Calculadora de Aviso-Pr&eacute;vio</strong><span>Estime aviso trabalhado ou indenizado em poucos segundos.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-fgts/"><span class="titulo-resultado">Trabalho</span><strong>Calculadora de FGTS</strong><span>Veja dep&oacute;sitos mensais e estimativa de saldo do fundo.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-trabalho-rh/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Trabalho e RH</strong><span>Explore outras ferramentas para folha, benef&iacute;cios e desligamento.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-seguro-desemprego/");
+  </script>
+</body>
+</html>

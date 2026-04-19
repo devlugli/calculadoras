@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de M&eacute;dia Escolar Online</title>
+  <meta name="description" content="Calcule m&eacute;dia escolar simples ou ponderada com notas e pesos para descobrir a m&eacute;dia final com rapidez.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-media-escolar/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de M&eacute;dia Escolar Online">
+  <meta property="og:description" content="Descubra a m&eacute;dia escolar final usando notas e pesos em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-media-escolar/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de M&eacute;dia Escolar</h1>
+    <p class="descricao">Some notas, aplique pesos e veja a m&eacute;dia final da disciplina de forma r&aacute;pida.</p>
+    <p class="selo">M&eacute;dia &bull; notas &bull; escola &bull; educa&ccedil;&atilde;o</p>
+
+    <div class="campo">
+      <label for="modo">Tipo de m&eacute;dia</label>
+      <select id="modo" onchange="trocarModo()">
+        <option value="simples">M&eacute;dia simples</option>
+        <option value="ponderada">M&eacute;dia ponderada</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="nota1">Nota 1</label>
+      <input id="nota1" type="number" step="0.01" value="7" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="nota2">Nota 2</label>
+      <input id="nota2" type="number" step="0.01" value="8.5" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="nota3">Nota 3</label>
+      <input id="nota3" type="number" step="0.01" value="6" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="nota4">Nota 4</label>
+      <input id="nota4" type="number" step="0.01" value="9" inputmode="decimal">
+    </div>
+
+    <div id="pesos" style="display:none;">
+      <div class="campo">
+        <label for="peso1">Peso 1</label>
+        <input id="peso1" type="number" step="0.01" value="1" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="peso2">Peso 2</label>
+        <input id="peso2" type="number" step="0.01" value="1" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="peso3">Peso 3</label>
+        <input id="peso3" type="number" step="0.01" value="1" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="peso4">Peso 4</label>
+        <input id="peso4" type="number" step="0.01" value="1" inputmode="decimal">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label for="mediaMinima">M&eacute;dia para aprova&ccedil;&atilde;o</label>
+      <input id="mediaMinima" type="number" step="0.01" value="7" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">M&eacute;dia final</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe as notas para descobrir a m&eacute;dia da disciplina.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Situa&ccedil;&atilde;o</span>
+        <strong id="situacaoFinal">-</strong>
+        <span id="situacaoFinalTexto">Compara a m&eacute;dia obtida com a m&iacute;nima desejada.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Soma das notas</span>
+        <strong id="somaNotas">-</strong>
+        <span id="somaNotasTexto">Ajuda a conferir os valores considerados no c&aacute;lculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura r&aacute;pida</span>
+        <strong id="resumoNotas">-</strong>
+        <span id="resumoNotasTexto">Resumo curto para saber se a meta foi atingida.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>M&eacute;dia escolar simples ou ponderada em uma p&aacute;gina</h2>
+    <p>Use esta ferramenta para calcular rapidamente a m&eacute;dia de provas, trabalhos e atividades com ou sem pesos diferentes.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como funciona a calculadora?</h2>
+    <p>Voc&ecirc; informa as notas e escolhe se quer usar m&eacute;dia simples ou ponderada. No modo ponderado, cada nota pode receber um peso diferente.</p>
+    <h2>Quando esta p&aacute;gina &eacute; &uacute;til?</h2>
+    <p>Ela ajuda alunos, pais e professores a conferir resultados de bimestre, semestre e recupera&ccedil;&atilde;o sem precisar montar a conta manualmente.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-media/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>Calculadora de M&eacute;dia</strong><span>Calcule a m&eacute;dia de valores de forma direta.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-media-ponderada/"><span class="titulo-resultado">Matem&aacute;tica</span><strong>M&eacute;dia Ponderada</strong><span>Use pesos diferentes para cada valor informado.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Matem&aacute;tica</strong><span>Veja outras ferramentas para estudo e c&aacute;lculo escolar.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-media-escolar/");
+  </script>
+</body>
+</html>

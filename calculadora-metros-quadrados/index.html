@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Metros Quadrados Online</title>
+  <meta name="description" content="Calcule metros quadrados de ambientes, pisos, paredes e terrenos com largura, comprimento e quantidade de &aacute;reas.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-metros-quadrados/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de Metros Quadrados Online">
+  <meta property="og:description" content="Descubra a &aacute;rea em metros quadrados de ambientes e superf&iacute;cies em poucos segundos.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-metros-quadrados/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de Metros Quadrados</h1>
+    <p class="descricao">Calcule a &aacute;rea total de ambientes, pisos, paredes e terrenos usando medidas simples.</p>
+    <p class="selo">Metros quadrados &bull; obra &bull; ambiente &bull; constru&ccedil;&atilde;o</p>
+
+    <div class="campo">
+      <label for="largura">Largura (m)</label>
+      <input id="largura" type="number" step="0.01" value="4" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="comprimento">Comprimento (m)</label>
+      <input id="comprimento" type="number" step="0.01" value="5" inputmode="decimal">
+    </div>
+    <div class="campo">
+      <label for="quantidade">Quantidade de &aacute;reas iguais</label>
+      <input id="quantidade" type="number" step="1" value="1" inputmode="numeric">
+    </div>
+    <div class="campo">
+      <label for="perda">Margem extra (%)</label>
+      <input id="perda" type="number" step="0.01" value="10" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">&Aacute;rea total</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Informe largura e comprimento para ver a &aacute;rea em m&sup2;.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">&Aacute;rea base</span>
+        <strong id="areaBase">-</strong>
+        <span id="areaBaseTexto">Resultado de largura x comprimento para uma &aacute;rea.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">&Aacute;rea total</span>
+        <strong id="areaTotal">-</strong>
+        <span id="areaTotalTexto">Resultado multiplicado pela quantidade de &aacute;reas iguais.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Com margem</span>
+        <strong id="areaComMargem">-</strong>
+        <span id="areaComMargemTexto">Ajuda a planejar compra com sobra para cortes e perdas.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>Metros quadrados para obra, piso e parede</h2>
+    <p>Esta ferramenta transforma medidas lineares em uma &aacute;rea f&aacute;cil de usar para or&ccedil;amento, compra de material e planejamento de reforma.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como calcular metros quadrados?</h2>
+    <p>Em uma &aacute;rea retangular, basta multiplicar largura por comprimento. Se houver mais de uma &aacute;rea igual, multiplique o resultado pela quantidade.</p>
+    <h2>Quando usar?</h2>
+    <p>Use esta calculadora para piso, pintura, revestimento, tecido, carpete, terreno e outras situa&ccedil;&otilde;es em que a medida principal &eacute; m&sup2;.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-de-piso/"><span class="titulo-resultado">Constru&ccedil;&atilde;o</span><strong>Calculadora de Piso</strong><span>Transforme a &aacute;rea em pe&ccedil;as e caixas para compra.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-de-tinta/"><span class="titulo-resultado">Constru&ccedil;&atilde;o</span><strong>Calculadora de Tinta</strong><span>Use a metragem para estimar litros e embalagens de tinta.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-construcao/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Constru&ccedil;&atilde;o</strong><span>Veja outras ferramentas para materiais, obra e reforma.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-metros-quadrados/");
+  </script>
+</body>
+</html>

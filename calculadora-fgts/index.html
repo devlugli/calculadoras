@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de FGTS Online</title>
+  <meta name="description" content="Calcule dep&oacute;sitos mensais do FGTS, saldo acumulado estimado e multa rescis&oacute;ria de 40% com uma simula&ccedil;&atilde;o simples.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-fgts/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de FGTS Online">
+  <meta property="og:description" content="Veja o dep&oacute;sito mensal de 8%, o saldo estimado e a multa rescis&oacute;ria sobre o FGTS.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-fgts/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de FGTS</h1>
+    <p class="descricao">Simule dep&oacute;sitos mensais de FGTS, saldo acumulado e multa rescis&oacute;ria de 40%.</p>
+    <p class="selo">FGTS &bull; dep&oacute;sito mensal &bull; rescis&atilde;o &bull; trabalho</p>
+
+    <div class="campo">
+      <label for="salario">Sal&aacute;rio bruto (R$)</label>
+      <input id="salario" type="number" step="0.01" value="3200" inputmode="decimal">
+    </div>
+
+    <div class="campo">
+      <label for="meses">Meses trabalhados</label>
+      <input id="meses" type="number" step="1" value="18" inputmode="numeric">
+    </div>
+
+    <div class="campo">
+      <label for="saldoInicial">Saldo inicial estimado do FGTS (R$)</label>
+      <input id="saldoInicial" type="number" step="0.01" value="0" inputmode="decimal">
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Saldo estimado do FGTS</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Preencha sal&aacute;rio, meses e saldo inicial para estimar o fundo.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Dep&oacute;sito mensal</span>
+        <strong id="depositoMensal">-</strong>
+        <span id="depositoMensalTexto">Considera o percentual de 8% sobre o sal&aacute;rio bruto.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Total depositado</span>
+        <strong id="totalDepositado">-</strong>
+        <span id="totalDepositadoTexto">Soma aproximada dos dep&oacute;sitos no per&iacute;odo informado.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Multa de 40%</span>
+        <strong id="multaRescisoria">-</strong>
+        <span id="multaRescisoriaTexto">Estimativa informativa da multa rescis&oacute;ria sobre o saldo final.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>FGTS estimado com base no sal&aacute;rio e no tempo trabalhado</h2>
+    <p>Esta calculadora ajuda a visualizar o dep&oacute;sito mensal do FGTS, o total acumulado no per&iacute;odo e uma estimativa de multa rescis&oacute;ria.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Como o FGTS &eacute; calculado?</h2>
+    <p>Na forma mais comum, o dep&oacute;sito mensal corresponde a 8% do sal&aacute;rio bruto do trabalhador. A conta abaixo tem car&aacute;ter informativo e n&atilde;o substitui extrato oficial.</p>
+    <h2>Importante</h2>
+    <p>O saldo real pode variar por causa de dep&oacute;sitos anteriores, juros, atualiza&ccedil;&atilde;o monet&aacute;ria e eventos espec&iacute;ficos do contrato de trabalho.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-saque-aniversario-fgts/"><span class="titulo-resultado">Trabalho</span><strong>Saque-Anivers&aacute;rio FGTS</strong><span>Veja quanto pode sacar por ano usando o saldo do fundo.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-seguro-desemprego/"><span class="titulo-resultado">Trabalho</span><strong>Seguro-Desemprego</strong><span>Estime outra verba comum em cen&aacute;rios de desligamento.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-trabalho-rh/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Trabalho e RH</strong><span>Explore ferramentas de folha, encargos e benef&iacute;cios.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-fgts/");
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de &Aacute;rea Online | Ret&acirc;ngulo, Tri&acirc;ngulo, C&iacute;rculo e Trap&eacute;zio</title>
+  <meta name="description" content="Calcule &aacute;rea de ret&acirc;ngulo, tri&acirc;ngulo, c&iacute;rculo e trap&eacute;zio com uma calculadora online simples e r&aacute;pida.">
+  <link rel="canonical" href="https://calcbrazil.com/calculadora-area/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1LTJL2BFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D1LTJL2BFV');
+  </script>
+  <meta property="og:title" content="Calculadora de &Aacute;rea Online">
+  <meta property="og:description" content="Descubra a &aacute;rea de figuras planas sem fazer a conta manualmente.">
+  <meta property="og:image" content="https://calcbrazil.com/preview.png">
+  <meta property="og:url" content="https://calcbrazil.com/calculadora-area/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="/">Voltar para a p&aacute;gina inicial</a></p>
+    <h1>Calculadora de &Aacute;rea</h1>
+    <p class="descricao">Calcule a &aacute;rea de figuras geom&eacute;tricas comuns em uma p&aacute;gina s&oacute;.</p>
+    <p class="selo">&Aacute;rea &bull; geometria &bull; matem&aacute;tica &bull; medida</p>
+
+    <div class="campo">
+      <label for="forma">Figura geom&eacute;trica</label>
+      <select id="forma" onchange="trocarForma()">
+        <option value="retangulo">Ret&acirc;ngulo</option>
+        <option value="triangulo">Tri&acirc;ngulo</option>
+        <option value="circulo">C&iacute;rculo</option>
+        <option value="trapezio">Trap&eacute;zio</option>
+      </select>
+    </div>
+
+    <div id="formaRetangulo">
+      <div class="campo">
+        <label for="baseRetangulo">Base</label>
+        <input id="baseRetangulo" type="number" step="0.01" value="5" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="alturaRetangulo">Altura</label>
+        <input id="alturaRetangulo" type="number" step="0.01" value="3" inputmode="decimal">
+      </div>
+    </div>
+
+    <div id="formaTriangulo" style="display:none;">
+      <div class="campo">
+        <label for="baseTriangulo">Base</label>
+        <input id="baseTriangulo" type="number" step="0.01" value="8" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="alturaTriangulo">Altura</label>
+        <input id="alturaTriangulo" type="number" step="0.01" value="4" inputmode="decimal">
+      </div>
+    </div>
+
+    <div id="formaCirculo" style="display:none;">
+      <div class="campo">
+        <label for="raioCirculo">Raio</label>
+        <input id="raioCirculo" type="number" step="0.01" value="2.5" inputmode="decimal">
+      </div>
+    </div>
+
+    <div id="formaTrapezio" style="display:none;">
+      <div class="campo">
+        <label for="baseMaiorTrapezio">Base maior</label>
+        <input id="baseMaiorTrapezio" type="number" step="0.01" value="10" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="baseMenorTrapezio">Base menor</label>
+        <input id="baseMenorTrapezio" type="number" step="0.01" value="6" inputmode="decimal">
+      </div>
+      <div class="campo">
+        <label for="alturaTrapezio">Altura</label>
+        <input id="alturaTrapezio" type="number" step="0.01" value="4" inputmode="decimal">
+      </div>
+    </div>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <div class="resumo-topo">
+      <div class="resumo-topo-titulo" id="resumoTopoTitulo">Resultado da &aacute;rea</div>
+      <div class="resumo-topo-valor" id="resumoTopoValor">-</div>
+      <div class="resumo-topo-texto" id="resumoTopoTexto">Escolha a figura e informe as medidas necess&aacute;rias.</div>
+    </div>
+
+    <div class="resultado-grid detalhes-resultado">
+      <div class="card-resultado">
+        <span class="titulo-resultado">Figura</span>
+        <strong id="detalheFigura">-</strong>
+        <span id="detalheFiguraTexto">Mostra qual forma est&aacute; sendo usada no c&aacute;lculo.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">F&oacute;rmula</span>
+        <strong id="detalheFormula">-</strong>
+        <span id="detalheFormulaTexto">A conta aparece resumida para confer&ecirc;ncia r&aacute;pida.</span>
+      </div>
+      <div class="card-resultado">
+        <span class="titulo-resultado">Leitura r&aacute;pida</span>
+        <strong id="detalheLeitura">-</strong>
+        <span id="detalheLeituraTexto">Resumo simples do resultado encontrado.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-callout">
+    <h2>&Aacute;rea de figuras planas em poucos segundos</h2>
+    <p>Use esta calculadora para descobrir a &aacute;rea de figuras geom&eacute;tricas comuns sem precisar trocar de p&aacute;gina para cada f&oacute;rmula.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Quais formas esta calculadora atende?</h2>
+    <p>Voc&ecirc; pode calcular &aacute;rea de ret&acirc;ngulo, tri&acirc;ngulo, c&iacute;rculo e trap&eacute;zio a partir das medidas b&aacute;sicas de cada figura.</p>
+    <h2>Quando a calculadora de &aacute;rea &eacute; &uacute;til?</h2>
+    <p>Ela &eacute; &uacute;til em estudos, provas, projetos, obra, pintura e qualquer situa&ccedil;&atilde;o em que a &aacute;rea precisa ser estimada com rapidez.</p>
+  </section>
+
+  <section class="seo">
+    <h2>Veja tamb&eacute;m</h2>
+    <div class="resultado-grid">
+      <a class="card-resultado card-link" href="/calculadora-area-do-circulo/"><span class="titulo-resultado">Geometria</span><strong>&Aacute;rea do C&iacute;rculo</strong><span>Calcule apenas a &aacute;rea do c&iacute;rculo com foco total no raio.</span></a>
+      <a class="card-resultado card-link" href="/calculadora-metros-quadrados/"><span class="titulo-resultado">Constru&ccedil;&atilde;o</span><strong>Metros Quadrados</strong><span>Use medidas de ambiente para estimar &aacute;rea pr&aacute;tica no dia a dia.</span></a>
+      <a class="card-resultado card-link" href="/calculadoras-matematica/"><span class="titulo-resultado">Categoria</span><strong>Calculadoras de Matem&aacute;tica</strong><span>Explore outras ferramentas geom&eacute;tricas e num&eacute;ricas.</span></a>
+    </div>
+  </section>
+
+  <section id="calculadorasPopulares" class="seo"></section>
+  <section id="calculadorasRelacionadas" class="seo"></section>
+
+  <script src="../assets/js/populares.js"></script>
+  <script src="../assets/js/relacionadas.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderizarCalculadorasPopulares();
+    renderizarCalculadorasRelacionadas("/calculadora-area/");
+  </script>
+</body>
+</html>
