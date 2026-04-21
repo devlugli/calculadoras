@@ -28,19 +28,20 @@ function atualizarResumoMeses(meses) {
   document.getElementById("mesesRestantesValor").innerText = Number.isFinite(anos) ? mesesRestantes : "-";
   document.getElementById("mesesLeituraRapida").innerText = Number.isFinite(anos) ? leitura : "-";
 }
-
 function converterMeses() {
-  const meses = Number(document.getElementById("mesesEntrada").value);
+  const campo = document.getElementById("mesesEntrada");
+  const meses = Math.floor(Number(campo.value));
 
   if (!Number.isFinite(meses) || meses < 0) {
     document.getElementById("resumoTopoValor").innerText = "-";
-    document.getElementById("resumoTopoTexto").innerText = "Informe uma quantidade de meses v\u00e1lida.";
+    document.getElementById("resumoTopoTexto").innerText = "Informe uma quantidade de meses válida.";
     document.getElementById("anosInteirosValor").innerText = "-";
     document.getElementById("mesesRestantesValor").innerText = "-";
     document.getElementById("mesesLeituraRapida").innerText = "-";
     return;
   }
 
+  campo.value = meses;
   atualizarResumoMeses(meses);
 }
 
