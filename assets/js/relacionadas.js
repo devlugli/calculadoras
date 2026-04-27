@@ -651,6 +651,72 @@ const CALCULADORAS = [
 }
 ];
 
+const CLUSTERS = [
+  {
+    key: "trabalho-rh",
+    nome: "Trabalho e RH",
+    hubUrl: "/calculadoras-trabalho-rh/",
+    hubTitulo: "Calculadoras de Trabalho e RH",
+    hubDescricao: "Explore o hub com simuladores de salario, descontos, beneficios e rotinas trabalhistas.",
+    itens: [
+      "/calculadora-salario-liquido/",
+      "/calculadora-decimo-terceiro/",
+      "/calculadora-ferias/",
+      "/calculadora-rescisao/",
+      "/calculadora-horas-extras/",
+      "/calculadora-fgts/",
+      "/calculadora-inss/",
+      "/calculadora-irrf-salario/"
+    ]
+  },
+  {
+    key: "financeiro",
+    nome: "Financeiro",
+    hubUrl: "/calculadoras-financeiras/",
+    hubTitulo: "Calculadoras Financeiras",
+    hubDescricao: "Veja simuladores de financiamento, emprestimo, juros, investimentos e precificacao.",
+    itens: [
+      "/calculadora-financiamento/",
+      "/simulador-emprestimo-pessoal/",
+      "/calculadora-juros-compostos/",
+      "/calculadora-juros-simples/",
+      "/calculadora-rendimento-cdi/",
+      "/calculadora-rendimento-poupanca/",
+      "/calculadora-preco-de-venda/",
+      "/calculadora-markup/"
+    ]
+  },
+  {
+    key: "combustivel",
+    nome: "Combustivel",
+    hubUrl: "/calculadoras-combustivel/",
+    hubTitulo: "Calculadoras de Combustivel",
+    hubDescricao: "Encontre ferramentas para consumo, comparacao de combustivel e custo de viagem.",
+    itens: [
+      "/calculadora-alcool-ou-gasolina/",
+      "/calculadora-km-por-litro/",
+      "/calculadora-custo-por-km/",
+      "/calculadora-gasto-combustivel-viagem/",
+      "/calculadora-tempo-de-viagem/",
+      "/calculadora-autonomia-do-carro/"
+    ]
+  },
+  {
+    key: "ferramentas-online",
+    nome: "Ferramentas Online",
+    hubUrl: "/ferramentas-online/",
+    hubTitulo: "Ferramentas Online",
+    hubDescricao: "Navegue por geradores, utilitarios de texto, ferramentas dev, QR Code e conversores.",
+    itens: [
+      "/geradores-dados/",
+      "/ferramentas-texto/",
+      "/ferramentas-dev/",
+      "/ferramentas-qr/",
+      "/conversores/"
+    ]
+  }
+];
+
 function normalizarUrl(url) {
   if (!url) return "/";
   let normalizada = url.trim();
@@ -685,16 +751,71 @@ function criarCard(calc) {
   `;
 }
 
+const CLUSTERS_POR_URL = CLUSTERS.reduce((mapa, cluster) => {
+  cluster.itens.forEach((url) => {
+    mapa[normalizarUrl(url)] = cluster;
+  });
+
+  mapa[normalizarUrl(cluster.hubUrl)] = cluster;
+  return mapa;
+}, {});
+
+const CALCULADORAS_POR_URL = CALCULADORAS.reduce((mapa, calculadora) => {
+  mapa[normalizarUrl(calculadora.url)] = calculadora;
+  return mapa;
+}, {});
+
+function criarCardHub(cluster) {
+  return `
+    <a class="card-resultado card-link" href="${cluster.hubUrl}">
+      <span class="titulo-resultado">Hub do cluster</span>
+      <strong>${cluster.hubTitulo}</strong>
+      <span>${cluster.hubDescricao}</span>
+    </a>
+  `;
+}
+
 function renderizarCalculadorasRelacionadas(urlAtual, quantidade = 6) {
   const container = document.getElementById("calculadorasRelacionadas");
   if (!container) return;
 
   const atual = normalizarUrl(urlAtual);
-  const calculadoraAtual = CALCULADORAS.find(c => normalizarUrl(c.url) === atual);
+  const calculadoraAtual = CALCULADORAS_POR_URL[atual];
+  const clusterAtual = CLUSTERS_POR_URL[atual];
 
   const outrasCalculadoras = CALCULADORAS.filter(c => normalizarUrl(c.url) !== atual);
 
   let relacionadas = [];
+  let heading = "Calculadoras relacionadas";
+
+  if (clusterAtual) {
+    const quantidadeCluster = Math.max(5, Math.min(10, quantidade || 6));
+    const urlsDoCluster = clusterAtual.itens
+      .map(normalizarUrl)
+      .filter((url) => url !== atual);
+
+    relacionadas = urlsDoCluster
+      .map((url) => CALCULADORAS_POR_URL[url])
+      .filter(Boolean)
+      .slice(0, quantidadeCluster);
+
+    heading = clusterAtual.key === "ferramentas-online"
+      ? "Outras paginas relacionadas"
+      : "Outras calculadoras relacionadas";
+
+    const paginaEhHub = atual === normalizarUrl(clusterAtual.hubUrl);
+    const incluirHub = !paginaEhHub;
+
+    container.innerHTML = `
+      <h2>${heading}</h2>
+      <div class="resultado-grid">
+        ${incluirHub ? criarCardHub(clusterAtual) : ""}
+        ${relacionadas.map(criarCard).join("")}
+      </div>
+    `;
+
+    return;
+  }
 
   if (calculadoraAtual) {
     const mesmaCategoria = outrasCalculadoras.filter(
@@ -714,7 +835,7 @@ function renderizarCalculadorasRelacionadas(urlAtual, quantidade = 6) {
   }
 
   container.innerHTML = `
-    <h2>Calculadoras relacionadas</h2>
+    <h2>${heading}</h2>
     <div class="resultado-grid">
       ${relacionadas.map(criarCard).join("")}
     </div>
