@@ -1,4 +1,4 @@
-const CALCULADORAS = [
+﻿const CALCULADORAS = [
   {
     url: "/calculadora-porcentagem/",
     titulo: "Calculadora de Porcentagem",
@@ -652,6 +652,26 @@ const CALCULADORAS = [
 ];
 
 const CLUSTERS = [
+  {
+    key: "ferramentas-para-criadores",
+    nome: "Criadores",
+    hubUrl: "/ferramentas-para-criadores/",
+    hubTitulo: "Ferramentas para Criadores",
+    hubDescricao: "Ferramentas para imagem, texto, WhatsApp, redes sociais e conteudo online.",
+    itens: [
+      "/redimensionador-de-imagem/",
+      "/compressor-de-imagem/",
+      "/conversor-de-imagem/",
+      "/calculadora-proporcao-imagem/",
+      "/contador-de-caracteres-redes-sociais/",
+      "/formatador-de-texto-whatsapp/",
+      "/limpador-de-texto/",
+      "/conversor-maiusculas-minusculas/",
+      "/gerador-de-slug/",
+      "/divisor-de-texto/"
+    ]
+  },
+
   {
     key: "trabalho-rh",
     nome: "Trabalho e RH",
