@@ -1,3 +1,2 @@
-http://calcbrazil.com/* https://calcbrazil.com/:splat 301!
-http://www.calcbrazil.com/* https://calcbrazil.com/:splat 301!
-https://www.calcbrazil.com/* https://calcbrazil.com/:splat 301!
+# Domain-level http/www redirects are managed in Cloudflare Redirect Rules.
+# Workers Static Assets _redirects supports path-based sources only.
