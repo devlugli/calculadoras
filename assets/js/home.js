@@ -47,6 +47,7 @@ const homeTools = [
   { name: "Minutos para Horas", url: "./minutos-para-horas/" },
   { name: "Dias para Horas", url: "./dias-para-horas/" },
   { name: "Anos para Meses", url: "./anos-para-meses/" },
+  { name: "18 meses é quanto tempo?", url: "./18-meses-e-quanto-tempo/" },
   { name: "Meses para Anos", url: "./meses-para-anos/" }
 ];
 

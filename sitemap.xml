@@ -441,11 +441,6 @@
 <priority>0.8</priority>
 </url>
 <url>
-<loc>https://calcbrazil.com/calculadora-nome/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
 <loc>https://calcbrazil.com/calculadora-intervalo-entre-contracoes/</loc>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
@@ -687,6 +682,11 @@
 </url>
 <url>
 <loc>https://calcbrazil.com/meses-para-anos/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://calcbrazil.com/18-meses-e-quanto-tempo/</loc>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>

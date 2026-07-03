@@ -10,6 +10,7 @@
     --cb-accent-soft:#ccfbf1;
     --cb-warm:#c2410c;
     --cb-shadow:0 24px 60px rgba(84, 55, 20, 0.08);
+    --cb-version:"CalcBrazil v2026.05.01.1";
 }
 
 *{
@@ -25,6 +26,30 @@ body{
     margin:0;
     padding:40px 20px;
     color:var(--cb-text);
+}
+
+body::after{
+    content:var(--cb-version);
+    position:fixed;
+    right:10px;
+    bottom:8px;
+    z-index:40;
+    padding:4px 7px;
+    border:1px solid rgba(148, 163, 184, 0.26);
+    border-radius:999px;
+    background:rgba(255, 253, 248, 0.82);
+    color:#64748b;
+    font-size:10px;
+    line-height:1;
+    pointer-events:none;
+    opacity:0.72;
+    box-shadow:0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+@media print{
+    body::after{
+        display:none;
+    }
 }
 
 .container{

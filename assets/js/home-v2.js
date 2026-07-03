@@ -93,6 +93,7 @@
   { name: "Minutos para Horas", url: "./minutos-para-horas/", category: "Conversores", aliases: ["minutos para horas"] },
   { name: "Dias para Horas", url: "./dias-para-horas/", category: "Conversores", aliases: ["dias para horas"] },
   { name: "Anos para Meses", url: "./anos-para-meses/", category: "Conversores", aliases: ["anos para meses"] },
+  { name: "18 meses é quanto tempo?", url: "./18-meses-e-quanto-tempo/", category: "Conversores", aliases: ["18 meses", "18 meses é quanto tempo", "18 meses sao quantos anos", "quanto tempo é 18 meses", "18 meses equivale a quantos anos"] },
   { name: "Meses para Anos", url: "./meses-para-anos/", category: "Conversores", aliases: ["meses para anos"] },
   { name: "Calculadora de Churrasco", url: "./calculadora-de-churrasco/", category: "Cotidiano", aliases: ["churrasco", "carne por pessoa", "quanto comprar para churrasco"] },
   { name: "Quantidade de Bebida para Festa", url: "./quantidade-de-bebida-para-festa/", category: "Cotidiano", aliases: ["bebida para festa", "quantidade de bebida", "cerveja e refrigerante"] },
